@@ -597,10 +597,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
 /* harmony import */ var _auth_permission__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.permission */ 4377);
 /* harmony import */ var _common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/menuType */ 95166);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 87624);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! keycloak-angular */ 88566);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 44424);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 87624);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keycloak-angular */ 88566);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 44424);
+/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/item-manager.service */ 43983);
+
 
 
 
@@ -609,10 +611,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class AuthService {
-  constructor(keycloakService, router) {
+  constructor(keycloakService, router, itemManagerService) {
     this.keycloakService = keycloakService;
     this.router = router;
-    this.isAuthenticatedSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__.BehaviorSubject(false);
+    this.itemManagerService = itemManagerService;
+    this.isAuthenticatedSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__.BehaviorSubject(false);
     this.isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
     this.protectFromEmptyToken = () => {
       const tokenParsed = this.keycloakService.getKeycloakInstance().tokenParsed;
@@ -641,6 +644,7 @@ class AuthService {
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const url = window.location;
       yield _this2.keycloakService.logout(url.protocol + '//' + url.host + '/login');
+      _this2.itemManagerService.clearRolesContext();
     })();
   }
   isAuthenticated() {
@@ -658,45 +662,56 @@ class AuthService {
       return _this4.keycloakService.getToken();
     })();
   }
-  getOrgMrn() {
+  getOrgMrnFromToken() {
     var _this5 = this;
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this5.protectFromEmptyToken();
       return _this5.keycloakService.getKeycloakInstance().tokenParsed["org"];
     })();
   }
-  getUserName() {
+  getUserNameFromToken() {
     var _this6 = this;
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this6.protectFromEmptyToken();
       return _this6.keycloakService.getKeycloakInstance().tokenParsed["name"];
     })();
   }
-  getUserMrn() {
+  getUserMrnFromToken() {
     var _this7 = this;
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this7.protectFromEmptyToken();
       return _this7.keycloakService.getKeycloakInstance().tokenParsed["mrn"];
     })();
   }
-  getUserRoles() {
+  getUserRolesFromToken() {
     var _this8 = this;
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this8.protectFromEmptyToken();
       return _this8.keycloakService.getKeycloakInstance().tokenParsed["roles"];
     })();
   }
-  getUserPermission() {
+  getUserPermissionsFromToken() {
     var _this9 = this;
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this9.protectFromEmptyToken();
+      return _this9.keycloakService.getKeycloakInstance().tokenParsed["permissions"];
+    })();
+  }
+  getUserPermission(rolesInOrg) {
+    var _this10 = this;
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      _this10.protectFromEmptyToken();
       return new Promise(/*#__PURE__*/function () {
         var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (resolve, reject) {
-          const roles = yield _this9.keycloakService.getKeycloakInstance().tokenParsed["roles"];
-          if (!roles) {
+          let roles = (yield _this10.getUserRolesFromToken()) || [];
+          const permissions = (yield _this10.getUserPermissionsFromToken()) || [];
+          if (!roles && !permissions) {
             resolve(_auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.User);
+            return;
           }
-          resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(roles));
+          roles = Array.from(new Set([...roles, ..._this10.convertPermissionToRoles(permissions, rolesInOrg)]));
+          const final = (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(roles);
+          resolve(final);
         });
         return function (_x, _x2) {
           return _ref.apply(this, arguments);
@@ -704,16 +719,44 @@ class AuthService {
       }());
     })();
   }
-  hasPermission(context, forMyOrg = false) {
-    var _this10 = this;
+  hasSiteAdminPermission(rolesInOrg) {
+    var _this11 = this;
     return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      _this10.protectFromEmptyToken();
+      _this11.protectFromEmptyToken();
       return new Promise(/*#__PURE__*/function () {
         var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (resolve, reject) {
-          if (!_this10.keycloakService.isLoggedIn()) resolve(false);
-          _this10.getUserPermission().then(permission => {
+          let roles = yield _this11.getUserRolesFromToken();
+          const permissions = yield _this11.getUserPermissionsFromToken();
+          if (!roles || !permissions) {
+            resolve(false);
+            return;
+          }
+          if (!roles) {
+            roles = [];
+          }
+          roles = Array.from(new Set([...roles, ..._this11.convertPermissionToRoles(permissions, rolesInOrg)]));
+          resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(roles), _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin));
+        });
+        return function (_x3, _x4) {
+          return _ref2.apply(this, arguments);
+        };
+      }());
+    })();
+  }
+  hasPermission(context, rolesInOrg, forMyOrg = false) {
+    var _this12 = this;
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      _this12.protectFromEmptyToken();
+      return new Promise(/*#__PURE__*/function () {
+        var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (resolve, reject) {
+          if (!_this12.keycloakService.isLoggedIn()) {
+            resolve(false);
+            return;
+          }
+          _this12.getUserPermission(rolesInOrg).then(permission => {
             if (!permission) {
               resolve(false);
+              return;
             }
             if ((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin)) {
               // super admin
@@ -738,16 +781,25 @@ class AuthService {
             }
           });
         });
-        return function (_x3, _x4) {
-          return _ref2.apply(this, arguments);
+        return function (_x5, _x6) {
+          return _ref3.apply(this, arguments);
         };
       }());
     })();
   }
+  convertPermissionToRoles(permission, rolesInOrg) {
+    const roles = [];
+    for (const role of rolesInOrg) {
+      if (permission.includes(role.permission)) {
+        roles.push(role.roleName);
+      }
+    }
+    return roles;
+  }
   static #_ = this.ɵfac = function AuthService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || AuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](keycloak_angular__WEBPACK_IMPORTED_MODULE_5__.KeycloakService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__.Router));
+    return new (__ngFactoryType__ || AuthService)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](keycloak_angular__WEBPACK_IMPORTED_MODULE_6__.KeycloakService), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_7__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_3__.ItemManagerService));
   };
-  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({
     token: AuthService,
     factory: AuthService.ɵfac,
     providedIn: 'root'
@@ -6756,6 +6808,2810 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
+/***/ 14943:
+/*!*****************************************!*\
+  !*** ./src/app/common/columnForMenu.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ColumnForResource: () => (/* binding */ ColumnForResource)
+/* harmony export */ });
+/* harmony import */ var _countryOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countryOptions */ 80781);
+/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./timeConverter */ 71066);
+/*
+ * Copyright (c) 2025 Maritime Connectivity Platform Consortium
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/**
+ * a json format for both ngx-smart-table and ngx-editable-form articulating how the corresponding interface should work
+ */
+const ColumnForResource = {
+  device: {
+    id: {
+      title: 'ID',
+      type: 'number',
+      description: 'identifier'
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      immutable: true,
+      required: true,
+      shortIdType: 'device',
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>:<unique_id>'"
+    },
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of device',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    permissions: {
+      title: 'Permissions',
+      type: 'string',
+      description: 'List of permissions assigned by the organization',
+      visibleFrom: ['edit', 'detail', 'edit', 'edit-new']
+    },
+    mrnSubsidiary: {
+      title: 'Subsidiary MRN',
+      type: 'string',
+      description: 'Additional MRN assigned to entity',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    homeMMSUrl: {
+      title: 'Home MMS URL',
+      type: 'string',
+      description: 'URL of home MMS'
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  organization: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    logo: {
+      title: 'Logo',
+      type: 'image',
+      allowedExtensions: ['.jpg', '.png'],
+      visibleFrom: ['detail', 'edit']
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      immutable: true,
+      required: true,
+      shortIdType: 'organization',
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>'"
+    },
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of organization',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    mrnSubsidiary: {
+      title: 'Subsidiary MRN',
+      type: 'string',
+      description: 'Additional MRN assigned to entity',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    homeMMSUrl: {
+      title: 'Home MMS URL',
+      type: 'string',
+      description: 'URL of home MMS'
+    },
+    email: {
+      title: 'e-mail',
+      type: 'string',
+      description: 'Contact e-mail',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true,
+      error: "Please enter a valid email address"
+    },
+    url: {
+      title: 'URL',
+      type: 'string',
+      description: 'URL of organization',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true,
+      error: "Please enter a valid URL"
+    },
+    address: {
+      title: 'Address',
+      type: 'string',
+      description: 'Address of organization',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    country: {
+      title: 'Country',
+      type: 'string',
+      description: 'Country that organization belongs to',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      options: _countryOptions__WEBPACK_IMPORTED_MODULE_0__.countryOptions,
+      required: true
+    },
+    federationType: {
+      title: 'Federation type',
+      type: 'string',
+      description: 'OpenID Connect federation type',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      immutable: true
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  service: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      immutable: true,
+      required: true,
+      shortIdType: 'service',
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>:<unique_id>'"
+    },
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of service',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    permissions: {
+      title: 'Permissions',
+      type: 'string',
+      description: 'List of permissions assigned by the organization',
+      visibleFrom: ['edit', 'detail', 'edit', 'edit-new']
+    },
+    mrnSubsidiary: {
+      title: 'Subsidiary MRN',
+      type: 'string',
+      description: 'Additional MRN assigned to entity',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    homeMMSUrl: {
+      title: 'Home MMS URL',
+      type: 'string',
+      description: 'URL of home MMS'
+    },
+    instanceVersion: {
+      title: 'Instance version',
+      type: 'string',
+      description: 'Version of service instance',
+      immutable: true
+    },
+    certDomainName: {
+      title: 'Certificate domain name',
+      type: 'string',
+      description: 'The domain name the service will be available on. Used in the issued certificates for the service.',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    oidcClientId: {
+      title: 'OIDC client ID',
+      type: 'string',
+      description: 'OpenID Connect client ID',
+      visibleFrom: ['detail', 'edit']
+    },
+    oidcClientSecret: {
+      title: 'OIDC client secret',
+      type: 'string',
+      description: 'OpenID Connect client secret',
+      visibleFrom: ['detail', 'edit']
+    },
+    oidcAccessType: {
+      title: 'Access type',
+      type: 'string',
+      description: 'OpenID Connect access type',
+      options: [{
+        title: 'public',
+        value: 'public',
+        showField: {
+          key: 'oidcRedirectUri',
+          value: true
+        }
+      }, {
+        title: 'bearer-only',
+        value: 'bearer-only',
+        showField: {
+          key: 'oidcRedirectUri',
+          value: false
+        }
+      }, {
+        title: 'confidential',
+        value: 'confidential',
+        showField: {
+          key: 'oidcRedirectUri',
+          value: true
+        }
+      }],
+      visibleFrom: ['detail', 'edit']
+    },
+    oidcRedirectUri: {
+      title: 'OIDC redirect URI',
+      type: 'string',
+      description: 'OpenID Connect client redirect URI',
+      visibleFrom: ['detail', 'edit']
+    },
+    vessel: {
+      title: 'Vessel',
+      type: 'vessel',
+      description: 'Correlated vessel',
+      visibleFrom: ['detail', 'edit']
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  user: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      immutable: true,
+      required: true,
+      shortIdType: 'user',
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>:<unique_id>'"
+    },
+    firstName: {
+      title: 'First name',
+      type: 'string',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    lastName: {
+      title: 'Last name',
+      type: 'string',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    email: {
+      title: 'e-mail',
+      type: 'string',
+      description: 'Contact e-mail',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      immutable: true,
+      required: true,
+      error: "Please enter a valid email address"
+    },
+    permissions: {
+      title: 'Permissions',
+      type: 'string',
+      description: 'List of permissions assigned by the organization',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new']
+    },
+    mrnSubsidiary: {
+      title: 'Subsidiary MRN',
+      type: 'string',
+      description: 'Additional MRN assigned to entity',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    homeMMSUrl: {
+      title: 'Home MMS URL',
+      type: 'string',
+      description: 'URL of home MMS'
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  vessel: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    logo: {
+      title: 'Logo',
+      type: 'image',
+      allowedExtensions: ['.jpg', '.png'],
+      visibleFrom: ['detail', 'edit']
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      immutable: true,
+      required: true,
+      shortIdType: 'vessel',
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>:<unique_id>'"
+    },
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of device',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    permissions: {
+      title: 'Permissions',
+      type: 'string',
+      description: 'List of permissions assigned by the organization',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    // vessel specific
+    imoNumber: {
+      title: 'IMO number',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    mmsiNumber: {
+      title: 'MMSI number',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    callsign: {
+      title: 'Call sign',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    flagstate: {
+      title: 'Flag state',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    aisClass: {
+      title: 'AIS class',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    portOfRegister: {
+      title: 'Port of register',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    mrnSubsidiary: {
+      title: 'Subsidiary MRN',
+      type: 'string',
+      description: 'Additional MRN assigned to entity',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    homeMMSUrl: {
+      title: 'Home MMS URL',
+      type: 'string',
+      description: 'URL of home MMS'
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  role: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    permission: {
+      title: 'Permission',
+      type: 'string',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    roleName: {
+      title: 'Role name',
+      type: 'string',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      options: [{
+        title: 'ROLE_SITE_ADMIN',
+        value: 'ROLE_SITE_ADMIN'
+      }, {
+        title: 'ROLE_ORG_ADMIN',
+        value: 'ROLE_ORG_ADMIN'
+      }, {
+        title: 'ROLE_USER',
+        value: 'ROLE_USER'
+      }, {
+        title: 'ROLE_ENTITY_ADMIN',
+        value: 'ROLE_ENTITY_ADMIN'
+      }, {
+        title: 'ROLE_USER_ADMIN',
+        value: 'ROLE_USER_ADMIN'
+      }, {
+        title: 'ROLE_VESSEL_ADMIN',
+        value: 'ROLE_VESSEL_ADMIN'
+      }, {
+        title: 'ROLE_SERVICE_ADMIN',
+        value: 'ROLE_SERVICE_ADMIN'
+      }, {
+        title: 'ROLE_APPROVE_ORG',
+        value: 'ROLE_APPROVE_ORG'
+      }, {
+        title: 'ROLE_DEVICE_ADMIN',
+        value: 'ROLE_DEVICE_ADMIN'
+      }, {
+        title: 'ROLE_MMS_ADMIN',
+        value: 'ROLE_MMS_ADMIN'
+      }],
+      required: true
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  orgcandidate: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      shortIdType: 'organization',
+      immutable: true,
+      required: true,
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>'"
+    },
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of organization',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    mrnSubsidiary: {
+      title: 'Subsidiary MRN',
+      type: 'string',
+      description: 'Additional MRN assigned to entity',
+      visibleFrom: ['detail', 'edit']
+    },
+    homeMMSUrl: {
+      title: 'Home MMS URL',
+      type: 'string',
+      description: 'URL of home MMS'
+    },
+    email: {
+      title: 'e-mail',
+      type: 'string',
+      description: 'Contact e-mail',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true,
+      error: "Please enter a valid email address"
+    },
+    url: {
+      title: 'URL',
+      type: 'string',
+      description: 'URL of organization',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true,
+      error: "Please enter a valid URL"
+    },
+    address: {
+      title: 'Address',
+      type: 'string',
+      description: 'Address of organization',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    country: {
+      title: 'Country',
+      type: 'string',
+      description: 'Country that organization belongs to',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      options: _countryOptions__WEBPACK_IMPORTED_MODULE_0__.countryOptions,
+      required: true
+    },
+    federationType: {
+      title: 'Federation type',
+      type: 'string',
+      description: 'OpenID Connect federation type',
+      visibleFrom: ['detail', 'edit'],
+      immutable: true
+    },
+    createdAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail']
+    },
+    updatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      valuePrepareFunction: timestamp => {
+        return (0,_timeConverter__WEBPACK_IMPORTED_MODULE_1__.convertTime)(timestamp);
+      },
+      immutable: true,
+      visibleFrom: ['detail', 'list']
+    }
+  },
+  instance: {
+    id: {
+      title: 'ID',
+      type: 'number'
+    },
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of service instance',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    version: {
+      title: 'Version',
+      type: 'string',
+      description: 'Version of service instance',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    serviceTypeValue: {
+      title: 'Service type',
+      type: 'string',
+      description: 'Service type of service instance',
+      visibleFrom: ['list']
+    },
+    serviceType: {
+      title: 'Service type',
+      type: 'stringArray',
+      options: [{
+        title: 'MS 1 - VTS Information service (INS)',
+        value: 'VTSInformationService'
+      }, {
+        title: 'MS 2 - VTS Navigational assistance service (NAS)',
+        value: 'VTSNavigationalAssistanceService'
+      }, {
+        title: 'MS 3 - Traffic organization service (TOS)',
+        value: 'TrafficOrganizationService'
+      }, {
+        title: 'MS 4 - Port support service (PSS)',
+        value: 'PortSupportService'
+      }, {
+        title: 'MS 5 - Maritime safety information (MSI) service',
+        value: 'MaritimeSafetyInformationService'
+      }, {
+        title: 'MS 6 - Pilotage service',
+        value: 'PilotageService'
+      }, {
+        title: 'MS 7 - Tug service',
+        value: 'TugService'
+      }, {
+        title: 'MS 8 - Vessel shore reporting',
+        value: 'VesselShoreReporting'
+      }, {
+        title: 'MS 9 - Telemedical assistance service (TMAS)',
+        value: 'TelemedicalAssistanceService'
+      }, {
+        title: 'MS 10 - Maritime assistance service (MAS)',
+        value: 'MaritimeAssistanceService'
+      }, {
+        title: 'MS 11 - Nautical chart service',
+        value: 'NauticalChartService'
+      }, {
+        title: 'MS 12 - Nautical publications service',
+        value: 'NauticalPublicationsService'
+      }, {
+        title: 'MS 13 - Ice navigation service',
+        value: 'IceNavigationService'
+      }, {
+        title: 'MS 14 - Meteorological information service',
+        value: 'MeteorologicalInformationService'
+      }, {
+        title: 'MS 15 - Real-time hydrographic and environmental information services',
+        value: 'RealTimeHydrographicAndEnvironmentalInformationServices'
+      }, {
+        title: 'MS 16 - Search and rescue (SAR) service',
+        value: 'SearchAndRescueService'
+      }, {
+        title: 'Other',
+        value: 'other:etc'
+      }],
+      description: 'The service type shall reflect the associated operational service type provided according to defined types',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    dataProductTypeValue: {
+      title: 'Data product type',
+      type: 'string',
+      description: 'Data product type of service instance',
+      visibleFrom: ['list']
+    },
+    dataProductType: {
+      title: 'Data product type',
+      type: 'stringArray',
+      options: [{
+        title: 'S-57 Electronic Navigational Chart (ENC)',
+        value: 'S57'
+      }, {
+        title: 'S-101 Electronic Navigational Chart (ENC)',
+        value: 'S101'
+      }, {
+        title: 'S-102 Bathymetric Surface',
+        value: 'S102'
+      }, {
+        title: 'S-104 Water Level Information for Surface Navigation',
+        value: 'S104'
+      }, {
+        title: 'S-111 Surface Currents',
+        value: 'S111'
+      }, {
+        title: 'S-122 Marine Protected Areas (MPAs)',
+        value: 'S122'
+      }, {
+        title: 'S-123 Marine Radio Services',
+        value: 'S123'
+      }, {
+        title: 'S-124 Navigational Warnings',
+        value: 'S124'
+      }, {
+        title: 'S-125 Marine Navigational Services',
+        value: 'S125'
+      }, {
+        title: 'S-126 Marine Physical Environment',
+        value: 'S126'
+      }, {
+        title: 'S-127 Marine Traffic Management',
+        value: 'S127'
+      }, {
+        title: 'S-128 Catalogue of Nautical Products',
+        value: 'S128'
+      }, {
+        title: 'S-129 Under Keel Clearance Management (UKCM)',
+        value: 'S129'
+      }, {
+        title: 'S-131 Marine Harbour Infrastructure',
+        value: 'S131'
+      }, {
+        title: 'S-210 Inter-VTS Exchange Format',
+        value: 'S210'
+      }, {
+        title: 'S-211 Port Call Message Format',
+        value: 'S211'
+      }, {
+        title: 'S-212 VTS Digital Information Service',
+        value: 'S212'
+      }, {
+        title: 'S-401 Inland ENC',
+        value: 'S401'
+      }, {
+        title: 'S-402 Bathymetric Contour Overlay for Inland ENC',
+        value: 'S402'
+      }, {
+        title: 'S-411 Sea Ice Information',
+        value: 'S411'
+      }, {
+        title: 'S-412 Weather Overlay',
+        value: 'S412'
+      }, {
+        title: 'S-413 Marine Weather Conditions',
+        value: 'S413'
+      }, {
+        title: 'S-414 Marine Weather Observations',
+        value: 'S414'
+      }, {
+        title: 'S-421 Route Plan',
+        value: 'S421'
+      }, {
+        title: 'Route Plan',
+        value: 'RTZ'
+      }, {
+        title: 'Electronic Port Clearance',
+        value: 'EPC'
+      }, {
+        title: 'Other data types not covered in this table',
+        value: 'OTHER'
+      }],
+      description: 'Data product type defined in IEC 63173-2 SECOM standard',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    status: {
+      title: 'Status',
+      type: 'string',
+      options: [{
+        title: 'Provisional',
+        value: 'PROVISIONAL'
+      }, {
+        title: 'Released',
+        value: 'RELEASED'
+      }, {
+        title: 'Deprecated',
+        value: 'DEPRECATED'
+      }, {
+        title: 'Deleted',
+        value: 'DELETED'
+      }],
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new'],
+      required: true
+    },
+    endpointUri: {
+      title: 'Endpoint URI',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    endpointType: {
+      title: 'Endpoint type',
+      type: 'string',
+      visibleFrom: []
+    },
+    organizationId: {
+      title: 'Organization ID',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    keywords: {
+      title: 'Keywords',
+      type: 'stringArray',
+      placeholder: 'Please enter keyword',
+      visibleFrom: ['detail', 'list', 'edit', 'edit-new']
+    },
+    instanceId: {
+      title: 'Instance ID',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      placeholder: 'urn:mrn:',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>'",
+      required: true
+    },
+    implementsServiceDesign: {
+      title: 'Technical design ID',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      placeholder: 'urn:mrn:',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    implementsServiceDesignVersion: {
+      title: 'Technical design version',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'edit', 'edit-new']
+    },
+    comment: {
+      title: 'Comment',
+      type: 'string',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    geometryContentType: {
+      title: 'Geometry content type',
+      type: 'string',
+      visibleFrom: []
+    },
+    geometry: {
+      title: 'Geometry',
+      type: 'object',
+      visibleFrom: []
+    },
+    unlocode: {
+      title: 'Unlocode',
+      type: 'string',
+      placeholder: 'Please enter UN/LOCODE',
+      visibleFrom: []
+    },
+    mmsi: {
+      title: 'MMSI',
+      type: 'string',
+      visibleFrom: []
+    },
+    imo: {
+      title: 'IMO number',
+      type: 'string',
+      visibleFrom: []
+    },
+    instanceAsXml: {
+      title: 'Instance as XML',
+      type: 'file',
+      visibleFrom: ['detail']
+    },
+    instanceAsXmlName: {
+      title: 'Instance as XML',
+      type: 'xml',
+      visibleFrom: ['edit', 'edit-new']
+    },
+    instanceAsDocId: {
+      title: 'Instance as DocId',
+      type: 'number'
+    },
+    instanceAsDoc: {
+      title: 'Instance as document',
+      type: 'file',
+      visibleFrom: ['detail']
+    },
+    instanceAsDocName: {
+      title: 'Instance as document',
+      type: 'file',
+      visibleFrom: ['edit', 'edit-new']
+    },
+    ledgerRequestId: {
+      title: 'Ledger Request ID',
+      type: 'number'
+    },
+    ledgerRequestStatus: {
+      title: 'Ledger Request status',
+      type: 'string',
+      options: [{
+        title: 'Inactive',
+        value: 'INACTIVE'
+      }, {
+        title: 'Created',
+        value: 'CREATED'
+      }, {
+        title: 'Vetting',
+        value: 'VETTING'
+      }, {
+        title: 'Vetted',
+        value: 'VETTED'
+      }, {
+        title: 'Requesting',
+        value: 'REQUESTING'
+      }, {
+        title: 'Succeeded',
+        value: 'SUCCEEDED'
+      }, {
+        title: 'Failed',
+        value: 'FAILED'
+      }, {
+        title: 'Rejected',
+        value: 'REJECTED'
+      }],
+      visibleFrom: []
+    },
+    docIds: {
+      title: 'Related documents',
+      type: 'fileArray',
+      filter: false,
+      visibleFrom: []
+    },
+    publishedAt: {
+      title: 'Created at',
+      type: 'string',
+      description: 'Time of creation',
+      filter: false,
+      immutable: true,
+      visibleFrom: []
+    },
+    lastUpdatedAt: {
+      title: 'Updated at',
+      type: 'string',
+      description: 'Time of last update',
+      filter: false,
+      immutable: true,
+      visibleFrom: ['detail']
+    }
+  },
+  searchobjectresult: {
+    instanceId: {
+      title: "Instance ID",
+      type: "string",
+      description: "MCP MRN as unique identifier",
+      placeholder: "urn:mrn:",
+      visibleFrom: ["detail", "edit", "edit-new"]
+    },
+    name: {
+      title: "Name",
+      type: "string",
+      description: "Name of service instance",
+      visibleFrom: ["detail", "list", "edit", "edit-new"]
+    },
+    version: {
+      title: "Version",
+      type: "string",
+      description: "Version of service instance",
+      visibleFrom: ["detail", "list", "edit", "edit-new"]
+    },
+    status: {
+      title: "Status",
+      type: "string",
+      options: [{
+        title: "Provisional",
+        value: "PROVISIONAL"
+      }, {
+        title: "Released",
+        value: "RELEASED"
+      }, {
+        title: "Deprecated",
+        value: "DEPRECATED"
+      }, {
+        title: "Deleted",
+        value: "DELETED"
+      }],
+      visibleFrom: ["detail", "list", "edit", "edit-new"]
+    },
+    description: {
+      title: "Description",
+      type: "string",
+      visibleFrom: ["detail", "edit", "edit-new"]
+    },
+    dataProductType: {
+      title: "Data product type",
+      type: "stringArray",
+      options: [{
+        title: "S-57 Electronic Navigational Chart (ENC)",
+        value: "S57"
+      }, {
+        title: "S-101 Electronic Navigational Chart (ENC)",
+        value: "S101"
+      }, {
+        title: "S-102 Bathymetric Surface",
+        value: "S102"
+      }],
+      description: "Data product type defined in IEC 63173-2 SECOM standard",
+      visibleFrom: ["edit", "edit-new"]
+    },
+    organizationId: {
+      title: "Organization ID",
+      type: "string",
+      visibleFrom: ["detail", "edit", "edit-new"]
+    },
+    endpointUri: {
+      title: "Endpoint URI",
+      type: "string",
+      visibleFrom: ["detail", "edit", "edit-new"]
+    },
+    endpointType: {
+      title: "Endpoint type",
+      type: "string",
+      visibleFrom: []
+    },
+    keywords: {
+      title: "Keywords",
+      type: "stringArray",
+      placeholder: "Please enter keyword",
+      visibleFrom: ["detail", "list", "edit", "edit-new"]
+    },
+    unlocode: {
+      title: "Unlocode",
+      type: "string",
+      placeholder: "Please enter UN/LOCODE",
+      visibleFrom: []
+    },
+    instanceAsXml: {
+      title: "Instance as XML",
+      type: "file",
+      visibleFrom: []
+    },
+    publishedAt: {
+      title: "Created at",
+      type: "string",
+      description: "Time of creation",
+      filter: false,
+      immutable: true,
+      visibleFrom: []
+    },
+    lastUpdatedAt: {
+      title: "Updated at",
+      type: "string",
+      description: "Time of last update",
+      filter: false,
+      immutable: true,
+      visibleFrom: ["detail"]
+    },
+    comment: {
+      title: "Comment",
+      type: "string",
+      description: "Comment description",
+      visibleFrom: ["detail", "edit", "edit-new"],
+      required: true
+    },
+    mmsi: {
+      title: "MMSI",
+      type: "string",
+      visibleFrom: []
+    },
+    imo: {
+      title: "IMO number",
+      type: "string",
+      visibleFrom: []
+    },
+    geometry: {
+      title: "Geometry",
+      type: "object",
+      visibleFrom: []
+    }
+  },
+  newOrganization: {
+    orgMrn: {
+      title: 'Maritime Resource Name (MRN) for organization',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true,
+      shortIdType: 'organization',
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>'"
+    },
+    orgName: {
+      title: 'Organization name',
+      type: 'string',
+      description: 'Name of organization',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    orgEmail: {
+      title: 'Organization contact e-mail',
+      type: 'string',
+      description: 'Contact e-mail',
+      placeholder: 'non-personal email, e.g., info@example.org',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    orgUrl: {
+      title: 'URL of organization',
+      type: 'string',
+      description: 'URL of organization',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    orgAddress: {
+      title: 'Address of organization',
+      type: 'string',
+      description: 'Address of organization',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      required: true
+    },
+    orgCountry: {
+      title: 'Country of organization',
+      type: 'stringArray',
+      description: 'Country that organization belongs to',
+      visibleFrom: ['detail', 'edit', 'edit-new'],
+      options: _countryOptions__WEBPACK_IMPORTED_MODULE_0__.countryOptions,
+      required: true
+    }
+  },
+  ledgerInstance: {
+    name: {
+      title: 'Name',
+      type: 'string',
+      description: 'Name of service instance',
+      visibleFrom: ['list']
+    },
+    mrn: {
+      title: 'MRN',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['list'],
+      error: "Please enter a valid MCP MRN, respecting the format 'urn:mrn:mcp:<entity_type>:<id_provider_id>:<org_id>'"
+    },
+    version: {
+      title: 'Version',
+      type: 'string',
+      description: 'Version of service instance',
+      visibleFrom: ['list']
+    },
+    keywords: {
+      title: 'Keywords',
+      type: 'string',
+      visibleFrom: ['list']
+    },
+    coverageArea: {
+      title: 'Coverage ',
+      type: 'string'
+    },
+    status: {
+      title: 'Status',
+      type: 'string',
+      options: [{
+        title: 'Provisional',
+        value: 'PROVISIONAL'
+      }, {
+        title: 'Released',
+        value: 'RELEASED'
+      }, {
+        title: 'Deprecated',
+        value: 'DEPRECATED'
+      }, {
+        title: 'Deleted',
+        value: 'DELETED'
+      }],
+      visibleFrom: ['list']
+    },
+    implementsDesignMRN: {
+      title: 'Technical design ID',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['list'],
+      shortIdType: 'design',
+      immutable: true
+    },
+    implementsDesignVersion: {
+      title: 'Technical design version',
+      type: 'string',
+      description: 'MCP MRN as unique identifer',
+      visibleFrom: ['list']
+    },
+    msrName: {
+      title: 'MSR Name of register',
+      type: 'string',
+      visibleFrom: ['list']
+    },
+    msrUrl: {
+      title: 'MSR URL of register',
+      type: 'string',
+      visibleFrom: ['list']
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 80781:
+/*!******************************************!*\
+  !*** ./src/app/common/countryOptions.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   countryOptions: () => (/* binding */ countryOptions)
+/* harmony export */ });
+/*
+ * Copyright (c) 2025 Maritime Connectivity Platform Consortium
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * country information collection for the country select menu
+ */
+const countryOptions = [{
+  code: "AF",
+  code3: "AFG",
+  title: "Afghanistan",
+  value: "Afghanistan"
+}, {
+  code: "AL",
+  code3: "ALB",
+  title: "Albania",
+  value: "Albania"
+}, {
+  code: "DZ",
+  code3: "DZA",
+  title: "Algeria",
+  value: "Algeria"
+}, {
+  code: "AS",
+  code3: "ASM",
+  title: "American Samoa",
+  value: "American Samoa"
+}, {
+  code: "AD",
+  code3: "AND",
+  title: "Andorra",
+  value: "Andorra"
+}, {
+  code: "AO",
+  code3: "AGO",
+  title: "Angola",
+  value: "Angola"
+}, {
+  code: "AI",
+  code3: "AIA",
+  title: "Anguilla",
+  value: "Anguilla"
+}, {
+  code: "AQ",
+  code3: "ATA",
+  title: "Antarctica",
+  value: "Antarctica"
+}, {
+  code: "AG",
+  code3: "ATG",
+  title: "Antigua and Barbuda",
+  value: "Antigua and Barbuda"
+}, {
+  code: "AR",
+  code3: "ARG",
+  title: "Argentina",
+  value: "Argentina"
+}, {
+  code: "AM",
+  code3: "ARM",
+  title: "Armenia",
+  value: "Armenia"
+}, {
+  code: "AW",
+  code3: "ABW",
+  title: "Aruba",
+  value: "Aruba"
+}, {
+  code: "AU",
+  code3: "AUS",
+  title: "Australia",
+  value: "Australia"
+}, {
+  code: "AT",
+  code3: "AUT",
+  title: "Austria",
+  value: "Austria"
+}, {
+  code: "AZ",
+  code3: "AZE",
+  title: "Azerbaijan",
+  value: "Azerbaijan"
+}, {
+  code: "BS",
+  code3: "BHS",
+  title: "Bahamas (the)",
+  value: "Bahamas (the)"
+}, {
+  code: "BH",
+  code3: "BHR",
+  title: "Bahrain",
+  value: "Bahrain"
+}, {
+  code: "BD",
+  code3: "BGD",
+  title: "Bangladesh",
+  value: "Bangladesh"
+}, {
+  code: "BB",
+  code3: "BRB",
+  title: "Barbados",
+  value: "Barbados"
+}, {
+  code: "BY",
+  code3: "BLR",
+  title: "Belarus",
+  value: "Belarus"
+}, {
+  code: "BE",
+  code3: "BEL",
+  title: "Belgium",
+  value: "Belgium"
+}, {
+  code: "BZ",
+  code3: "BLZ",
+  title: "Belize",
+  value: "Belize"
+}, {
+  code: "BJ",
+  code3: "BEN",
+  title: "Benin",
+  value: "Benin"
+}, {
+  code: "BM",
+  code3: "BMU",
+  title: "Bermuda",
+  value: "Bermuda"
+}, {
+  code: "BT",
+  code3: "BTN",
+  title: "Bhutan",
+  value: "Bhutan"
+}, {
+  code: "BO",
+  code3: "BOL",
+  title: "Bolivia (Plurinational State of)",
+  value: "Bolivia (Plurinational State of)"
+}, {
+  code: "BQ",
+  code3: "BES",
+  title: "Bonaire, Sint Eustatius and Saba",
+  value: "Bonaire, Sint Eustatius and Saba"
+}, {
+  code: "BA",
+  code3: "BIH",
+  title: "Bosnia and Herzegovina",
+  value: "Bosnia and Herzegovina"
+}, {
+  code: "BW",
+  code3: "BWA",
+  title: "Botswana",
+  value: "Botswana"
+}, {
+  code: "BV",
+  code3: "BVT",
+  title: "Bouvet Island",
+  value: "Bouvet Island"
+}, {
+  code: "BR",
+  code3: "BRA",
+  title: "Brazil",
+  value: "Brazil"
+}, {
+  code: "IO",
+  code3: "IOT",
+  title: "British Indian Ocean Territory (the)",
+  value: "British Indian Ocean Territory (the)"
+}, {
+  code: "BN",
+  code3: "BRN",
+  title: "Brunei Darussalam",
+  value: "Brunei Darussalam"
+}, {
+  code: "BG",
+  code3: "BGR",
+  title: "Bulgaria",
+  value: "Bulgaria"
+}, {
+  code: "BF",
+  code3: "BFA",
+  title: "Burkina Faso",
+  value: "Burkina Faso"
+}, {
+  code: "BI",
+  code3: "BDI",
+  title: "Burundi",
+  value: "Burundi"
+}, {
+  code: "CV",
+  code3: "CPV",
+  title: "Cabo Verde",
+  value: "Cabo Verde"
+}, {
+  code: "KH",
+  code3: "KHM",
+  title: "Cambodia",
+  value: "Cambodia"
+}, {
+  code: "CM",
+  code3: "CMR",
+  title: "Cameroon",
+  value: "Cameroon"
+}, {
+  code: "CA",
+  code3: "CAN",
+  title: "Canada",
+  value: "Canada"
+}, {
+  code: "KY",
+  code3: "CYM",
+  title: "Cayman Islands (the)",
+  value: "Cayman Islands (the)"
+}, {
+  code: "CF",
+  code3: "CAF",
+  title: "Central African Republic (the)",
+  value: "Central African Republic (the)"
+}, {
+  code: "TD",
+  code3: "TCD",
+  title: "Chad",
+  value: "Chad"
+}, {
+  code: "CL",
+  code3: "CHL",
+  title: "Chile",
+  value: "Chile"
+}, {
+  code: "CN",
+  code3: "CHN",
+  title: "China",
+  value: "China"
+}, {
+  code: "CX",
+  code3: "CXR",
+  title: "Christmas Island",
+  value: "Christmas Island"
+}, {
+  code: "CC",
+  code3: "CCK",
+  title: "Cocos (Keeling) Islands (the)",
+  value: "Cocos (Keeling) Islands (the)"
+}, {
+  code: "CO",
+  code3: "COL",
+  title: "Colombia",
+  value: "Colombia"
+}, {
+  code: "KM",
+  code3: "COM",
+  title: "Comoros (the)",
+  value: "Comoros (the)"
+}, {
+  code: "CD",
+  code3: "COD",
+  title: "Congo (the Democratic Republic of the)",
+  value: "Congo (the Democratic Republic of the)"
+}, {
+  code: "CG",
+  code3: "COG",
+  title: "Congo (the)",
+  value: "Congo (the)"
+}, {
+  code: "CK",
+  code3: "COK",
+  title: "Cook Islands (the)",
+  value: "Cook Islands (the)"
+}, {
+  code: "CR",
+  code3: "CRI",
+  title: "Costa Rica",
+  value: "Costa Rica"
+}, {
+  code: "HR",
+  code3: "HRV",
+  title: "Croatia",
+  value: "Croatia"
+}, {
+  code: "CU",
+  code3: "CUB",
+  title: "Cuba",
+  value: "Cuba"
+}, {
+  code: "CW",
+  code3: "CUW",
+  title: "Curaçao",
+  value: "Curaçao"
+}, {
+  code: "CY",
+  code3: "CYP",
+  title: "Cyprus",
+  value: "Cyprus"
+}, {
+  code: "CZ",
+  code3: "CZE",
+  title: "Czechia",
+  value: "Czechia"
+}, {
+  code: "CI",
+  code3: "CIV",
+  title: "Côte d'Ivoire",
+  value: "Côte d'Ivoire"
+}, {
+  code: "DK",
+  code3: "DNK",
+  title: "Denmark",
+  value: "Denmark"
+}, {
+  code: "DJ",
+  code3: "DJI",
+  title: "Djibouti",
+  value: "Djibouti"
+}, {
+  code: "DM",
+  code3: "DMA",
+  title: "Dominica",
+  value: "Dominica"
+}, {
+  code: "DO",
+  code3: "DOM",
+  title: "Dominican Republic (the)",
+  value: "Dominican Republic (the)"
+}, {
+  code: "EC",
+  code3: "ECU",
+  title: "Ecuador",
+  value: "Ecuador"
+}, {
+  code: "EG",
+  code3: "EGY",
+  title: "Egypt",
+  value: "Egypt"
+}, {
+  code: "SV",
+  code3: "SLV",
+  title: "El Salvador",
+  value: "El Salvador"
+}, {
+  code: "GQ",
+  code3: "GNQ",
+  title: "Equatorial Guinea",
+  value: "Equatorial Guinea"
+}, {
+  code: "ER",
+  code3: "ERI",
+  title: "Eritrea",
+  value: "Eritrea"
+}, {
+  code: "EE",
+  code3: "EST",
+  title: "Estonia",
+  value: "Estonia"
+}, {
+  code: "SZ",
+  code3: "SWZ",
+  title: "Eswatini",
+  value: "Eswatini"
+}, {
+  code: "ET",
+  code3: "ETH",
+  title: "Ethiopia",
+  value: "Ethiopia"
+}, {
+  code: "FK",
+  code3: "FLK",
+  title: "Falkland Islands (the) [Malvinas]",
+  value: "Falkland Islands (the) [Malvinas]"
+}, {
+  code: "FO",
+  code3: "FRO",
+  title: "Faroe Islands (the)",
+  value: "Faroe Islands (the)"
+}, {
+  code: "FJ",
+  code3: "FJI",
+  title: "Fiji",
+  value: "Fiji"
+}, {
+  code: "FI",
+  code3: "FIN",
+  title: "Finland",
+  value: "Finland"
+}, {
+  code: "FR",
+  code3: "FRA",
+  title: "France",
+  value: "France"
+}, {
+  code: "GF",
+  code3: "GUF",
+  title: "French Guiana",
+  value: "French Guiana"
+}, {
+  code: "PF",
+  code3: "PYF",
+  title: "French Polynesia",
+  value: "French Polynesia"
+}, {
+  code: "TF",
+  code3: "ATF",
+  title: "French Southern Territories (the)",
+  value: "French Southern Territories (the)"
+}, {
+  code: "GA",
+  code3: "GAB",
+  title: "Gabon",
+  value: "Gabon"
+}, {
+  code: "GM",
+  code3: "GMB",
+  title: "Gambia (the)",
+  value: "Gambia (the)"
+}, {
+  code: "GE",
+  code3: "GEO",
+  title: "Georgia",
+  value: "Georgia"
+}, {
+  code: "DE",
+  code3: "DEU",
+  title: "Germany",
+  value: "Germany"
+}, {
+  code: "GH",
+  code3: "GHA",
+  title: "Ghana",
+  value: "Ghana"
+}, {
+  code: "GI",
+  code3: "GIB",
+  title: "Gibraltar",
+  value: "Gibraltar"
+}, {
+  code: "GR",
+  code3: "GRC",
+  title: "Greece",
+  value: "Greece"
+}, {
+  code: "GL",
+  code3: "GRL",
+  title: "Greenland",
+  value: "Greenland"
+}, {
+  code: "GD",
+  code3: "GRD",
+  title: "Grenada",
+  value: "Grenada"
+}, {
+  code: "GP",
+  code3: "GLP",
+  title: "Guadeloupe",
+  value: "Guadeloupe"
+}, {
+  code: "GU",
+  code3: "GUM",
+  title: "Guam",
+  value: "Guam"
+}, {
+  code: "GT",
+  code3: "GTM",
+  title: "Guatemala",
+  value: "Guatemala"
+}, {
+  code: "GG",
+  code3: "GGY",
+  title: "Guernsey",
+  value: "Guernsey"
+}, {
+  code: "GN",
+  code3: "GIN",
+  title: "Guinea",
+  value: "Guinea"
+}, {
+  code: "GW",
+  code3: "GNB",
+  title: "Guinea-Bissau",
+  value: "Guinea-Bissau"
+}, {
+  code: "GY",
+  code3: "GUY",
+  title: "Guyana",
+  value: "Guyana"
+}, {
+  code: "HT",
+  code3: "HTI",
+  title: "Haiti",
+  value: "Haiti"
+}, {
+  code: "HM",
+  code3: "HMD",
+  title: "Heard Island and McDonald Islands",
+  value: "Heard Island and McDonald Islands"
+}, {
+  code: "VA",
+  code3: "VAT",
+  title: "Holy See (the)",
+  value: "Holy See (the)"
+}, {
+  code: "HN",
+  code3: "HND",
+  title: "Honduras",
+  value: "Honduras"
+}, {
+  code: "HK",
+  code3: "HKG",
+  title: "Hong Kong",
+  value: "Hong Kong"
+}, {
+  code: "HU",
+  code3: "HUN",
+  title: "Hungary",
+  value: "Hungary"
+}, {
+  code: "IS",
+  code3: "ISL",
+  title: "Iceland",
+  value: "Iceland"
+}, {
+  code: "IN",
+  code3: "IND",
+  title: "India",
+  value: "India"
+}, {
+  code: "ID",
+  code3: "IDN",
+  title: "Indonesia",
+  value: "Indonesia"
+}, {
+  code: "IR",
+  code3: "IRN",
+  title: "Iran (Islamic Republic of)",
+  value: "Iran (Islamic Republic of)"
+}, {
+  code: "IQ",
+  code3: "IRQ",
+  title: "Iraq",
+  value: "Iraq"
+}, {
+  code: "IE",
+  code3: "IRL",
+  title: "Ireland",
+  value: "Ireland"
+}, {
+  code: "IM",
+  code3: "IMN",
+  title: "Isle of Man",
+  value: "Isle of Man"
+}, {
+  code: "IL",
+  code3: "ISR",
+  title: "Israel",
+  value: "Israel"
+}, {
+  code: "IT",
+  code3: "ITA",
+  title: "Italy",
+  value: "Italy"
+}, {
+  code: "JM",
+  code3: "JAM",
+  title: "Jamaica",
+  value: "Jamaica"
+}, {
+  code: "JP",
+  code3: "JPN",
+  title: "Japan",
+  value: "Japan"
+}, {
+  code: "JE",
+  code3: "JEY",
+  title: "Jersey",
+  value: "Jersey"
+}, {
+  code: "JO",
+  code3: "JOR",
+  title: "Jordan",
+  value: "Jordan"
+}, {
+  code: "KZ",
+  code3: "KAZ",
+  title: "Kazakhstan",
+  value: "Kazakhstan"
+}, {
+  code: "KE",
+  code3: "KEN",
+  title: "Kenya",
+  value: "Kenya"
+}, {
+  code: "KI",
+  code3: "KIR",
+  title: "Kiribati",
+  value: "Kiribati"
+}, {
+  code: "KP",
+  code3: "PRK",
+  title: "Korea (the Democratic People's Republic of)",
+  value: "Korea (the Democratic People's Republic of)"
+}, {
+  code: "KR",
+  code3: "KOR",
+  title: "Korea (the Republic of)",
+  value: "Korea (the Republic of)"
+}, {
+  code: "KW",
+  code3: "KWT",
+  title: "Kuwait",
+  value: "Kuwait"
+}, {
+  code: "KG",
+  code3: "KGZ",
+  title: "Kyrgyzstan",
+  value: "Kyrgyzstan"
+}, {
+  code: "LA",
+  code3: "LAO",
+  title: "Lao People's Democratic Republic (the)",
+  value: "Lao People's Democratic Republic (the)"
+}, {
+  code: "LV",
+  code3: "LVA",
+  title: "Latvia",
+  value: "Latvia"
+}, {
+  code: "LB",
+  code3: "LBN",
+  title: "Lebanon",
+  value: "Lebanon"
+}, {
+  code: "LS",
+  code3: "LSO",
+  title: "Lesotho",
+  value: "Lesotho"
+}, {
+  code: "LR",
+  code3: "LBR",
+  title: "Liberia",
+  value: "Liberia"
+}, {
+  code: "LY",
+  code3: "LBY",
+  title: "Libya",
+  value: "Libya"
+}, {
+  code: "LI",
+  code3: "LIE",
+  title: "Liechtenstein",
+  value: "Liechtenstein"
+}, {
+  code: "LT",
+  code3: "LTU",
+  title: "Lithuania",
+  value: "Lithuania"
+}, {
+  code: "LU",
+  code3: "LUX",
+  title: "Luxembourg",
+  value: "Luxembourg"
+}, {
+  code: "MO",
+  code3: "MAC",
+  title: "Macao",
+  value: "Macao"
+}, {
+  code: "MG",
+  code3: "MDG",
+  title: "Madagascar",
+  value: "Madagascar"
+}, {
+  code: "MW",
+  code3: "MWI",
+  title: "Malawi",
+  value: "Malawi"
+}, {
+  code: "MY",
+  code3: "MYS",
+  title: "Malaysia",
+  value: "Malaysia"
+}, {
+  code: "MV",
+  code3: "MDV",
+  title: "Maldives",
+  value: "Maldives"
+}, {
+  code: "ML",
+  code3: "MLI",
+  title: "Mali",
+  value: "Mali"
+}, {
+  code: "MT",
+  code3: "MLT",
+  title: "Malta",
+  value: "Malta"
+}, {
+  code: "MH",
+  code3: "MHL",
+  title: "Marshall Islands (the)",
+  value: "Marshall Islands (the)"
+}, {
+  code: "MQ",
+  code3: "MTQ",
+  title: "Martinique",
+  value: "Martinique"
+}, {
+  code: "MR",
+  code3: "MRT",
+  title: "Mauritania",
+  value: "Mauritania"
+}, {
+  code: "MU",
+  code3: "MUS",
+  title: "Mauritius",
+  value: "Mauritius"
+}, {
+  code: "YT",
+  code3: "MYT",
+  title: "Mayotte",
+  value: "Mayotte"
+}, {
+  code: "MX",
+  code3: "MEX",
+  title: "Mexico",
+  value: "Mexico"
+}, {
+  code: "FM",
+  code3: "FSM",
+  title: "Micronesia (Federated States of)",
+  value: "Micronesia (Federated States of)"
+}, {
+  code: "MD",
+  code3: "MDA",
+  title: "Moldova (the Republic of)",
+  value: "Moldova (the Republic of)"
+}, {
+  code: "MC",
+  code3: "MCO",
+  title: "Monaco",
+  value: "Monaco"
+}, {
+  code: "MN",
+  code3: "MNG",
+  title: "Mongolia",
+  value: "Mongolia"
+}, {
+  code: "ME",
+  code3: "MNE",
+  title: "Montenegro",
+  value: "Montenegro"
+}, {
+  code: "MS",
+  code3: "MSR",
+  title: "Montserrat",
+  value: "Montserrat"
+}, {
+  code: "MA",
+  code3: "MAR",
+  title: "Morocco",
+  value: "Morocco"
+}, {
+  code: "MZ",
+  code3: "MOZ",
+  title: "Mozambique",
+  value: "Mozambique"
+}, {
+  code: "MM",
+  code3: "MMR",
+  title: "Myanmar",
+  value: "Myanmar"
+}, {
+  code: "NA",
+  code3: "NAM",
+  title: "Namibia",
+  value: "Namibia"
+}, {
+  code: "NR",
+  code3: "NRU",
+  title: "Nauru",
+  value: "Nauru"
+}, {
+  code: "NP",
+  code3: "NPL",
+  title: "Nepal",
+  value: "Nepal"
+}, {
+  code: "NL",
+  code3: "NLD",
+  title: "Netherlands (the)",
+  value: "Netherlands (the)"
+}, {
+  code: "NC",
+  code3: "NCL",
+  title: "New Caledonia",
+  value: "New Caledonia"
+}, {
+  code: "NZ",
+  code3: "NZL",
+  title: "New Zealand",
+  value: "New Zealand"
+}, {
+  code: "NI",
+  code3: "NIC",
+  title: "Nicaragua",
+  value: "Nicaragua"
+}, {
+  code: "NE",
+  code3: "NER",
+  title: "Niger (the)",
+  value: "Niger (the)"
+}, {
+  code: "NG",
+  code3: "NGA",
+  title: "Nigeria",
+  value: "Nigeria"
+}, {
+  code: "NU",
+  code3: "NIU",
+  title: "Niue",
+  value: "Niue"
+}, {
+  code: "NF",
+  code3: "NFK",
+  title: "Norfolk Island",
+  value: "Norfolk Island"
+}, {
+  code: "MP",
+  code3: "MNP",
+  title: "Northern Mariana Islands (the)",
+  value: "Northern Mariana Islands (the)"
+}, {
+  code: "NO",
+  code3: "NOR",
+  title: "Norway",
+  value: "Norway"
+}, {
+  code: "OM",
+  code3: "OMN",
+  title: "Oman",
+  value: "Oman"
+}, {
+  code: "PK",
+  code3: "PAK",
+  title: "Pakistan",
+  value: "Pakistan"
+}, {
+  code: "PW",
+  code3: "PLW",
+  title: "Palau",
+  value: "Palau"
+}, {
+  code: "PS",
+  code3: "PSE",
+  title: "Palestine, State of",
+  value: "Palestine, State of"
+}, {
+  code: "PA",
+  code3: "PAN",
+  title: "Panama",
+  value: "Panama"
+}, {
+  code: "PG",
+  code3: "PNG",
+  title: "Papua New Guinea",
+  value: "Papua New Guinea"
+}, {
+  code: "PY",
+  code3: "PRY",
+  title: "Paraguay",
+  value: "Paraguay"
+}, {
+  code: "PE",
+  code3: "PER",
+  title: "Peru",
+  value: "Peru"
+}, {
+  code: "PH",
+  code3: "PHL",
+  title: "Philippines (the)",
+  value: "Philippines (the)"
+}, {
+  code: "PN",
+  code3: "PCN",
+  title: "Pitcairn",
+  value: "Pitcairn"
+}, {
+  code: "PL",
+  code3: "POL",
+  title: "Poland",
+  value: "Poland"
+}, {
+  code: "PT",
+  code3: "PRT",
+  title: "Portugal",
+  value: "Portugal"
+}, {
+  code: "PR",
+  code3: "PRI",
+  title: "Puerto Rico",
+  value: "Puerto Rico"
+}, {
+  code: "QA",
+  code3: "QAT",
+  title: "Qatar",
+  value: "Qatar"
+}, {
+  code: "MK",
+  code3: "MKD",
+  title: "Republic of North Macedonia",
+  value: "Republic of North Macedonia"
+}, {
+  code: "RO",
+  code3: "ROU",
+  title: "Romania",
+  value: "Romania"
+}, {
+  code: "RU",
+  code3: "RUS",
+  title: "Russian Federation (the)",
+  value: "Russian Federation (the)"
+}, {
+  code: "RW",
+  code3: "RWA",
+  title: "Rwanda",
+  value: "Rwanda"
+}, {
+  code: "RE",
+  code3: "REU",
+  title: "Réunion",
+  value: "Réunion"
+}, {
+  code: "BL",
+  code3: "BLM",
+  title: "Saint Barthélemy",
+  value: "Saint Barthélemy"
+}, {
+  code: "SH",
+  code3: "SHN",
+  title: "Saint Helena, Ascension and Tristan da Cunha",
+  value: "Saint Helena, Ascension and Tristan da Cunha"
+}, {
+  code: "KN",
+  code3: "KNA",
+  title: "Saint Kitts and Nevis",
+  value: "Saint Kitts and Nevis"
+}, {
+  code: "LC",
+  code3: "LCA",
+  title: "Saint Lucia",
+  value: "Saint Lucia"
+}, {
+  code: "MF",
+  code3: "MAF",
+  title: "Saint Martin (French part)",
+  value: "Saint Martin (French part)"
+}, {
+  code: "PM",
+  code3: "SPM",
+  title: "Saint Pierre and Miquelon",
+  value: "Saint Pierre and Miquelon"
+}, {
+  code: "VC",
+  code3: "VCT",
+  title: "Saint Vincent and the Grenadines",
+  value: "Saint Vincent and the Grenadines"
+}, {
+  code: "WS",
+  code3: "WSM",
+  title: "Samoa",
+  value: "Samoa"
+}, {
+  code: "SM",
+  code3: "SMR",
+  title: "San Marino",
+  value: "San Marino"
+}, {
+  code: "ST",
+  code3: "STP",
+  title: "Sao Tome and Principe",
+  value: "Sao Tome and Principe"
+}, {
+  code: "SA",
+  code3: "SAU",
+  title: "Saudi Arabia",
+  value: "Saudi Arabia"
+}, {
+  code: "SN",
+  code3: "SEN",
+  title: "Senegal",
+  value: "Senegal"
+}, {
+  code: "RS",
+  code3: "SRB",
+  title: "Serbia",
+  value: "Serbia"
+}, {
+  code: "SC",
+  code3: "SYC",
+  title: "Seychelles",
+  value: "Seychelles"
+}, {
+  code: "SL",
+  code3: "SLE",
+  title: "Sierra Leone",
+  value: "Sierra Leone"
+}, {
+  code: "SG",
+  code3: "SGP",
+  title: "Singapore",
+  value: "Singapore"
+}, {
+  code: "SX",
+  code3: "SXM",
+  title: "Sint Maarten (Dutch part)",
+  value: "Sint Maarten (Dutch part)"
+}, {
+  code: "SK",
+  code3: "SVK",
+  title: "Slovakia",
+  value: "Slovakia"
+}, {
+  code: "SI",
+  code3: "SVN",
+  title: "Slovenia",
+  value: "Slovenia"
+}, {
+  code: "SB",
+  code3: "SLB",
+  title: "Solomon Islands",
+  value: "Solomon Islands"
+}, {
+  code: "SO",
+  code3: "SOM",
+  title: "Somalia",
+  value: "Somalia"
+}, {
+  code: "ZA",
+  code3: "ZAF",
+  title: "South Africa",
+  value: "South Africa"
+}, {
+  code: "GS",
+  code3: "SGS",
+  title: "South Georgia and the South Sandwich Islands",
+  value: "South Georgia and the South Sandwich Islands"
+}, {
+  code: "SS",
+  code3: "SSD",
+  title: "South Sudan",
+  value: "South Sudan"
+}, {
+  code: "ES",
+  code3: "ESP",
+  title: "Spain",
+  value: "Spain"
+}, {
+  code: "LK",
+  code3: "LKA",
+  title: "Sri Lanka",
+  value: "Sri Lanka"
+}, {
+  code: "SD",
+  code3: "SDN",
+  title: "Sudan (the)",
+  value: "Sudan (the)"
+}, {
+  code: "SR",
+  code3: "SUR",
+  title: "Surititle",
+  value: "Surititle"
+}, {
+  code: "SJ",
+  code3: "SJM",
+  title: "Svalbard and Jan Mayen",
+  value: "Svalbard and Jan Mayen"
+}, {
+  code: "SE",
+  code3: "SWE",
+  title: "Sweden",
+  value: "Sweden"
+}, {
+  code: "CH",
+  code3: "CHE",
+  title: "Switzerland",
+  value: "Switzerland"
+}, {
+  code: "SY",
+  code3: "SYR",
+  title: "Syrian Arab Republic",
+  value: "Syrian Arab Republic"
+}, {
+  code: "TW",
+  code3: "TWN",
+  title: "Taiwan",
+  value: "Taiwan"
+}, {
+  code: "TJ",
+  code3: "TJK",
+  title: "Tajikistan",
+  value: "Tajikistan"
+}, {
+  code: "TZ",
+  code3: "TZA",
+  title: "Tanzania, United Republic of",
+  value: "Tanzania, United Republic of"
+}, {
+  code: "TH",
+  code3: "THA",
+  title: "Thailand",
+  value: "Thailand"
+}, {
+  code: "TL",
+  code3: "TLS",
+  title: "Timor-Leste",
+  value: "Timor-Leste"
+}, {
+  code: "TG",
+  code3: "TGO",
+  title: "Togo",
+  value: "Togo"
+}, {
+  code: "TK",
+  code3: "TKL",
+  title: "Tokelau",
+  value: "Tokelau"
+}, {
+  code: "TO",
+  code3: "TON",
+  title: "Tonga",
+  value: "Tonga"
+}, {
+  code: "TT",
+  code3: "TTO",
+  title: "Trinidad and Tobago",
+  value: "Trinidad and Tobago"
+}, {
+  code: "TN",
+  code3: "TUN",
+  title: "Tunisia",
+  value: "Tunisia"
+}, {
+  code: "TR",
+  code3: "TUR",
+  title: "Turkey",
+  value: "Turkey"
+}, {
+  code: "TM",
+  code3: "TKM",
+  title: "Turkmenistan",
+  value: "Turkmenistan"
+}, {
+  code: "TC",
+  code3: "TCA",
+  title: "Turks and Caicos Islands (the)",
+  value: "Turks and Caicos Islands (the)"
+}, {
+  code: "TV",
+  code3: "TUV",
+  title: "Tuvalu",
+  value: "Tuvalu"
+}, {
+  code: "UG",
+  code3: "UGA",
+  title: "Uganda",
+  value: "Uganda"
+}, {
+  code: "UA",
+  code3: "UKR",
+  title: "Ukraine",
+  value: "Ukraine"
+}, {
+  code: "AE",
+  code3: "ARE",
+  title: "United Arab Emirates (the)",
+  value: "United Arab Emirates (the)"
+}, {
+  code: "GB",
+  code3: "GBR",
+  title: "United Kingdom of Great Britain and Northern Ireland (the)",
+  value: "United Kingdom of Great Britain and Northern Ireland (the)"
+}, {
+  code: "UM",
+  code3: "UMI",
+  title: "United States Minor Outlying Islands (the)",
+  value: "United States Minor Outlying Islands (the)"
+}, {
+  code: "US",
+  code3: "USA",
+  title: "United States of America (the)",
+  value: "United States of America (the)"
+}, {
+  code: "UY",
+  code3: "URY",
+  title: "Uruguay",
+  value: "Uruguay"
+}, {
+  code: "UZ",
+  code3: "UZB",
+  title: "Uzbekistan",
+  value: "Uzbekistan"
+}, {
+  code: "VU",
+  code3: "VUT",
+  title: "Vanuatu",
+  value: "Vanuatu"
+}, {
+  code: "VE",
+  code3: "VEN",
+  title: "Venezuela (Bolivarian Republic of)",
+  value: "Venezuela (Bolivarian Republic of)"
+}, {
+  code: "VN",
+  code3: "VNM",
+  title: "Viet Nam",
+  value: "Viet Nam"
+}, {
+  code: "VG",
+  code3: "VGB",
+  title: "Virgin Islands (British)",
+  value: "Virgin Islands (British)"
+}, {
+  code: "VI",
+  code3: "VIR",
+  title: "Virgin Islands (U.S.)",
+  value: "Virgin Islands (U.S.)"
+}, {
+  code: "WF",
+  code3: "WLF",
+  title: "Wallis and Futuna",
+  value: "Wallis and Futuna"
+}, {
+  code: "EH",
+  code3: "ESH",
+  title: "Western Sahara",
+  value: "Western Sahara"
+}, {
+  code: "YE",
+  code3: "YEM",
+  title: "Yemen",
+  value: "Yemen"
+}, {
+  code: "ZM",
+  code3: "ZMB",
+  title: "Zambia",
+  value: "Zambia"
+}, {
+  code: "ZW",
+  code3: "ZWE",
+  title: "Zimbabwe",
+  value: "Zimbabwe"
+}, {
+  code: "AX",
+  code3: "ALA",
+  title: "Åland Islands",
+  value: "Åland Islands"
+}];
+
+/***/ }),
+
+/***/ 25247:
+/*!*****************************************!*\
+  !*** ./src/app/common/dataformatter.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   formatData: () => (/* binding */ formatData),
+/* harmony export */   formatInstanceData: () => (/* binding */ formatInstanceData),
+/* harmony export */   formatVesselToUpload: () => (/* binding */ formatVesselToUpload)
+/* harmony export */ });
+/* harmony import */ var _backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/vesselAttribute */ 24160);
+/*
+ * Copyright (c) 2025 Maritime Connectivity Platform Consortium
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+const formatData = data => {
+  const menuData = {}; // Add type annotation for menuData
+  for (const key in data) {
+    if (key === "attributes") {
+      // for vessel
+      for (const attr_key in data[key]) {
+        const attributeName = camel2snake(data[key][attr_key].attributeName);
+        if (Object.values(_backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__.VesselAttribute.AttributeNameEnum).find(e => e === attributeName)) {
+          menuData[snake2camel(attributeName)] = data[key][attr_key].attributeValue;
+        }
+      }
+    } else {
+      menuData[key] = data[key];
+    }
+  }
+  return menuData;
+};
+const formatInstanceData = data => {
+  const menuData = {}; // Add type annotation for menuData
+  for (const key in data) {
+    menuData[key] = data[key];
+  }
+  return menuData;
+};
+const formatVesselToUpload = vesselData => {
+  const attributes = [];
+  for (const key in vesselData) {
+    const attributeName = camel2snake(key);
+    if (Object.values(_backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__.VesselAttribute.AttributeNameEnum).find(e => e === attributeName)) {
+      attributes.push({
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        attributeName: attributeName,
+        attributeValue: vesselData[key]
+      });
+      delete vesselData[key];
+    }
+  }
+  vesselData["attributes"] = attributes;
+  return vesselData;
+};
+const snake2camel = input => input.split("-").reduce((res, word, i) => i === 0 ? word.toLowerCase() : `${res}${word.charAt(0).toUpperCase()}${word.substr(1).toLowerCase()}`, "");
+const camel2snake = str => str.replace(/[A-Z]/g, constter => `-${constter.toLowerCase()}`);
+
+/***/ }),
+
+/***/ 61224:
+/*!****************************************!*\
+  !*** ./src/app/common/filterObject.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   appendUpdatedAttributes: () => (/* binding */ appendUpdatedAttributes),
+/* harmony export */   filterUndefinedAttributes: () => (/* binding */ filterUndefinedAttributes),
+/* harmony export */   migrateVesselAttributes: () => (/* binding */ migrateVesselAttributes)
+/* harmony export */ });
+/*
+ * Copyright (c) 2025 Maritime Connectivity Platform Consortium
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const filterUndefinedAttributes = entity => Object.fromEntries(Object.entries(entity).filter(([key, value]) => value !== undefined && typeof value === 'string' ? value.toString().length > 0 : true));
+const appendUpdatedAttributes = (original, updates, attributes) => {
+  const updatedItem = {
+    ...original
+  };
+  for (const key in updates) {
+    if (attributes.hasOwnProperty(key)) {
+      updatedItem[key] = updates[key];
+    }
+  }
+  return updatedItem;
+};
+const migrateVesselAttributes = item => {
+  return {
+    ...item,
+    ...item.attributes.reduce((acc, attr) => ({
+      ...acc,
+      [attr.attributeName.replace(/-([a-z])/g, function (g) {
+        return g[1].toUpperCase();
+      })]: attr.attributeValue
+    }), {})
+  };
+};
+
+/***/ }),
+
+/***/ 19677:
+/*!********************************************!*\
+  !*** ./src/app/common/itemPreprocessor.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   preprocess: () => (/* binding */ preprocess),
+/* harmony export */   preprocessToShow: () => (/* binding */ preprocessToShow),
+/* harmony export */   preprocessToUpload: () => (/* binding */ preprocessToUpload)
+/* harmony export */ });
+/* harmony import */ var _columnForMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./columnForMenu */ 14943);
+/* harmony import */ var _dataformatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dataformatter */ 25247);
+/* harmony import */ var _filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filterObject */ 61224);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuType */ 95166);
+/*
+ * Copyright (c) 2025 Maritime Connectivity Platform Consortium
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
+const preprocess = (item, itemType) => {
+  if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Vessel) {
+    return (0,_filterObject__WEBPACK_IMPORTED_MODULE_2__.migrateVesselAttributes)(item);
+  } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {
+    // when we receive the data from the backend, we need to convert the array to object for serviceType and dataProductType
+    // store the list of values
+    let serviceTypeStringArray = item.serviceType;
+    let dataProductTypeStringArray = item.dataProductType;
+    if (item.serviceType && !Array.isArray(item.serviceType) || !item.serviceType.every(type => typeof type === 'string')) {
+      // if the serviceType is already an array of object, we convert it to an array of string
+      serviceTypeStringArray = item.serviceType.map(e => e.value);
+    } else if (item.serviceType) {
+      // if the serviceType is an array of string, we convert it to an array of object
+      // then convert the array of string to object
+      serviceTypeStringArray = item.serviceType; // save this for later
+      // actual conversion
+      item.serviceType = item.serviceType ? Array.isArray(item.serviceType) ? item.serviceType.map(_serviceType => {
+        const filtered = _columnForMenu__WEBPACK_IMPORTED_MODULE_0__.ColumnForResource[itemType].serviceType.options.filter(o => o.value === _serviceType);
+        // if we don't find the value, we set it to other
+        return filtered.length > 0 ? filtered.pop() : {
+          value: _serviceType,
+          title: 'Other'
+        };
+      }) : [] : [];
+    } else {
+      serviceTypeStringArray = [];
+    }
+    if (item.dataProductType && !Array.isArray(item.dataProductType) || !item.dataProductType.every(type => typeof type === 'string')) {
+      // if the dataProductType is already an array of object, we convert it to an array of string
+      dataProductTypeStringArray = item.dataProductType.map(e => e.value);
+    } else if (item.dataProductType) {
+      // if the dataProductType is an array of string, we convert it to an array of object
+      // then convert the array of string to object
+      dataProductTypeStringArray = item.dataProductType; // save this for later
+      // actual conversion
+      item.dataProductType = item.dataProductType ? Array.isArray(item.dataProductType) ? item.dataProductType.map(_dataProductType => {
+        const filtered = _columnForMenu__WEBPACK_IMPORTED_MODULE_0__.ColumnForResource[itemType].dataProductType.options.filter(o => o.value === _dataProductType);
+        // if we don't find the value, we set it to other
+        return filtered.length > 0 ? filtered.pop() : {
+          value: _dataProductType,
+          title: 'Other'
+        };
+      }) : [] : [];
+    } else {
+      dataProductTypeStringArray = [];
+    }
+    item.keywords = item.keywords ? item.keywords.filter(e => e.length > 0) : [];
+    return {
+      ...item,
+      serviceTypeValue: serviceTypeStringArray ? Array.isArray(serviceTypeStringArray) ? serviceTypeStringArray.join(", ") : serviceTypeStringArray : "",
+      dataProductTypeValue: dataProductTypeStringArray ? Array.isArray(dataProductTypeStringArray) ? dataProductTypeStringArray.join(", ") : dataProductTypeStringArray : ""
+    };
+  }
+  return item;
+};
+const preprocessToUpload = (item, itemType) => {
+  if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Vessel) {
+    return (0,_dataformatter__WEBPACK_IMPORTED_MODULE_1__.formatVesselToUpload)(item);
+  } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {
+    return {
+      ...item,
+      dataProductType: item["dataProductType"] && Array.isArray(item["dataProductType"]) ? item["dataProductType"].map(d => d.value).filter(d => d !== undefined) : [],
+      serviceType: item["serviceType"] && Array.isArray(item["serviceType"]) ? item["serviceType"].map(d => d.value).filter(d => d !== undefined) : [],
+      instanceAsDoc: typeof item.instanceAsDoc === 'string' ? null : item.instanceAsDoc,
+      instanceAsXml: typeof item.instanceAsXml === 'string' ? null : item.instanceAsXml,
+      comment: item.comment ? item.comment : '',
+      keywords: typeof item.keywords === 'string' ? item.keywords.length > 0 ? item.keywords.split(",") : [] : item.keywords
+    };
+  }
+  return item;
+};
+const preprocessToShow = (item, itemType) => {
+  if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {
+    item.instanceAsDocName = item.instanceAsDoc ? '' : undefined;
+    if (!item.instanceAsXmlName || item.instanceAsXmlName.length === 0) {
+      item.instanceAsXmlName = item.instanceAsXml ? '' : undefined;
+    }
+  }
+  return item;
+};
+
+/***/ }),
+
 /***/ 95166:
 /*!************************************!*\
   !*** ./src/app/common/menuType.ts ***!
@@ -6883,6 +9739,272 @@ const itemTypeToString = itemType => {
 
 /***/ }),
 
+/***/ 43983:
+/*!*******************************************************!*\
+  !*** ./src/app/common/shared/item-manager.service.ts ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ItemManagerService: () => (/* binding */ ItemManagerService)
+/* harmony export */ });
+/* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 95166);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 80983);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 50317);
+/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../itemPreprocessor */ 19677);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 9136);
+/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 90719);
+/* harmony import */ var src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/backend-api/secom */ 67063);
+
+
+
+
+
+
+
+
+class ItemManagerService {
+  constructor(deviceService, organizationService, userService, serviceService, vesselService, roleService, instanceService, secomService, xmlService) {
+    var _this = this;
+    this.deviceService = deviceService;
+    this.organizationService = organizationService;
+    this.userService = userService;
+    this.serviceService = serviceService;
+    this.vesselService = vesselService;
+    this.roleService = roleService;
+    this.instanceService = instanceService;
+    this.secomService = secomService;
+    this.xmlService = xmlService;
+    this.rolesContext = {};
+    this.fetchListOfData = /*#__PURE__*/function () {
+      var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, pageNumber, elementsPerPage, secomSearchParam) {
+        let page;
+        if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.instanceService.getInstances(pageNumber, elementsPerPage, [], 'response'));
+          const totalElements = parseInt(page.headers.get('X-Total-Count')) || 0;
+          return {
+            data: page.body.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)),
+            totalPages: Math.ceil(totalElements / elementsPerPage),
+            totalElements
+          };
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.SearchObjectResult && secomSearchParam) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.secomService.search(secomSearchParam, pageNumber, elementsPerPage, 'response'));
+          const totalElements = parseInt(page.headers.get('X-Total-Count')) || 10;
+          return {
+            data: (page.body?.searchServiceResult).map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)),
+            totalPages: Math.ceil(totalElements / elementsPerPage),
+            totalElements
+          };
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.deviceService.getOrganizationDevices(orgMrn, pageNumber, elementsPerPage));
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.organizationService.getOrganization(pageNumber, elementsPerPage));
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.userService.getOrganizationUsers(orgMrn, pageNumber, elementsPerPage));
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.serviceService.getOrganizationServices(orgMrn, pageNumber, elementsPerPage));
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.vesselService.getOrganizationVessels(orgMrn, pageNumber, elementsPerPage));
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.OrgCandidate) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.organizationService.getUnapprovedOrganizations(pageNumber, elementsPerPage));
+        } else {
+          throw new Error('Invalid entity type');
+        }
+        return {
+          data: Array.isArray(page) ? page.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)) : page.content.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)),
+          totalPages: page.totalPages,
+          totalElements: page.totalElements
+        };
+      });
+      return function (_x, _x2, _x3, _x4, _x5) {
+        return _ref.apply(this, arguments);
+      };
+    }();
+    this.fetchRolesInOrg = /*#__PURE__*/function () {
+      var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+        if (!_this.rolesContext[orgMrn]) {
+          _this.rolesContext[orgMrn] = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
+        }
+        return _this.rolesContext[orgMrn];
+      });
+      return function (_x6) {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+    this.clearRolesContext = () => {
+      this.rolesContext = {};
+    };
+    this.fetchSingleData = /*#__PURE__*/function () {
+      var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
+        try {
+          let item;
+          if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.deviceService.getDevice(orgMrn, id));
+          } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization) {
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.organizationService.getOrganization1(id));
+          } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.userService.getUser(orgMrn, id));
+          } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
+            if (instanceVersion && instanceVersion.length > 0) {
+              item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.serviceService.getServiceVersion(orgMrn, id, instanceVersion));
+            } else {
+              item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.serviceService.getService(orgMrn, id));
+            }
+          } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.vesselService.getVessel(orgMrn, id));
+          } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Role) {
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRole(orgMrn, parseInt(id)));
+          } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance && instanceVersion) {
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.instanceService.getInstanceByMRNAndVersion(id, instanceVersion));
+          } else {
+            return {};
+          }
+          return (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(item, itemType);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          return {};
+        }
+      });
+      return function (_x7, _x8, _x9, _x10) {
+        return _ref3.apply(this, arguments);
+      };
+    }();
+    this.registerData = (itemType, body, orgMrn) => {
+      if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
+        return this.userService.createUser(body, orgMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
+        return this.deviceService.createDevice(body, orgMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
+        return this.vesselService.createVessel(body, orgMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
+        return this.serviceService.createService(body, orgMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization) {
+        return this.organizationService.applyOrganization(body);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Role) {
+        return this.roleService.createRole(body, orgMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance) {
+        return this.instanceService.createInstance(body);
+      }
+      return new rxjs__WEBPACK_IMPORTED_MODULE_7__.Observable();
+    };
+    this.updateData = (itemType, body, orgMrn, entityMrn, version, numberId) => {
+      if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
+        return this.userService.updateUser(body, orgMrn, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
+        return this.deviceService.updateDevice(body, orgMrn, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
+        return this.vesselService.updateVessel(body, orgMrn, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
+        if (version) {
+          return this.serviceService.updateService(body, orgMrn, entityMrn, version);
+        } else {
+          return this.serviceService.updateService1(body, orgMrn, entityMrn);
+        }
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization || itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.OrgCandidate) {
+        return this.organizationService.updateOrganization(body, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Role && numberId) {
+        return this.roleService.updateRole(body, orgMrn, numberId);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance && numberId) {
+        return this.instanceService.updateInstance(Object.assign({}, body, {
+          id: numberId
+        }), numberId);
+      }
+      return new rxjs__WEBPACK_IMPORTED_MODULE_7__.Observable();
+    };
+    this.deleteData = (itemType, orgMrn, entityMrn, version, numberId) => {
+      if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
+        return this.userService.deleteUser(orgMrn, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
+        return this.deviceService.deleteDevice(orgMrn, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
+        return this.vesselService.deleteVessel(orgMrn, entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
+        if (version) {
+          return this.serviceService.deleteService(orgMrn, entityMrn, version);
+        } else {
+          return this.serviceService.deleteService1(orgMrn, entityMrn);
+        }
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization || itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.OrgCandidate) {
+        return this.organizationService.deleteOrg(entityMrn);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Role && numberId) {
+        return this.roleService.deleteRole(orgMrn, numberId);
+      } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance && numberId) {
+        return this.instanceService.deleteInstance(numberId);
+      }
+      return new rxjs__WEBPACK_IMPORTED_MODULE_7__.Observable();
+    };
+    this.migrate = (newServiceMrn, orgMrn, serviceMrn, instanceVersion) => {
+      return this.serviceService.migrateServiceMrn({
+        mrn: newServiceMrn
+      }, orgMrn, serviceMrn, instanceVersion);
+    };
+    this.approve = orgMrn => {
+      return this.organizationService.approveOrganization(orgMrn);
+    };
+    this.createRole = (role, orgMrn) => {
+      return this.roleService.createRole(role, orgMrn);
+    };
+    this.createUser = (user, orgMrn) => {
+      return this.userService.createUser(user, orgMrn);
+    };
+    this.verifyG1128Xml = xml => {
+      return this.xmlService.validateXmlWithG1128Schema(xml, 'INSTANCE');
+    };
+    this.createXml = xmlDto => {
+      return this.xmlService.createXml(xmlDto);
+    };
+    this.updateXml = (xmlDto, id) => {
+      return this.xmlService.updateXml(xmlDto, id);
+    };
+  }
+  static #_ = this.ɵfac = function ItemManagerService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || ItemManagerService)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.DeviceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.OrganizationControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.UserControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.ServiceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.VesselControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.RoleControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.InstanceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__.SECOMService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.XmlControllerService));
+  };
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({
+    token: ItemManagerService,
+    factory: ItemManagerService.ɵfac,
+    providedIn: 'root'
+  });
+}
+
+/***/ }),
+
+/***/ 71066:
+/*!*****************************************!*\
+  !*** ./src/app/common/timeConverter.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   convertTime: () => (/* binding */ convertTime)
+/* harmony export */ });
+/*
+ * Copyright (c) 2025 Maritime Connectivity Platform Consortium
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const convertTime = s => {
+  return new Date(s).toLocaleString();
+};
+
+/***/ }),
+
 /***/ 72741:
 /*!***********************************!*\
   !*** ./src/app/common/version.ts ***!
@@ -6996,7 +10118,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstr
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.4","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.5","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 
