@@ -3374,7 +3374,6 @@ class ListViewComponent {
     this.edit = selectedItem => {
       // user can edit for their own organization
       if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Organization && selectedItem.mrn === this.orgMrn) {
-        console.log(this.rolesInOrg);
         this.authService.hasPermission(this.itemType, this.rolesInOrg, true).then(hasPermission => {
           if (!hasPermission) {
             this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
@@ -4508,7 +4507,6 @@ class SrSearchComponent {
         this.geometryMap.clearMap();
       }
       this.smartTable.loadData();
-      //this.search(freetext, this.searchParams, Object.keys(this.queryGeometry).length > 0 ? geojsonToWKT(this.queryGeometry) : '');
     };
     this.view = selectedItem => {
       this.itemManagerService.fetchSingleData(this.instanceType, this.orgMrn, selectedItem.instanceId, selectedItem.version).then(instance => {
