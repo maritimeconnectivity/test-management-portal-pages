@@ -698,94 +698,44 @@ class AuthService {
     })();
   }
   getUserPermission(rolesInOrg) {
-    var _this10 = this;
-    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      _this10.protectFromEmptyToken();
-      return new Promise(/*#__PURE__*/function () {
-        var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (resolve, reject) {
-          let roles = (yield _this10.getUserRolesFromToken()) || [];
-          const permissions = (yield _this10.getUserPermissionsFromToken()) || [];
-          if (!roles && !permissions) {
-            resolve(_auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.User);
-            return;
-          }
-          roles = Array.from(new Set([...roles, ..._this10.convertPermissionToRoles(permissions, rolesInOrg)]));
-          const final = (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(roles);
-          resolve(final);
-        });
-        return function (_x, _x2) {
-          return _ref.apply(this, arguments);
-        };
-      }());
-    })();
+    if (!rolesInOrg || rolesInOrg.length === 0) {
+      return _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.User;
+    }
+    return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(rolesInOrg);
   }
   hasSiteAdminPermission(rolesInOrg) {
-    var _this11 = this;
-    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      _this11.protectFromEmptyToken();
-      return new Promise(/*#__PURE__*/function () {
-        var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (resolve, reject) {
-          let roles = yield _this11.getUserRolesFromToken();
-          const permissions = yield _this11.getUserPermissionsFromToken();
-          if (!roles || !permissions) {
-            resolve(false);
-            return;
-          }
-          if (!roles) {
-            roles = [];
-          }
-          roles = Array.from(new Set([...roles, ..._this11.convertPermissionToRoles(permissions, rolesInOrg)]));
-          resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(roles), _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin));
-        });
-        return function (_x3, _x4) {
-          return _ref2.apply(this, arguments);
-        };
-      }());
-    })();
+    return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(rolesInOrg), _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin);
   }
   hasPermission(context, rolesInOrg, forMyOrg = false) {
-    var _this12 = this;
-    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      _this12.protectFromEmptyToken();
-      return new Promise(/*#__PURE__*/function () {
-        var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (resolve, reject) {
-          if (!_this12.keycloakService.isLoggedIn()) {
-            resolve(false);
-            return;
-          }
-          _this12.getUserPermission(rolesInOrg).then(permission => {
-            if (!permission) {
-              resolve(false);
-              return;
-            }
-            if ((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin)) {
-              // super admin
-              resolve(true);
-            } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.User) {
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.UserAdmin));
-            } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Device) {
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.DeviceAdmin));
-            } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Vessel) {
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.VesselAdmin));
-            } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.MMS) {
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.MMSAdmin));
-            } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Service) {
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.ServiceAdmin));
-            } else if (forMyOrg && context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Organization || context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Role) {
-              // for my own organization management
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.OrgAdmin));
-            } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Organization) {
-              resolve((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin));
-            } else {
-              resolve(false);
-            }
-          });
-        });
-        return function (_x5, _x6) {
-          return _ref3.apply(this, arguments);
-        };
-      }());
-    })();
+    this.protectFromEmptyToken();
+    if (!this.keycloakService.isLoggedIn()) {
+      return false;
+    }
+    const permission = this.getUserPermission(rolesInOrg);
+    if (!permission) {
+      return false;
+    }
+    if ((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin)) {
+      // super admin
+      return true;
+    } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.User) {
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.UserAdmin);
+    } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Device) {
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.DeviceAdmin);
+    } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Vessel) {
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.VesselAdmin);
+    } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.MMS) {
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.MMSAdmin);
+    } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Service) {
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.ServiceAdmin);
+    } else if (forMyOrg && context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Organization || context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Role) {
+      // for my own organization management
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.OrgAdmin);
+    } else if (context === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Organization) {
+      return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)(permission, _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin);
+    } else {
+      return false;
+    }
   }
   convertPermissionToRoles(permission, rolesInOrg) {
     const roles = [];
@@ -9754,11 +9704,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 95166);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 80983);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 50317);
-/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../itemPreprocessor */ 19677);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 9136);
+/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../itemPreprocessor */ 19677);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 9136);
 /* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 90719);
 /* harmony import */ var src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/backend-api/secom */ 67063);
+
 
 
 
@@ -9779,7 +9730,7 @@ class ItemManagerService {
     this.instanceService = instanceService;
     this.secomService = secomService;
     this.xmlService = xmlService;
-    this.rolesContext = {};
+    this.rolesInOrg = [];
     this.fetchListOfData = /*#__PURE__*/function () {
       var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, pageNumber, elementsPerPage, secomSearchParam) {
         let page;
@@ -9787,7 +9738,7 @@ class ItemManagerService {
           page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.instanceService.getInstances(pageNumber, elementsPerPage, [], 'response'));
           const totalElements = parseInt(page.headers.get('X-Total-Count')) || 0;
           return {
-            data: page.body.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)),
+            data: page.body.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
             totalPages: Math.ceil(totalElements / elementsPerPage),
             totalElements
           };
@@ -9795,7 +9746,7 @@ class ItemManagerService {
           page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.secomService.search(secomSearchParam, pageNumber, elementsPerPage, 'response'));
           const totalElements = parseInt(page.headers.get('X-Total-Count')) || 10;
           return {
-            data: (page.body?.searchServiceResult).map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)),
+            data: (page.body?.searchServiceResult).map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
             totalPages: Math.ceil(totalElements / elementsPerPage),
             totalElements
           };
@@ -9815,7 +9766,7 @@ class ItemManagerService {
           throw new Error('Invalid entity type');
         }
         return {
-          data: Array.isArray(page) ? page.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)) : page.content.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(i, itemType)),
+          data: Array.isArray(page) ? page.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)) : page.content.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
           totalPages: page.totalPages,
           totalElements: page.totalElements
         };
@@ -9824,22 +9775,31 @@ class ItemManagerService {
         return _ref.apply(this, arguments);
       };
     }();
-    this.fetchRolesInOrg = /*#__PURE__*/function () {
+    this.fetchListOfRoles = /*#__PURE__*/function () {
       var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
-        if (!_this.rolesContext[orgMrn]) {
-          _this.rolesContext[orgMrn] = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
-        }
-        return _this.rolesContext[orgMrn];
+        return yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
       });
       return function (_x6) {
         return _ref2.apply(this, arguments);
       };
     }();
+    this.fetchRolesInOrg = /*#__PURE__*/function () {
+      var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+        if (_this.rolesInOrg.length === 0) {
+          const roles = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getMyRole(orgMrn));
+          _this.rolesInOrg = roles.map(role => role);
+        }
+        return _this.rolesInOrg;
+      });
+      return function (_x7) {
+        return _ref3.apply(this, arguments);
+      };
+    }();
     this.clearRolesContext = () => {
-      this.rolesContext = {};
+      this.rolesInOrg = [];
     };
     this.fetchSingleData = /*#__PURE__*/function () {
-      var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
+      var _ref4 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
         try {
           let item;
           if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
@@ -9863,14 +9823,14 @@ class ItemManagerService {
           } else {
             return {};
           }
-          return (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_2__.preprocess)(item, itemType);
+          return (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(item, itemType);
         } catch (error) {
           console.error('Error fetching data:', error);
           return {};
         }
       });
-      return function (_x7, _x8, _x9, _x10) {
-        return _ref3.apply(this, arguments);
+      return function (_x8, _x9, _x10, _x11) {
+        return _ref4.apply(this, arguments);
       };
     }();
     this.registerData = (itemType, body, orgMrn) => {
@@ -9962,7 +9922,7 @@ class ItemManagerService {
     };
   }
   static #_ = this.ɵfac = function ItemManagerService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || ItemManagerService)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.DeviceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.OrganizationControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.UserControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.ServiceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.VesselControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_3__.RoleControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.InstanceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__.SECOMService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.XmlControllerService));
+    return new (__ngFactoryType__ || ItemManagerService)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.DeviceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.OrganizationControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.UserControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.ServiceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.VesselControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.RoleControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.InstanceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__.SECOMService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.XmlControllerService));
   };
   static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({
     token: ItemManagerService,
@@ -10118,7 +10078,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstr
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.5","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.6","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 

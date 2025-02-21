@@ -2385,9 +2385,7 @@ class SidebarComponent {
     //Add 'implements OnInit' to the class.
     this.authService.getOrgMrnFromToken().then(orgMrn => {
       this.itemManagerService.fetchRolesInOrg(orgMrn).then(rolesInOrg => {
-        this.authService.hasSiteAdminPermission(rolesInOrg).then(isSiteAdmin => {
-          this.isSiteAdmin = isSiteAdmin;
-        });
+        this.isSiteAdmin = this.authService.hasSiteAdminPermission(rolesInOrg);
       });
     });
   }
@@ -3113,11 +3111,9 @@ class DetailViewComponent {
           _this2.loadItem(_this2.orgMrn);
         }
         _this2.itemManagerService.fetchRolesInOrg(orgMrn).then(roles => {
-          _this2.authService.hasPermission(_this2.itemType, roles, orgMrn === _this2.id).then(hasPermission => {
-            if (_this2.itemType !== src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
-              _this2.hasAdminPermission = hasPermission;
-            }
-          });
+          if (_this2.itemType !== src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
+            _this2.hasAdminPermission = _this2.authService.hasPermission(_this2.itemType, roles, orgMrn === _this2.id);
+          }
         });
         if (_this2.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
           _this2.apiBase = 'sr';
@@ -3278,7 +3274,6 @@ class ListViewComponent {
     this.totalElements = 0;
     this.hasAdminPermission = false;
     this.apiBase = 'ir';
-    this.rolesInOrg = [];
     this.setLabel = () => {
       this.labels = this.filterVisibleForList(src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_5__.ColumnForResource[this.itemType.toString()]);
     };
@@ -3304,7 +3299,7 @@ class ListViewComponent {
       var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, pageNumber, elementsPerPage, secomSearchParam) {
         try {
           if (itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Role) {
-            return yield _this.itemManagerService.fetchRolesInOrg(_this.orgMrn);
+            return yield _this.itemManagerService.fetchListOfRoles(_this.orgMrn);
           }
           const fetchedItems = yield _this.itemManagerService.fetchListOfData(itemType, _this.orgMrn, pageNumber, elementsPerPage, secomSearchParam);
           if (!fetchedItems) {
@@ -3374,14 +3369,11 @@ class ListViewComponent {
     this.edit = selectedItem => {
       // user can edit for their own organization
       if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Organization && selectedItem.mrn === this.orgMrn) {
-        this.authService.hasPermission(this.itemType, this.rolesInOrg, true).then(hasPermission => {
-          if (!hasPermission) {
-            this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
-            return;
-          }
-          this.moveToEditPage(selectedItem);
-        });
-        return;
+        if (!this.hasAdminPermission) {
+          this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
+          return;
+        }
+        this.moveToEditPage(selectedItem);
       }
       if (!this.hasAdminPermission) {
         this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
@@ -3451,10 +3443,7 @@ class ListViewComponent {
         this.orgMrn = orgMrn;
         this.setLabel();
         this.itemManagerService.fetchRolesInOrg(this.orgMrn).then(roles => {
-          this.rolesInOrg = roles;
-          this.authService.hasPermission(this.itemType, roles).then(hasPermission => {
-            this.hasAdminPermission = true;
-          });
+          this.hasAdminPermission = this.authService.hasPermission(this.itemType, roles);
         });
         if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {
           this.apiBase = 'sr';
