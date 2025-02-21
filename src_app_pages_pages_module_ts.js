@@ -2384,7 +2384,7 @@ class SidebarComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.authService.getOrgMrnFromToken().then(orgMrn => {
-      this.itemManagerService.fetchRolesInOrg(orgMrn).then(rolesInOrg => {
+      this.itemManagerService.fetchMyRolesInOrg(orgMrn).then(rolesInOrg => {
         this.isSiteAdmin = this.authService.hasSiteAdminPermission(rolesInOrg);
       });
     });
@@ -2872,7 +2872,7 @@ function DetailViewComponent_Conditional_4_Template(rf, ctx) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵconditional"](!ctx_r1.hasAdminPermission ? 0 : -1);
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isForNew", ctx_r1.isForNew)("itemType", ctx_r1.itemType)("item", ctx_r1.item)("orgMrn", ctx_r1.orgMrn)("mrnPrefix", ctx_r1.mrnPrefix)("isVerified", ctx_r1.isVerified)("hasWritePermission", ctx_r1.hasAdminPermission);
+    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isForNew", ctx_r1.isForNew)("itemType", ctx_r1.itemType)("item", ctx_r1.item)("orgMrn", ctx_r1.orgMrn)("mrnPrefix", ctx_r1.mrnPrefix)("roles", ctx_r1.roles)("isVerified", ctx_r1.isVerified)("hasWritePermission", ctx_r1.hasAdminPermission);
   }
 }
 function DetailViewComponent_Conditional_5_Template(rf, ctx) {
@@ -2927,6 +2927,7 @@ class DetailViewComponent {
     this.serial = '';
     this.apiBase = 'ir';
     this.isVerified = false;
+    this.roles = [];
     this.parseMyUrl = () => {
       return (0,rxjs__WEBPACK_IMPORTED_MODULE_11__.firstValueFrom)(this.route.url).then(url => {
         if (url.length === 4) {
@@ -3110,7 +3111,7 @@ class DetailViewComponent {
         } else {
           _this2.loadItem(_this2.orgMrn);
         }
-        _this2.itemManagerService.fetchRolesInOrg(orgMrn).then(roles => {
+        _this2.itemManagerService.fetchMyRolesInOrg(orgMrn).then(roles => {
           if (_this2.itemType !== src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
             _this2.hasAdminPermission = _this2.authService.hasPermission(_this2.itemType, roles, orgMrn === _this2.id);
           }
@@ -3118,6 +3119,11 @@ class DetailViewComponent {
         if (_this2.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
           _this2.apiBase = 'sr';
           _this2.hasAdminPermission = true;
+        }
+        if (_this2.isEditing) {
+          _this2.itemManagerService.fetchAllRolesInOrg(orgMrn).then(roles => {
+            _this2.roles = roles;
+          });
         }
       });
     }));
@@ -3160,7 +3166,7 @@ class DetailViewComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵStandaloneFeature"]],
     decls: 6,
     vars: 1,
-    consts: [[1, "parent"], [1, "btn", "btn-sm", "btn-secondary", 3, "click"], [3, "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "isVerified", "hasWritePermission"], [3, "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial"], [3, "clrAlertType"], [3, "submitEvent", "cancelEvent", "verifyEvent", "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "isVerified", "hasWritePermission"], [1, "alert-text"], [3, "editEvent", "refreshEvent", "migrateEvent", "deleteEvent", "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial"]],
+    consts: [[1, "parent"], [1, "btn", "btn-sm", "btn-secondary", 3, "click"], [3, "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "roles", "isVerified", "hasWritePermission"], [3, "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial"], [3, "clrAlertType"], [3, "submitEvent", "cancelEvent", "verifyEvent", "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "roles", "isVerified", "hasWritePermission"], [1, "alert-text"], [3, "editEvent", "refreshEvent", "migrateEvent", "deleteEvent", "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial"]],
     template: function DetailViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](0, "div", 0)(1, "div")(2, "button", 1);
@@ -3169,7 +3175,7 @@ class DetailViewComponent {
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtext"](3, "To list");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtemplate"](4, DetailViewComponent_Conditional_4_Template, 2, 8, "app-item-form", 2)(5, DetailViewComponent_Conditional_5_Template, 1, 6, "app-item-view", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtemplate"](4, DetailViewComponent_Conditional_4_Template, 2, 9, "app-item-form", 2)(5, DetailViewComponent_Conditional_5_Template, 1, 6, "app-item-view", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
       }
       if (rf & 2) {
@@ -3299,7 +3305,7 @@ class ListViewComponent {
       var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, pageNumber, elementsPerPage, secomSearchParam) {
         try {
           if (itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Role) {
-            return yield _this.itemManagerService.fetchListOfRoles(_this.orgMrn);
+            return yield _this.itemManagerService.fetchAllRolesInOrg(_this.orgMrn);
           }
           const fetchedItems = yield _this.itemManagerService.fetchListOfData(itemType, _this.orgMrn, pageNumber, elementsPerPage, secomSearchParam);
           if (!fetchedItems) {
@@ -3442,7 +3448,7 @@ class ListViewComponent {
       this.authService.getOrgMrnFromToken().then(orgMrn => {
         this.orgMrn = orgMrn;
         this.setLabel();
-        this.itemManagerService.fetchRolesInOrg(this.orgMrn).then(roles => {
+        this.itemManagerService.fetchMyRolesInOrg(this.orgMrn).then(roles => {
           this.hasAdminPermission = this.authService.hasPermission(this.itemType, roles);
         });
         if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {

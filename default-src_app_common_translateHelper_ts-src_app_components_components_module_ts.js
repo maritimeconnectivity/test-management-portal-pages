@@ -2521,6 +2521,7 @@ class ItemFormComponent {
     this.orgMrn = '';
     this.isVerified = false;
     this.hasWritePermission = false;
+    this.roles = [];
     this.cancelEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
     this.submitEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
     this.verifyEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
@@ -2528,7 +2529,6 @@ class ItemFormComponent {
     this.itemForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormGroup({});
     this.columnForMenu = {};
     this.isEditing = false;
-    this.roles = [];
     this.id = '';
     this.onSubmitIsGiven = true;
     this.isXmlEditorEnabled = false;
@@ -2881,7 +2881,8 @@ class ItemFormComponent {
       title: "title",
       orgMrn: "orgMrn",
       isVerified: "isVerified",
-      hasWritePermission: "hasWritePermission"
+      hasWritePermission: "hasWritePermission",
+      roles: "roles"
     },
     outputs: {
       cancelEvent: "cancelEvent",

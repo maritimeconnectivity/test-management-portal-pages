@@ -9775,7 +9775,7 @@ class ItemManagerService {
         return _ref.apply(this, arguments);
       };
     }();
-    this.fetchListOfRoles = /*#__PURE__*/function () {
+    this.fetchAllRolesInOrg = /*#__PURE__*/function () {
       var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
         return yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
       });
@@ -9783,7 +9783,7 @@ class ItemManagerService {
         return _ref2.apply(this, arguments);
       };
     }();
-    this.fetchRolesInOrg = /*#__PURE__*/function () {
+    this.fetchMyRolesInOrg = /*#__PURE__*/function () {
       var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
         if (_this.rolesInOrg.length === 0) {
           const roles = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getMyRole(orgMrn));
