@@ -2984,7 +2984,7 @@ class DetailViewComponent {
         this.isLoading = false;
         this.router.navigateByUrl('/pages/' + this.apiBase + '/' + this.itemType);
       }, err => {
-        this.notifierService.notify('error', this.translate.instant('error.resource.creationFailed') + err.error.message);
+        this.notifierService.notify('error', this.translate.instant('error.resource.creationFailed') + ' : ' + err.error.message);
         this.isLoading = false;
       }, () => this.isLoading = false);
     };
@@ -3005,7 +3005,7 @@ class DetailViewComponent {
           return _ref2.apply(this, arguments);
         };
       }(), err => {
-        this.notifierService.notify('error', this.translate.instant('error.resource.updateFailed') + err.error.message);
+        this.notifierService.notify('error', this.translate.instant('error.resource.updateFailed') + ' : ' + err.error.message);
         this.isLoading = false;
       });
     };
@@ -3032,7 +3032,7 @@ class DetailViewComponent {
         this.notifier.notify('success', this.translate.instant('success.resource.migrate'));
         this.loadItem(this.orgMrn);
       }, err => {
-        this.notifier.notify('error', this.translate.instant('error.resource.migrate') + err.error.message);
+        this.notifier.notify('error', this.translate.instant('error.resource.migrate') + ' : ' + err.error.message);
       });
     };
     this.deleteItem = () => {
@@ -3146,7 +3146,7 @@ class DetailViewComponent {
         this.itemManagerService.updateXml(this.item.instanceAsXml, this.item.instanceAsXml.id).subscribe(res => {
           this.notifier.notify('success', this.translate.instant('success.xml.update'));
         }, err => {
-          this.notifier.notify('error', this.translate.instant('error.xml.update') + err.error.message);
+          this.notifier.notify('error', this.translate.instant('error.xml.update') + ' : ' + err.error.message);
         });
       }
     }
