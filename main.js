@@ -706,8 +706,11 @@ class AuthService {
   hasSiteAdminPermission(rolesInOrg) {
     return (0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.hasAdminPermissionInMIR)((0,_auth_permission__WEBPACK_IMPORTED_MODULE_1__.rolesToPermission)(rolesInOrg), _auth_permission__WEBPACK_IMPORTED_MODULE_1__.AuthPermission.SiteAdmin);
   }
-  hasPermission(context, rolesInOrg, forMyOrg = false) {
+  hasPermission(context, rolesInOrg, mcpcontext, forMyOrg = false) {
     this.protectFromEmptyToken();
+    if (mcpcontext === _common_menuType__WEBPACK_IMPORTED_MODULE_2__.MCPComponentContext.MSR) {
+      return true;
+    }
     if (!this.keycloakService.isLoggedIn()) {
       return false;
     }
@@ -9574,6 +9577,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   EntityType: () => (/* binding */ EntityType),
 /* harmony export */   EntityTypes: () => (/* binding */ EntityTypes),
 /* harmony export */   ItemType: () => (/* binding */ ItemType),
+/* harmony export */   MCPComponentContext: () => (/* binding */ MCPComponentContext),
 /* harmony export */   MIRItemType: () => (/* binding */ MIRItemType),
 /* harmony export */   MenuTypeIconNames: () => (/* binding */ MenuTypeIconNames),
 /* harmony export */   MenuTypeNames: () => (/* binding */ MenuTypeNames),
@@ -9640,6 +9644,11 @@ var MrnAttributeInMSR;
   MrnAttributeInMSR["Instance"] = "instanceId";
   MrnAttributeInMSR["Design"] = "implementsServiceDesign";
 })(MrnAttributeInMSR || (MrnAttributeInMSR = {}));
+var MCPComponentContext;
+(function (MCPComponentContext) {
+  MCPComponentContext["MIR"] = "MIR";
+  MCPComponentContext["MSR"] = "MSR";
+})(MCPComponentContext || (MCPComponentContext = {}));
 /**
  * scope of MCP entity types
  */
@@ -10078,7 +10087,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstr
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.6","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.7","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 

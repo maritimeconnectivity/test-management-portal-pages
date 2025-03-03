@@ -3111,15 +3111,14 @@ class DetailViewComponent {
         } else {
           _this2.loadItem(_this2.orgMrn);
         }
-        _this2.itemManagerService.fetchMyRolesInOrg(orgMrn).then(roles => {
-          if (_this2.itemType !== src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
-            _this2.hasAdminPermission = _this2.authService.hasPermission(_this2.itemType, roles, orgMrn === _this2.id);
-          }
-        });
+        let mcpContext = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.MCPComponentContext.MIR;
         if (_this2.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance) {
           _this2.apiBase = 'sr';
-          _this2.hasAdminPermission = true;
+          mcpContext = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.MCPComponentContext.MSR;
         }
+        _this2.itemManagerService.fetchMyRolesInOrg(orgMrn).then(roles => {
+          _this2.hasAdminPermission = _this2.authService.hasPermission(_this2.itemType, roles, mcpContext, orgMrn === _this2.id);
+        });
         if (_this2.isEditing) {
           _this2.itemManagerService.fetchAllRolesInOrg(orgMrn).then(roles => {
             _this2.roles = roles;
@@ -3448,12 +3447,14 @@ class ListViewComponent {
       this.authService.getOrgMrnFromToken().then(orgMrn => {
         this.orgMrn = orgMrn;
         this.setLabel();
-        this.itemManagerService.fetchMyRolesInOrg(this.orgMrn).then(roles => {
-          this.hasAdminPermission = this.authService.hasPermission(this.itemType, roles);
-        });
+        let mcpContext = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.MCPComponentContext.MIR;
         if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {
           this.apiBase = 'sr';
+          mcpContext = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.MCPComponentContext.MSR;
         }
+        this.itemManagerService.fetchMyRolesInOrg(this.orgMrn).then(roles => {
+          this.hasAdminPermission = this.authService.hasPermission(this.itemType, roles, mcpContext);
+        });
       });
     });
   }
