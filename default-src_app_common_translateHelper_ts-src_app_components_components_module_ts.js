@@ -252,7 +252,7 @@ const toPem = (arrayBuffer, type) => {
 const convertCertChain = pemCertChain => {
   let certs = pemCertChain.split(/-----END CERTIFICATE-----/);
   certs = certs.slice(0, certs.length - 1);
-  let tmp = certs.map(c => c.split(/-----BEGIN CERTIFICATE-----/)[1].replace(/\n/mg, ''));
+  const tmp = certs.map(c => c.split(/-----BEGIN CERTIFICATE-----/)[1].replace(/\n/mg, ''));
   return tmp.map(c => pvtsutils__WEBPACK_IMPORTED_MODULE_3__.Convert.FromBase64(c));
 };
 const generatePassword = () => {
@@ -267,46 +267,19 @@ const generatePassword = () => {
 };
 const generatePKCS12 = /*#__PURE__*/function () {
   var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (privateKey, certs, password) {
-    const keyLocalIDBuffer = new ArrayBuffer(4);
-    const keyLocalIDView = new Uint8Array(keyLocalIDBuffer);
-    (0,pkijs__WEBPACK_IMPORTED_MODULE_2__.getRandomValues)(keyLocalIDView);
-    const certLocalIDBuffer = new ArrayBuffer(4);
+    const certLocalIDBuffer = new ArrayBuffer(20);
     const certLocalIDView = new Uint8Array(certLocalIDBuffer);
     (0,pkijs__WEBPACK_IMPORTED_MODULE_2__.getRandomValues)(certLocalIDView);
-    const caCertLocalIDBuffer = new ArrayBuffer(4);
+    const caCertLocalIDBuffer = new ArrayBuffer(20);
     const caCertLocalIDView = new Uint8Array(caCertLocalIDBuffer);
     (0,pkijs__WEBPACK_IMPORTED_MODULE_2__.getRandomValues)(caCertLocalIDView);
-    const bitArray = new ArrayBuffer(1);
-    const bitView = new Uint8Array(bitArray);
-    // tslint:disable-next-line:no-bitwise
-    bitView[0] |= 0x80;
-    const keyUsage = new asn1js__WEBPACK_IMPORTED_MODULE_1__.BitString({
-      valueHex: bitArray,
-      unusedBits: 7
-    });
-    privateKey.attributes = [new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-      type: '2.5.29.15',
-      values: [keyUsage]
-    })];
-    let certCn = '';
-    certs[0].subject.typesAndValues.forEach(t => {
-      if (t.type === '2.5.4.3') {
-        certCn = t.value.valueBlock.value;
-      }
-    });
-    let caCn = '';
-    certs[1].subject.typesAndValues.forEach(t => {
-      if (t.type === '2.5.4.3') {
-        caCn = t.value.valueBlock.value;
-      }
-    });
     const pfx = new pkijs__WEBPACK_IMPORTED_MODULE_2__.PFX({
       parsedValue: {
         integrityMode: 0,
         authenticatedSafe: new pkijs__WEBPACK_IMPORTED_MODULE_2__.AuthenticatedSafe({
           parsedValue: {
             safeContents: [{
-              privacyMode: 0,
+              privacyMode: 1,
               value: new pkijs__WEBPACK_IMPORTED_MODULE_2__.SafeContents({
                 safeBags: [new pkijs__WEBPACK_IMPORTED_MODULE_2__.SafeBag({
                   bagId: '1.2.840.113549.1.12.10.1.2',
@@ -314,51 +287,22 @@ const generatePKCS12 = /*#__PURE__*/function () {
                     parsedValue: privateKey
                   }),
                   bagAttributes: [new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.2.840.113549.1.9.20',
-                    // friendlyName
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.BmpString({
-                      value: 'PKCS8ShroudedKeyBag from PKIjs'
-                    })]
-                  }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.2.840.113549.1.9.21',
-                    // localKeyID
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.OctetString({
-                      valueHex: keyLocalIDBuffer
-                    })]
-                  }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.3.6.1.4.1.311.17.1',
-                    // pkcs12KeyProviderNameAttr
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.BmpString({
-                      value: 'MCP using https://pkijs.org/'
-                    })]
-                  })]
-                })]
-              })
-            }, {
-              privacyMode: 1,
-              value: new pkijs__WEBPACK_IMPORTED_MODULE_2__.SafeContents({
-                safeBags: [new pkijs__WEBPACK_IMPORTED_MODULE_2__.SafeBag({
-                  bagId: '1.2.840.113549.1.12.10.1.3',
-                  bagValue: new pkijs__WEBPACK_IMPORTED_MODULE_2__.CertBag({
-                    parsedValue: certs[0]
-                  }),
-                  bagAttributes: [new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.2.840.113549.1.9.20',
-                    // friendlyName
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.BmpString({
-                      value: certCn
-                    })]
-                  }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
                     type: '1.2.840.113549.1.9.21',
                     // localKeyID
                     values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.OctetString({
                       valueHex: certLocalIDBuffer
                     })]
-                  }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.3.6.1.4.1.311.17.1',
-                    // pkcs12KeyProviderNameAttr
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.BmpString({
-                      value: 'MCP using https://pkijs.org/'
+                  })]
+                }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.SafeBag({
+                  bagId: '1.2.840.113549.1.12.10.1.3',
+                  bagValue: new pkijs__WEBPACK_IMPORTED_MODULE_2__.CertBag({
+                    parsedValue: certs[0]
+                  }),
+                  bagAttributes: [new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
+                    type: '1.2.840.113549.1.9.21',
+                    // localKeyID
+                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.OctetString({
+                      valueHex: certLocalIDBuffer
                     })]
                   })]
                 }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.SafeBag({
@@ -367,22 +311,10 @@ const generatePKCS12 = /*#__PURE__*/function () {
                     parsedValue: certs[1]
                   }),
                   bagAttributes: [new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.2.840.113549.1.9.20',
-                    // friendlyName
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.BmpString({
-                      value: caCn
-                    })]
-                  }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
                     type: '1.2.840.113549.1.9.21',
                     // localKeyID
                     values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.OctetString({
                       valueHex: caCertLocalIDBuffer
-                    })]
-                  }), new pkijs__WEBPACK_IMPORTED_MODULE_2__.Attribute({
-                    type: '1.3.6.1.4.1.311.17.1',
-                    // pkcs12KeyProviderNameAttr
-                    values: [new asn1js__WEBPACK_IMPORTED_MODULE_1__.BmpString({
-                      value: 'MCP using https://pkijs.org/'
                     })]
                   })]
                 })]
@@ -398,28 +330,26 @@ const generatePKCS12 = /*#__PURE__*/function () {
       contentEncryptionAlgorithm: {
         name: 'AES-CBC',
         // OpenSSL can handle AES-CBC only
-        length: 128
+        length: 256
       },
-      hmacHashAlgorithm: 'SHA-1',
-      iterationCount: 100000
+      hmacHashAlgorithm: 'SHA-256',
+      iterationCount: 2048
     });
     yield pfx.parsedValue.authenticatedSafe.makeInternalValues({
       safeContents: [{
-        // Empty parameters for first SafeContent since "No Privacy" protection mode there
-      }, {
         password: passwordConverted,
         contentEncryptionAlgorithm: {
           name: 'AES-CBC',
           // OpenSSL can handle AES-CBC only
-          length: 128
+          length: 256
         },
-        hmacHashAlgorithm: 'SHA-1',
-        iterationCount: 100000
+        hmacHashAlgorithm: 'SHA-256',
+        iterationCount: 2048
       }]
     });
     yield pfx.makeInternalValues({
       password: passwordConverted,
-      iterations: 100000,
+      iterations: 2048,
       pbkdf2HashAlgorithm: 'SHA-256',
       hmacHashAlgorithm: 'SHA-256'
     });
