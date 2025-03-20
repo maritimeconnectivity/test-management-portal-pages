@@ -2480,6 +2480,7 @@ class ItemFormComponent {
     this.isVerified = false;
     this.hasWritePermission = false;
     this.roles = [];
+    this.keysToFilter = [];
     this.cancelEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
     this.submitEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
     this.verifyEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
@@ -2632,6 +2633,9 @@ class ItemFormComponent {
     this.setForm = () => {
       let formElements = {};
       Object.entries(src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_1__.ColumnForResource[this.itemType.toString()]).map(([key, value]) => {
+        if (this.keysToFilter.length > 0 && this.keysToFilter.includes(key)) {
+          return;
+        }
         if (!value.visibleFrom) return;
         if (value.visibleFrom && !value.visibleFrom.includes(this.viewContext)) return;
         if (key === 'mrn') {
@@ -2840,7 +2844,8 @@ class ItemFormComponent {
       orgMrn: "orgMrn",
       isVerified: "isVerified",
       hasWritePermission: "hasWritePermission",
-      roles: "roles"
+      roles: "roles",
+      keysToFilter: "keysToFilter"
     },
     outputs: {
       cancelEvent: "cancelEvent",
@@ -3321,6 +3326,7 @@ const _c0 = ["certModal"];
 const _c1 = ["revokeModal"];
 const _c2 = ["migrateModal"];
 const _c3 = ["xmlModal"];
+const _c4 = () => ["permissions"];
 function ItemViewComponent_Conditional_8_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementStart"](0, "div", 11);
@@ -3411,7 +3417,7 @@ function ItemViewComponent_Conditional_9_Conditional_1_Conditional_1_Template(rf
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵproperty"]("isForNew", true)("itemType", ctx_r1.userItemType)("item", ctx_r1.adminUser)("mrnPrefix", ctx_r1.adminUserMrnPrefix);
+    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵproperty"]("isForNew", true)("itemType", ctx_r1.userItemType)("item", ctx_r1.adminUser)("mrnPrefix", ctx_r1.adminUserMrnPrefix)("keysToFilter", _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵpureFunction0"](5, _c4));
   }
 }
 function ItemViewComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
@@ -3432,7 +3438,7 @@ function ItemViewComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
       return _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵresetView"](ctx_r1.openCertModal());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](1, ItemViewComponent_Conditional_9_Conditional_1_Conditional_1_Template, 2, 4, "app-item-form", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](1, ItemViewComponent_Conditional_9_Conditional_1_Conditional_1_Template, 2, 6, "app-item-form", 41);
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵnextContext"](2);
@@ -3890,7 +3896,7 @@ class ItemViewComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵNgOnChangesFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵStandaloneFeature"]],
     decls: 112,
     vars: 21,
-    consts: [["certModal", ""], ["revokeModal", ""], ["migrateModal", ""], ["xmlModal", ""], ["newAdminUserForm", ""], [1, "clr-row"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [1, "card"], [1, "card-header"], [1, "card-block"], [1, "card-text"], [1, "clr-col-md-12"], [1, "card-footer"], ["clrModalSize", "lg", 1, "modal", 3, "clrModalOpenChange", "clrModalOpen"], [1, "modal-title"], ["aria-label", "Close", "type", "button", 1, "close", 3, "click"], [1, "modal-body"], [1, "clr-col-sm-12", "clr-col-md-12"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], [1, "clr-col-4"], [1, "clr-col-8"], ["type", "date", "autocomplete", "off", "clrDate", "", "name", "demo", 3, "ngModelChange", "ngModel"], [1, "clr-form"], [1, "clr-form-control"], ["for", "basic", 1, "clr-control-label"], [1, "clr-control-container"], [1, "clr-input-wrapper"], ["type", "text", "id", "basic", "placeholder", "Enter value here", 1, "clr-input", 3, "value"], ["shape", "exclamation-circle", 1, "clr-validate-icon"], [1, "clr-subtext"], [1, "clr-textarea-wrapper"], ["clrTextarea", "", "cols", "100", "rows", "40"], ["href", "https://www.iala-aism.org/product/g1128-specification-of-e-nav-technical-service-fillable-annex-f-service-instance-description/", "target", "_blank"], [1, "spinner-view"], [3, "item", "itemType", "showCertTables", "columnForMenu"], [3, "geometry"], [4, "ngIf"], [3, "openCertModalEvent", "downloadDocFileEvent", "item", "itemType", "showCertTables", "columnForMenu"], [3, "downloadBtnEvent", "revokeBtnEvent", "openCertModalEvent", "item", "itemType", "showCertTables", "activeCertificates", "revokedCertificates", "columnForMenu", "serial"], ["title", "New administrator user", 3, "isForNew", "itemType", "item", "mrnPrefix"], [1, "btn", "btn-success"], [1, "btn", "btn-primary"], [1, "btn", "btn-danger", 3, "click"], [1, "btn", "btn-primary", 3, "click"], ["clrPosition", "top-right", 4, "clrIfOpen"], ["clrPosition", "top-right"], [1, "btn", "btn-success", 3, "click"], ["type", "radio", "clrRadio", "", "name", "options", "required", "", 3, "click"], ["target", "_blank", 3, "href"]],
+    consts: [["certModal", ""], ["revokeModal", ""], ["migrateModal", ""], ["xmlModal", ""], ["newAdminUserForm", ""], [1, "clr-row"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [1, "card"], [1, "card-header"], [1, "card-block"], [1, "card-text"], [1, "clr-col-md-12"], [1, "card-footer"], ["clrModalSize", "lg", 1, "modal", 3, "clrModalOpenChange", "clrModalOpen"], [1, "modal-title"], ["aria-label", "Close", "type", "button", 1, "close", 3, "click"], [1, "modal-body"], [1, "clr-col-sm-12", "clr-col-md-12"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], [1, "clr-col-4"], [1, "clr-col-8"], ["type", "date", "autocomplete", "off", "clrDate", "", "name", "demo", 3, "ngModelChange", "ngModel"], [1, "clr-form"], [1, "clr-form-control"], ["for", "basic", 1, "clr-control-label"], [1, "clr-control-container"], [1, "clr-input-wrapper"], ["type", "text", "id", "basic", "placeholder", "Enter value here", 1, "clr-input", 3, "value"], ["shape", "exclamation-circle", 1, "clr-validate-icon"], [1, "clr-subtext"], [1, "clr-textarea-wrapper"], ["clrTextarea", "", "cols", "100", "rows", "40"], ["href", "https://www.iala-aism.org/product/g1128-specification-of-e-nav-technical-service-fillable-annex-f-service-instance-description/", "target", "_blank"], [1, "spinner-view"], [3, "item", "itemType", "showCertTables", "columnForMenu"], [3, "geometry"], [4, "ngIf"], [3, "openCertModalEvent", "downloadDocFileEvent", "item", "itemType", "showCertTables", "columnForMenu"], [3, "downloadBtnEvent", "revokeBtnEvent", "openCertModalEvent", "item", "itemType", "showCertTables", "activeCertificates", "revokedCertificates", "columnForMenu", "serial"], ["title", "New administrator user", 3, "isForNew", "itemType", "item", "mrnPrefix", "keysToFilter"], [1, "btn", "btn-success"], [1, "btn", "btn-primary"], [1, "btn", "btn-danger", 3, "click"], [1, "btn", "btn-primary", 3, "click"], ["clrPosition", "top-right", 4, "clrIfOpen"], ["clrPosition", "top-right"], [1, "btn", "btn-success", 3, "click"], ["type", "radio", "clrRadio", "", "name", "options", "required", "", 3, "click"], ["target", "_blank", 3, "href"]],
     template: function ItemViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵgetCurrentView"]();
