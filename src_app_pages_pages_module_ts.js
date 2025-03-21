@@ -3118,6 +3118,12 @@ class DetailViewComponent {
         }
         _this2.itemManagerService.fetchMyRolesInOrg(orgMrn).then(roles => {
           _this2.hasEditPermission = _this2.authService.hasPermission(_this2.itemType, roles, mcpContext, orgMrn === _this2.id);
+          // user can't edit their own data
+          // if (this.itemType === ItemType.User && !this.hasEditPermission) {
+          //   this.authService.getUserMrnFromToken().then((mrn) => {
+          //     this.hasEditPermission = isUserEditingTheirOwnData(this.id, mrn);
+          //   });
+          // }
         });
         if (_this2.isEditing) {
           _this2.itemManagerService.fetchAllRolesInOrg(orgMrn).then(roles => {
@@ -3278,6 +3284,7 @@ class ListViewComponent {
     this.totalPages = 0;
     this.totalElements = 0;
     this.hasEditPermission = false;
+    this.currentUserMrn = '';
     this.apiBase = 'ir';
     this.setLabel = () => {
       this.labels = this.filterVisibleForList(src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_5__.ColumnForResource[this.itemType.toString()]);
@@ -3380,11 +3387,17 @@ class ListViewComponent {
         }
         this.moveToEditPage(selectedItem);
       }
-      if (!this.hasEditPermission) {
-        this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
-        return;
+      // user can edit for their own profile
+      // else if (this.itemType === ItemType.User && isUserEditingTheirOwnData(selectedItem.mrn, this.currentUserMrn)) {
+      //   this.moveToEditPage(selectedItem);
+      // } 
+      else {
+        if (!this.hasEditPermission) {
+          this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
+          return;
+        }
+        this.moveToEditPage(selectedItem);
       }
-      this.moveToEditPage(selectedItem);
     };
     this.view = selectedItem => {
       this.moveToEditPage(selectedItem, false);
@@ -3455,6 +3468,10 @@ class ListViewComponent {
         this.itemManagerService.fetchMyRolesInOrg(this.orgMrn).then(roles => {
           this.hasEditPermission = this.authService.hasPermission(this.itemType, roles, mcpContext);
         });
+        // fetch user's own MRN from token and store it
+        // this.authService.getUserMrnFromToken().then((userMrn) => {
+        //   this.currentUserMrn = userMrn;
+        // });
       });
     });
   }
