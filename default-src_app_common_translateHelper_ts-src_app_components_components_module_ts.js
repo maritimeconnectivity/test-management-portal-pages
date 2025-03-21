@@ -1248,18 +1248,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = a0 => [a0];
+function CertTableComponent_Conditional_0_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 1);
+  }
+  if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r0.columnsForActive)("data", ctx_r0.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](7, _c0, ctx_r0.serial))("deleteCall", ctx_r0.onRevoke)("downloadCall", ctx_r0.onDownload)("addCall", ctx_r0.onAdd)("itemType", ctx_r0.itemType);
+  }
+}
+function CertTableComponent_Conditional_0_Conditional_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 2);
+  }
+  if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r0.columnsForActive)("data", ctx_r0.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](5, _c0, ctx_r0.serial))("downloadCall", ctx_r0.onDownload)("itemType", ctx_r0.itemType);
+  }
+}
 function CertTableComponent_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, CertTableComponent_Conditional_0_Conditional_0_Template, 1, 9, "app-smart-table", 1)(1, CertTableComponent_Conditional_0_Conditional_1_Template, 1, 7, "app-smart-table", 2);
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r0.columnsForActive)("data", ctx_r0.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](7, _c0, ctx_r0.serial))("deleteCall", ctx_r0.onRevoke)("downloadCall", ctx_r0.onDownload)("addCall", ctx_r0.onAdd)("itemType", ctx_r0.itemType);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx_r0.hasEditPermission ? 0 : 1);
   }
 }
 function CertTableComponent_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 0);
   }
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
@@ -1282,6 +1300,7 @@ class CertTableComponent {
   constructor() {
     this.context = 'active';
     this.data = [];
+    this.hasEditPermission = false;
     this.addEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_3__.EventEmitter();
     this.downloadEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_3__.EventEmitter();
     this.revokeEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_3__.EventEmitter();
@@ -1308,7 +1327,8 @@ class CertTableComponent {
     inputs: {
       context: "context",
       data: "data",
-      serial: "serial"
+      serial: "serial",
+      hasEditPermission: "hasEditPermission"
     },
     outputs: {
       addEvent: "addEvent",
@@ -1319,10 +1339,10 @@ class CertTableComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵStandaloneFeature"]],
     decls: 3,
     vars: 1,
-    consts: [["deleteText", "Revoke", "placeholder", "There is no issued certificate.", 3, "labels", "data", "selectedIds", "deleteCall", "downloadCall", "addCall", "itemType"], ["placeholder", "There is no revoked certificate.", 3, "labels", "data", "itemType"]],
+    consts: [["placeholder", "There is no revoked certificate.", 3, "labels", "data", "itemType"], ["deleteText", "Revoke", "placeholder", "There is no issued certificate.", 3, "labels", "data", "selectedIds", "deleteCall", "downloadCall", "addCall", "itemType"], ["placeholder", "There is no issued certificate.", 3, "labels", "data", "selectedIds", "downloadCall", "itemType"]],
     template: function CertTableComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, CertTableComponent_Conditional_0_Template, 1, 9, "app-smart-table", 0)(1, CertTableComponent_Conditional_1_Template, 1, 3, "app-smart-table", 1)(2, CertTableComponent_Conditional_2_Template, 2, 1, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, CertTableComponent_Conditional_0_Template, 2, 1)(1, CertTableComponent_Conditional_1_Template, 1, 3, "app-smart-table", 0)(2, CertTableComponent_Conditional_2_Template, 2, 1, "h1");
       }
       if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.context === "active" ? 0 : ctx.context === "revoked" ? 1 : 2);
@@ -2478,7 +2498,7 @@ class ItemFormComponent {
     this.title = '';
     this.orgMrn = '';
     this.isVerified = false;
-    this.hasWritePermission = false;
+    this.hasEditPermission = false;
     this.roles = [];
     this.keysToFilter = [];
     this.cancelEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_11__.EventEmitter();
@@ -2765,7 +2785,7 @@ class ItemFormComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.OrgCandidate) {
-      this.hasWritePermission = true;
+      this.hasEditPermission = true;
     }
     this.prepareItem(this.itemType);
   }
@@ -2843,7 +2863,7 @@ class ItemFormComponent {
       title: "title",
       orgMrn: "orgMrn",
       isVerified: "isVerified",
-      hasWritePermission: "hasWritePermission",
+      hasEditPermission: "hasEditPermission",
       roles: "roles",
       keysToFilter: "keysToFilter"
     },
@@ -3155,7 +3175,7 @@ function ItemTableComponent_Conditional_3_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("data", ctx_r1.activeCertificates)("serial", ctx_r1.serial);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("data", ctx_r1.activeCertificates)("serial", ctx_r1.serial)("hasEditPermission", ctx_r1.hasEditPermission);
     _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("data", ctx_r1.revokedCertificates);
   }
@@ -3169,6 +3189,7 @@ class ItemTableComponent {
     this.revokedCertificates = [];
     this.columnForMenu = {};
     this.serial = undefined;
+    this.hasEditPermission = false;
     this.openXmlDialogEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_5__.EventEmitter();
     this.downloadDocFileEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_5__.EventEmitter();
     this.revokeBtnEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_5__.EventEmitter();
@@ -3212,7 +3233,8 @@ class ItemTableComponent {
       activeCertificates: "activeCertificates",
       revokedCertificates: "revokedCertificates",
       columnForMenu: "columnForMenu",
-      serial: "serial"
+      serial: "serial",
+      hasEditPermission: "hasEditPermission"
     },
     outputs: {
       openXmlDialogEvent: "openXmlDialogEvent",
@@ -3225,13 +3247,13 @@ class ItemTableComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵStandaloneFeature"]],
     decls: 4,
     vars: 5,
-    consts: [[1, "clr-form", "clr-form-horizontal"], ["class", "clr-form-horizontal clr-form-control clr-row", 4, "ngFor", "ngForOf"], [1, "clr-form-horizontal", "clr-form-control", "clr-row"], [1, "clr-control-label", "clr-col-12", "clr-col-md-2"], ["ng-reflect-ng-class", "clr-col-md-10 clr-col-12", 1, "clr-control-container", "clr-col-md-10", "clr-col-12"], [1, "clr-input-wrapper"], ["clrinput", "", "type", "string", "ng-reflect-name", "mrn", "ng-reflect-required", "true", "required", "", "aria-describedby", "clr-form-control-1-helper", 1, "clr-input", "ng-untouched", "ng-pristine", "ng-invalid", "ng-star-inserted", 3, "width"], [1, "btn", "btn-sm"], ["clrinput", "", "type", "string", "ng-reflect-name", "mrn", "ng-reflect-required", "true", "required", "", "aria-describedby", "clr-form-control-1-helper", 1, "clr-input", "ng-untouched", "ng-pristine", "ng-invalid", "ng-star-inserted"], ["disabled", "", 1, "btn", "btn-sm", "btn-outline"], [1, "label", "label-light-blue"], [1, "btn", "btn-sm", 3, "click"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], ["context", "active", 3, "addEvent", "downloadEvent", "revokeEvent", "data", "serial"], ["context", "revoked", 3, "data"]],
+    consts: [[1, "clr-form", "clr-form-horizontal"], ["class", "clr-form-horizontal clr-form-control clr-row", 4, "ngFor", "ngForOf"], [1, "clr-form-horizontal", "clr-form-control", "clr-row"], [1, "clr-control-label", "clr-col-12", "clr-col-md-2"], ["ng-reflect-ng-class", "clr-col-md-10 clr-col-12", 1, "clr-control-container", "clr-col-md-10", "clr-col-12"], [1, "clr-input-wrapper"], ["clrinput", "", "type", "string", "ng-reflect-name", "mrn", "ng-reflect-required", "true", "required", "", "aria-describedby", "clr-form-control-1-helper", 1, "clr-input", "ng-untouched", "ng-pristine", "ng-invalid", "ng-star-inserted", 3, "width"], [1, "btn", "btn-sm"], ["clrinput", "", "type", "string", "ng-reflect-name", "mrn", "ng-reflect-required", "true", "required", "", "aria-describedby", "clr-form-control-1-helper", 1, "clr-input", "ng-untouched", "ng-pristine", "ng-invalid", "ng-star-inserted"], ["disabled", "", 1, "btn", "btn-sm", "btn-outline"], [1, "label", "label-light-blue"], [1, "btn", "btn-sm", 3, "click"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], ["context", "active", 3, "addEvent", "downloadEvent", "revokeEvent", "data", "serial", "hasEditPermission"], ["context", "revoked", 3, "data"]],
     template: function ItemTableComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, ItemTableComponent_div_1_Template, 7, 2, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵpipe"](2, "keyvalue");
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](3, ItemTableComponent_Conditional_3_Template, 10, 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](3, ItemTableComponent_Conditional_3_Template, 10, 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
       }
       if (rf & 2) {
@@ -3442,14 +3464,14 @@ function ItemViewComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵproperty"]("item", ctx_r1.item)("itemType", ctx_r1.itemType)("showCertTables", ctx_r1.showCertTables)("activeCertificates", ctx_r1.activeCertificates)("revokedCertificates", ctx_r1.revokedCertificates)("columnForMenu", ctx_r1.columnForMenu)("serial", ctx_r1.serial);
+    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵproperty"]("item", ctx_r1.item)("itemType", ctx_r1.itemType)("showCertTables", ctx_r1.showCertTables)("activeCertificates", ctx_r1.activeCertificates)("revokedCertificates", ctx_r1.revokedCertificates)("columnForMenu", ctx_r1.columnForMenu)("serial", ctx_r1.serial)("hasEditPermission", ctx_r1.hasEditPermission);
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵconditional"](ctx_r1.itemType === "orgcandidate" ? 1 : -1);
   }
 }
 function ItemViewComponent_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](0, ItemViewComponent_Conditional_9_Conditional_0_Template, 2, 1, "div", 35)(1, ItemViewComponent_Conditional_9_Conditional_1_Template, 2, 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵtemplate"](0, ItemViewComponent_Conditional_9_Conditional_0_Template, 2, 1, "div", 35)(1, ItemViewComponent_Conditional_9_Conditional_1_Template, 2, 9);
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵnextContext"]();
@@ -3619,6 +3641,7 @@ class ItemViewComponent {
     this.isLoading = true;
     this.viewOnly = false;
     this.noMap = false;
+    this.hasEditPermission = false;
     this.editEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_16__.EventEmitter();
     this.migrateEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_16__.EventEmitter();
     this.deleteEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_16__.EventEmitter();
@@ -3882,7 +3905,8 @@ class ItemViewComponent {
       serial: "serial",
       isLoading: "isLoading",
       viewOnly: "viewOnly",
-      noMap: "noMap"
+      noMap: "noMap",
+      hasEditPermission: "hasEditPermission"
     },
     outputs: {
       editEvent: "editEvent",
@@ -3896,7 +3920,7 @@ class ItemViewComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵNgOnChangesFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵStandaloneFeature"]],
     decls: 112,
     vars: 21,
-    consts: [["certModal", ""], ["revokeModal", ""], ["migrateModal", ""], ["xmlModal", ""], ["newAdminUserForm", ""], [1, "clr-row"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [1, "card"], [1, "card-header"], [1, "card-block"], [1, "card-text"], [1, "clr-col-md-12"], [1, "card-footer"], ["clrModalSize", "lg", 1, "modal", 3, "clrModalOpenChange", "clrModalOpen"], [1, "modal-title"], ["aria-label", "Close", "type", "button", 1, "close", 3, "click"], [1, "modal-body"], [1, "clr-col-sm-12", "clr-col-md-12"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], [1, "clr-col-4"], [1, "clr-col-8"], ["type", "date", "autocomplete", "off", "clrDate", "", "name", "demo", 3, "ngModelChange", "ngModel"], [1, "clr-form"], [1, "clr-form-control"], ["for", "basic", 1, "clr-control-label"], [1, "clr-control-container"], [1, "clr-input-wrapper"], ["type", "text", "id", "basic", "placeholder", "Enter value here", 1, "clr-input", 3, "value"], ["shape", "exclamation-circle", 1, "clr-validate-icon"], [1, "clr-subtext"], [1, "clr-textarea-wrapper"], ["clrTextarea", "", "cols", "100", "rows", "40"], ["href", "https://www.iala-aism.org/product/g1128-specification-of-e-nav-technical-service-fillable-annex-f-service-instance-description/", "target", "_blank"], [1, "spinner-view"], [3, "item", "itemType", "showCertTables", "columnForMenu"], [3, "geometry"], [4, "ngIf"], [3, "openCertModalEvent", "downloadDocFileEvent", "item", "itemType", "showCertTables", "columnForMenu"], [3, "downloadBtnEvent", "revokeBtnEvent", "openCertModalEvent", "item", "itemType", "showCertTables", "activeCertificates", "revokedCertificates", "columnForMenu", "serial"], ["title", "New administrator user", 3, "isForNew", "itemType", "item", "mrnPrefix", "keysToFilter"], [1, "btn", "btn-success"], [1, "btn", "btn-primary"], [1, "btn", "btn-danger", 3, "click"], [1, "btn", "btn-primary", 3, "click"], ["clrPosition", "top-right", 4, "clrIfOpen"], ["clrPosition", "top-right"], [1, "btn", "btn-success", 3, "click"], ["type", "radio", "clrRadio", "", "name", "options", "required", "", 3, "click"], ["target", "_blank", 3, "href"]],
+    consts: [["certModal", ""], ["revokeModal", ""], ["migrateModal", ""], ["xmlModal", ""], ["newAdminUserForm", ""], [1, "clr-row"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [1, "card"], [1, "card-header"], [1, "card-block"], [1, "card-text"], [1, "clr-col-md-12"], [1, "card-footer"], ["clrModalSize", "lg", 1, "modal", 3, "clrModalOpenChange", "clrModalOpen"], [1, "modal-title"], ["aria-label", "Close", "type", "button", 1, "close", 3, "click"], [1, "modal-body"], [1, "clr-col-sm-12", "clr-col-md-12"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], [1, "clr-col-4"], [1, "clr-col-8"], ["type", "date", "autocomplete", "off", "clrDate", "", "name", "demo", 3, "ngModelChange", "ngModel"], [1, "clr-form"], [1, "clr-form-control"], ["for", "basic", 1, "clr-control-label"], [1, "clr-control-container"], [1, "clr-input-wrapper"], ["type", "text", "id", "basic", "placeholder", "Enter value here", 1, "clr-input", 3, "value"], ["shape", "exclamation-circle", 1, "clr-validate-icon"], [1, "clr-subtext"], [1, "clr-textarea-wrapper"], ["clrTextarea", "", "cols", "100", "rows", "40"], ["href", "https://www.iala-aism.org/product/g1128-specification-of-e-nav-technical-service-fillable-annex-f-service-instance-description/", "target", "_blank"], [1, "spinner-view"], [3, "item", "itemType", "showCertTables", "columnForMenu"], [3, "geometry"], [4, "ngIf"], [3, "openCertModalEvent", "downloadDocFileEvent", "item", "itemType", "showCertTables", "columnForMenu"], [3, "downloadBtnEvent", "revokeBtnEvent", "openCertModalEvent", "item", "itemType", "showCertTables", "activeCertificates", "revokedCertificates", "columnForMenu", "serial", "hasEditPermission"], ["title", "New administrator user", 3, "isForNew", "itemType", "item", "mrnPrefix", "keysToFilter"], [1, "btn", "btn-success"], [1, "btn", "btn-primary"], [1, "btn", "btn-danger", 3, "click"], [1, "btn", "btn-primary", 3, "click"], ["clrPosition", "top-right", 4, "clrIfOpen"], ["clrPosition", "top-right"], [1, "btn", "btn-success", 3, "click"], ["type", "radio", "clrRadio", "", "name", "options", "required", "", 3, "click"], ["target", "_blank", 3, "href"]],
     template: function ItemViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵgetCurrentView"]();
@@ -4187,7 +4211,7 @@ function SmartExpandableTableComponent_Conditional_0_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("itemType", ctx_r1.itemType)("item", ctx_r1.selectedItem)("isLoading", false)("viewOnly", ctx_r1.itemType === "searchobjectresult");
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("itemType", ctx_r1.itemType)("item", ctx_r1.selectedItem)("isLoading", false)("viewOnly", ctx_r1.itemType === "searchobjectresult")("hasEditPermission", ctx_r1.hasEditPermission);
   }
 }
 function SmartExpandableTableComponent_Conditional_1_Conditional_1_Conditional_1_Template(rf, ctx) {
@@ -4491,6 +4515,7 @@ class SmartExpandableTableComponent {
     this.addText = 'Add';
     this.totalPages = 0;
     this.totalElements = 0;
+    this.hasEditPermission = false;
     this.getData = itemType => new Promise((resolve, reject) => resolve([]));
     this.rowSelectEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_5__.EventEmitter();
     this.revokeCertsEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_5__.EventEmitter();
@@ -4658,6 +4683,7 @@ class SmartExpandableTableComponent {
       addText: "addText",
       totalPages: "totalPages",
       totalElements: "totalElements",
+      hasEditPermission: "hasEditPermission",
       getData: "getData"
     },
     outputs: {
@@ -4674,10 +4700,10 @@ class SmartExpandableTableComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵNgOnChangesFeature"], _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵStandaloneFeature"]],
     decls: 2,
     vars: 1,
-    consts: [["pagination", ""], [3, "clrDgSelected", "clrDgLoading"], [1, "btn", "btn-sm", "btn-secondary", 3, "click"], [1, "clr-row"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [3, "editEvent", "deleteEvent", "refreshEvent", "migrateEvent", "approveEvent", "itemType", "item", "isLoading", "viewOnly"], [3, "clrDgSelectedChange", "clrDgRefresh", "clrDgSelected", "clrDgLoading"], [1, "datagrid-empty"], [3, "clrDgItem", 4, "clrDgItems", "clrDgItemsOf"], [3, "clrDgPageSize"], [3, "change", "clrPageSizeOptions"], [1, "clr-row", "clr-justify-content-center"], [1, "btn-group"], ["type", "button", 1, "btn", "btn-sm", "btn-secondary", 3, "click"], ["shape", "plus"], ["shape", "times"], ["shape", "download"], [3, "clrDgItem"], [3, "click"], [4, "clrIfDetail"], [3, "itemType", "item"], [1, "btn-group", "btn-outline-primary", "btn-sm"], [1, "btn", 3, "click", "disabled"], [1, "btn", 3, "disabled"]],
+    consts: [["pagination", ""], [3, "clrDgSelected", "clrDgLoading"], [1, "btn", "btn-sm", "btn-secondary", 3, "click"], [1, "clr-row"], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [3, "editEvent", "deleteEvent", "refreshEvent", "migrateEvent", "approveEvent", "itemType", "item", "isLoading", "viewOnly", "hasEditPermission"], [3, "clrDgSelectedChange", "clrDgRefresh", "clrDgSelected", "clrDgLoading"], [1, "datagrid-empty"], [3, "clrDgItem", 4, "clrDgItems", "clrDgItemsOf"], [3, "clrDgPageSize"], [3, "change", "clrPageSizeOptions"], [1, "clr-row", "clr-justify-content-center"], [1, "btn-group"], ["type", "button", 1, "btn", "btn-sm", "btn-secondary", 3, "click"], ["shape", "plus"], ["shape", "times"], ["shape", "download"], [3, "clrDgItem"], [3, "click"], [4, "clrIfDetail"], [3, "itemType", "item"], [1, "btn-group", "btn-outline-primary", "btn-sm"], [1, "btn", 3, "click", "disabled"], [1, "btn", 3, "disabled"]],
     template: function SmartExpandableTableComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](0, SmartExpandableTableComponent_Conditional_0_Template, 6, 4)(1, SmartExpandableTableComponent_Conditional_1_Template, 14, 11, "clr-datagrid", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](0, SmartExpandableTableComponent_Conditional_0_Template, 6, 5)(1, SmartExpandableTableComponent_Conditional_1_Template, 14, 11, "clr-datagrid", 1);
       }
       if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵconditional"](ctx.expanded ? 0 : 1);
@@ -4807,10 +4833,29 @@ function SmartTableComponent_Conditional_1_Conditional_1_Conditional_3_Template(
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r1.deleteText, "");
   }
 }
+function SmartTableComponent_Conditional_1_Conditional_1_Conditional_4_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 7)(1, "button", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function SmartTableComponent_Conditional_1_Conditional_1_Conditional_4_Template_button_click_1_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r6);
+      const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](3);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r1.downloadCall(ctx_r1.selected));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "cds-icon", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r1.downloadText, "");
+  }
+}
 function SmartTableComponent_Conditional_1_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "clr-dg-action-bar");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, SmartTableComponent_Conditional_1_Conditional_1_Conditional_1_Template, 4, 1, "div", 7)(2, SmartTableComponent_Conditional_1_Conditional_1_Conditional_2_Template, 7, 2, "div", 7)(3, SmartTableComponent_Conditional_1_Conditional_1_Conditional_3_Template, 4, 1, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, SmartTableComponent_Conditional_1_Conditional_1_Conditional_1_Template, 4, 1, "div", 7)(2, SmartTableComponent_Conditional_1_Conditional_1_Conditional_2_Template, 7, 2, "div", 7)(3, SmartTableComponent_Conditional_1_Conditional_1_Conditional_3_Template, 4, 1, "div", 7)(4, SmartTableComponent_Conditional_1_Conditional_1_Conditional_4_Template, 4, 1, "div", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -4818,7 +4863,7 @@ function SmartTableComponent_Conditional_1_Conditional_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵconditional"](ctx_r1.addCall !== undefined ? 1 : -1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵconditional"](ctx_r1.deleteCall !== undefined && ctx_r1.downloadCall !== undefined ? 2 : ctx_r1.deleteCall !== undefined ? 3 : -1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵconditional"](ctx_r1.deleteCall !== undefined && ctx_r1.downloadCall !== undefined ? 2 : ctx_r1.deleteCall !== undefined ? 3 : ctx_r1.downloadCall !== undefined ? 4 : -1);
   }
 }
 function SmartTableComponent_Conditional_1_For_3_Template(rf, ctx) {
@@ -4828,50 +4873,50 @@ function SmartTableComponent_Conditional_1_For_3_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const column_r6 = ctx.$implicit;
+    const column_r7 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](column_r6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](column_r7);
   }
 }
 function SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "clr-dg-cell", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Conditional_0_Template_clr_dg_cell_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r7);
-      const datum_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2).$implicit;
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+      const datum_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2).$implicit;
       const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r1.userRowSelect(datum_r8));
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r1.userRowSelect(datum_r9));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const itemName_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
-    const datum_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+    const itemName_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+    const datum_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r1.convertTimeString(datum_r8[itemName_r9]));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r1.convertTimeString(datum_r9[itemName_r10]));
   }
 }
 function SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "clr-dg-cell", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Conditional_1_Template_clr_dg_cell_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r10);
-      const datum_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2).$implicit;
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r11);
+      const datum_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2).$implicit;
       const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r1.userRowSelect(datum_r8));
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r1.userRowSelect(datum_r9));
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const itemName_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
-    const datum_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+    const itemName_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+    const datum_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](datum_r8[itemName_r9]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](datum_r9[itemName_r10]);
   }
 }
 function SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Template(rf, ctx) {
@@ -4879,9 +4924,9 @@ function SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Template(rf, ctx) 
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Conditional_0_Template, 2, 1, "clr-dg-cell")(1, SmartTableComponent_Conditional_1_clr_dg_row_6_For_2_Conditional_1_Template, 2, 1, "clr-dg-cell");
   }
   if (rf & 2) {
-    const itemName_r9 = ctx.$implicit;
+    const itemName_r10 = ctx.$implicit;
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵconditional"](ctx_r1.isTimestampFormat(itemName_r9) ? 0 : 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵconditional"](ctx_r1.isTimestampFormat(itemName_r10) ? 0 : 1);
   }
 }
 function SmartTableComponent_Conditional_1_clr_dg_row_6_Template(rf, ctx) {
@@ -4891,9 +4936,9 @@ function SmartTableComponent_Conditional_1_clr_dg_row_6_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const datum_r8 = ctx.$implicit;
+    const datum_r9 = ctx.$implicit;
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("clrDgItem", datum_r8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("clrDgItem", datum_r9);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrepeater"](ctx_r1.labelKeys);
   }
@@ -4908,7 +4953,7 @@ function SmartTableComponent_Conditional_1_Template(rf, ctx) {
       _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtwoWayBindingSet"](ctx_r1.selected, $event) || (ctx_r1.selected = $event);
       return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"]($event);
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, SmartTableComponent_Conditional_1_Conditional_1_Template, 4, 2, "clr-dg-action-bar");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, SmartTableComponent_Conditional_1_Conditional_1_Template, 5, 2, "clr-dg-action-bar");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrepeaterCreate"](2, SmartTableComponent_Conditional_1_For_3_Template, 2, 1, "clr-dg-column", null, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrepeaterTrackByIdentity"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "clr-dg-placeholder", 3);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5);
@@ -4921,7 +4966,7 @@ function SmartTableComponent_Conditional_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
   }
   if (rf & 2) {
-    const pagination_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](9);
+    const pagination_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](9);
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtwoWayProperty"]("clrDgSelected", ctx_r1.selected);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
@@ -4937,7 +4982,7 @@ function SmartTableComponent_Conditional_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("clrPageSizeOptions", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction0"](9, _c0));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate3"](" ", pagination_r11.firstItem + 1, " - ", pagination_r11.lastItem + 1, " of ", pagination_r11.totalItems, " certificates ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate3"](" ", pagination_r12.firstItem + 1, " - ", pagination_r12.lastItem + 1, " of ", pagination_r12.totalItems, " certificates ");
   }
 }
 _cds_core_icon__WEBPACK_IMPORTED_MODULE_3__.ClarityIcons.addIcons(_cds_core_icon__WEBPACK_IMPORTED_MODULE_4__.downloadIcon, _cds_core_icon__WEBPACK_IMPORTED_MODULE_5__.timesIcon, _cds_core_icon__WEBPACK_IMPORTED_MODULE_6__.plusIcon);

@@ -2870,9 +2870,9 @@ function DetailViewComponent_Conditional_4_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵconditional"](!ctx_r1.hasAdminPermission ? 0 : -1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵconditional"](!ctx_r1.hasEditPermission ? 0 : -1);
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isForNew", ctx_r1.isForNew)("itemType", ctx_r1.itemType)("item", ctx_r1.item)("orgMrn", ctx_r1.orgMrn)("mrnPrefix", ctx_r1.mrnPrefix)("roles", ctx_r1.roles)("isVerified", ctx_r1.isVerified)("hasWritePermission", ctx_r1.hasAdminPermission);
+    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isForNew", ctx_r1.isForNew)("itemType", ctx_r1.itemType)("item", ctx_r1.item)("orgMrn", ctx_r1.orgMrn)("mrnPrefix", ctx_r1.mrnPrefix)("roles", ctx_r1.roles)("isVerified", ctx_r1.isVerified)("hasEditPermission", ctx_r1.hasEditPermission);
   }
 }
 function DetailViewComponent_Conditional_5_Template(rf, ctx) {
@@ -2900,7 +2900,7 @@ function DetailViewComponent_Conditional_5_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isLoading", ctx_r1.isLoading)("itemType", ctx_r1.itemType)("item", ctx_r1.item)("orgMrn", ctx_r1.orgMrn)("mrnPrefix", ctx_r1.mrnPrefix)("serial", ctx_r1.serial);
+    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("isLoading", ctx_r1.isLoading)("itemType", ctx_r1.itemType)("item", ctx_r1.item)("orgMrn", ctx_r1.orgMrn)("mrnPrefix", ctx_r1.mrnPrefix)("serial", ctx_r1.serial)("hasEditPermission", ctx_r1.hasEditPermission);
   }
 }
 class DetailViewComponent {
@@ -2923,7 +2923,7 @@ class DetailViewComponent {
     this.isLoading = true;
     this.isForNew = false;
     this.item = {};
-    this.hasAdminPermission = false;
+    this.hasEditPermission = false;
     this.serial = '';
     this.apiBase = 'ir';
     this.isVerified = false;
@@ -2961,7 +2961,7 @@ class DetailViewComponent {
       };
     }();
     this.edit = item => {
-      if (!this.hasAdminPermission) {
+      if (!this.hasEditPermission) {
         this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
         return;
       }
@@ -2972,7 +2972,7 @@ class DetailViewComponent {
       this.isEditing = false;
     };
     this.submit = item => {
-      if (!this.hasAdminPermission) {
+      if (!this.hasEditPermission) {
         this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
         return;
       }
@@ -3036,7 +3036,7 @@ class DetailViewComponent {
       });
     };
     this.deleteItem = () => {
-      if (!this.hasAdminPermission) {
+      if (!this.hasEditPermission) {
         this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
         return;
       }
@@ -3117,7 +3117,7 @@ class DetailViewComponent {
           mcpContext = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.MCPComponentContext.MSR;
         }
         _this2.itemManagerService.fetchMyRolesInOrg(orgMrn).then(roles => {
-          _this2.hasAdminPermission = _this2.authService.hasPermission(_this2.itemType, roles, mcpContext, orgMrn === _this2.id);
+          _this2.hasEditPermission = _this2.authService.hasPermission(_this2.itemType, roles, mcpContext, orgMrn === _this2.id);
         });
         if (_this2.isEditing) {
           _this2.itemManagerService.fetchAllRolesInOrg(orgMrn).then(roles => {
@@ -3165,7 +3165,7 @@ class DetailViewComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵStandaloneFeature"]],
     decls: 6,
     vars: 1,
-    consts: [[1, "parent"], [1, "btn", "btn-sm", "btn-secondary", 3, "click"], [3, "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "roles", "isVerified", "hasWritePermission"], [3, "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial"], [3, "clrAlertType"], [3, "submitEvent", "cancelEvent", "verifyEvent", "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "roles", "isVerified", "hasWritePermission"], [1, "alert-text"], [3, "editEvent", "refreshEvent", "migrateEvent", "deleteEvent", "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial"]],
+    consts: [[1, "parent"], [1, "btn", "btn-sm", "btn-secondary", 3, "click"], [3, "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "roles", "isVerified", "hasEditPermission"], [3, "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial", "hasEditPermission"], [3, "clrAlertType"], [3, "submitEvent", "cancelEvent", "verifyEvent", "isForNew", "itemType", "item", "orgMrn", "mrnPrefix", "roles", "isVerified", "hasEditPermission"], [1, "alert-text"], [3, "editEvent", "refreshEvent", "migrateEvent", "deleteEvent", "isLoading", "itemType", "item", "orgMrn", "mrnPrefix", "serial", "hasEditPermission"]],
     template: function DetailViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](0, "div", 0)(1, "div")(2, "button", 1);
@@ -3174,7 +3174,7 @@ class DetailViewComponent {
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtext"](3, "To list");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtemplate"](4, DetailViewComponent_Conditional_4_Template, 2, 9, "app-item-form", 2)(5, DetailViewComponent_Conditional_5_Template, 1, 6, "app-item-view", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtemplate"](4, DetailViewComponent_Conditional_4_Template, 2, 9, "app-item-form", 2)(5, DetailViewComponent_Conditional_5_Template, 1, 7, "app-item-view", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
       }
       if (rf & 2) {
@@ -3258,7 +3258,7 @@ function ListViewComponent_Conditional_1_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("itemType", ctx_r1.itemType)("labels", ctx_r1.labels)("getData", ctx_r1.fetchData)("totalPages", ctx_r1.totalPages)("totalElements", ctx_r1.totalElements)("deleteCall", ctx_r1.onDelete)("addCall", ctx_r1.onAdd);
+    _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("itemType", ctx_r1.itemType)("labels", ctx_r1.labels)("getData", ctx_r1.fetchData)("totalPages", ctx_r1.totalPages)("totalElements", ctx_r1.totalElements)("deleteCall", ctx_r1.onDelete)("addCall", ctx_r1.onAdd)("hasEditPermission", ctx_r1.hasEditPermission);
   }
 }
 class ListViewComponent {
@@ -3277,7 +3277,7 @@ class ListViewComponent {
     this.viewContext = 'list';
     this.totalPages = 0;
     this.totalElements = 0;
-    this.hasAdminPermission = false;
+    this.hasEditPermission = false;
     this.apiBase = 'ir';
     this.setLabel = () => {
       this.labels = this.filterVisibleForList(src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_5__.ColumnForResource[this.itemType.toString()]);
@@ -3334,7 +3334,7 @@ class ListViewComponent {
         };
         if (selected.length === 0) {
           _this.notifier.notify('error', _this.translate.instant('error.selection.noSelection'));
-        } else if (!_this.hasAdminPermission) {
+        } else if (!_this.hasEditPermission) {
           _this.notifier.notify('error', _this.translate.instant('error.resource.permissionError'));
         } else {
           yield selected.forEach(/*#__PURE__*/function () {
@@ -3362,7 +3362,7 @@ class ListViewComponent {
       };
     }();
     this.onAdd = () => {
-      if (!this.hasAdminPermission) {
+      if (!this.hasEditPermission) {
         this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
       } else {
         this.router.navigateByUrl('/pages/' + this.apiBase + '/' + this.itemType + '/new');
@@ -3374,13 +3374,13 @@ class ListViewComponent {
     this.edit = selectedItem => {
       // user can edit for their own organization
       if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Organization && selectedItem.mrn === this.orgMrn) {
-        if (!this.hasAdminPermission) {
+        if (!this.hasEditPermission) {
           this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
           return;
         }
         this.moveToEditPage(selectedItem);
       }
-      if (!this.hasAdminPermission) {
+      if (!this.hasEditPermission) {
         this.notifier.notify('error', this.translate.instant('error.resource.permissionError'));
         return;
       }
@@ -3453,7 +3453,7 @@ class ListViewComponent {
           mcpContext = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.MCPComponentContext.MSR;
         }
         this.itemManagerService.fetchMyRolesInOrg(this.orgMrn).then(roles => {
-          this.hasAdminPermission = this.authService.hasPermission(this.itemType, roles, mcpContext);
+          this.hasEditPermission = this.authService.hasPermission(this.itemType, roles, mcpContext);
         });
       });
     });
@@ -3496,11 +3496,11 @@ class ListViewComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵStandaloneFeature"]],
     decls: 2,
     vars: 1,
-    consts: [["exTable", ""], [1, "parent"], ["placeholder", "There is no data.", 3, "itemType", "labels", "getData", "totalPages", "totalElements", "deleteCall", "addCall"], ["placeholder", "There is no data.", 3, "refreshEvent", "migrateEvent", "editEvent", "approveEvent", "itemType", "labels", "getData", "totalPages", "totalElements", "deleteCall", "addCall"]],
+    consts: [["exTable", ""], [1, "parent"], ["placeholder", "There is no data.", 3, "itemType", "labels", "getData", "totalPages", "totalElements", "deleteCall", "addCall", "hasEditPermission"], ["placeholder", "There is no data.", 3, "refreshEvent", "migrateEvent", "editEvent", "approveEvent", "itemType", "labels", "getData", "totalPages", "totalElements", "deleteCall", "addCall", "hasEditPermission"]],
     template: function ListViewComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](1, ListViewComponent_Conditional_1_Template, 2, 7, "app-smart-expandable-table", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵtemplate"](1, ListViewComponent_Conditional_1_Template, 2, 8, "app-smart-expandable-table", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementEnd"]();
       }
       if (rf & 2) {
