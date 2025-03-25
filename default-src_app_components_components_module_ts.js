@@ -3730,7 +3730,7 @@ class ItemViewComponent {
     };
     this.openCertModal = () => {
       if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__.ItemType.Service && this.instanceVersion) {
-        this.notifier.notify('error', this.translate.instant('error.selection.wrongtype'));
+        this.notifier.notify('error', this.translate.instant('error.selection.notMigrated'));
         return;
       }
       this.certModal?.open();
@@ -3781,7 +3781,7 @@ class ItemViewComponent {
     };
     this.clickRevokeBtn = selected => {
       if (this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__.ItemType.Service && this.instanceVersion) {
-        this.notifier.notify('error', this.translate.instant('error.selection.wrongtype'));
+        this.notifier.notify('error', this.translate.instant('error.selection.notMigrated'));
         return;
       }
       if (selected.length === 0) {
