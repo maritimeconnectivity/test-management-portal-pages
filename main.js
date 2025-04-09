@@ -1,6 +1,6 @@
 (self["webpackChunkmanagement_portal_clr"] = self["webpackChunkmanagement_portal_clr"] || []).push([["main"],{
 
-/***/ 52961:
+/***/ 56443:
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
@@ -12,9 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppRoutingModule: () => (/* binding */ AppRoutingModule),
 /* harmony export */   routes: () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 44424);
-/* harmony import */ var _auth_auth_guard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth/auth.guard */ 27061);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _auth_auth_guard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth/auth.guard */ 28179);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 42391);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -36,11 +36,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [{
   path: 'pages',
-  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_pages_pages_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/pages.module */ 36400)).then(m => m.PagesModule),
+  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_pages_pages_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/pages.module */ 98046)).then(m => m.PagesModule),
   canActivateChild: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_0__.authGuard]
 }, {
   path: '',
-  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_landing_landing_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./landing/landing.module */ 52576)).then(m => m.LandingModule)
+  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_landing_landing_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./landing/landing.module */ 3254)).then(m => m.LandingModule)
 }
 //*
 //{ path: '', redirectTo: 'pages', pathMatch: 'full' },
@@ -70,7 +70,7 @@ class AppRoutingModule {
 
 /***/ }),
 
-/***/ 35429:
+/***/ 9371:
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
   \**********************************/
@@ -81,9 +81,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppComponent: () => (/* binding */ AppComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ 44424);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gramli-angular-notifier */ 1059);
+/* harmony import */ var src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/assets/js/wasm_exec.js */ 76153);
+/* harmony import */ var src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gramli-angular-notifier */ 9806);
+
 
 
 
@@ -91,27 +94,34 @@ class AppComponent {
   constructor() {
     this.title = 'management-portal-clr';
   }
+  ngOnInit() {
+    const go = new Go();
+    WebAssembly.instantiateStreaming(fetch(window.location.origin + "/assets/wasm/main.wasm"), go.importObject).then(result => {
+      console.log("Loaded WASM");
+      go.run(result.instance).then(() => console.log("Finished"));
+    });
+  }
   static #_ = this.ɵfac = function AppComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || AppComponent)();
   };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
     type: AppComponent,
     selectors: [["app-root"]],
     decls: 2,
     vars: 0,
     template: function AppComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet")(1, "notifier-container");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "router-outlet")(1, "notifier-container");
       }
     },
-    dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_1__.RouterOutlet, gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_2__.NotifierContainerComponent],
+    dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterOutlet, gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_3__.NotifierContainerComponent],
     styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
   });
 }
 
 /***/ }),
 
-/***/ 96370:
+/***/ 26060:
 /*!*******************************!*\
   !*** ./src/app/app.config.ts ***!
   \*******************************/
@@ -122,8 +132,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppConfig: () => (/* binding */ AppConfig)
 /* harmony export */ });
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../environments/environment */ 91083);
-/* harmony import */ var _common_version__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/version */ 72741);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../environments/environment */ 95297);
+/* harmony import */ var _common_version__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/version */ 92671);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -170,7 +180,7 @@ AppConfig._initialize();
 
 /***/ }),
 
-/***/ 19256:
+/***/ 60250:
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
@@ -182,23 +192,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppModule: () => (/* binding */ AppModule),
 /* harmony export */   HttpLoaderFactory: () => (/* binding */ HttpLoaderFactory)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ 29218);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ 95445);
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 52961);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 35429);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 81577);
-/* harmony import */ var _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./backend-api/identity-registry */ 9136);
-/* harmony import */ var _backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./backend-api/service-registry */ 90719);
-/* harmony import */ var _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backend-api/secom */ 67063);
-/* harmony import */ var _auth_auth_init__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth/auth.init */ 73608);
-/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! keycloak-angular */ 88566);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 48070);
-/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/http-loader */ 15328);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! gramli-angular-notifier */ 1059);
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.config */ 96370);
-/* harmony import */ var _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.interceptor */ 14807);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ 9320);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ 5535);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 56443);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 9371);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 99758);
+/* harmony import */ var _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./backend-api/identity-registry */ 64886);
+/* harmony import */ var _backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./backend-api/service-registry */ 91877);
+/* harmony import */ var _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backend-api/secom */ 44269);
+/* harmony import */ var _auth_auth_init__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth/auth.init */ 47846);
+/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! keycloak-angular */ 99445);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 95550);
+/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/http-loader */ 87768);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! gramli-angular-notifier */ 9806);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.config */ 26060);
+/* harmony import */ var _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.interceptor */ 81849);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -283,7 +293,7 @@ class AppModule {
 
 /***/ }),
 
-/***/ 27061:
+/***/ 28179:
 /*!************************************!*\
   !*** ./src/app/auth/auth.guard.ts ***!
   \************************************/
@@ -295,9 +305,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   authGuard: () => (/* binding */ authGuard)
 /* harmony export */ });
 /* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 44424);
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ 84595);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ 89809);
 
 
 
@@ -320,7 +330,7 @@ const authGuard = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ 73608:
+/***/ 47846:
 /*!***********************************!*\
   !*** ./src/app/auth/auth.init.ts ***!
   \***********************************/
@@ -331,7 +341,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initializeKeycloak: () => (/* binding */ initializeKeycloak)
 /* harmony export */ });
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app.config */ 96370);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app.config */ 26060);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -367,7 +377,7 @@ const initializeKeycloak = keycloak => {
 
 /***/ }),
 
-/***/ 14807:
+/***/ 81849:
 /*!******************************************!*\
   !*** ./src/app/auth/auth.interceptor.ts ***!
   \******************************************/
@@ -378,10 +388,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AuthInterceptor: () => (/* binding */ AuthInterceptor)
 /* harmony export */ });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 15790);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 97761);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 44424);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 16339);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 75322);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 59655);
 
 
 
@@ -410,7 +420,7 @@ class AuthInterceptor {
 
 /***/ }),
 
-/***/ 4377:
+/***/ 43191:
 /*!*****************************************!*\
   !*** ./src/app/auth/auth.permission.ts ***!
   \*****************************************/
@@ -425,7 +435,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   hasAdminPermissionInMIR: () => (/* binding */ hasAdminPermissionInMIR),
 /* harmony export */   rolesToPermission: () => (/* binding */ rolesToPermission)
 /* harmony export */ });
-/* harmony import */ var _backend_api_identity_registry_model_role__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/role */ 66488);
+/* harmony import */ var _backend_api_identity_registry_model_role__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/role */ 96974);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -583,7 +593,7 @@ const hasAdminPermissionInMIR = (myPermission, permissionRole) => {
 
 /***/ }),
 
-/***/ 84595:
+/***/ 89809:
 /*!**************************************!*\
   !*** ./src/app/auth/auth.service.ts ***!
   \**************************************/
@@ -595,13 +605,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AuthService: () => (/* binding */ AuthService)
 /* harmony export */ });
 /* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var _auth_permission__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.permission */ 4377);
-/* harmony import */ var _common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/menuType */ 95166);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 87624);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keycloak-angular */ 88566);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 44424);
-/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/item-manager.service */ 43983);
+/* harmony import */ var _auth_permission__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.permission */ 43191);
+/* harmony import */ var _common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/menuType */ 93644);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 91217);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keycloak-angular */ 99445);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/item-manager.service */ 11137);
 
 
 
@@ -761,7 +771,7 @@ class AuthService {
 
 /***/ }),
 
-/***/ 82700:
+/***/ 83114:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api.module.ts ***!
   \*************************************************************/
@@ -772,21 +782,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ApiModule: () => (/* binding */ ApiModule)
 /* harmony export */ });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 85586);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _api_agentController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/agentController.service */ 91427);
-/* harmony import */ var _api_certificateController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/certificateController.service */ 19069);
-/* harmony import */ var _api_deviceController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/deviceController.service */ 78996);
-/* harmony import */ var _api_logoController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/logoController.service */ 67765);
-/* harmony import */ var _api_mmsController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./api/mmsController.service */ 51105);
-/* harmony import */ var _api_organizationController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./api/organizationController.service */ 29093);
-/* harmony import */ var _api_roleController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./api/roleController.service */ 32238);
-/* harmony import */ var _api_serviceController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./api/serviceController.service */ 53697);
-/* harmony import */ var _api_userController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./api/userController.service */ 83621);
-/* harmony import */ var _api_vesselController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./api/vesselController.service */ 98920);
-/* harmony import */ var _api_vesselImageController_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./api/vesselImageController.service */ 72269);
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../app.config */ 96370);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 84700);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _api_agentController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/agentController.service */ 95541);
+/* harmony import */ var _api_certificateController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/certificateController.service */ 65943);
+/* harmony import */ var _api_deviceController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/deviceController.service */ 45034);
+/* harmony import */ var _api_logoController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/logoController.service */ 26807);
+/* harmony import */ var _api_mmsController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./api/mmsController.service */ 57231);
+/* harmony import */ var _api_organizationController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./api/organizationController.service */ 69823);
+/* harmony import */ var _api_roleController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./api/roleController.service */ 94628);
+/* harmony import */ var _api_serviceController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./api/serviceController.service */ 1019);
+/* harmony import */ var _api_userController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./api/userController.service */ 78347);
+/* harmony import */ var _api_vesselController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./api/vesselController.service */ 83194);
+/* harmony import */ var _api_vesselImageController_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./api/vesselImageController.service */ 20623);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../app.config */ 26060);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -840,7 +850,7 @@ class ApiModule {
 
 /***/ }),
 
-/***/ 91427:
+/***/ 95541:
 /*!******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/agentController.service.ts ***!
   \******************************************************************************/
@@ -851,11 +861,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AgentControllerService: () => (/* binding */ AgentControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1076,7 +1086,7 @@ class AgentControllerService {
 
 /***/ }),
 
-/***/ 80903:
+/***/ 80061:
 /*!**********************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/api.ts ***!
   \**********************************************************/
@@ -1098,17 +1108,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VesselControllerService: () => (/* reexport safe */ _vesselController_service__WEBPACK_IMPORTED_MODULE_9__.VesselControllerService),
 /* harmony export */   VesselImageControllerService: () => (/* reexport safe */ _vesselImageController_service__WEBPACK_IMPORTED_MODULE_10__.VesselImageControllerService)
 /* harmony export */ });
-/* harmony import */ var _agentController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agentController.service */ 91427);
-/* harmony import */ var _certificateController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./certificateController.service */ 19069);
-/* harmony import */ var _deviceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deviceController.service */ 78996);
-/* harmony import */ var _logoController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logoController.service */ 67765);
-/* harmony import */ var _mmsController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mmsController.service */ 51105);
-/* harmony import */ var _organizationController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./organizationController.service */ 29093);
-/* harmony import */ var _roleController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./roleController.service */ 32238);
-/* harmony import */ var _serviceController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./serviceController.service */ 53697);
-/* harmony import */ var _userController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./userController.service */ 83621);
-/* harmony import */ var _vesselController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./vesselController.service */ 98920);
-/* harmony import */ var _vesselImageController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./vesselImageController.service */ 72269);
+/* harmony import */ var _agentController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agentController.service */ 95541);
+/* harmony import */ var _certificateController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./certificateController.service */ 65943);
+/* harmony import */ var _deviceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deviceController.service */ 45034);
+/* harmony import */ var _logoController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logoController.service */ 26807);
+/* harmony import */ var _mmsController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mmsController.service */ 57231);
+/* harmony import */ var _organizationController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./organizationController.service */ 69823);
+/* harmony import */ var _roleController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./roleController.service */ 94628);
+/* harmony import */ var _serviceController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./serviceController.service */ 1019);
+/* harmony import */ var _userController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./userController.service */ 78347);
+/* harmony import */ var _vesselController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./vesselController.service */ 83194);
+/* harmony import */ var _vesselImageController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./vesselImageController.service */ 20623);
 
 
 
@@ -1135,7 +1145,7 @@ const APIS = [_agentController_service__WEBPACK_IMPORTED_MODULE_0__.AgentControl
 
 /***/ }),
 
-/***/ 19069:
+/***/ 65943:
 /*!************************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/certificateController.service.ts ***!
   \************************************************************************************/
@@ -1146,10 +1156,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CertificateControllerService: () => (/* binding */ CertificateControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1265,7 +1275,7 @@ class CertificateControllerService {
 
 /***/ }),
 
-/***/ 78996:
+/***/ 45034:
 /*!*******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/deviceController.service.ts ***!
   \*******************************************************************************/
@@ -1276,11 +1286,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DeviceControllerService: () => (/* binding */ DeviceControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1557,7 +1567,7 @@ class DeviceControllerService {
 
 /***/ }),
 
-/***/ 67765:
+/***/ 26807:
 /*!*****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/logoController.service.ts ***!
   \*****************************************************************************/
@@ -1568,10 +1578,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LogoControllerService: () => (/* binding */ LogoControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1709,7 +1719,7 @@ class LogoControllerService {
 
 /***/ }),
 
-/***/ 51105:
+/***/ 57231:
 /*!****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/mmsController.service.ts ***!
   \****************************************************************************/
@@ -1720,11 +1730,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   MmsControllerService: () => (/* binding */ MmsControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -2001,7 +2011,7 @@ class MmsControllerService {
 
 /***/ }),
 
-/***/ 29093:
+/***/ 69823:
 /*!*************************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/organizationController.service.ts ***!
   \*************************************************************************************/
@@ -2012,11 +2022,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   OrganizationControllerService: () => (/* binding */ OrganizationControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -2341,7 +2351,7 @@ class OrganizationControllerService {
 
 /***/ }),
 
-/***/ 32238:
+/***/ 94628:
 /*!*****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/roleController.service.ts ***!
   \*****************************************************************************/
@@ -2352,10 +2362,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   RoleControllerService: () => (/* binding */ RoleControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -2565,7 +2575,7 @@ class RoleControllerService {
 
 /***/ }),
 
-/***/ 53697:
+/***/ 1019:
 /*!********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/serviceController.service.ts ***!
   \********************************************************************************/
@@ -2576,11 +2586,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ServiceControllerService: () => (/* binding */ ServiceControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3208,7 +3218,7 @@ class ServiceControllerService {
 
 /***/ }),
 
-/***/ 83621:
+/***/ 78347:
 /*!*****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/userController.service.ts ***!
   \*****************************************************************************/
@@ -3219,11 +3229,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   UserControllerService: () => (/* binding */ UserControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3500,7 +3510,7 @@ class UserControllerService {
 
 /***/ }),
 
-/***/ 98920:
+/***/ 83194:
 /*!*******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/vesselController.service.ts ***!
   \*******************************************************************************/
@@ -3511,11 +3521,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   VesselControllerService: () => (/* binding */ VesselControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 40192);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3815,7 +3825,7 @@ class VesselControllerService {
 
 /***/ }),
 
-/***/ 72269:
+/***/ 20623:
 /*!************************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/vesselImageController.service.ts ***!
   \************************************************************************************/
@@ -3826,10 +3836,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   VesselImageControllerService: () => (/* binding */ VesselImageControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 85586);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3979,7 +3989,7 @@ class VesselImageControllerService {
 
 /***/ }),
 
-/***/ 85586:
+/***/ 84700:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/configuration.ts ***!
   \****************************************************************/
@@ -4051,7 +4061,7 @@ class Configuration {
 
 /***/ }),
 
-/***/ 40192:
+/***/ 79834:
 /*!**********************************************************!*\
   !*** ./src/app/backend-api/identity-registry/encoder.ts ***!
   \**********************************************************/
@@ -4062,7 +4072,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CustomHttpUrlEncodingCodec: () => (/* binding */ CustomHttpUrlEncodingCodec)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 92726);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 /**
 * CustomHttpUrlEncodingCodec
@@ -4082,7 +4092,7 @@ class CustomHttpUrlEncodingCodec extends _angular_common_http__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 9136:
+/***/ 64886:
 /*!********************************************************!*\
   !*** ./src/app/backend-api/identity-registry/index.ts ***!
   \********************************************************/
@@ -4115,11 +4125,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VesselControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.VesselControllerService),
 /* harmony export */   VesselImageControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.VesselImageControllerService)
 /* harmony export */ });
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 80903);
-/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 95962);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 39573);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 85586);
-/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 82700);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 80061);
+/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 97936);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 84700);
+/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 83114);
 
 
 
@@ -4128,7 +4138,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 34151:
+/***/ 10625:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/agent.ts ***!
   \**************************************************************/
@@ -4140,7 +4150,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 20137:
+/***/ 58679:
 /*!*************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/allowedAgentRole.ts ***!
   \*************************************************************************/
@@ -4178,7 +4188,7 @@ var AllowedAgentRole;
 
 /***/ }),
 
-/***/ 12201:
+/***/ 34171:
 /*!********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/certificate.ts ***!
   \********************************************************************/
@@ -4201,7 +4211,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 87277:
+/***/ 34271:
 /*!******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/certificateRevocation.ts ***!
   \******************************************************************************/
@@ -4241,7 +4251,7 @@ var CertificateRevocation;
 
 /***/ }),
 
-/***/ 23538:
+/***/ 82544:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/device.ts ***!
   \***************************************************************/
@@ -4253,7 +4263,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 80951:
+/***/ 33397:
 /*!**********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/identityProviderAttribute.ts ***!
   \**********************************************************************************/
@@ -4284,7 +4294,7 @@ var IdentityProviderAttribute;
 
 /***/ }),
 
-/***/ 38957:
+/***/ 71419:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/mMS.ts ***!
   \************************************************************/
@@ -4296,7 +4306,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 95962:
+/***/ 97936:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/models.ts ***!
   \***************************************************************/
@@ -4313,34 +4323,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Service: () => (/* reexport safe */ _service__WEBPACK_IMPORTED_MODULE_20__.Service),
 /* harmony export */   VesselAttribute: () => (/* reexport safe */ _vesselAttribute__WEBPACK_IMPORTED_MODULE_25__.VesselAttribute)
 /* harmony export */ });
-/* harmony import */ var _agent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agent */ 34151);
-/* harmony import */ var _allowedAgentRole__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./allowedAgentRole */ 20137);
-/* harmony import */ var _certificate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./certificate */ 12201);
-/* harmony import */ var _certificateRevocation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./certificateRevocation */ 87277);
-/* harmony import */ var _device__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./device */ 23538);
-/* harmony import */ var _identityProviderAttribute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./identityProviderAttribute */ 80951);
-/* harmony import */ var _mMS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mMS */ 38957);
-/* harmony import */ var _orgMrnLogoBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./orgMrnLogoBody */ 40090);
-/* harmony import */ var _orgMrnLogoBody1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./orgMrnLogoBody1 */ 75295);
-/* harmony import */ var _organization__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./organization */ 51387);
-/* harmony import */ var _pageAgent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pageAgent */ 96178);
-/* harmony import */ var _pageDevice__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pageDevice */ 49521);
-/* harmony import */ var _pageMMS__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pageMMS */ 72772);
-/* harmony import */ var _pageOrganization__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pageOrganization */ 264);
-/* harmony import */ var _pageService__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pageService */ 51388);
-/* harmony import */ var _pageUser__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pageUser */ 37608);
-/* harmony import */ var _pageVessel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pageVessel */ 94477);
-/* harmony import */ var _pageable__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pageable */ 20075);
-/* harmony import */ var _pageableObject__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pageableObject */ 63184);
-/* harmony import */ var _role__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./role */ 66488);
-/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./service */ 333);
-/* harmony import */ var _servicePatch__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./servicePatch */ 73139);
-/* harmony import */ var _sortObject__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sortObject */ 25359);
-/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./user */ 72995);
-/* harmony import */ var _vessel__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./vessel */ 87178);
-/* harmony import */ var _vesselAttribute__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./vesselAttribute */ 24160);
-/* harmony import */ var _vesselMrnVesselImageBody__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./vesselMrnVesselImageBody */ 69076);
-/* harmony import */ var _vesselMrnVesselImageBody1__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./vesselMrnVesselImageBody1 */ 92277);
+/* harmony import */ var _agent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agent */ 10625);
+/* harmony import */ var _allowedAgentRole__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./allowedAgentRole */ 58679);
+/* harmony import */ var _certificate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./certificate */ 34171);
+/* harmony import */ var _certificateRevocation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./certificateRevocation */ 34271);
+/* harmony import */ var _device__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./device */ 82544);
+/* harmony import */ var _identityProviderAttribute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./identityProviderAttribute */ 33397);
+/* harmony import */ var _mMS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mMS */ 71419);
+/* harmony import */ var _orgMrnLogoBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./orgMrnLogoBody */ 83024);
+/* harmony import */ var _orgMrnLogoBody1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./orgMrnLogoBody1 */ 62601);
+/* harmony import */ var _organization__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./organization */ 43301);
+/* harmony import */ var _pageAgent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pageAgent */ 1056);
+/* harmony import */ var _pageDevice__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pageDevice */ 61547);
+/* harmony import */ var _pageMMS__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pageMMS */ 77734);
+/* harmony import */ var _pageOrganization__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pageOrganization */ 8046);
+/* harmony import */ var _pageService__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pageService */ 90866);
+/* harmony import */ var _pageUser__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pageUser */ 20162);
+/* harmony import */ var _pageVessel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pageVessel */ 82075);
+/* harmony import */ var _pageable__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pageable */ 13985);
+/* harmony import */ var _pageableObject__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pageableObject */ 80686);
+/* harmony import */ var _role__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./role */ 96974);
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./service */ 57775);
+/* harmony import */ var _servicePatch__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./servicePatch */ 26557);
+/* harmony import */ var _sortObject__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sortObject */ 13569);
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./user */ 15409);
+/* harmony import */ var _vessel__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./vessel */ 95148);
+/* harmony import */ var _vesselAttribute__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./vesselAttribute */ 55078);
+/* harmony import */ var _vesselMrnVesselImageBody__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./vesselMrnVesselImageBody */ 77822);
+/* harmony import */ var _vesselMrnVesselImageBody1__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./vesselMrnVesselImageBody1 */ 98059);
 
 
 
@@ -4372,7 +4382,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 40090:
+/***/ 83024:
 /*!***********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/orgMrnLogoBody.ts ***!
   \***********************************************************************/
@@ -4395,7 +4405,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 75295:
+/***/ 62601:
 /*!************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/orgMrnLogoBody1.ts ***!
   \************************************************************************/
@@ -4418,7 +4428,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 51387:
+/***/ 43301:
 /*!*********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/organization.ts ***!
   \*********************************************************************/
@@ -4440,7 +4450,7 @@ var Organization;
 
 /***/ }),
 
-/***/ 96178:
+/***/ 1056:
 /*!******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageAgent.ts ***!
   \******************************************************************/
@@ -4452,7 +4462,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 49521:
+/***/ 61547:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageDevice.ts ***!
   \*******************************************************************/
@@ -4464,7 +4474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 72772:
+/***/ 77734:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageMMS.ts ***!
   \****************************************************************/
@@ -4476,7 +4486,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 264:
+/***/ 8046:
 /*!*************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageOrganization.ts ***!
   \*************************************************************************/
@@ -4488,7 +4498,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 51388:
+/***/ 90866:
 /*!********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageService.ts ***!
   \********************************************************************/
@@ -4500,7 +4510,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 37608:
+/***/ 20162:
 /*!*****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageUser.ts ***!
   \*****************************************************************/
@@ -4512,7 +4522,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 94477:
+/***/ 82075:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageVessel.ts ***!
   \*******************************************************************/
@@ -4524,7 +4534,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 20075:
+/***/ 13985:
 /*!*****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageable.ts ***!
   \*****************************************************************/
@@ -4547,7 +4557,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 63184:
+/***/ 80686:
 /*!***********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageableObject.ts ***!
   \***********************************************************************/
@@ -4559,7 +4569,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 66488:
+/***/ 96974:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/role.ts ***!
   \*************************************************************/
@@ -4601,7 +4611,7 @@ var Role;
 
 /***/ }),
 
-/***/ 333:
+/***/ 57775:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/service.ts ***!
   \****************************************************************/
@@ -4621,7 +4631,7 @@ var Service;
 
 /***/ }),
 
-/***/ 73139:
+/***/ 26557:
 /*!*********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/servicePatch.ts ***!
   \*********************************************************************/
@@ -4644,7 +4654,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 25359:
+/***/ 13569:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/sortObject.ts ***!
   \*******************************************************************/
@@ -4667,7 +4677,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 72995:
+/***/ 15409:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/user.ts ***!
   \*************************************************************/
@@ -4679,7 +4689,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 87178:
+/***/ 95148:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vessel.ts ***!
   \***************************************************************/
@@ -4691,7 +4701,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 24160:
+/***/ 55078:
 /*!************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vesselAttribute.ts ***!
   \************************************************************************/
@@ -4727,7 +4737,7 @@ var VesselAttribute;
 
 /***/ }),
 
-/***/ 69076:
+/***/ 77822:
 /*!*********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vesselMrnVesselImageBody.ts ***!
   \*********************************************************************************/
@@ -4750,7 +4760,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 92277:
+/***/ 98059:
 /*!**********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vesselMrnVesselImageBody1.ts ***!
   \**********************************************************************************/
@@ -4773,7 +4783,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 39573:
+/***/ 51311:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/variables.ts ***!
   \************************************************************/
@@ -4785,7 +4795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* binding */ BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* binding */ COLLECTION_FORMATS)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
 
 const BASE_PATH = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('basePath');
 const COLLECTION_FORMATS = {
@@ -4797,7 +4807,7 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
-/***/ 58313:
+/***/ 54239:
 /*!*************************************************!*\
   !*** ./src/app/backend-api/secom/api.module.ts ***!
   \*************************************************/
@@ -4808,10 +4818,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ApiModule: () => (/* binding */ ApiModule)
 /* harmony export */ });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 58969);
-/* harmony import */ var _api_sECOM_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/sECOM.service */ 30076);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 78939);
+/* harmony import */ var _api_sECOM_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/sECOM.service */ 39570);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 
 
@@ -4847,7 +4857,7 @@ class ApiModule {
 
 /***/ }),
 
-/***/ 15544:
+/***/ 57270:
 /*!**********************************************!*\
   !*** ./src/app/backend-api/secom/api/api.ts ***!
   \**********************************************/
@@ -4859,14 +4869,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   APIS: () => (/* binding */ APIS),
 /* harmony export */   SECOMService: () => (/* reexport safe */ _sECOM_service__WEBPACK_IMPORTED_MODULE_0__.SECOMService)
 /* harmony export */ });
-/* harmony import */ var _sECOM_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sECOM.service */ 30076);
+/* harmony import */ var _sECOM_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sECOM.service */ 39570);
 
 
 const APIS = [_sECOM_service__WEBPACK_IMPORTED_MODULE_0__.SECOMService];
 
 /***/ }),
 
-/***/ 30076:
+/***/ 39570:
 /*!********************************************************!*\
   !*** ./src/app/backend-api/secom/api/sECOM.service.ts ***!
   \********************************************************/
@@ -4877,12 +4887,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SECOMService: () => (/* binding */ SECOMService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 76639);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 55694);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 58969);
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app.config */ 96370);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 35753);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 46400);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 78939);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app.config */ 26060);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -4961,7 +4971,7 @@ class SECOMService {
 
 /***/ }),
 
-/***/ 58969:
+/***/ 78939:
 /*!****************************************************!*\
   !*** ./src/app/backend-api/secom/configuration.ts ***!
   \****************************************************/
@@ -5033,7 +5043,7 @@ class Configuration {
 
 /***/ }),
 
-/***/ 76639:
+/***/ 35753:
 /*!**********************************************!*\
   !*** ./src/app/backend-api/secom/encoder.ts ***!
   \**********************************************/
@@ -5044,7 +5054,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CustomHttpUrlEncodingCodec: () => (/* binding */ CustomHttpUrlEncodingCodec)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 92726);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 /**
 * CustomHttpUrlEncodingCodec
@@ -5064,7 +5074,7 @@ class CustomHttpUrlEncodingCodec extends _angular_common_http__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 67063:
+/***/ 44269:
 /*!********************************************!*\
   !*** ./src/app/backend-api/secom/index.ts ***!
   \********************************************/
@@ -5082,11 +5092,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SearchObjectResult: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.SearchObjectResult),
 /* harmony export */   SearchParameters: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.SearchParameters)
 /* harmony export */ });
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 15544);
-/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 30811);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 55694);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 58969);
-/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 58313);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 57270);
+/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 33665);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 46400);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 78939);
+/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 54239);
 
 
 
@@ -5095,7 +5105,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 30811:
+/***/ 33665:
 /*!***************************************************!*\
   !*** ./src/app/backend-api/secom/model/models.ts ***!
   \***************************************************/
@@ -5107,16 +5117,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SearchObjectResult: () => (/* reexport safe */ _searchObjectResult__WEBPACK_IMPORTED_MODULE_1__.SearchObjectResult),
 /* harmony export */   SearchParameters: () => (/* reexport safe */ _searchParameters__WEBPACK_IMPORTED_MODULE_2__.SearchParameters)
 /* harmony export */ });
-/* harmony import */ var _searchFilterObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchFilterObject */ 27308);
-/* harmony import */ var _searchObjectResult__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./searchObjectResult */ 77859);
-/* harmony import */ var _searchParameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchParameters */ 66249);
+/* harmony import */ var _searchFilterObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchFilterObject */ 62638);
+/* harmony import */ var _searchObjectResult__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./searchObjectResult */ 49125);
+/* harmony import */ var _searchParameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchParameters */ 90511);
 
 
 
 
 /***/ }),
 
-/***/ 27308:
+/***/ 62638:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/secom/model/searchFilterObject.ts ***!
   \***************************************************************/
@@ -5128,7 +5138,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 77859:
+/***/ 49125:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/secom/model/searchObjectResult.ts ***!
   \***************************************************************/
@@ -5185,7 +5195,7 @@ var SearchObjectResult;
 
 /***/ }),
 
-/***/ 66249:
+/***/ 90511:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/secom/model/searchParameters.ts ***!
   \*************************************************************/
@@ -5242,7 +5252,7 @@ var SearchParameters;
 
 /***/ }),
 
-/***/ 55694:
+/***/ 46400:
 /*!************************************************!*\
   !*** ./src/app/backend-api/secom/variables.ts ***!
   \************************************************/
@@ -5254,7 +5264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* binding */ BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* binding */ COLLECTION_FORMATS)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
 
 const BASE_PATH = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('basePath');
 const COLLECTION_FORMATS = {
@@ -5266,7 +5276,7 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
-/***/ 66561:
+/***/ 61543:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api.module.ts ***!
   \************************************************************/
@@ -5277,13 +5287,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ApiModule: () => (/* binding */ ApiModule)
 /* harmony export */ });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 23729);
-/* harmony import */ var _api_docController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/docController.service */ 80307);
-/* harmony import */ var _api_instanceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/instanceController.service */ 15032);
-/* harmony import */ var _api_ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/ledgerRequestController.service */ 67691);
-/* harmony import */ var _api_xmlController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/xmlController.service */ 36288);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 92726);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 36707);
+/* harmony import */ var _api_docController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/docController.service */ 33773);
+/* harmony import */ var _api_instanceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/instanceController.service */ 3574);
+/* harmony import */ var _api_ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/ledgerRequestController.service */ 46317);
+/* harmony import */ var _api_xmlController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/xmlController.service */ 94930);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 
 
@@ -5322,7 +5332,7 @@ class ApiModule {
 
 /***/ }),
 
-/***/ 2880:
+/***/ 35374:
 /*!*********************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/api.ts ***!
   \*********************************************************/
@@ -5337,10 +5347,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   LedgerRequestControllerService: () => (/* reexport safe */ _ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_2__.LedgerRequestControllerService),
 /* harmony export */   XmlControllerService: () => (/* reexport safe */ _xmlController_service__WEBPACK_IMPORTED_MODULE_3__.XmlControllerService)
 /* harmony export */ });
-/* harmony import */ var _docController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./docController.service */ 80307);
-/* harmony import */ var _instanceController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instanceController.service */ 15032);
-/* harmony import */ var _ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ledgerRequestController.service */ 67691);
-/* harmony import */ var _xmlController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./xmlController.service */ 36288);
+/* harmony import */ var _docController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./docController.service */ 33773);
+/* harmony import */ var _instanceController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instanceController.service */ 3574);
+/* harmony import */ var _ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ledgerRequestController.service */ 46317);
+/* harmony import */ var _xmlController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./xmlController.service */ 94930);
 
 
 
@@ -5353,7 +5363,7 @@ const APIS = [_docController_service__WEBPACK_IMPORTED_MODULE_0__.DocControllerS
 
 /***/ }),
 
-/***/ 80307:
+/***/ 33773:
 /*!***************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/docController.service.ts ***!
   \***************************************************************************/
@@ -5364,11 +5374,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DocControllerService: () => (/* binding */ DocControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 46903);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 20422);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 23729);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -5539,7 +5549,7 @@ class DocControllerService {
 
 /***/ }),
 
-/***/ 15032:
+/***/ 3574:
 /*!********************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/instanceController.service.ts ***!
   \********************************************************************************/
@@ -5550,11 +5560,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   InstanceControllerService: () => (/* binding */ InstanceControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 46903);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 20422);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 23729);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -5828,7 +5838,7 @@ class InstanceControllerService {
 
 /***/ }),
 
-/***/ 67691:
+/***/ 46317:
 /*!*************************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/ledgerRequestController.service.ts ***!
   \*************************************************************************************/
@@ -5839,11 +5849,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LedgerRequestControllerService: () => (/* binding */ LedgerRequestControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 46903);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 20422);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 23729);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -6016,7 +6026,7 @@ class LedgerRequestControllerService {
 
 /***/ }),
 
-/***/ 36288:
+/***/ 94930:
 /*!***************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/xmlController.service.ts ***!
   \***************************************************************************/
@@ -6027,11 +6037,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   XmlControllerService: () => (/* binding */ XmlControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 92726);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 46903);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 20422);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 23729);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -6250,7 +6260,7 @@ class XmlControllerService {
 
 /***/ }),
 
-/***/ 23729:
+/***/ 36707:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/service-registry/configuration.ts ***!
   \***************************************************************/
@@ -6322,7 +6332,7 @@ class Configuration {
 
 /***/ }),
 
-/***/ 46903:
+/***/ 26513:
 /*!*********************************************************!*\
   !*** ./src/app/backend-api/service-registry/encoder.ts ***!
   \*********************************************************/
@@ -6333,7 +6343,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CustomHttpUrlEncodingCodec: () => (/* binding */ CustomHttpUrlEncodingCodec)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 92726);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 /**
 * CustomHttpUrlEncodingCodec
@@ -6353,7 +6363,7 @@ class CustomHttpUrlEncodingCodec extends _angular_common_http__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 90719:
+/***/ 91877:
 /*!*******************************************************!*\
   !*** ./src/app/backend-api/service-registry/index.ts ***!
   \*******************************************************/
@@ -6374,11 +6384,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   LedgerRequestDto: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.LedgerRequestDto),
 /* harmony export */   XmlControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.XmlControllerService)
 /* harmony export */ });
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 2880);
-/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 54259);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 20422);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 23729);
-/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 66561);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 35374);
+/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 25321);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 36707);
+/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 61543);
 
 
 
@@ -6387,7 +6397,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4783:
+/***/ 39633:
 /*!******************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/coordinate.ts ***!
   \******************************************************************/
@@ -6410,7 +6420,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 99054:
+/***/ 24596:
 /*!**************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/coordinateSequence.ts ***!
   \**************************************************************************/
@@ -6433,7 +6443,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 45050:
+/***/ 71580:
 /*!*********************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/coordinateSequenceFactory.ts ***!
   \*********************************************************************************/
@@ -6456,7 +6466,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 89770:
+/***/ 62396:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/docDto.ts ***!
   \**************************************************************/
@@ -6479,7 +6489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 63629:
+/***/ 18159:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/envelope.ts ***!
   \****************************************************************/
@@ -6502,7 +6512,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 65841:
+/***/ 65835:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/geometry.ts ***!
   \****************************************************************/
@@ -6514,7 +6524,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 26279:
+/***/ 25333:
 /*!***********************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/geometryFactory.ts ***!
   \***********************************************************************/
@@ -6526,7 +6536,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 56461:
+/***/ 2779:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/instanceDto.ts ***!
   \*******************************************************************/
@@ -6588,7 +6598,7 @@ var InstanceDto;
 
 /***/ }),
 
-/***/ 91266:
+/***/ 2676:
 /*!************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/ledgerRequestDto.ts ***!
   \************************************************************************/
@@ -6626,7 +6636,7 @@ var LedgerRequestDto;
 
 /***/ }),
 
-/***/ 54259:
+/***/ 25321:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/models.ts ***!
   \**************************************************************/
@@ -6638,19 +6648,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   InstanceDto: () => (/* reexport safe */ _instanceDto__WEBPACK_IMPORTED_MODULE_7__.InstanceDto),
 /* harmony export */   LedgerRequestDto: () => (/* reexport safe */ _ledgerRequestDto__WEBPACK_IMPORTED_MODULE_8__.LedgerRequestDto)
 /* harmony export */ });
-/* harmony import */ var _coordinate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coordinate */ 4783);
-/* harmony import */ var _coordinateSequence__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./coordinateSequence */ 99054);
-/* harmony import */ var _coordinateSequenceFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./coordinateSequenceFactory */ 45050);
-/* harmony import */ var _docDto__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./docDto */ 89770);
-/* harmony import */ var _envelope__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./envelope */ 63629);
-/* harmony import */ var _geometry__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./geometry */ 65841);
-/* harmony import */ var _geometryFactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./geometryFactory */ 26279);
-/* harmony import */ var _instanceDto__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./instanceDto */ 56461);
-/* harmony import */ var _ledgerRequestDto__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ledgerRequestDto */ 91266);
-/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./point */ 55023);
-/* harmony import */ var _precisionModel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./precisionModel */ 6784);
-/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./type */ 21433);
-/* harmony import */ var _xmlDto__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./xmlDto */ 11947);
+/* harmony import */ var _coordinate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coordinate */ 39633);
+/* harmony import */ var _coordinateSequence__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./coordinateSequence */ 24596);
+/* harmony import */ var _coordinateSequenceFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./coordinateSequenceFactory */ 71580);
+/* harmony import */ var _docDto__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./docDto */ 62396);
+/* harmony import */ var _envelope__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./envelope */ 18159);
+/* harmony import */ var _geometry__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./geometry */ 65835);
+/* harmony import */ var _geometryFactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./geometryFactory */ 25333);
+/* harmony import */ var _instanceDto__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./instanceDto */ 2779);
+/* harmony import */ var _ledgerRequestDto__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ledgerRequestDto */ 2676);
+/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./point */ 78817);
+/* harmony import */ var _precisionModel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./precisionModel */ 78518);
+/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./type */ 28087);
+/* harmony import */ var _xmlDto__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./xmlDto */ 37253);
 
 
 
@@ -6667,7 +6677,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 55023:
+/***/ 78817:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/point.ts ***!
   \*************************************************************/
@@ -6679,7 +6689,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 6784:
+/***/ 78518:
 /*!**********************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/precisionModel.ts ***!
   \**********************************************************************/
@@ -6691,7 +6701,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 21433:
+/***/ 28087:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/type.ts ***!
   \************************************************************/
@@ -6714,7 +6724,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 11947:
+/***/ 37253:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/xmlDto.ts ***!
   \**************************************************************/
@@ -6737,7 +6747,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 20422:
+/***/ 4168:
 /*!***********************************************************!*\
   !*** ./src/app/backend-api/service-registry/variables.ts ***!
   \***********************************************************/
@@ -6749,7 +6759,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* binding */ BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* binding */ COLLECTION_FORMATS)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
 
 const BASE_PATH = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('basePath');
 const COLLECTION_FORMATS = {
@@ -6761,7 +6771,7 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
-/***/ 14943:
+/***/ 41977:
 /*!*****************************************!*\
   !*** ./src/app/common/columnForMenu.ts ***!
   \*****************************************/
@@ -6772,8 +6782,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ColumnForResource: () => (/* binding */ ColumnForResource)
 /* harmony export */ });
-/* harmony import */ var _countryOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countryOptions */ 80781);
-/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./timeConverter */ 71066);
+/* harmony import */ var _countryOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countryOptions */ 76775);
+/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./timeConverter */ 24536);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -8038,7 +8048,7 @@ const ColumnForResource = {
 
 /***/ }),
 
-/***/ 80781:
+/***/ 76775:
 /*!******************************************!*\
   !*** ./src/app/common/countryOptions.ts ***!
   \******************************************/
@@ -9316,7 +9326,7 @@ const countryOptions = [{
 
 /***/ }),
 
-/***/ 25247:
+/***/ 11309:
 /*!*****************************************!*\
   !*** ./src/app/common/dataformatter.ts ***!
   \*****************************************/
@@ -9329,7 +9339,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   formatInstanceData: () => (/* binding */ formatInstanceData),
 /* harmony export */   formatVesselToUpload: () => (/* binding */ formatVesselToUpload)
 /* harmony export */ });
-/* harmony import */ var _backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/vesselAttribute */ 24160);
+/* harmony import */ var _backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/vesselAttribute */ 55078);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -9392,7 +9402,7 @@ const camel2snake = str => str.replace(/[A-Z]/g, constter => `-${constter.toLowe
 
 /***/ }),
 
-/***/ 61224:
+/***/ 7946:
 /*!****************************************!*\
   !*** ./src/app/common/filterObject.ts ***!
   \****************************************/
@@ -9446,7 +9456,7 @@ const migrateVesselAttributes = item => {
 
 /***/ }),
 
-/***/ 19677:
+/***/ 19823:
 /*!********************************************!*\
   !*** ./src/app/common/itemPreprocessor.ts ***!
   \********************************************/
@@ -9459,10 +9469,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   preprocessToShow: () => (/* binding */ preprocessToShow),
 /* harmony export */   preprocessToUpload: () => (/* binding */ preprocessToUpload)
 /* harmony export */ });
-/* harmony import */ var _columnForMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./columnForMenu */ 14943);
-/* harmony import */ var _dataformatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dataformatter */ 25247);
-/* harmony import */ var _filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filterObject */ 61224);
-/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuType */ 95166);
+/* harmony import */ var _columnForMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./columnForMenu */ 41977);
+/* harmony import */ var _dataformatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dataformatter */ 11309);
+/* harmony import */ var _filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filterObject */ 7946);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuType */ 93644);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -9565,7 +9575,7 @@ const preprocessToShow = (item, itemType) => {
 
 /***/ }),
 
-/***/ 95166:
+/***/ 93644:
 /*!************************************!*\
   !*** ./src/app/common/menuType.ts ***!
   \************************************/
@@ -9698,7 +9708,7 @@ const itemTypeToString = itemType => {
 
 /***/ }),
 
-/***/ 43983:
+/***/ 11137:
 /*!*******************************************************!*\
   !*** ./src/app/common/shared/item-manager.service.ts ***!
   \*******************************************************/
@@ -9710,14 +9720,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ItemManagerService: () => (/* binding */ ItemManagerService)
 /* harmony export */ });
 /* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 95166);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 80983);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 50317);
-/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 9136);
-/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../itemPreprocessor */ 19677);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 90719);
-/* harmony import */ var src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/backend-api/secom */ 67063);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 93644);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 99792);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 76018);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 64886);
+/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../itemPreprocessor */ 19823);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 91877);
+/* harmony import */ var src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/backend-api/secom */ 44269);
 
 
 
@@ -9942,7 +9952,7 @@ class ItemManagerService {
 
 /***/ }),
 
-/***/ 71066:
+/***/ 24536:
 /*!*****************************************!*\
   !*** ./src/app/common/timeConverter.ts ***!
   \*****************************************/
@@ -9974,7 +9984,7 @@ const convertTime = s => {
 
 /***/ }),
 
-/***/ 72741:
+/***/ 92671:
 /*!***********************************!*\
   !*** ./src/app/common/version.ts ***!
   \***********************************/
@@ -9991,7 +10001,7 @@ const mpVersion = _package_json__WEBPACK_IMPORTED_MODULE_0__.version;
 
 /***/ }),
 
-/***/ 91083:
+/***/ 95297:
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
   \*****************************************/
@@ -10044,7 +10054,7 @@ const environment = {
 
 /***/ }),
 
-/***/ 20998:
+/***/ 44072:
 /*!*********************!*\
   !*** ./src/main.ts ***!
   \*********************/
@@ -10052,11 +10062,605 @@ const environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ 29218);
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 19256);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ 9320);
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 60250);
 
 
 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule).catch(err => console.error(err));
+
+/***/ }),
+
+/***/ 76153:
+/*!************************************!*\
+  !*** ./src/assets/js/wasm_exec.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+// Copyright 2018 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+
+
+var _asyncToGenerator = (__webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/asyncToGenerator.js */ 51486)["default"]);
+(() => {
+  const enosys = () => {
+    const err = new Error("not implemented");
+    err.code = "ENOSYS";
+    return err;
+  };
+  if (!globalThis.fs) {
+    let outputBuf = "";
+    globalThis.fs = {
+      constants: {
+        O_WRONLY: -1,
+        O_RDWR: -1,
+        O_CREAT: -1,
+        O_TRUNC: -1,
+        O_APPEND: -1,
+        O_EXCL: -1,
+        O_DIRECTORY: -1
+      },
+      // unused
+      writeSync(fd, buf) {
+        outputBuf += decoder.decode(buf);
+        const nl = outputBuf.lastIndexOf("\n");
+        if (nl != -1) {
+          console.log(outputBuf.substring(0, nl));
+          outputBuf = outputBuf.substring(nl + 1);
+        }
+        return buf.length;
+      },
+      write(fd, buf, offset, length, position, callback) {
+        if (offset !== 0 || length !== buf.length || position !== null) {
+          callback(enosys());
+          return;
+        }
+        const n = this.writeSync(fd, buf);
+        callback(null, n);
+      },
+      chmod(path, mode, callback) {
+        callback(enosys());
+      },
+      chown(path, uid, gid, callback) {
+        callback(enosys());
+      },
+      close(fd, callback) {
+        callback(enosys());
+      },
+      fchmod(fd, mode, callback) {
+        callback(enosys());
+      },
+      fchown(fd, uid, gid, callback) {
+        callback(enosys());
+      },
+      fstat(fd, callback) {
+        callback(enosys());
+      },
+      fsync(fd, callback) {
+        callback(null);
+      },
+      ftruncate(fd, length, callback) {
+        callback(enosys());
+      },
+      lchown(path, uid, gid, callback) {
+        callback(enosys());
+      },
+      link(path, link, callback) {
+        callback(enosys());
+      },
+      lstat(path, callback) {
+        callback(enosys());
+      },
+      mkdir(path, perm, callback) {
+        callback(enosys());
+      },
+      open(path, flags, mode, callback) {
+        callback(enosys());
+      },
+      read(fd, buffer, offset, length, position, callback) {
+        callback(enosys());
+      },
+      readdir(path, callback) {
+        callback(enosys());
+      },
+      readlink(path, callback) {
+        callback(enosys());
+      },
+      rename(from, to, callback) {
+        callback(enosys());
+      },
+      rmdir(path, callback) {
+        callback(enosys());
+      },
+      stat(path, callback) {
+        callback(enosys());
+      },
+      symlink(path, link, callback) {
+        callback(enosys());
+      },
+      truncate(path, length, callback) {
+        callback(enosys());
+      },
+      unlink(path, callback) {
+        callback(enosys());
+      },
+      utimes(path, atime, mtime, callback) {
+        callback(enosys());
+      }
+    };
+  }
+  if (!globalThis.process) {
+    globalThis.process = {
+      getuid() {
+        return -1;
+      },
+      getgid() {
+        return -1;
+      },
+      geteuid() {
+        return -1;
+      },
+      getegid() {
+        return -1;
+      },
+      getgroups() {
+        throw enosys();
+      },
+      pid: -1,
+      ppid: -1,
+      umask() {
+        throw enosys();
+      },
+      cwd() {
+        throw enosys();
+      },
+      chdir() {
+        throw enosys();
+      }
+    };
+  }
+  if (!globalThis.path) {
+    globalThis.path = {
+      resolve(...pathSegments) {
+        return pathSegments.join("/");
+      }
+    };
+  }
+  if (!globalThis.crypto) {
+    throw new Error("globalThis.crypto is not available, polyfill required (crypto.getRandomValues only)");
+  }
+  if (!globalThis.performance) {
+    throw new Error("globalThis.performance is not available, polyfill required (performance.now only)");
+  }
+  if (!globalThis.TextEncoder) {
+    throw new Error("globalThis.TextEncoder is not available, polyfill required");
+  }
+  if (!globalThis.TextDecoder) {
+    throw new Error("globalThis.TextDecoder is not available, polyfill required");
+  }
+  const encoder = new TextEncoder("utf-8");
+  const decoder = new TextDecoder("utf-8");
+  globalThis.Go = class {
+    constructor() {
+      this.argv = ["js"];
+      this.env = {};
+      this.exit = code => {
+        if (code !== 0) {
+          console.warn("exit code:", code);
+        }
+      };
+      this._exitPromise = new Promise(resolve => {
+        this._resolveExitPromise = resolve;
+      });
+      this._pendingEvent = null;
+      this._scheduledTimeouts = new Map();
+      this._nextCallbackTimeoutID = 1;
+      const setInt64 = (addr, v) => {
+        this.mem.setUint32(addr + 0, v, true);
+        this.mem.setUint32(addr + 4, Math.floor(v / 4294967296), true);
+      };
+      const setInt32 = (addr, v) => {
+        this.mem.setUint32(addr + 0, v, true);
+      };
+      const getInt64 = addr => {
+        const low = this.mem.getUint32(addr + 0, true);
+        const high = this.mem.getInt32(addr + 4, true);
+        return low + high * 4294967296;
+      };
+      const loadValue = addr => {
+        const f = this.mem.getFloat64(addr, true);
+        if (f === 0) {
+          return undefined;
+        }
+        if (!isNaN(f)) {
+          return f;
+        }
+        const id = this.mem.getUint32(addr, true);
+        return this._values[id];
+      };
+      const storeValue = (addr, v) => {
+        const nanHead = 0x7FF80000;
+        if (typeof v === "number" && v !== 0) {
+          if (isNaN(v)) {
+            this.mem.setUint32(addr + 4, nanHead, true);
+            this.mem.setUint32(addr, 0, true);
+            return;
+          }
+          this.mem.setFloat64(addr, v, true);
+          return;
+        }
+        if (v === undefined) {
+          this.mem.setFloat64(addr, 0, true);
+          return;
+        }
+        let id = this._ids.get(v);
+        if (id === undefined) {
+          id = this._idPool.pop();
+          if (id === undefined) {
+            id = this._values.length;
+          }
+          this._values[id] = v;
+          this._goRefCounts[id] = 0;
+          this._ids.set(v, id);
+        }
+        this._goRefCounts[id]++;
+        let typeFlag = 0;
+        switch (typeof v) {
+          case "object":
+            if (v !== null) {
+              typeFlag = 1;
+            }
+            break;
+          case "string":
+            typeFlag = 2;
+            break;
+          case "symbol":
+            typeFlag = 3;
+            break;
+          case "function":
+            typeFlag = 4;
+            break;
+        }
+        this.mem.setUint32(addr + 4, nanHead | typeFlag, true);
+        this.mem.setUint32(addr, id, true);
+      };
+      const loadSlice = addr => {
+        const array = getInt64(addr + 0);
+        const len = getInt64(addr + 8);
+        return new Uint8Array(this._inst.exports.mem.buffer, array, len);
+      };
+      const loadSliceOfValues = addr => {
+        const array = getInt64(addr + 0);
+        const len = getInt64(addr + 8);
+        const a = new Array(len);
+        for (let i = 0; i < len; i++) {
+          a[i] = loadValue(array + i * 8);
+        }
+        return a;
+      };
+      const loadString = addr => {
+        const saddr = getInt64(addr + 0);
+        const len = getInt64(addr + 8);
+        return decoder.decode(new DataView(this._inst.exports.mem.buffer, saddr, len));
+      };
+      const testCallExport = (a, b) => {
+        this._inst.exports.testExport0();
+        return this._inst.exports.testExport(a, b);
+      };
+      const timeOrigin = Date.now() - performance.now();
+      this.importObject = {
+        _gotest: {
+          add: (a, b) => a + b,
+          callExport: testCallExport
+        },
+        gojs: {
+          // Go's SP does not change as long as no Go code is running. Some operations (e.g. calls, getters and setters)
+          // may synchronously trigger a Go event handler. This makes Go code get executed in the middle of the imported
+          // function. A goroutine can switch to a new stack if the current stack is too small (see morestack function).
+          // This changes the SP, thus we have to update the SP used by the imported function.
+
+          // func wasmExit(code int32)
+          "runtime.wasmExit": sp => {
+            sp >>>= 0;
+            const code = this.mem.getInt32(sp + 8, true);
+            this.exited = true;
+            delete this._inst;
+            delete this._values;
+            delete this._goRefCounts;
+            delete this._ids;
+            delete this._idPool;
+            this.exit(code);
+          },
+          // func wasmWrite(fd uintptr, p unsafe.Pointer, n int32)
+          "runtime.wasmWrite": sp => {
+            sp >>>= 0;
+            const fd = getInt64(sp + 8);
+            const p = getInt64(sp + 16);
+            const n = this.mem.getInt32(sp + 24, true);
+            fs.writeSync(fd, new Uint8Array(this._inst.exports.mem.buffer, p, n));
+          },
+          // func resetMemoryDataView()
+          "runtime.resetMemoryDataView": sp => {
+            sp >>>= 0;
+            this.mem = new DataView(this._inst.exports.mem.buffer);
+          },
+          // func nanotime1() int64
+          "runtime.nanotime1": sp => {
+            sp >>>= 0;
+            setInt64(sp + 8, (timeOrigin + performance.now()) * 1000000);
+          },
+          // func walltime() (sec int64, nsec int32)
+          "runtime.walltime": sp => {
+            sp >>>= 0;
+            const msec = new Date().getTime();
+            setInt64(sp + 8, msec / 1000);
+            this.mem.setInt32(sp + 16, msec % 1000 * 1000000, true);
+          },
+          // func scheduleTimeoutEvent(delay int64) int32
+          "runtime.scheduleTimeoutEvent": sp => {
+            sp >>>= 0;
+            const id = this._nextCallbackTimeoutID;
+            this._nextCallbackTimeoutID++;
+            this._scheduledTimeouts.set(id, setTimeout(() => {
+              this._resume();
+              while (this._scheduledTimeouts.has(id)) {
+                // for some reason Go failed to register the timeout event, log and try again
+                // (temporary workaround for https://github.com/golang/go/issues/28975)
+                console.warn("scheduleTimeoutEvent: missed timeout event");
+                this._resume();
+              }
+            }, getInt64(sp + 8)));
+            this.mem.setInt32(sp + 16, id, true);
+          },
+          // func clearTimeoutEvent(id int32)
+          "runtime.clearTimeoutEvent": sp => {
+            sp >>>= 0;
+            const id = this.mem.getInt32(sp + 8, true);
+            clearTimeout(this._scheduledTimeouts.get(id));
+            this._scheduledTimeouts.delete(id);
+          },
+          // func getRandomData(r []byte)
+          "runtime.getRandomData": sp => {
+            sp >>>= 0;
+            crypto.getRandomValues(loadSlice(sp + 8));
+          },
+          // func finalizeRef(v ref)
+          "syscall/js.finalizeRef": sp => {
+            sp >>>= 0;
+            const id = this.mem.getUint32(sp + 8, true);
+            this._goRefCounts[id]--;
+            if (this._goRefCounts[id] === 0) {
+              const v = this._values[id];
+              this._values[id] = null;
+              this._ids.delete(v);
+              this._idPool.push(id);
+            }
+          },
+          // func stringVal(value string) ref
+          "syscall/js.stringVal": sp => {
+            sp >>>= 0;
+            storeValue(sp + 24, loadString(sp + 8));
+          },
+          // func valueGet(v ref, p string) ref
+          "syscall/js.valueGet": sp => {
+            sp >>>= 0;
+            const result = Reflect.get(loadValue(sp + 8), loadString(sp + 16));
+            sp = this._inst.exports.getsp() >>> 0; // see comment above
+            storeValue(sp + 32, result);
+          },
+          // func valueSet(v ref, p string, x ref)
+          "syscall/js.valueSet": sp => {
+            sp >>>= 0;
+            Reflect.set(loadValue(sp + 8), loadString(sp + 16), loadValue(sp + 32));
+          },
+          // func valueDelete(v ref, p string)
+          "syscall/js.valueDelete": sp => {
+            sp >>>= 0;
+            Reflect.deleteProperty(loadValue(sp + 8), loadString(sp + 16));
+          },
+          // func valueIndex(v ref, i int) ref
+          "syscall/js.valueIndex": sp => {
+            sp >>>= 0;
+            storeValue(sp + 24, Reflect.get(loadValue(sp + 8), getInt64(sp + 16)));
+          },
+          // valueSetIndex(v ref, i int, x ref)
+          "syscall/js.valueSetIndex": sp => {
+            sp >>>= 0;
+            Reflect.set(loadValue(sp + 8), getInt64(sp + 16), loadValue(sp + 24));
+          },
+          // func valueCall(v ref, m string, args []ref) (ref, bool)
+          "syscall/js.valueCall": sp => {
+            sp >>>= 0;
+            try {
+              const v = loadValue(sp + 8);
+              const m = Reflect.get(v, loadString(sp + 16));
+              const args = loadSliceOfValues(sp + 32);
+              const result = Reflect.apply(m, v, args);
+              sp = this._inst.exports.getsp() >>> 0; // see comment above
+              storeValue(sp + 56, result);
+              this.mem.setUint8(sp + 64, 1);
+            } catch (err) {
+              sp = this._inst.exports.getsp() >>> 0; // see comment above
+              storeValue(sp + 56, err);
+              this.mem.setUint8(sp + 64, 0);
+            }
+          },
+          // func valueInvoke(v ref, args []ref) (ref, bool)
+          "syscall/js.valueInvoke": sp => {
+            sp >>>= 0;
+            try {
+              const v = loadValue(sp + 8);
+              const args = loadSliceOfValues(sp + 16);
+              const result = Reflect.apply(v, undefined, args);
+              sp = this._inst.exports.getsp() >>> 0; // see comment above
+              storeValue(sp + 40, result);
+              this.mem.setUint8(sp + 48, 1);
+            } catch (err) {
+              sp = this._inst.exports.getsp() >>> 0; // see comment above
+              storeValue(sp + 40, err);
+              this.mem.setUint8(sp + 48, 0);
+            }
+          },
+          // func valueNew(v ref, args []ref) (ref, bool)
+          "syscall/js.valueNew": sp => {
+            sp >>>= 0;
+            try {
+              const v = loadValue(sp + 8);
+              const args = loadSliceOfValues(sp + 16);
+              const result = Reflect.construct(v, args);
+              sp = this._inst.exports.getsp() >>> 0; // see comment above
+              storeValue(sp + 40, result);
+              this.mem.setUint8(sp + 48, 1);
+            } catch (err) {
+              sp = this._inst.exports.getsp() >>> 0; // see comment above
+              storeValue(sp + 40, err);
+              this.mem.setUint8(sp + 48, 0);
+            }
+          },
+          // func valueLength(v ref) int
+          "syscall/js.valueLength": sp => {
+            sp >>>= 0;
+            setInt64(sp + 16, parseInt(loadValue(sp + 8).length));
+          },
+          // valuePrepareString(v ref) (ref, int)
+          "syscall/js.valuePrepareString": sp => {
+            sp >>>= 0;
+            const str = encoder.encode(String(loadValue(sp + 8)));
+            storeValue(sp + 16, str);
+            setInt64(sp + 24, str.length);
+          },
+          // valueLoadString(v ref, b []byte)
+          "syscall/js.valueLoadString": sp => {
+            sp >>>= 0;
+            const str = loadValue(sp + 8);
+            loadSlice(sp + 16).set(str);
+          },
+          // func valueInstanceOf(v ref, t ref) bool
+          "syscall/js.valueInstanceOf": sp => {
+            sp >>>= 0;
+            this.mem.setUint8(sp + 24, loadValue(sp + 8) instanceof loadValue(sp + 16) ? 1 : 0);
+          },
+          // func copyBytesToGo(dst []byte, src ref) (int, bool)
+          "syscall/js.copyBytesToGo": sp => {
+            sp >>>= 0;
+            const dst = loadSlice(sp + 8);
+            const src = loadValue(sp + 32);
+            if (!(src instanceof Uint8Array || src instanceof Uint8ClampedArray)) {
+              this.mem.setUint8(sp + 48, 0);
+              return;
+            }
+            const toCopy = src.subarray(0, dst.length);
+            dst.set(toCopy);
+            setInt64(sp + 40, toCopy.length);
+            this.mem.setUint8(sp + 48, 1);
+          },
+          // func copyBytesToJS(dst ref, src []byte) (int, bool)
+          "syscall/js.copyBytesToJS": sp => {
+            sp >>>= 0;
+            const dst = loadValue(sp + 8);
+            const src = loadSlice(sp + 16);
+            if (!(dst instanceof Uint8Array || dst instanceof Uint8ClampedArray)) {
+              this.mem.setUint8(sp + 48, 0);
+              return;
+            }
+            const toCopy = src.subarray(0, dst.length);
+            dst.set(toCopy);
+            setInt64(sp + 40, toCopy.length);
+            this.mem.setUint8(sp + 48, 1);
+          },
+          "debug": value => {
+            console.log(value);
+          }
+        }
+      };
+    }
+    run(instance) {
+      var _this = this;
+      return _asyncToGenerator(function* () {
+        if (!(instance instanceof WebAssembly.Instance)) {
+          throw new Error("Go.run: WebAssembly.Instance expected");
+        }
+        _this._inst = instance;
+        _this.mem = new DataView(_this._inst.exports.mem.buffer);
+        _this._values = [
+        // JS values that Go currently has references to, indexed by reference id
+        NaN, 0, null, true, false, globalThis, _this];
+        _this._goRefCounts = new Array(_this._values.length).fill(Infinity); // number of references that Go has to a JS value, indexed by reference id
+        _this._ids = new Map([
+        // mapping from JS values to reference ids
+        [0, 1], [null, 2], [true, 3], [false, 4], [globalThis, 5], [_this, 6]]);
+        _this._idPool = []; // unused ids that have been garbage collected
+        _this.exited = false; // whether the Go program has exited
+
+        // Pass command line arguments and environment variables to WebAssembly by writing them to the linear memory.
+        let offset = 4096;
+        const strPtr = str => {
+          const ptr = offset;
+          const bytes = encoder.encode(str + "\0");
+          new Uint8Array(_this.mem.buffer, offset, bytes.length).set(bytes);
+          offset += bytes.length;
+          if (offset % 8 !== 0) {
+            offset += 8 - offset % 8;
+          }
+          return ptr;
+        };
+        const argc = _this.argv.length;
+        const argvPtrs = [];
+        _this.argv.forEach(arg => {
+          argvPtrs.push(strPtr(arg));
+        });
+        argvPtrs.push(0);
+        const keys = Object.keys(_this.env).sort();
+        keys.forEach(key => {
+          argvPtrs.push(strPtr(`${key}=${_this.env[key]}`));
+        });
+        argvPtrs.push(0);
+        const argv = offset;
+        argvPtrs.forEach(ptr => {
+          _this.mem.setUint32(offset, ptr, true);
+          _this.mem.setUint32(offset + 4, 0, true);
+          offset += 8;
+        });
+
+        // The linker guarantees global data starts from at least wasmMinDataAddr.
+        // Keep in sync with cmd/link/internal/ld/data.go:wasmMinDataAddr.
+        const wasmMinDataAddr = 4096 + 8192;
+        if (offset >= wasmMinDataAddr) {
+          throw new Error("total length of command line and environment variables exceeds limit");
+        }
+        _this._inst.exports.run(argc, argv);
+        if (_this.exited) {
+          _this._resolveExitPromise();
+        }
+        yield _this._exitPromise;
+      })();
+    }
+    _resume() {
+      if (this.exited) {
+        throw new Error("Go program has already exited");
+      }
+      this._inst.exports.resume();
+      if (this.exited) {
+        this._resolveExitPromise();
+      }
+    }
+    _makeFuncWrapper(id) {
+      const go = this;
+      return function () {
+        const event = {
+          id: id,
+          this: this,
+          args: arguments
+        };
+        go._pendingEvent = event;
+        go._resume();
+        return event.result;
+      };
+    }
+  };
+})();
 
 /***/ }),
 
@@ -10087,14 +10691,14 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstr
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","pkijs":"^3.2.4","pvtsutils":"^1.3.5","pvutils":"^1.1.3","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","wkt":"link:@types/@terraformer/wkt","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(20998)));
+/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(44072)));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkmanagement_portal_clr"] = self["webpackChunkmanagement_portal_clr"] || []).push([["src_app_landing_landing_module_ts"],{
 
-/***/ 65065:
+/***/ 2119:
 /*!***************************************************!*\
   !*** ./src/app/landing/landing-routing.module.ts ***!
   \***************************************************/
@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LandingRoutingModule: () => (/* binding */ LandingRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 44424);
-/* harmony import */ var _landing_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./landing.component */ 67837);
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/login.component */ 84325);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _landing_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./landing.component */ 5255);
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/login.component */ 41391);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -58,7 +58,7 @@ class LandingRoutingModule {
 
 /***/ }),
 
-/***/ 67837:
+/***/ 5255:
 /*!**********************************************!*\
   !*** ./src/app/landing/landing.component.ts ***!
   \**********************************************/
@@ -68,8 +68,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LandingComponent: () => (/* binding */ LandingComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ 44424);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ 59655);
 
 
 /**
@@ -96,7 +96,7 @@ class LandingComponent {
 
 /***/ }),
 
-/***/ 52576:
+/***/ 3254:
 /*!*******************************************!*\
   !*** ./src/app/landing/landing.module.ts ***!
   \*******************************************/
@@ -106,12 +106,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LandingModule: () => (/* binding */ LandingModule)
 /* harmony export */ });
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login/login.component */ 84325);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 44424);
-/* harmony import */ var _landing_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./landing.component */ 67837);
-/* harmony import */ var _landing_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./landing-routing.module */ 65065);
-/* harmony import */ var _common_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/shared.module */ 90058);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 1888);
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login/login.component */ 41391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _landing_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./landing.component */ 5255);
+/* harmony import */ var _landing_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./landing-routing.module */ 2119);
+/* harmony import */ var _common_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/shared.module */ 87224);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -138,7 +138,7 @@ class LandingModule {
 
 /***/ }),
 
-/***/ 84325:
+/***/ 41391:
 /*!**************************************************!*\
   !*** ./src/app/landing/login/login.component.ts ***!
   \**************************************************/
@@ -149,21 +149,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   LoginComponent: () => (/* binding */ LoginComponent)
 /* harmony export */ });
 /* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @clr/angular */ 81577);
-/* harmony import */ var src_app_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.config */ 96370);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ 84576);
-/* harmony import */ var src_app_common_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/languages */ 72170);
-/* harmony import */ var src_app_common_translateHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/translateHelper */ 23987);
-/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 90058);
-/* harmony import */ var src_app_components_components_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/components/components.module */ 99850);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/common/menuType */ 95166);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rxjs */ 97761);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs */ 15790);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ 1888);
-/* harmony import */ var src_app_auth_auth_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/auth/auth.service */ 84595);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ngx-translate/core */ 48070);
-/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 9136);
-/* harmony import */ var _components_item_form_item_form_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/item-form/item-form.component */ 74662);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @clr/angular */ 99758);
+/* harmony import */ var src_app_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.config */ 26060);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ 52525);
+/* harmony import */ var src_app_common_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/languages */ 2376);
+/* harmony import */ var src_app_common_translateHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/translateHelper */ 73673);
+/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 87224);
+/* harmony import */ var src_app_components_components_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/components/components.module */ 8160);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/common/menuType */ 93644);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rxjs */ 75322);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs */ 16339);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var src_app_auth_auth_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/auth/auth.service */ 89809);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ngx-translate/core */ 95550);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 64886);
+/* harmony import */ var _components_item_form_item_form_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/item-form/item-form.component */ 36880);
 
 
 
