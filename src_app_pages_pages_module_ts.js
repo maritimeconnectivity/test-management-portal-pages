@@ -2385,7 +2385,7 @@ class SidebarComponent {
     //Add 'implements OnInit' to the class.
     this.authService.getOrgMrnFromToken().then(orgMrn => {
       this.itemManagerService.fetchMyRolesInOrg(orgMrn).then(rolesInOrg => {
-        this.isSiteAdmin = this.authService.hasSiteAdminPermission(rolesInOrg);
+        this.isSiteAdmin = this.authService.hasSiteAdminPermission(rolesInOrg) || this.authService.hasApproveOrgPermission(rolesInOrg);
       });
     });
   }
@@ -3442,13 +3442,13 @@ class ListViewComponent {
             this.notifier.notify('success', this.translate.instant('success.resource.approveOrganization.user') + ' - ' + selectedItem.adminUser.mrn);
             this.router.navigateByUrl('/pages/' + this.apiBase + '/organization');
           }, err => {
-            this.notifier.notify('error', this.translate.instant('error.resource.approveOrganization.userCreation') + err.error?.message);
+            this.notifier.notify('error', this.translate.instant('error.resource.approveOrganization.userCreation') + ": " + err.error?.message);
           });
         }, err => {
-          this.notifier.notify('error', this.translate.instant('error.resource.approveOrganization.roleCreation') + err.error?.message);
+          this.notifier.notify('error', this.translate.instant('error.resource.approveOrganization.roleCreation') + ": " + err.error?.message);
         });
       }, err => {
-        this.notifier.notify('error', this.translate.instant('error.resource.approveOrganization.general') + err.error?.message);
+        this.notifier.notify('error', this.translate.instant('error.resource.approveOrganization.general') + ": " + err.error?.message);
       });
     };
     this.notifier = notifierService;
