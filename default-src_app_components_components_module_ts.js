@@ -791,7 +791,7 @@ class FileHelperService {
   }
   downloadPemCertificate(certificateBundle, entityName) {
     try {
-      const nameNoSpacesOrColons = entityName.replaceAll(/(\s|:)/, '_');
+      const nameNoSpacesOrColons = entityName.replaceAll(/(\s|:)/g, '_');
       const zip = new (jszip__WEBPACK_IMPORTED_MODULE_2___default())();
       zip.file("Certificate_" + nameNoSpacesOrColons + ".pem", certificateBundle.certificate);
       if (certificateBundle.privateKey) {
