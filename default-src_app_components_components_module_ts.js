@@ -791,25 +791,25 @@ class FileHelperService {
   }
   downloadPemCertificate(certificateBundle, entityName) {
     try {
-      const nameNoSpaces = entityName.split(' ').join('_');
-      const zip = new jszip__WEBPACK_IMPORTED_MODULE_2__();
-      zip.file("Certificate_" + nameNoSpaces + ".pem", certificateBundle.certificate);
+      const nameNoSpacesOrColons = entityName.replaceAll(/(\s|:)/, '_');
+      const zip = new (jszip__WEBPACK_IMPORTED_MODULE_2___default())();
+      zip.file("Certificate_" + nameNoSpacesOrColons + ".pem", certificateBundle.certificate);
       if (certificateBundle.privateKey) {
-        zip.file("PrivateKey_" + nameNoSpaces + ".pem", certificateBundle.privateKey);
+        zip.file("PrivateKey_" + nameNoSpacesOrColons + ".pem", certificateBundle.privateKey);
       }
       if (certificateBundle.publicKey) {
-        zip.file("PublicKey_" + nameNoSpaces + ".pem", certificateBundle.publicKey);
+        zip.file("PublicKey_" + nameNoSpacesOrColons + ".pem", certificateBundle.publicKey);
       }
       if (certificateBundle.pkcs12Keystore) {
-        zip.file("Keystore_" + nameNoSpaces + ".p12", certificateBundle.pkcs12Keystore);
+        zip.file("Keystore_" + nameNoSpacesOrColons + ".p12", certificateBundle.pkcs12Keystore);
       }
       if (certificateBundle.keystorePassword) {
-        zip.file("KeystorePassword_" + nameNoSpaces + ".txt", certificateBundle.keystorePassword);
+        zip.file("KeystorePassword_" + nameNoSpacesOrColons + ".txt", certificateBundle.keystorePassword);
       }
       zip.generateAsync({
         type: "blob"
       }).then(function (content) {
-        file_saver__WEBPACK_IMPORTED_MODULE_1__.saveAs(content, "Certificate_" + nameNoSpaces + ".zip");
+        file_saver__WEBPACK_IMPORTED_MODULE_1___default().saveAs(content, "Certificate_" + nameNoSpacesOrColons + ".zip");
       });
     } catch (error) {
       this.notifierService.notify('error', this.translate.instant('error.file.downloadcert') + error);
@@ -820,9 +820,9 @@ class FileHelperService {
       this.notifierService.notify('error', this.translate.instant('error.file.empty'));
       return;
     }
-    let fileContent = xmlFile.content;
-    let fileName = xmlFile.name;
-    let fileType = xmlFile.contentContentType;
+    const fileContent = xmlFile.content;
+    const fileName = xmlFile.name;
+    const fileType = xmlFile.contentContentType;
     this.downloadFile(fileContent, fileType, fileName);
   }
   downloadDoc(docFile) {
@@ -835,28 +835,28 @@ class FileHelperService {
       this.notifierService.notify('error', this.translate.instant('error.file.wrongformat') + docFile.name);
       return;
     }
-    let fileContent = docFile.filecontent.toString();
-    let fileName = docFile.name;
-    let fileType = docFile.filecontentContentType;
+    const fileContent = docFile.filecontent.toString();
+    const fileName = docFile.name;
+    const fileType = docFile.filecontentContentType;
     this.downloadBase64File(fileContent, fileType, fileName);
   }
   downloadBase64File(base64Content, fileType, fileName) {
     try {
-      let byteArray = this.convertBase64ToByteArray(base64Content);
-      let blob = new Blob([byteArray], {
+      const byteArray = this.convertBase64ToByteArray(base64Content);
+      const blob = new Blob([byteArray], {
         type: fileType
       });
-      file_saver__WEBPACK_IMPORTED_MODULE_1__.saveAs(blob, fileName);
+      file_saver__WEBPACK_IMPORTED_MODULE_1___default().saveAs(blob, fileName);
     } catch (error) {
       this.notifierService.notify('error', this.translate.instant('error.file.downloaderror') + error);
     }
   }
   downloadFile(content, fileType, fileName) {
     try {
-      let blob = new Blob([content], {
+      const blob = new Blob([content], {
         type: fileType
       });
-      file_saver__WEBPACK_IMPORTED_MODULE_1__.saveAs(blob, fileName);
+      file_saver__WEBPACK_IMPORTED_MODULE_1___default().saveAs(blob, fileName);
     } catch (error) {
       this.notifierService.notify('error', this.translate.instant('error.file.downloaderror') + error);
     }
@@ -884,8 +884,8 @@ class FileHelperService {
     });
   }
   convertBase64ToByteArray(base64Content) {
-    let byteCharacters = window.atob(base64Content);
-    let byteNumbers = new Array(byteCharacters.length);
+    const byteCharacters = window.atob(base64Content);
+    const byteNumbers = new Array(byteCharacters.length);
     for (let i = 0; i < byteCharacters.length; i++) {
       byteNumbers[i] = byteCharacters.charCodeAt(i);
     }
