@@ -465,7 +465,7 @@ class LoginComponent {
     standalone: true,
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵStandaloneFeature"]],
     decls: 119,
-    vars: 66,
+    vars: 67,
     consts: [["regInfoModal", ""], ["wizard", ""], [1, "login-wrapper"], [1, "login"], [1, "login-header"], [1, "top-logo"], ["height", "100%", "alt", "Logo", 3, "src"], [1, "actions"], ["clrDropdownTrigger", "", 1, "btn", "btn-link", "btn-sm"], ["shape", "angle", "direction", "down"], ["aria-label", "option.code", "clrDropdownItem", ""], [1, "login-body"], [1, "title"], [1, "hint"], [1, "login-group"], [1, "btn", "btn-primary", 3, "click"], [1, "btn", "btn-warning-outline", 3, "click"], ["href", "javascript://", 1, "signup", 3, "click"], [1, "login-footer"], [1, "copyright"], ["target", "_blank", 1, "text-white", 3, "href"], [3, "clrModalOpenChange", "clrModalOpen", "clrModalSize"], [1, "modal-title"], [1, "modal-body"], [1, "clr-timeline"], [1, "clr-timeline-step"], [1, "clr-timeline-step-header"], ["role", "img", "shape", "circle", "aria-label", "Not started"], [1, "clr-timeline-step-body"], [1, "clr-timeline-step-title"], [1, "clr-timeline-step-description"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["clrWizardSize", "xl", 3, "clrWizardOpenChange", "clrWizardOpen"], [3, "type"], [3, "click", "type"], ["clrPageTitle", ""], [3, "clrWizardPageCustomButton"], [3, "isForNew", "itemType", "item", "mrnPrefix"], [3, "clrAlertType"], ["clrPageButtons", ""], ["aria-label", "option.code", "clrDropdownItem", "", 3, "click"], [3, "submitEvent", "isForNew", "itemType", "item", "mrnPrefix"], [1, "alert-text"], ["disabled", "", 1, "btn", "btn-primary"]],
     template: function LoginComponent_Template(rf, ctx) {
       if (rf & 1) {
@@ -642,17 +642,17 @@ class LoginComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵrepeater"](ctx.langs);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](16, 34, "landing.title.serviceName"), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](16, 35, "landing.title.serviceName"), " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", ctx.environmentName, " ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](19, 36, "landing.title.environmentName"), "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", ctx.environmentName, " ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](19, 37, "landing.title.environmentName"), "");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](23, 38, "landing.button.login"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](23, 39, "landing.button.login"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](26, 40, "landing.button.register"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](26, 41, "landing.button.register"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](29, 42, "landing.button.registerInfo"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](29, 43, "landing.button.registerInfo"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"]("2024 ", ctx.serviceProviderName, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", ctx.serviceYear, " ", ctx.serviceProviderName, "");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpropertyInterpolate"]("href", ctx.footerLink, _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"]();
@@ -661,27 +661,27 @@ class LoginComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtwoWayProperty"]("clrModalOpen", ctx.regInfoOpened);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("clrModalSize", ctx.size);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](39, 44, "registrationProcess.title"), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](39, 45, "registrationProcess.title"), " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](49, 46, "registrationProcess.step1.title"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](49, 47, "registrationProcess.step1.title"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](52, 48, "registrationProcess.step1.content"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](52, 49, "registrationProcess.step1.content"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](60, 50, "registrationProcess.step2.title"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](60, 51, "registrationProcess.step2.title"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](63, 52, "registrationProcess.step2.content"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](63, 53, "registrationProcess.step2.content"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](71, 54, "registrationProcess.step3.title"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](71, 55, "registrationProcess.step3.title"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](74, 56, "registrationProcess.step3.content"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](74, 57, "registrationProcess.step3.content"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](82, 58, "registrationProcess.step4.title"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](82, 59, "registrationProcess.step4.title"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](85, 60, "registrationProcess.step4.content"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](85, 61, "registrationProcess.step4.content"));
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](7);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtwoWayProperty"]("clrWizardOpen", ctx.wizardOpen);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](95, 62, "register.title"), "", ctx.environmentName, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](95, 63, "register.title"), "", ctx.environmentName, "");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵproperty"]("type", "cancel");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
@@ -697,7 +697,7 @@ class LoginComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵconditional"](!ctx.agreed ? 110 : ctx.agreed && !ctx.submitted ? 111 : 112);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](118, 64, "register.summary.content"), "", ctx.contactEmail, ".");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](118, 65, "register.summary.content"), "", ctx.contactEmail, ".");
       }
     },
     dependencies: [_clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrSelectModule, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgForm, src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__.SharedModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_13__.TranslatePipe, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrModalModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrModal, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrModalBody, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.CdsIconCustomTag, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdown, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownMenu, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownTrigger, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownItem, src_app_components_components_module__WEBPACK_IMPORTED_MODULE_5__.ComponentsModule, _components_item_form_item_form_component__WEBPACK_IMPORTED_MODULE_9__.ItemFormComponent, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlertModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlert, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlertItem, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlertText, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizard, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardPage, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardButton, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardTitle, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardPageTitle, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardPageButtons],
