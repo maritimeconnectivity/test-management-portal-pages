@@ -324,6 +324,7 @@ class LoginComponent {
     this.footerName = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.FOOTER_NAME;
     this.environmentName = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.ENVIRONMENT_NAME.toUpperCase();
     this.serviceProviderName = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.MP_NAME;
+    this.serviceYear = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.MP_YEAR ?? new Date().getFullYear();
     this.currentLang = "en-GB";
     this.currentLangName = "English";
     this.loggedIn = false;
