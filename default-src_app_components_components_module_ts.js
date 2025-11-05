@@ -1098,31 +1098,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = a0 => [a0];
-function CertTableComponent_Conditional_0_Conditional_0_Template(rf, ctx) {
+function CertTableComponent_Conditional_0_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 1);
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r0.columnsForActive)("data", ctx_r0.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](7, _c0, ctx_r0.serial))("deleteCall", ctx_r0.onRevoke)("downloadCall", ctx_r0.onDownload)("addCall", ctx_r0.onAdd)("itemType", ctx_r0.itemType);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    const placeHolder_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵreadContextLet"](0);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpropertyInterpolate"]("placeholder", placeHolder_r1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r1.columnsForActive)("data", ctx_r1.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](8, _c0, ctx_r1.serial))("deleteCall", ctx_r1.onRevoke)("downloadCall", ctx_r1.onDownload)("addCall", ctx_r1.onAdd)("itemType", ctx_r1.itemType);
   }
 }
-function CertTableComponent_Conditional_0_Conditional_1_Template(rf, ctx) {
+function CertTableComponent_Conditional_0_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 2);
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r0.columnsForActive)("data", ctx_r0.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](5, _c0, ctx_r0.serial))("downloadCall", ctx_r0.onDownload)("itemType", ctx_r0.itemType);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    const placeHolder_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵreadContextLet"](0);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpropertyInterpolate"]("placeholder", placeHolder_r1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r1.columnsForActive)("data", ctx_r1.data)("selectedIds", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](6, _c0, ctx_r1.serial))("downloadCall", ctx_r1.onDownload)("itemType", ctx_r1.itemType);
   }
 }
 function CertTableComponent_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, CertTableComponent_Conditional_0_Conditional_0_Template, 1, 9, "app-smart-table", 1)(1, CertTableComponent_Conditional_0_Conditional_1_Template, 1, 7, "app-smart-table", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdeclareLet"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, CertTableComponent_Conditional_0_Conditional_1_Template, 1, 10, "app-smart-table", 1)(2, CertTableComponent_Conditional_0_Conditional_2_Template, 1, 8, "app-smart-table", 2);
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx_r0.hasEditPermission ? 0 : 1);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵstoreLet"]("There are no active certificates.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx_r1.hasEditPermission ? 1 : 2);
   }
 }
 function CertTableComponent_Conditional_1_Template(rf, ctx) {
@@ -1130,8 +1139,8 @@ function CertTableComponent_Conditional_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-smart-table", 0);
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r0.columnsForRevoked)("data", ctx_r0.data)("itemType", ctx_r0.itemType);
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("labels", ctx_r1.columnsForRevoked)("data", ctx_r1.data)("itemType", ctx_r1.itemType);
   }
 }
 function CertTableComponent_Conditional_2_Template(rf, ctx) {
@@ -1141,9 +1150,9 @@ function CertTableComponent_Conditional_2_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("The given context is wrong! : ", ctx_r0.context, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("The given context is wrong! : ", ctx_r1.context, "");
   }
 }
 class CertTableComponent {
@@ -1189,10 +1198,10 @@ class CertTableComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵStandaloneFeature"]],
     decls: 3,
     vars: 1,
-    consts: [["placeholder", "There is no revoked certificate.", 3, "labels", "data", "itemType"], ["deleteText", "Revoke", "placeholder", "There is no issued certificate.", 3, "labels", "data", "selectedIds", "deleteCall", "downloadCall", "addCall", "itemType"], ["placeholder", "There is no issued certificate.", 3, "labels", "data", "selectedIds", "downloadCall", "itemType"]],
+    consts: [["placeholder", "There are no revoked certificates.", 3, "labels", "data", "itemType"], ["deleteText", "Revoke", 3, "labels", "data", "selectedIds", "deleteCall", "downloadCall", "addCall", "placeholder", "itemType"], [3, "labels", "data", "selectedIds", "downloadCall", "placeholder", "itemType"]],
     template: function CertTableComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, CertTableComponent_Conditional_0_Template, 2, 1)(1, CertTableComponent_Conditional_1_Template, 1, 3, "app-smart-table", 0)(2, CertTableComponent_Conditional_2_Template, 2, 1, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, CertTableComponent_Conditional_0_Template, 3, 2)(1, CertTableComponent_Conditional_1_Template, 1, 3, "app-smart-table", 0)(2, CertTableComponent_Conditional_2_Template, 2, 1, "h1");
       }
       if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵconditional"](ctx.context === "active" ? 0 : ctx.context === "revoked" ? 1 : 2);
