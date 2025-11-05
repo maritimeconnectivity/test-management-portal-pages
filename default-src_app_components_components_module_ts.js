@@ -3590,8 +3590,6 @@ class ItemViewComponent {
         this.notifier.notify('error', this.translate.instant('error.selection.notMigrated'));
         return;
       }
-      this.certModal?.open();
-      this.certModalOpened = true;
       this.issue();
     };
     this.openXmlDialog = (xml, isEditing = false) => {
@@ -3605,6 +3603,8 @@ class ItemViewComponent {
     this.issue = () => {
       (0,src_app_common_certificateUtil__WEBPACK_IMPORTED_MODULE_3__.issueNewWithLocalKeys)(this.certificateService, this.itemType, this.itemId, this.orgMrn, this.fromBrowser).then(cert => {
         this.certificateBundle = cert;
+        this.certModal?.open();
+        this.certModalOpened = true;
         this.notifier.notify('success', this.translate.instant('success.certificate.issue'));
       });
     };
