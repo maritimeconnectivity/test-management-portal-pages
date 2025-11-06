@@ -249,7 +249,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CertChartComponent: () => (/* binding */ CertChartComponent)
 /* harmony export */ });
-/* harmony import */ var _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @swimlane/ngx-charts */ 6503);
+/* harmony import */ var _swimlane_ngx_charts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @swimlane/ngx-charts */ 45611);
 /* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 32288);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 4371);
@@ -4170,6 +4170,7 @@ class SrSearchComponent {
     this.remainingGlobalSearchCalls = 0;
     this.burstTimeouts = [];
     this.errorMessage = null;
+    this.selectedInstanceIsLocal = false;
     this.setLabel = () => {
       this.labels = this.filterVisibleForList(src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_5__.ColumnForResource[this.itemType.toString()]);
     };
@@ -4288,6 +4289,7 @@ class SrSearchComponent {
       });
     };
     this.onSearch = payload => {
+      console.log("org mrn is ", this.orgMrn);
       //Check empty params
       if (Object.keys(payload.searchParams).length === 0) {
         this.errorMessage = 'Please add at least one search parameter before searching.';
@@ -4307,8 +4309,24 @@ class SrSearchComponent {
       this.smartTable.loadData(undefined);
     };
     this.view = selectedItem => {
-      this.itemManagerService.fetchSingleData(this.instanceType, this.orgMrn, selectedItem.instanceId, selectedItem.version).then(instance => {
-        this.selectedInstance = instance;
+      console.log("VIEW!!!");
+      this.itemManagerService.fetchSingleData(src_app_common_menuType__WEBPACK_IMPORTED_MODULE_4__.ItemType.Instance, this.orgMrn, selectedItem.instanceId, selectedItem.version).then(instance => {
+        if (!instance || Object.keys(instance).length === 0) {
+          console.log('Instance fetch returned empty – treating as remote');
+          this.selectedInstance = selectedItem;
+          this.selectedInstanceIsLocal = false;
+          this.instanceType = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_4__.ItemType.SearchObjectResult;
+        } else {
+          // Found in local MSR
+          this.selectedInstance = instance;
+          this.selectedInstanceIsLocal = true;
+          this.instanceType = src_app_common_menuType__WEBPACK_IMPORTED_MODULE_4__.ItemType.Instance;
+        }
+        this.showPanel = true;
+      }).catch(err => {
+        console.warn('Error fetching instance locally – treating as remote', err);
+        this.selectedInstance = selectedItem;
+        this.selectedInstanceIsLocal = false;
         this.showPanel = true;
       });
     };
@@ -4425,8 +4443,8 @@ class SrSearchComponent {
     standalone: true,
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵStandaloneFeature"]],
     decls: 19,
-    vars: 17,
-    consts: [["queryInput", ""], ["map", ""], ["panel", ""], ["exTable", ""], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [1, "clr-row", "clr-col-md-12"], [2, "width", "100%", 3, "searchEvent", "clearAllEvent", "orgMrn", "isLoadingGlobal", "errorMessage"], [1, "clr-row"], [1, "clr-col-md-12"], [3, "geometryChangeEvent", "clearEvent", "mapContainerHeight", "isEditing", "isForSearch", "geometry", "geometryBacklink"], [1, "spinner-view"], ["placeholder", "There is no data.", 3, "itemType", "labels", "getData", "totalPages", "totalElements"], [3, "clrSidePanelOpenChange", "clrSidePanelAlternateClose", "clrSidePanelOpen", "clrSidePanelPreventClose"], [1, "side-panel-body"], [3, "isLoading", "itemType", "item", "orgMrn", "viewOnly", "noMap"], [1, "side-panel-footer"], ["type", "button", 1, "btn", "btn-outline-primary", 3, "click"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["placeholder", "There is no data.", 3, "refreshEvent", "viewEvent", "itemType", "labels", "getData", "totalPages", "totalElements"]],
+    vars: 18,
+    consts: [["queryInput", ""], ["map", ""], ["panel", ""], ["exTable", ""], [1, "clr-col-lg-12", "clr-col-md-8", "clr-col-12"], [1, "clr-row", "clr-col-md-12"], [2, "width", "100%", 3, "searchEvent", "clearAllEvent", "orgMrn", "isLoadingGlobal", "errorMessage"], [1, "clr-row"], [1, "clr-col-md-12"], [3, "geometryChangeEvent", "clearEvent", "mapContainerHeight", "isEditing", "isForSearch", "geometry", "geometryBacklink"], [1, "spinner-view"], ["placeholder", "There is no data.", 3, "itemType", "labels", "getData", "totalPages", "totalElements"], [3, "clrSidePanelOpenChange", "clrSidePanelAlternateClose", "clrSidePanelOpen", "clrSidePanelPreventClose"], [1, "side-panel-body"], [3, "isLoading", "itemType", "item", "orgMrn", "viewOnly", "noMap"], [1, "side-panel-footer"], ["type", "button", 1, "btn", "btn-outline-primary", 3, "click", "disabled"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["placeholder", "There is no data.", 3, "refreshEvent", "viewEvent", "itemType", "labels", "getData", "totalPages", "totalElements"]],
     template: function SrSearchComponent_Template(rf, ctx) {
       if (rf & 1) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵgetCurrentView"]();
@@ -4491,6 +4509,8 @@ class SrSearchComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵproperty"]("clrSidePanelPreventClose", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵproperty"]("isLoading", ctx.isLoading)("itemType", ctx.instanceType)("item", ctx.selectedInstance)("orgMrn", ctx.orgMrn)("viewOnly", true)("noMap", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵproperty"]("disabled", !ctx.selectedInstanceIsLocal);
       }
     },
     dependencies: [_components_input_geometry_input_geometry_component__WEBPACK_IMPORTED_MODULE_1__.InputGeometryComponent, src_app_components_components_module__WEBPACK_IMPORTED_MODULE_2__.ComponentsModule, _components_item_view_item_view_component__WEBPACK_IMPORTED_MODULE_11__.ItemViewComponent, _components_smart_expandable_table_smart_expandable_table_component__WEBPACK_IMPORTED_MODULE_12__.SmartExpandableTableComponent, _clr_angular__WEBPACK_IMPORTED_MODULE_17__.ClarityModule, _clr_angular__WEBPACK_IMPORTED_MODULE_17__.ClrSidePanel, _clr_angular__WEBPACK_IMPORTED_MODULE_17__.ClrSpinner, _components_svc_search_input_svc_search_input_component__WEBPACK_IMPORTED_MODULE_3__.SvcSearchInputComponent],
@@ -8277,10 +8297,10 @@ const h = "world",
 
 /***/ }),
 
-/***/ 6503:
-/*!******************************************************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/@swimlane+ngx-charts@20.5.0_dya5kbgqvyj2o236icrmj2nrr4/node_modules/@swimlane/ngx-charts/fesm2020/swimlane-ngx-charts.mjs ***!
-  \******************************************************************************************************************************************************/
+/***/ 45611:
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@swimlane+ngx-charts@20.5.0_ea4ee1bbcd9f3d46f82b3e1e2b3a25fa/node_modules/@swimlane/ngx-charts/fesm2020/swimlane-ngx-charts.mjs ***!
+  \************************************************************************************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
