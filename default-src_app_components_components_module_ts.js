@@ -1,6 +1,6 @@
 (self["webpackChunkmanagement_portal_clr"] = self["webpackChunkmanagement_portal_clr"] || []).push([["default-src_app_components_components_module_ts"],{
 
-/***/ 942:
+/***/ 99931:
 /*!******************************************!*\
   !*** ./src/app/common/certRevokeInfo.ts ***!
   \******************************************/
@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getReasonOptionFromRevocationReason: () => (/* binding */ getReasonOptionFromRevocationReason)
 /* harmony export */ });
-/* harmony import */ var _backend_api_identity_registry_model_certificateRevocation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../backend-api/identity-registry/model/certificateRevocation */ 69606);
+/* harmony import */ var _backend_api_identity_registry_model_certificateRevocation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../backend-api/identity-registry/model/certificateRevocation */ 67887);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -135,7 +135,7 @@ const getReasonOptionFromRevocationReason = revocationReason => {
 
 /***/ }),
 
-/***/ 55200:
+/***/ 7456:
 /*!*******************************************!*\
   !*** ./src/app/common/certificateUtil.ts ***!
   \*******************************************/
@@ -146,7 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   issueNewWithLocalKeys: () => (/* binding */ issueNewWithLocalKeys)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
+/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
@@ -208,7 +208,7 @@ const issueNewWithLocalKeys = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ 53542:
+/***/ 18623:
 /*!************************************************!*\
   !*** ./src/app/common/columnForCertificate.ts ***!
   \************************************************/
@@ -220,7 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ActiveCertificatesColumn: () => (/* binding */ ActiveCertificatesColumn),
 /* harmony export */   RevokedCertificatesColumn: () => (/* binding */ RevokedCertificatesColumn)
 /* harmony export */ });
-/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timeConverter */ 73751);
+/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timeConverter */ 91464);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -283,7 +283,7 @@ const RevokedCertificatesColumn = {
 
 /***/ }),
 
-/***/ 55077:
+/***/ 74668:
 /*!****************************************!*\
   !*** ./src/app/common/file-decoder.ts ***!
   \****************************************/
@@ -331,7 +331,7 @@ const encodeFileToBase64 = file => {
 
 /***/ }),
 
-/***/ 68847:
+/***/ 1880:
 /*!*************************************!*\
   !*** ./src/app/common/languages.ts ***!
   \*************************************/
@@ -369,7 +369,7 @@ const languages = [{
 
 /***/ }),
 
-/***/ 90855:
+/***/ 2512:
 /*!*****************************************!*\
   !*** ./src/app/common/mapToGeometry.ts ***!
   \*****************************************/
@@ -384,9 +384,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   populateWKTTextArea: () => (/* binding */ populateWKTTextArea),
 /* harmony export */   removeLayers: () => (/* binding */ removeLayers)
 /* harmony export */ });
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 73952);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 1505);
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _terraformer_wkt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @terraformer/wkt */ 54691);
+/* harmony import */ var _terraformer_wkt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @terraformer/wkt */ 88282);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -460,7 +460,7 @@ const removeLayers = (sourceLayer, targetGroup) => {
 
 /***/ }),
 
-/***/ 98216:
+/***/ 72229:
 /*!************************************!*\
   !*** ./src/app/common/mrnRegex.ts ***!
   \************************************/
@@ -500,7 +500,7 @@ function mrnValidator() {
 
 /***/ }),
 
-/***/ 75035:
+/***/ 81828:
 /*!***********************************!*\
   !*** ./src/app/common/mrnUtil.ts ***!
   \***********************************/
@@ -537,7 +537,7 @@ const isUserEditingTheirOwnData = (userMrn, mrnInToken) => {
 
 /***/ }),
 
-/***/ 9109:
+/***/ 57944:
 /*!************************************************!*\
   !*** ./src/app/common/mustIncludeValidator.ts ***!
   \************************************************/
@@ -580,7 +580,7 @@ function mustIncludePatternValidator(pattern) {
 
 /***/ }),
 
-/***/ 43846:
+/***/ 49431:
 /*!******************************************************!*\
   !*** ./src/app/common/shared/certificate.service.ts ***!
   \******************************************************/
@@ -591,10 +591,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CertificateService: () => (/* binding */ CertificateService)
 /* harmony export */ });
-/* harmony import */ var _certRevokeInfo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../certRevokeInfo */ 942);
-/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 88393);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 15771);
+/* harmony import */ var _certRevokeInfo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../certRevokeInfo */ 99931);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 96060);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 64742);
 
 
 
@@ -726,7 +726,7 @@ class CertificateService {
 
 /***/ }),
 
-/***/ 86400:
+/***/ 32013:
 /*!******************************************************!*\
   !*** ./src/app/common/shared/file-helper.service.ts ***!
   \******************************************************/
@@ -737,15 +737,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   FileHelperService: () => (/* binding */ FileHelperService)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ 95254);
+/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ 41691);
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jszip */ 62979);
+/* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jszip */ 6568);
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jszip__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ 24593);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gramli-angular-notifier */ 5379);
-/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 89978);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ 82711);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gramli-angular-notifier */ 74504);
+/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 57045);
 
 
 
@@ -903,7 +903,7 @@ class FileHelperService {
 
 /***/ }),
 
-/***/ 80093:
+/***/ 93224:
 /*!************************************************!*\
   !*** ./src/app/common/shared/shared.module.ts ***!
   \************************************************/
@@ -914,9 +914,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SharedModule: () => (/* binding */ SharedModule)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 2186);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngx-translate/core */ 24593);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 32288);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 37289);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngx-translate/core */ 82711);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 72877);
 
 
 
@@ -940,7 +940,7 @@ class SharedModule {
 
 /***/ }),
 
-/***/ 61505:
+/***/ 24246:
 /*!*****************************************!*\
   !*** ./src/app/common/sortMenuOrder.ts ***!
   \*****************************************/
@@ -972,7 +972,7 @@ const sortColumnForMenu = (a, b) => {
 
 /***/ }),
 
-/***/ 44930:
+/***/ 36473:
 /*!*******************************************!*\
   !*** ./src/app/common/translateHelper.ts ***!
   \*******************************************/
@@ -986,7 +986,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getLang: () => (/* binding */ getLang),
 /* harmony export */   loadLang: () => (/* binding */ loadLang)
 /* harmony export */ });
-/* harmony import */ var _languages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages */ 68847);
+/* harmony import */ var _languages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages */ 1880);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -1047,7 +1047,7 @@ const getLang = code => {
 
 /***/ }),
 
-/***/ 80161:
+/***/ 8414:
 /*!*************************************!*\
   !*** ./src/app/common/variables.ts ***!
   \*************************************/
@@ -1062,7 +1062,7 @@ const ORG_ADMIN_AT_MIR = 'ORGADMIN';
 
 /***/ }),
 
-/***/ 82199:
+/***/ 8132:
 /*!***************************************************************!*\
   !*** ./src/app/components/cert-table/cert-table.component.ts ***!
   \***************************************************************/
@@ -1073,10 +1073,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CertTableComponent: () => (/* binding */ CertTableComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../smart-table/smart-table.component */ 45647);
-/* harmony import */ var src_app_common_columnForCertificate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/columnForCertificate */ 53542);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../smart-table/smart-table.component */ 46996);
+/* harmony import */ var src_app_common_columnForCertificate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/columnForCertificate */ 18623);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -1214,7 +1214,7 @@ class CertTableComponent {
 
 /***/ }),
 
-/***/ 44403:
+/***/ 43920:
 /*!*************************************************!*\
   !*** ./src/app/components/components.module.ts ***!
   \*************************************************/
@@ -1225,14 +1225,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ComponentsModule: () => (/* binding */ ComponentsModule)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 2186);
-/* harmony import */ var _common_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/shared/shared.module */ 80093);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ 5423);
-/* harmony import */ var _item_form_item_form_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./item-form/item-form.component */ 32683);
-/* harmony import */ var _item_view_item_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./item-view/item-view.component */ 63591);
-/* harmony import */ var _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./smart-table/smart-table.component */ 45647);
-/* harmony import */ var _smart_expandable_table_smart_expandable_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./smart-expandable-table/smart-expandable-table.component */ 27687);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 32288);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 37289);
+/* harmony import */ var _common_shared_shared_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/shared/shared.module */ 93224);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ 20032);
+/* harmony import */ var _item_form_item_form_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./item-form/item-form.component */ 74112);
+/* harmony import */ var _item_view_item_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./item-view/item-view.component */ 34692);
+/* harmony import */ var _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./smart-table/smart-table.component */ 46996);
+/* harmony import */ var _smart_expandable_table_smart_expandable_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./smart-expandable-table/smart-expandable-table.component */ 58300);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 72877);
 
 
 
@@ -1261,7 +1261,7 @@ class ComponentsModule {
 
 /***/ }),
 
-/***/ 13215:
+/***/ 84720:
 /*!***********************************************************************!*\
   !*** ./src/app/components/input-geometry/input-geometry.component.ts ***!
   \***********************************************************************/
@@ -1272,14 +1272,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   InputGeometryComponent: () => (/* binding */ InputGeometryComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _bluehalo_ngx_leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @bluehalo/ngx-leaflet */ 86539);
-/* harmony import */ var _bluehalo_ngx_leaflet_draw__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @bluehalo/ngx-leaflet-draw */ 48114);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 73952);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _bluehalo_ngx_leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @bluehalo/ngx-leaflet */ 41236);
+/* harmony import */ var _bluehalo_ngx_leaflet_draw__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @bluehalo/ngx-leaflet-draw */ 23973);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 1505);
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var src_app_common_mapToGeometry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/mapToGeometry */ 90855);
-/* harmony import */ var _turf_turf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @turf/turf */ 98824);
-/* harmony import */ var _turf_boolean_point_in_polygon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @turf/boolean-point-in-polygon */ 80020);
+/* harmony import */ var src_app_common_mapToGeometry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/mapToGeometry */ 2512);
+/* harmony import */ var _turf_turf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @turf/turf */ 62965);
+/* harmony import */ var _turf_boolean_point_in_polygon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @turf/boolean-point-in-polygon */ 74561);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -1543,7 +1543,7 @@ class InputGeometryComponent {
 
 /***/ }),
 
-/***/ 32683:
+/***/ 74112:
 /*!*************************************************************!*\
   !*** ./src/app/components/item-form/item-form.component.ts ***!
   \*************************************************************/
@@ -1554,23 +1554,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ItemFormComponent: () => (/* binding */ ItemFormComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 46974);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 5423);
-/* harmony import */ var src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/columnForMenu */ 4294);
-/* harmony import */ var src_app_common_filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/filterObject */ 71343);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
-/* harmony import */ var src_app_common_mrnRegex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/common/mrnRegex */ 98216);
-/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 80093);
-/* harmony import */ var src_app_common_itemPreprocessor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/common/itemPreprocessor */ 71770);
-/* harmony import */ var src_app_common_file_decoder__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/common/file-decoder */ 55077);
-/* harmony import */ var _input_geometry_input_geometry_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../input-geometry/input-geometry.component */ 13215);
-/* harmony import */ var src_app_common_mustIncludeValidator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/common/mustIncludeValidator */ 9109);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! gramli-angular-notifier */ 5379);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ngx-translate/core */ 24593);
-/* harmony import */ var src_app_common_shared_file_helper_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/common/shared/file-helper.service */ 86400);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common */ 2186);
+/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 6829);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 20032);
+/* harmony import */ var src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/columnForMenu */ 12361);
+/* harmony import */ var src_app_common_filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/filterObject */ 62650);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
+/* harmony import */ var src_app_common_mrnRegex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/common/mrnRegex */ 72229);
+/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 93224);
+/* harmony import */ var src_app_common_itemPreprocessor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/common/itemPreprocessor */ 2527);
+/* harmony import */ var src_app_common_file_decoder__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/common/file-decoder */ 74668);
+/* harmony import */ var _input_geometry_input_geometry_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../input-geometry/input-geometry.component */ 84720);
+/* harmony import */ var src_app_common_mustIncludeValidator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/common/mustIncludeValidator */ 57944);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! gramli-angular-notifier */ 74504);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ngx-translate/core */ 82711);
+/* harmony import */ var src_app_common_shared_file_helper_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/common/shared/file-helper.service */ 32013);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common */ 37289);
 
 
 
@@ -2776,7 +2776,7 @@ class ItemFormComponent {
 
 /***/ }),
 
-/***/ 38281:
+/***/ 38762:
 /*!***************************************************************!*\
   !*** ./src/app/components/item-table/item-table.component.ts ***!
   \***************************************************************/
@@ -2787,13 +2787,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ItemTableComponent: () => (/* binding */ ItemTableComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
-/* harmony import */ var src_app_common_timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/timeConverter */ 73751);
-/* harmony import */ var _cert_table_cert_table_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cert-table/cert-table.component */ 82199);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 2186);
-/* harmony import */ var src_app_common_sortMenuOrder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/sortMenuOrder */ 61505);
-/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 80093);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
+/* harmony import */ var src_app_common_timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/timeConverter */ 91464);
+/* harmony import */ var _cert_table_cert_table_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cert-table/cert-table.component */ 8132);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 37289);
+/* harmony import */ var src_app_common_sortMenuOrder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/sortMenuOrder */ 24246);
+/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 93224);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -3129,7 +3129,7 @@ class ItemTableComponent {
 
 /***/ }),
 
-/***/ 63591:
+/***/ 34692:
 /*!*************************************************************!*\
   !*** ./src/app/components/item-view/item-view.component.ts ***!
   \*************************************************************/
@@ -3140,30 +3140,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ItemViewComponent: () => (/* binding */ ItemViewComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
-/* harmony import */ var src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/columnForMenu */ 4294);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/forms */ 46974);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common */ 2186);
-/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 80093);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @clr/angular */ 5423);
-/* harmony import */ var src_app_common_certificateUtil__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/certificateUtil */ 55200);
-/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 15771);
-/* harmony import */ var src_app_common_certRevokeInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/common/certRevokeInfo */ 942);
-/* harmony import */ var src_app_common_filterObject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/common/filterObject */ 71343);
-/* harmony import */ var _item_form_item_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../item-form/item-form.component */ 32683);
-/* harmony import */ var src_app_common_mrnUtil__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/common/mrnUtil */ 75035);
-/* harmony import */ var src_app_common_variables__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/common/variables */ 80161);
-/* harmony import */ var _item_table_item_table_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../item-table/item-table.component */ 38281);
-/* harmony import */ var _input_geometry_input_geometry_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../input-geometry/input-geometry.component */ 13215);
-/* harmony import */ var src_app_common_itemPreprocessor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/common/itemPreprocessor */ 71770);
-/* harmony import */ var src_app_common_translateHelper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/common/translateHelper */ 44930);
-/* harmony import */ var src_app_common_shared_certificate_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/common/shared/certificate.service */ 43846);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ngx-translate/core */ 24593);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gramli-angular-notifier */ 5379);
-/* harmony import */ var src_app_common_shared_file_helper_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! src/app/common/shared/file-helper.service */ 86400);
-/* harmony import */ var src_app_auth_auth_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/app/auth/auth.service */ 12764);
-/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../common/shared/item-manager.service */ 74974);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
+/* harmony import */ var src_app_common_columnForMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/columnForMenu */ 12361);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/forms */ 6829);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/common */ 37289);
+/* harmony import */ var src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/common/shared/shared.module */ 93224);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @clr/angular */ 20032);
+/* harmony import */ var src_app_common_certificateUtil__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/certificateUtil */ 7456);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 64742);
+/* harmony import */ var src_app_common_certRevokeInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/common/certRevokeInfo */ 99931);
+/* harmony import */ var src_app_common_filterObject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/common/filterObject */ 62650);
+/* harmony import */ var _item_form_item_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../item-form/item-form.component */ 74112);
+/* harmony import */ var src_app_common_mrnUtil__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/common/mrnUtil */ 81828);
+/* harmony import */ var src_app_common_variables__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/common/variables */ 8414);
+/* harmony import */ var _item_table_item_table_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../item-table/item-table.component */ 38762);
+/* harmony import */ var _input_geometry_input_geometry_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../input-geometry/input-geometry.component */ 84720);
+/* harmony import */ var src_app_common_itemPreprocessor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/common/itemPreprocessor */ 2527);
+/* harmony import */ var src_app_common_translateHelper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/common/translateHelper */ 36473);
+/* harmony import */ var src_app_common_shared_certificate_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/common/shared/certificate.service */ 49431);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ngx-translate/core */ 82711);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! gramli-angular-notifier */ 74504);
+/* harmony import */ var src_app_common_shared_file_helper_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! src/app/common/shared/file-helper.service */ 32013);
+/* harmony import */ var src_app_auth_auth_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/app/auth/auth.service */ 97953);
+/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../common/shared/item-manager.service */ 59025);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -4015,7 +4015,7 @@ class ItemViewComponent {
 
 /***/ }),
 
-/***/ 27687:
+/***/ 58300:
 /*!***************************************************************************************!*\
   !*** ./src/app/components/smart-expandable-table/smart-expandable-table.component.ts ***!
   \***************************************************************************************/
@@ -4026,14 +4026,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SmartExpandableTableComponent: () => (/* binding */ SmartExpandableTableComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ 5423);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
-/* harmony import */ var _item_view_item_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item-view/item-view.component */ 63591);
-/* harmony import */ var src_app_common_timeConverter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/timeConverter */ 73751);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 4371);
-/* harmony import */ var src_app_auth_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/auth/auth.service */ 12764);
+/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ 20032);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
+/* harmony import */ var _item_view_item_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../item-view/item-view.component */ 34692);
+/* harmony import */ var src_app_common_timeConverter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/timeConverter */ 91464);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 80848);
+/* harmony import */ var src_app_auth_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/auth/auth.service */ 97953);
 
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
@@ -4421,6 +4421,8 @@ class SmartExpandableTableComponent {
     this.labelKeys = [];
     this.labelTitles = [];
     this.isLoading = false;
+    this.hasFetched = false;
+    this.defaultLoaded = false;
     this.pageNumbers = [];
     this.currentPageNumber = 0;
     this.currentPageRange = 0;
@@ -4534,6 +4536,9 @@ class SmartExpandableTableComponent {
     var _this = this;
     return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const newRows = (yield _this.getData(_this.itemType, pageNumber, _this.elementsPerPage, undefined, xactId)) || [];
+      if (_this.defaultLoaded && newRows.length === 0) {
+        _this.placeholder = "Search returned no data"; // <-- override message
+      }
       // If this is a follow-up retrieveResults call, append instead of overwrite
       if (xactId && _this.data && _this.data.length) {
         // naive merge, no de-duplication
@@ -4545,6 +4550,7 @@ class SmartExpandableTableComponent {
         _this.currentPageNumber = pageNumber;
       }
       _this.isLoading = false;
+      _this.defaultLoaded = true;
     })();
   }
   // this function is for background loading of data
@@ -4610,7 +4616,7 @@ class SmartExpandableTableComponent {
 
 /***/ }),
 
-/***/ 45647:
+/***/ 46996:
 /*!*****************************************************************!*\
   !*** ./src/app/components/smart-table/smart-table.component.ts ***!
   \*****************************************************************/
@@ -4621,14 +4627,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SmartTableComponent: () => (/* binding */ SmartTableComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ 5423);
-/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cds/core/icon */ 86336);
-/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cds/core/icon */ 50789);
-/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cds/core/icon */ 11863);
-/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cds/core/icon */ 97353);
-/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 88393);
-/* harmony import */ var src_app_common_timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/timeConverter */ 73751);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @clr/angular */ 20032);
+/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @cds/core/icon */ 64229);
+/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @cds/core/icon */ 61634);
+/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @cds/core/icon */ 5966);
+/* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cds/core/icon */ 48846);
+/* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
+/* harmony import */ var src_app_common_timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/timeConverter */ 91464);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -4963,7 +4969,7 @@ class SmartTableComponent {
 
 /***/ }),
 
-/***/ 54691:
+/***/ 88282:
 /*!***************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@terraformer+wkt@2.2.1/node_modules/@terraformer/wkt/dist/t-wkt.esm.js ***!
   \***************************************************************************************************/
@@ -6652,7 +6658,7 @@ var geojsonToWKT = function geojsonToWKT(geojson) {
 
 /***/ }),
 
-/***/ 95254:
+/***/ 41691:
 /*!*******************************************************************************************!*\
   !*** ./node_modules/.pnpm/file-saver@2.0.5/node_modules/file-saver/dist/FileSaver.min.js ***!
   \*******************************************************************************************/
@@ -6740,7 +6746,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 62979:
+/***/ 6568:
 /*!******************************************************************************!*\
   !*** ./node_modules/.pnpm/jszip@3.10.1/node_modules/jszip/dist/jszip.min.js ***!
   \******************************************************************************/
@@ -10108,7 +10114,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
 /***/ }),
 
-/***/ 990:
+/***/ 64097:
 /*!**********************************************************************************************!*\
   !*** ./node_modules/.pnpm/leaflet-draw@1.0.4/node_modules/leaflet-draw/dist/leaflet.draw.js ***!
   \**********************************************************************************************/
@@ -11865,7 +11871,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
 /***/ }),
 
-/***/ 73952:
+/***/ 1505:
 /*!***********************************************************************************!*\
   !*** ./node_modules/.pnpm/leaflet@1.9.4/node_modules/leaflet/dist/leaflet-src.js ***!
   \***********************************************************************************/
@@ -24600,7 +24606,7 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 
 /***/ }),
 
-/***/ 48114:
+/***/ 23973:
 /*!************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@bluehalo+ngx-leaflet-draw@18.0.4_@angular+common@18.2.3_@angular+core@18.2.3_rxjs@7.8._a059d5797d6e312dc602d2ed087cc934/node_modules/@bluehalo/ngx-leaflet-draw/fesm2022/bluehalo-ngx-leaflet-draw.mjs ***!
   \************************************************************************************************************************************************************************************************************************************/
@@ -24612,10 +24618,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   LeafletDrawDirective: () => (/* binding */ LeafletDrawDirective),
 /* harmony export */   LeafletDrawModule: () => (/* binding */ LeafletDrawModule)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var _bluehalo_ngx_leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @bluehalo/ngx-leaflet */ 86539);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 73952);
-/* harmony import */ var leaflet_draw__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! leaflet-draw */ 990);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _bluehalo_ngx_leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @bluehalo/ngx-leaflet */ 41236);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 1505);
+/* harmony import */ var leaflet_draw__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! leaflet-draw */ 64097);
 
 
 
@@ -24857,7 +24863,7 @@ class LeafletDrawModule {
 
 /***/ }),
 
-/***/ 86539:
+/***/ 41236:
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@bluehalo+ngx-leaflet@18.0.2_@angular+common@18.2.3_@angular+core@18.2.3_rxjs@7.8.1_zon_32ce864e872d6af90550434337b2b20c/node_modules/@bluehalo/ngx-leaflet/fesm2022/bluehalo-ngx-leaflet.mjs ***!
   \**************************************************************************************************************************************************************************************************************************/
@@ -24879,8 +24885,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   LeafletTileLayerDefinition: () => (/* binding */ LeafletTileLayerDefinition),
 /* harmony export */   LeafletUtil: () => (/* binding */ LeafletUtil)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 32288);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 73952);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ 1505);
 
 
 
@@ -25906,7 +25912,7 @@ class LeafletTileLayerDefinition {
 
 /***/ }),
 
-/***/ 50789:
+/***/ 61634:
 /*!********************************************************************************************!*\
   !*** ./node_modules/.pnpm/@cds+core@6.13.0/node_modules/@cds/core/icon/shapes/download.js ***!
   \********************************************************************************************/
@@ -25918,7 +25924,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   downloadIcon: () => (/* binding */ t),
 /* harmony export */   downloadIconName: () => (/* binding */ d)
 /* harmony export */ });
-/* harmony import */ var _icon_renderer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../icon.renderer.js */ 48884);
+/* harmony import */ var _icon_renderer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../icon.renderer.js */ 81031);
 
 const d = "download",
   t = ["download", (0,_icon_renderer_js__WEBPACK_IMPORTED_MODULE_0__.renderIcon)({
@@ -25930,7 +25936,7 @@ const d = "download",
 
 /***/ }),
 
-/***/ 97353:
+/***/ 48846:
 /*!****************************************************************************************!*\
   !*** ./node_modules/.pnpm/@cds+core@6.13.0/node_modules/@cds/core/icon/shapes/plus.js ***!
   \****************************************************************************************/
@@ -25942,7 +25948,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   plusIcon: () => (/* binding */ a),
 /* harmony export */   plusIconName: () => (/* binding */ r)
 /* harmony export */ });
-/* harmony import */ var _icon_renderer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../icon.renderer.js */ 48884);
+/* harmony import */ var _icon_renderer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../icon.renderer.js */ 81031);
 
 const r = "plus",
   a = ["plus", (0,_icon_renderer_js__WEBPACK_IMPORTED_MODULE_0__.renderIcon)({
@@ -25952,7 +25958,7 @@ const r = "plus",
 
 /***/ }),
 
-/***/ 80020:
+/***/ 74561:
 /*!*******************************************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@turf+boolean-point-in-polygon@7.2.0/node_modules/@turf/boolean-point-in-polygon/dist/esm/index.js ***!
   \*******************************************************************************************************************************/
@@ -25964,8 +25970,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   booleanPointInPolygon: () => (/* binding */ booleanPointInPolygon),
 /* harmony export */   "default": () => (/* binding */ turf_boolean_point_in_polygon_default)
 /* harmony export */ });
-/* harmony import */ var point_in_polygon_hao__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! point-in-polygon-hao */ 48438);
-/* harmony import */ var _turf_invariant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @turf/invariant */ 67310);
+/* harmony import */ var point_in_polygon_hao__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! point-in-polygon-hao */ 435);
+/* harmony import */ var _turf_invariant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @turf/invariant */ 47295);
 // index.ts
 
 
@@ -26002,7 +26008,7 @@ var turf_boolean_point_in_polygon_default = booleanPointInPolygon;
 
 /***/ }),
 
-/***/ 98824:
+/***/ 62965:
 /*!*********************************************************************************************!*\
   !*** ./node_modules/.pnpm/@turf+helpers@7.2.0/node_modules/@turf/helpers/dist/esm/index.js ***!
   \*********************************************************************************************/
@@ -26317,7 +26323,7 @@ function validateId(id) {
 
 /***/ }),
 
-/***/ 67310:
+/***/ 47295:
 /*!*************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@turf+invariant@7.2.0/node_modules/@turf/invariant/dist/esm/index.js ***!
   \*************************************************************************************************/
@@ -26335,7 +26341,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getGeom: () => (/* binding */ getGeom),
 /* harmony export */   getType: () => (/* binding */ getType)
 /* harmony export */ });
-/* harmony import */ var _turf_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @turf/helpers */ 98824);
+/* harmony import */ var _turf_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @turf/helpers */ 62965);
 // index.ts
 
 function getCoord(coord) {
@@ -26442,7 +26448,7 @@ function getType(geojson, _name) {
 
 /***/ }),
 
-/***/ 48438:
+/***/ 435:
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/.pnpm/point-in-polygon-hao@1.2.4/node_modules/point-in-polygon-hao/dist/esm/index.js ***!
   \***********************************************************************************************************/
@@ -26453,7 +26459,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ pointInPolygon)
 /* harmony export */ });
-/* harmony import */ var robust_predicates__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! robust-predicates */ 43065);
+/* harmony import */ var robust_predicates__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! robust-predicates */ 6534);
 
 function pointInPolygon(p, polygon) {
   var i;
@@ -26510,7 +26516,7 @@ function pointInPolygon(p, polygon) {
 
 /***/ }),
 
-/***/ 85670:
+/***/ 76875:
 /*!***************************************************************************************************!*\
   !*** ./node_modules/.pnpm/robust-predicates@3.0.2/node_modules/robust-predicates/esm/incircle.js ***!
   \***************************************************************************************************/
@@ -26522,7 +26528,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   incircle: () => (/* binding */ incircle),
 /* harmony export */   incirclefast: () => (/* binding */ incirclefast)
 /* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 30733);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 72468);
 
 const iccerrboundA = (10 + 96 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
 const iccerrboundB = (4 + 48 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
@@ -27186,7 +27192,7 @@ function incirclefast(ax, ay, bx, by, cx, cy, dx, dy) {
 
 /***/ }),
 
-/***/ 87867:
+/***/ 41798:
 /*!***************************************************************************************************!*\
   !*** ./node_modules/.pnpm/robust-predicates@3.0.2/node_modules/robust-predicates/esm/insphere.js ***!
   \***************************************************************************************************/
@@ -27198,7 +27204,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   insphere: () => (/* binding */ insphere),
 /* harmony export */   inspherefast: () => (/* binding */ inspherefast)
 /* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 30733);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 72468);
 
 const isperrboundA = (16 + 224 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
 const isperrboundB = (5 + 72 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
@@ -27888,7 +27894,7 @@ function inspherefast(pax, pay, paz, pbx, pby, pbz, pcx, pcy, pcz, pdx, pdy, pdz
 
 /***/ }),
 
-/***/ 78174:
+/***/ 91623:
 /*!***************************************************************************************************!*\
   !*** ./node_modules/.pnpm/robust-predicates@3.0.2/node_modules/robust-predicates/esm/orient2d.js ***!
   \***************************************************************************************************/
@@ -27900,7 +27906,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   orient2d: () => (/* binding */ orient2d),
 /* harmony export */   orient2dfast: () => (/* binding */ orient2dfast)
 /* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 30733);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 72468);
 
 const ccwerrboundA = (3 + 16 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
 const ccwerrboundB = (2 + 12 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
@@ -28071,7 +28077,7 @@ function orient2dfast(ax, ay, bx, by, cx, cy) {
 
 /***/ }),
 
-/***/ 39531:
+/***/ 72298:
 /*!***************************************************************************************************!*\
   !*** ./node_modules/.pnpm/robust-predicates@3.0.2/node_modules/robust-predicates/esm/orient3d.js ***!
   \***************************************************************************************************/
@@ -28083,7 +28089,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   orient3d: () => (/* binding */ orient3d),
 /* harmony export */   orient3dfast: () => (/* binding */ orient3dfast)
 /* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 30733);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util.js */ 72468);
 
 const o3derrboundA = (7 + 56 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
 const o3derrboundB = (3 + 28 * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon) * _util_js__WEBPACK_IMPORTED_MODULE_0__.epsilon;
@@ -28502,7 +28508,7 @@ function orient3dfast(ax, ay, az, bx, by, bz, cx, cy, cz, dx, dy, dz) {
 
 /***/ }),
 
-/***/ 30733:
+/***/ 72468:
 /*!***********************************************************************************************!*\
   !*** ./node_modules/.pnpm/robust-predicates@3.0.2/node_modules/robust-predicates/esm/util.js ***!
   \***********************************************************************************************/
@@ -28657,7 +28663,7 @@ function vec(n) {
 
 /***/ }),
 
-/***/ 43065:
+/***/ 6534:
 /*!********************************************************************************************!*\
   !*** ./node_modules/.pnpm/robust-predicates@3.0.2/node_modules/robust-predicates/index.js ***!
   \********************************************************************************************/
@@ -28675,10 +28681,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   orient3d: () => (/* reexport safe */ _esm_orient3d_js__WEBPACK_IMPORTED_MODULE_1__.orient3d),
 /* harmony export */   orient3dfast: () => (/* reexport safe */ _esm_orient3d_js__WEBPACK_IMPORTED_MODULE_1__.orient3dfast)
 /* harmony export */ });
-/* harmony import */ var _esm_orient2d_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./esm/orient2d.js */ 78174);
-/* harmony import */ var _esm_orient3d_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./esm/orient3d.js */ 39531);
-/* harmony import */ var _esm_incircle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./esm/incircle.js */ 85670);
-/* harmony import */ var _esm_insphere_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./esm/insphere.js */ 87867);
+/* harmony import */ var _esm_orient2d_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./esm/orient2d.js */ 91623);
+/* harmony import */ var _esm_orient3d_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./esm/orient3d.js */ 72298);
+/* harmony import */ var _esm_incircle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./esm/incircle.js */ 76875);
+/* harmony import */ var _esm_insphere_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./esm/insphere.js */ 41798);
 
 
 
