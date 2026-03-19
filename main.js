@@ -1,6 +1,6 @@
 (self["webpackChunkmanagement_portal_clr"] = self["webpackChunkmanagement_portal_clr"] || []).push([["main"],{
 
-/***/ 64258:
+/***/ 56443:
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
@@ -12,9 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppRoutingModule: () => (/* binding */ AppRoutingModule),
 /* harmony export */   routes: () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 97820);
-/* harmony import */ var _auth_auth_guard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth/auth.guard */ 74956);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _auth_auth_guard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth/auth.guard */ 28179);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 42391);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -36,11 +36,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [{
   path: 'pages',
-  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_pages_pages_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/pages.module */ 25143)).then(m => m.PagesModule),
+  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_pages_pages_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/pages.module */ 98046)).then(m => m.PagesModule),
   canActivateChild: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_0__.authGuard]
 }, {
   path: '',
-  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_landing_landing_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./landing/landing.module */ 77119)).then(m => m.LandingModule)
+  loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-src_app_components_components_module_ts"), __webpack_require__.e("src_app_landing_landing_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./landing/landing.module */ 3254)).then(m => m.LandingModule)
 }
 //*
 //{ path: '', redirectTo: 'pages', pathMatch: 'full' },
@@ -70,7 +70,7 @@ class AppRoutingModule {
 
 /***/ }),
 
-/***/ 97596:
+/***/ 9371:
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
   \**********************************/
@@ -81,11 +81,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppComponent: () => (/* binding */ AppComponent)
 /* harmony export */ });
-/* harmony import */ var src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/assets/js/wasm_exec.js */ 15418);
+/* harmony import */ var src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/assets/js/wasm_exec.js */ 76153);
 /* harmony import */ var src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(src_assets_js_wasm_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 97820);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gramli-angular-notifier */ 84369);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gramli-angular-notifier */ 9806);
 
 
 
@@ -121,7 +121,7 @@ class AppComponent {
 
 /***/ }),
 
-/***/ 22769:
+/***/ 26060:
 /*!*******************************!*\
   !*** ./src/app/app.config.ts ***!
   \*******************************/
@@ -132,9 +132,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppConfig: () => (/* binding */ AppConfig)
 /* harmony export */ });
-/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../environments/environment */ 45824);
-/* harmony import */ var _common_version__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common/version */ 58386);
+/* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../environments/environment */ 95297);
+/* harmony import */ var _common_version__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common/version */ 92671);
 
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 class AppConfig {
   static _initialize() {
     var _this = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
         const res = yield fetch('/assets/config.json');
         const config = yield res.json();
@@ -216,7 +216,7 @@ class AppConfig {
 
 /***/ }),
 
-/***/ 86763:
+/***/ 60250:
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
@@ -228,23 +228,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppModule: () => (/* binding */ AppModule),
 /* harmony export */   HttpLoaderFactory: () => (/* binding */ HttpLoaderFactory)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ 59851);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ 53888);
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 64258);
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 97596);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 48149);
-/* harmony import */ var _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./backend-api/identity-registry */ 68937);
-/* harmony import */ var _backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./backend-api/service-registry */ 65392);
-/* harmony import */ var _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backend-api/secom */ 77410);
-/* harmony import */ var _auth_auth_init__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth/auth.init */ 82619);
-/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! keycloak-angular */ 19232);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 28695);
-/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/http-loader */ 38633);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! gramli-angular-notifier */ 84369);
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.config */ 22769);
-/* harmony import */ var _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.interceptor */ 30858);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ 9320);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser/animations */ 5535);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 56443);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 9371);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 99758);
+/* harmony import */ var _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./backend-api/identity-registry */ 64886);
+/* harmony import */ var _backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./backend-api/service-registry */ 91877);
+/* harmony import */ var _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backend-api/secom */ 44269);
+/* harmony import */ var _auth_auth_init__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth/auth.init */ 47846);
+/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! keycloak-angular */ 99445);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngx-translate/core */ 95550);
+/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/http-loader */ 87768);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! gramli-angular-notifier */ 9806);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.config */ 26060);
+/* harmony import */ var _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.interceptor */ 81849);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -329,7 +329,7 @@ class AppModule {
 
 /***/ }),
 
-/***/ 74956:
+/***/ 28179:
 /*!************************************!*\
   !*** ./src/app/auth/auth.guard.ts ***!
   \************************************/
@@ -340,16 +340,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   authGuard: () => (/* binding */ authGuard)
 /* harmony export */ });
-/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 97820);
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ 34954);
+/* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ 89809);
 
 
 
 
 const authGuard = /*#__PURE__*/function () {
-  var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (route, state) {
+  var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (route, state) {
     const authService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(_auth_service__WEBPACK_IMPORTED_MODULE_1__.AuthService);
     const router = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router);
     const authenticated = yield authService.isAuthenticated();
@@ -366,7 +366,7 @@ const authGuard = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ 82619:
+/***/ 47846:
 /*!***********************************!*\
   !*** ./src/app/auth/auth.init.ts ***!
   \***********************************/
@@ -377,7 +377,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initializeKeycloak: () => (/* binding */ initializeKeycloak)
 /* harmony export */ });
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app.config */ 22769);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app.config */ 26060);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -413,7 +413,7 @@ const initializeKeycloak = keycloak => {
 
 /***/ }),
 
-/***/ 30858:
+/***/ 81849:
 /*!******************************************!*\
   !*** ./src/app/auth/auth.interceptor.ts ***!
   \******************************************/
@@ -424,10 +424,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AuthInterceptor: () => (/* binding */ AuthInterceptor)
 /* harmony export */ });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 62176);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 37303);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 97820);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 16339);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 75322);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 59655);
 
 
 
@@ -456,7 +456,7 @@ class AuthInterceptor {
 
 /***/ }),
 
-/***/ 57582:
+/***/ 43191:
 /*!*****************************************!*\
   !*** ./src/app/auth/auth.permission.ts ***!
   \*****************************************/
@@ -471,7 +471,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   hasAdminPermissionInMIR: () => (/* binding */ hasAdminPermissionInMIR),
 /* harmony export */   rolesToPermission: () => (/* binding */ rolesToPermission)
 /* harmony export */ });
-/* harmony import */ var _backend_api_identity_registry_model_role__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/role */ 30747);
+/* harmony import */ var _backend_api_identity_registry_model_role__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/role */ 96974);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -629,7 +629,7 @@ const hasAdminPermissionInMIR = (myPermission, permissionRole) => {
 
 /***/ }),
 
-/***/ 34954:
+/***/ 89809:
 /*!**************************************!*\
   !*** ./src/app/auth/auth.service.ts ***!
   \**************************************/
@@ -640,14 +640,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AuthService: () => (/* binding */ AuthService)
 /* harmony export */ });
-/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
-/* harmony import */ var _auth_permission__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.permission */ 57582);
-/* harmony import */ var _common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/menuType */ 82287);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 24394);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keycloak-angular */ 19232);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 97820);
-/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/item-manager.service */ 84192);
+/* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
+/* harmony import */ var _auth_permission__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.permission */ 43191);
+/* harmony import */ var _common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/menuType */ 93644);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 91217);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! keycloak-angular */ 99445);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 59655);
+/* harmony import */ var _common_shared_item_manager_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/shared/item-manager.service */ 11137);
 
 
 
@@ -673,7 +673,7 @@ class AuthService {
   }
   login() {
     var _this = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const url = window.location;
       yield _this.keycloakService.login({
         redirectUri: url.protocol + '//' + url.host + '/pages'
@@ -687,7 +687,7 @@ class AuthService {
   }
   logout() {
     var _this2 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const url = window.location;
       yield _this2.keycloakService.logout(url.protocol + '//' + url.host + '/login');
       _this2.itemManagerService.clearRolesContext();
@@ -695,7 +695,7 @@ class AuthService {
   }
   isAuthenticated() {
     var _this3 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const authenticated = yield _this3.keycloakService.isLoggedIn();
       _this3.setAuthenticated(authenticated);
       return Promise.resolve(authenticated);
@@ -703,42 +703,42 @@ class AuthService {
   }
   getToken() {
     var _this4 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this4.protectFromEmptyToken();
       return _this4.keycloakService.getToken();
     })();
   }
   getOrgMrnFromToken() {
     var _this5 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this5.protectFromEmptyToken();
       return _this5.keycloakService.getKeycloakInstance().tokenParsed["org"];
     })();
   }
   getUserNameFromToken() {
     var _this6 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this6.protectFromEmptyToken();
       return _this6.keycloakService.getKeycloakInstance().tokenParsed["name"];
     })();
   }
   getUserMrnFromToken() {
     var _this7 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this7.protectFromEmptyToken();
       return _this7.keycloakService.getKeycloakInstance().tokenParsed["mrn"];
     })();
   }
   getUserRolesFromToken() {
     var _this8 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this8.protectFromEmptyToken();
       return _this8.keycloakService.getKeycloakInstance().tokenParsed["roles"];
     })();
   }
   getUserPermissionsFromToken() {
     var _this9 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this9.protectFromEmptyToken();
       return _this9.keycloakService.getKeycloakInstance().tokenParsed["permissions"];
     })();
@@ -810,7 +810,7 @@ class AuthService {
 
 /***/ }),
 
-/***/ 96099:
+/***/ 83114:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api.module.ts ***!
   \*************************************************************/
@@ -821,21 +821,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ApiModule: () => (/* binding */ ApiModule)
 /* harmony export */ });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 21167);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _api_agentController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/agentController.service */ 17838);
-/* harmony import */ var _api_certificateController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/certificateController.service */ 75060);
-/* harmony import */ var _api_deviceController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/deviceController.service */ 60675);
-/* harmony import */ var _api_logoController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/logoController.service */ 37090);
-/* harmony import */ var _api_mmsController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./api/mmsController.service */ 87064);
-/* harmony import */ var _api_organizationController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./api/organizationController.service */ 67202);
-/* harmony import */ var _api_roleController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./api/roleController.service */ 18357);
-/* harmony import */ var _api_serviceController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./api/serviceController.service */ 58496);
-/* harmony import */ var _api_userController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./api/userController.service */ 34618);
-/* harmony import */ var _api_vesselController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./api/vesselController.service */ 47499);
-/* harmony import */ var _api_vesselImageController_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./api/vesselImageController.service */ 40244);
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../app.config */ 22769);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 84700);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _api_agentController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/agentController.service */ 95541);
+/* harmony import */ var _api_certificateController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/certificateController.service */ 65943);
+/* harmony import */ var _api_deviceController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/deviceController.service */ 45034);
+/* harmony import */ var _api_logoController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/logoController.service */ 26807);
+/* harmony import */ var _api_mmsController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./api/mmsController.service */ 57231);
+/* harmony import */ var _api_organizationController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./api/organizationController.service */ 69823);
+/* harmony import */ var _api_roleController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./api/roleController.service */ 94628);
+/* harmony import */ var _api_serviceController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./api/serviceController.service */ 1019);
+/* harmony import */ var _api_userController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./api/userController.service */ 78347);
+/* harmony import */ var _api_vesselController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./api/vesselController.service */ 83194);
+/* harmony import */ var _api_vesselImageController_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./api/vesselImageController.service */ 20623);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../app.config */ 26060);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -889,7 +889,7 @@ class ApiModule {
 
 /***/ }),
 
-/***/ 17838:
+/***/ 95541:
 /*!******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/agentController.service.ts ***!
   \******************************************************************************/
@@ -900,11 +900,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AgentControllerService: () => (/* binding */ AgentControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1125,7 +1125,7 @@ class AgentControllerService {
 
 /***/ }),
 
-/***/ 69970:
+/***/ 80061:
 /*!**********************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/api.ts ***!
   \**********************************************************/
@@ -1147,17 +1147,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VesselControllerService: () => (/* reexport safe */ _vesselController_service__WEBPACK_IMPORTED_MODULE_9__.VesselControllerService),
 /* harmony export */   VesselImageControllerService: () => (/* reexport safe */ _vesselImageController_service__WEBPACK_IMPORTED_MODULE_10__.VesselImageControllerService)
 /* harmony export */ });
-/* harmony import */ var _agentController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agentController.service */ 17838);
-/* harmony import */ var _certificateController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./certificateController.service */ 75060);
-/* harmony import */ var _deviceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deviceController.service */ 60675);
-/* harmony import */ var _logoController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logoController.service */ 37090);
-/* harmony import */ var _mmsController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mmsController.service */ 87064);
-/* harmony import */ var _organizationController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./organizationController.service */ 67202);
-/* harmony import */ var _roleController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./roleController.service */ 18357);
-/* harmony import */ var _serviceController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./serviceController.service */ 58496);
-/* harmony import */ var _userController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./userController.service */ 34618);
-/* harmony import */ var _vesselController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./vesselController.service */ 47499);
-/* harmony import */ var _vesselImageController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./vesselImageController.service */ 40244);
+/* harmony import */ var _agentController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agentController.service */ 95541);
+/* harmony import */ var _certificateController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./certificateController.service */ 65943);
+/* harmony import */ var _deviceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deviceController.service */ 45034);
+/* harmony import */ var _logoController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logoController.service */ 26807);
+/* harmony import */ var _mmsController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mmsController.service */ 57231);
+/* harmony import */ var _organizationController_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./organizationController.service */ 69823);
+/* harmony import */ var _roleController_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./roleController.service */ 94628);
+/* harmony import */ var _serviceController_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./serviceController.service */ 1019);
+/* harmony import */ var _userController_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./userController.service */ 78347);
+/* harmony import */ var _vesselController_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./vesselController.service */ 83194);
+/* harmony import */ var _vesselImageController_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./vesselImageController.service */ 20623);
 
 
 
@@ -1184,7 +1184,7 @@ const APIS = [_agentController_service__WEBPACK_IMPORTED_MODULE_0__.AgentControl
 
 /***/ }),
 
-/***/ 75060:
+/***/ 65943:
 /*!************************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/certificateController.service.ts ***!
   \************************************************************************************/
@@ -1195,10 +1195,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CertificateControllerService: () => (/* binding */ CertificateControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1314,7 +1314,7 @@ class CertificateControllerService {
 
 /***/ }),
 
-/***/ 60675:
+/***/ 45034:
 /*!*******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/deviceController.service.ts ***!
   \*******************************************************************************/
@@ -1325,11 +1325,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DeviceControllerService: () => (/* binding */ DeviceControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1606,7 +1606,7 @@ class DeviceControllerService {
 
 /***/ }),
 
-/***/ 37090:
+/***/ 26807:
 /*!*****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/logoController.service.ts ***!
   \*****************************************************************************/
@@ -1617,10 +1617,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   LogoControllerService: () => (/* binding */ LogoControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -1758,7 +1758,7 @@ class LogoControllerService {
 
 /***/ }),
 
-/***/ 87064:
+/***/ 57231:
 /*!****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/mmsController.service.ts ***!
   \****************************************************************************/
@@ -1769,11 +1769,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   MmsControllerService: () => (/* binding */ MmsControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -2050,7 +2050,7 @@ class MmsControllerService {
 
 /***/ }),
 
-/***/ 67202:
+/***/ 69823:
 /*!*************************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/organizationController.service.ts ***!
   \*************************************************************************************/
@@ -2061,11 +2061,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   OrganizationControllerService: () => (/* binding */ OrganizationControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -2390,7 +2390,7 @@ class OrganizationControllerService {
 
 /***/ }),
 
-/***/ 18357:
+/***/ 94628:
 /*!*****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/roleController.service.ts ***!
   \*****************************************************************************/
@@ -2401,10 +2401,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   RoleControllerService: () => (/* binding */ RoleControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -2614,7 +2614,7 @@ class RoleControllerService {
 
 /***/ }),
 
-/***/ 58496:
+/***/ 1019:
 /*!********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/serviceController.service.ts ***!
   \********************************************************************************/
@@ -2625,11 +2625,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ServiceControllerService: () => (/* binding */ ServiceControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3257,7 +3257,7 @@ class ServiceControllerService {
 
 /***/ }),
 
-/***/ 34618:
+/***/ 78347:
 /*!*****************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/userController.service.ts ***!
   \*****************************************************************************/
@@ -3268,11 +3268,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   UserControllerService: () => (/* binding */ UserControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3549,7 +3549,7 @@ class UserControllerService {
 
 /***/ }),
 
-/***/ 47499:
+/***/ 83194:
 /*!*******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/vesselController.service.ts ***!
   \*******************************************************************************/
@@ -3560,11 +3560,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   VesselControllerService: () => (/* binding */ VesselControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 66117);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 79834);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -3864,7 +3864,7 @@ class VesselControllerService {
 
 /***/ }),
 
-/***/ 40244:
+/***/ 20623:
 /*!************************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/api/vesselImageController.service.ts ***!
   \************************************************************************************/
@@ -3875,10 +3875,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   VesselImageControllerService: () => (/* binding */ VesselImageControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 21167);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84700);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -4028,7 +4028,7 @@ class VesselImageControllerService {
 
 /***/ }),
 
-/***/ 21167:
+/***/ 84700:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/configuration.ts ***!
   \****************************************************************/
@@ -4100,7 +4100,7 @@ class Configuration {
 
 /***/ }),
 
-/***/ 66117:
+/***/ 79834:
 /*!**********************************************************!*\
   !*** ./src/app/backend-api/identity-registry/encoder.ts ***!
   \**********************************************************/
@@ -4111,7 +4111,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CustomHttpUrlEncodingCodec: () => (/* binding */ CustomHttpUrlEncodingCodec)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 68947);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 /**
 * CustomHttpUrlEncodingCodec
@@ -4131,7 +4131,7 @@ class CustomHttpUrlEncodingCodec extends _angular_common_http__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 68937:
+/***/ 64886:
 /*!********************************************************!*\
   !*** ./src/app/backend-api/identity-registry/index.ts ***!
   \********************************************************/
@@ -4164,11 +4164,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VesselControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.VesselControllerService),
 /* harmony export */   VesselImageControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.VesselImageControllerService)
 /* harmony export */ });
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 69970);
-/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 94517);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 82300);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 21167);
-/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 96099);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 80061);
+/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 97936);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 51311);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 84700);
+/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 83114);
 
 
 
@@ -4177,7 +4177,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 70590:
+/***/ 10625:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/agent.ts ***!
   \**************************************************************/
@@ -4189,7 +4189,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 24470:
+/***/ 58679:
 /*!*************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/allowedAgentRole.ts ***!
   \*************************************************************************/
@@ -4227,7 +4227,7 @@ var AllowedAgentRole;
 
 /***/ }),
 
-/***/ 77540:
+/***/ 34171:
 /*!********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/certificate.ts ***!
   \********************************************************************/
@@ -4250,7 +4250,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 56024:
+/***/ 34271:
 /*!******************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/certificateRevocation.ts ***!
   \******************************************************************************/
@@ -4290,7 +4290,7 @@ var CertificateRevocation;
 
 /***/ }),
 
-/***/ 22645:
+/***/ 82544:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/device.ts ***!
   \***************************************************************/
@@ -4302,7 +4302,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 44790:
+/***/ 33397:
 /*!**********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/identityProviderAttribute.ts ***!
   \**********************************************************************************/
@@ -4333,7 +4333,7 @@ var IdentityProviderAttribute;
 
 /***/ }),
 
-/***/ 46240:
+/***/ 71419:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/mMS.ts ***!
   \************************************************************/
@@ -4345,7 +4345,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 94517:
+/***/ 97936:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/models.ts ***!
   \***************************************************************/
@@ -4362,34 +4362,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Service: () => (/* reexport safe */ _service__WEBPACK_IMPORTED_MODULE_20__.Service),
 /* harmony export */   VesselAttribute: () => (/* reexport safe */ _vesselAttribute__WEBPACK_IMPORTED_MODULE_25__.VesselAttribute)
 /* harmony export */ });
-/* harmony import */ var _agent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agent */ 70590);
-/* harmony import */ var _allowedAgentRole__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./allowedAgentRole */ 24470);
-/* harmony import */ var _certificate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./certificate */ 77540);
-/* harmony import */ var _certificateRevocation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./certificateRevocation */ 56024);
-/* harmony import */ var _device__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./device */ 22645);
-/* harmony import */ var _identityProviderAttribute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./identityProviderAttribute */ 44790);
-/* harmony import */ var _mMS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mMS */ 46240);
-/* harmony import */ var _orgMrnLogoBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./orgMrnLogoBody */ 59433);
-/* harmony import */ var _orgMrnLogoBody1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./orgMrnLogoBody1 */ 7394);
-/* harmony import */ var _organization__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./organization */ 8156);
-/* harmony import */ var _pageAgent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pageAgent */ 18459);
-/* harmony import */ var _pageDevice__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pageDevice */ 82734);
-/* harmony import */ var _pageMMS__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pageMMS */ 73265);
-/* harmony import */ var _pageOrganization__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pageOrganization */ 59367);
-/* harmony import */ var _pageService__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pageService */ 94873);
-/* harmony import */ var _pageUser__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pageUser */ 52447);
-/* harmony import */ var _pageVessel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pageVessel */ 13702);
-/* harmony import */ var _pageable__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pageable */ 74368);
-/* harmony import */ var _pageableObject__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pageableObject */ 84351);
-/* harmony import */ var _role__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./role */ 30747);
-/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./service */ 96048);
-/* harmony import */ var _servicePatch__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./servicePatch */ 53700);
-/* harmony import */ var _sortObject__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sortObject */ 73408);
-/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./user */ 56620);
-/* harmony import */ var _vessel__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./vessel */ 16321);
-/* harmony import */ var _vesselAttribute__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./vesselAttribute */ 16833);
-/* harmony import */ var _vesselMrnVesselImageBody__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./vesselMrnVesselImageBody */ 41127);
-/* harmony import */ var _vesselMrnVesselImageBody1__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./vesselMrnVesselImageBody1 */ 87524);
+/* harmony import */ var _agent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agent */ 10625);
+/* harmony import */ var _allowedAgentRole__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./allowedAgentRole */ 58679);
+/* harmony import */ var _certificate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./certificate */ 34171);
+/* harmony import */ var _certificateRevocation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./certificateRevocation */ 34271);
+/* harmony import */ var _device__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./device */ 82544);
+/* harmony import */ var _identityProviderAttribute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./identityProviderAttribute */ 33397);
+/* harmony import */ var _mMS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mMS */ 71419);
+/* harmony import */ var _orgMrnLogoBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./orgMrnLogoBody */ 83024);
+/* harmony import */ var _orgMrnLogoBody1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./orgMrnLogoBody1 */ 62601);
+/* harmony import */ var _organization__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./organization */ 43301);
+/* harmony import */ var _pageAgent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pageAgent */ 1056);
+/* harmony import */ var _pageDevice__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pageDevice */ 61547);
+/* harmony import */ var _pageMMS__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pageMMS */ 77734);
+/* harmony import */ var _pageOrganization__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pageOrganization */ 8046);
+/* harmony import */ var _pageService__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pageService */ 90866);
+/* harmony import */ var _pageUser__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pageUser */ 20162);
+/* harmony import */ var _pageVessel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pageVessel */ 82075);
+/* harmony import */ var _pageable__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pageable */ 13985);
+/* harmony import */ var _pageableObject__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pageableObject */ 80686);
+/* harmony import */ var _role__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./role */ 96974);
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./service */ 57775);
+/* harmony import */ var _servicePatch__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./servicePatch */ 26557);
+/* harmony import */ var _sortObject__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sortObject */ 13569);
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./user */ 15409);
+/* harmony import */ var _vessel__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./vessel */ 95148);
+/* harmony import */ var _vesselAttribute__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./vesselAttribute */ 55078);
+/* harmony import */ var _vesselMrnVesselImageBody__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./vesselMrnVesselImageBody */ 77822);
+/* harmony import */ var _vesselMrnVesselImageBody1__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./vesselMrnVesselImageBody1 */ 98059);
 
 
 
@@ -4421,7 +4421,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 59433:
+/***/ 83024:
 /*!***********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/orgMrnLogoBody.ts ***!
   \***********************************************************************/
@@ -4444,7 +4444,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7394:
+/***/ 62601:
 /*!************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/orgMrnLogoBody1.ts ***!
   \************************************************************************/
@@ -4467,7 +4467,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 8156:
+/***/ 43301:
 /*!*********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/organization.ts ***!
   \*********************************************************************/
@@ -4489,7 +4489,7 @@ var Organization;
 
 /***/ }),
 
-/***/ 18459:
+/***/ 1056:
 /*!******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageAgent.ts ***!
   \******************************************************************/
@@ -4501,7 +4501,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 82734:
+/***/ 61547:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageDevice.ts ***!
   \*******************************************************************/
@@ -4513,7 +4513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 73265:
+/***/ 77734:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageMMS.ts ***!
   \****************************************************************/
@@ -4525,7 +4525,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 59367:
+/***/ 8046:
 /*!*************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageOrganization.ts ***!
   \*************************************************************************/
@@ -4537,7 +4537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 94873:
+/***/ 90866:
 /*!********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageService.ts ***!
   \********************************************************************/
@@ -4549,7 +4549,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 52447:
+/***/ 20162:
 /*!*****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageUser.ts ***!
   \*****************************************************************/
@@ -4561,7 +4561,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 13702:
+/***/ 82075:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageVessel.ts ***!
   \*******************************************************************/
@@ -4573,7 +4573,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 74368:
+/***/ 13985:
 /*!*****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageable.ts ***!
   \*****************************************************************/
@@ -4596,7 +4596,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 84351:
+/***/ 80686:
 /*!***********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/pageableObject.ts ***!
   \***********************************************************************/
@@ -4608,7 +4608,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 30747:
+/***/ 96974:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/role.ts ***!
   \*************************************************************/
@@ -4650,7 +4650,7 @@ var Role;
 
 /***/ }),
 
-/***/ 96048:
+/***/ 57775:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/service.ts ***!
   \****************************************************************/
@@ -4670,7 +4670,7 @@ var Service;
 
 /***/ }),
 
-/***/ 53700:
+/***/ 26557:
 /*!*********************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/servicePatch.ts ***!
   \*********************************************************************/
@@ -4693,7 +4693,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 73408:
+/***/ 13569:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/sortObject.ts ***!
   \*******************************************************************/
@@ -4716,7 +4716,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 56620:
+/***/ 15409:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/user.ts ***!
   \*************************************************************/
@@ -4728,7 +4728,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 16321:
+/***/ 95148:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vessel.ts ***!
   \***************************************************************/
@@ -4740,7 +4740,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 16833:
+/***/ 55078:
 /*!************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vesselAttribute.ts ***!
   \************************************************************************/
@@ -4776,7 +4776,7 @@ var VesselAttribute;
 
 /***/ }),
 
-/***/ 41127:
+/***/ 77822:
 /*!*********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vesselMrnVesselImageBody.ts ***!
   \*********************************************************************************/
@@ -4799,7 +4799,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 87524:
+/***/ 98059:
 /*!**********************************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/model/vesselMrnVesselImageBody1.ts ***!
   \**********************************************************************************/
@@ -4822,7 +4822,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 82300:
+/***/ 51311:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/identity-registry/variables.ts ***!
   \************************************************************/
@@ -4834,7 +4834,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* binding */ BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* binding */ COLLECTION_FORMATS)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
 
 const BASE_PATH = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('basePath');
 const COLLECTION_FORMATS = {
@@ -4846,7 +4846,7 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
-/***/ 1086:
+/***/ 54239:
 /*!*************************************************!*\
   !*** ./src/app/backend-api/secom/api.module.ts ***!
   \*************************************************/
@@ -4857,12 +4857,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ApiModule: () => (/* binding */ ApiModule)
 /* harmony export */ });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 84144);
-/* harmony import */ var _api_ping_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/ping.service */ 12616);
-/* harmony import */ var _api_sECOM_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/sECOM.service */ 7901);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 68947);
-
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 78939);
+/* harmony import */ var _api_sECOM_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/sECOM.service */ 39570);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 
 
@@ -4886,19 +4884,19 @@ class ApiModule {
     }
   }
   static #_ = this.ɵfac = function ApiModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || ApiModule)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](ApiModule, 12), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient, 8));
+    return new (__ngFactoryType__ || ApiModule)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](ApiModule, 12), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient, 8));
   };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
     type: ApiModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({
-    providers: [_api_ping_service__WEBPACK_IMPORTED_MODULE_1__.PingService, _api_sECOM_service__WEBPACK_IMPORTED_MODULE_2__.SECOMService]
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+    providers: [_api_sECOM_service__WEBPACK_IMPORTED_MODULE_1__.SECOMService]
   });
 }
 
 /***/ }),
 
-/***/ 89977:
+/***/ 57270:
 /*!**********************************************!*\
   !*** ./src/app/backend-api/secom/api/api.ts ***!
   \**********************************************/
@@ -4908,96 +4906,16 @@ class ApiModule {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   APIS: () => (/* binding */ APIS),
-/* harmony export */   PingService: () => (/* reexport safe */ _ping_service__WEBPACK_IMPORTED_MODULE_0__.PingService),
-/* harmony export */   SECOMService: () => (/* reexport safe */ _sECOM_service__WEBPACK_IMPORTED_MODULE_1__.SECOMService)
+/* harmony export */   SECOMService: () => (/* reexport safe */ _sECOM_service__WEBPACK_IMPORTED_MODULE_0__.SECOMService)
 /* harmony export */ });
-/* harmony import */ var _ping_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ping.service */ 12616);
-/* harmony import */ var _sECOM_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sECOM.service */ 7901);
+/* harmony import */ var _sECOM_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sECOM.service */ 39570);
 
 
-
-
-const APIS = [_ping_service__WEBPACK_IMPORTED_MODULE_0__.PingService, _sECOM_service__WEBPACK_IMPORTED_MODULE_1__.SECOMService];
+const APIS = [_sECOM_service__WEBPACK_IMPORTED_MODULE_0__.SECOMService];
 
 /***/ }),
 
-/***/ 12616:
-/*!*******************************************************!*\
-  !*** ./src/app/backend-api/secom/api/ping.service.ts ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   PingService: () => (/* binding */ PingService)
-/* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../variables */ 53515);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ 84144);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 17858);
-
-
-
-
-
-
-class PingService {
-  constructor(httpClient, basePath, configuration) {
-    this.httpClient = httpClient;
-    this.basePath = '/';
-    this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpHeaders();
-    this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_1__.Configuration();
-    if (basePath) {
-      this.basePath = basePath;
-    }
-    if (configuration) {
-      this.configuration = configuration;
-      this.basePath = basePath || configuration.basePath || this.basePath;
-    }
-  }
-  /**
-   * @param consumes string[] mime-types
-   * @return true: consumes contains 'multipart/form-data', false: otherwise
-   */
-  canConsumeForm(consumes) {
-    const form = 'multipart/form-data';
-    for (const consume of consumes) {
-      if (form === consume) {
-        return true;
-      }
-    }
-    return false;
-  }
-  v2PingGet(observe = 'body', reportProgress = false) {
-    let headers = this.defaultHeaders;
-    // to determine the Accept header
-    let httpHeaderAccepts = ['application/json'];
-    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-    if (httpHeaderAcceptSelected != undefined) {
-      headers = headers.set('Accept', httpHeaderAcceptSelected);
-    }
-    // to determine the Content-Type header
-    const consumes = [];
-    return this.httpClient.request('get', `${this.basePath}/api/secom/v2/ping`, {
-      withCredentials: this.configuration.withCredentials,
-      headers: headers,
-      observe: observe,
-      reportProgress: reportProgress
-    });
-  }
-  static #_ = this.ɵfac = function PingService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || PingService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_variables__WEBPACK_IMPORTED_MODULE_0__.BASE_PATH, 8), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_configuration__WEBPACK_IMPORTED_MODULE_1__.Configuration, 8));
-  };
-  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({
-    token: PingService,
-    factory: PingService.ɵfac
-  });
-}
-
-/***/ }),
-
-/***/ 7901:
+/***/ 39570:
 /*!********************************************************!*\
   !*** ./src/app/backend-api/secom/api/sECOM.service.ts ***!
   \********************************************************/
@@ -5008,11 +4926,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SECOMService: () => (/* binding */ SECOMService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 30710);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 53515);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 84144);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 35753);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 46400);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 78939);
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../app.config */ 26060);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42391);
+
 
 
 
@@ -5023,8 +4943,8 @@ __webpack_require__.r(__webpack_exports__);
 class SECOMService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
-    this.basePath = '';
-    this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
+    this.basePath = _app_config__WEBPACK_IMPORTED_MODULE_3__.AppConfig.SR_BASE_PATH;
+    this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
     if (basePath) {
       this.basePath = basePath;
@@ -5047,85 +4967,15 @@ class SECOMService {
     }
     return false;
   }
-  v2RetrieveResultsTransactionIdGet(transactionId, observe = 'body', reportProgress = false) {
-    if (transactionId === null || transactionId === undefined) {
-      throw new Error('Required parameter transactionId was null or undefined when calling v2RetrieveResultsTransactionIdGet.');
-    }
-    let headers = this.defaultHeaders;
-    // to determine the Accept header
-    let httpHeaderAccepts = ['application/json'];
-    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-    if (httpHeaderAcceptSelected != undefined) {
-      headers = headers.set('Accept', httpHeaderAcceptSelected);
-    }
-    // to determine the Content-Type header
-    const consumes = [];
-    return this.httpClient.request('get', `${this.basePath}/api/secom/v2/retrieveResults/${encodeURIComponent(String(transactionId))}`, {
-      withCredentials: this.configuration.withCredentials,
-      headers: headers,
-      observe: observe,
-      reportProgress: reportProgress
-    });
-  }
-  v2SearchServiceGet(name, status, version, keywords, description, specificationId, designId, instanceId, organisationId, mmsi, imo, serviceType, unlocode, endpointUri, dataProductType, localOnly, geometry, includeXml, observe = 'body', reportProgress = false) {
-    let queryParameters = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpParams({
+  search(body, page, pageSize, observe = 'body', reportProgress = false) {
+    let queryParameters = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpParams({
       encoder: new _encoder__WEBPACK_IMPORTED_MODULE_0__.CustomHttpUrlEncodingCodec()
     });
-    if (name !== undefined && name !== null) {
-      queryParameters = queryParameters.set('name', name);
+    if (page !== undefined && page !== null) {
+      queryParameters = queryParameters.set('page', page);
     }
-    if (status !== undefined && status !== null) {
-      queryParameters = queryParameters.set('status', status);
-    }
-    if (version !== undefined && version !== null) {
-      queryParameters = queryParameters.set('version', version);
-    }
-    if (keywords) {
-      keywords.forEach(element => {
-        queryParameters = queryParameters.append('keywords', element);
-      });
-    }
-    if (description !== undefined && description !== null) {
-      queryParameters = queryParameters.set('description', description);
-    }
-    if (specificationId !== undefined && specificationId !== null) {
-      queryParameters = queryParameters.set('specificationId', specificationId);
-    }
-    if (designId !== undefined && designId !== null) {
-      queryParameters = queryParameters.set('designId', designId);
-    }
-    if (instanceId !== undefined && instanceId !== null) {
-      queryParameters = queryParameters.set('instanceId', instanceId);
-    }
-    if (organisationId !== undefined && organisationId !== null) {
-      queryParameters = queryParameters.set('organisationId', organisationId);
-    }
-    if (mmsi !== undefined && mmsi !== null) {
-      queryParameters = queryParameters.set('mmsi', mmsi);
-    }
-    if (imo !== undefined && imo !== null) {
-      queryParameters = queryParameters.set('imo', imo);
-    }
-    if (serviceType !== undefined && serviceType !== null) {
-      queryParameters = queryParameters.set('serviceType', serviceType);
-    }
-    if (unlocode !== undefined && unlocode !== null) {
-      queryParameters = queryParameters.set('unlocode', unlocode);
-    }
-    if (endpointUri !== undefined && endpointUri !== null) {
-      queryParameters = queryParameters.set('endpointUri', endpointUri);
-    }
-    if (dataProductType !== undefined && dataProductType !== null) {
-      queryParameters = queryParameters.set('dataProductType', dataProductType);
-    }
-    if (localOnly !== undefined && localOnly !== null) {
-      queryParameters = queryParameters.set('localOnly', localOnly);
-    }
-    if (geometry !== undefined && geometry !== null) {
-      queryParameters = queryParameters.set('geometry', geometry);
-    }
-    if (includeXml !== undefined && includeXml !== null) {
-      queryParameters = queryParameters.set('includeXml', includeXml);
+    if (pageSize !== undefined && pageSize !== null) {
+      queryParameters = queryParameters.set('pageSize', pageSize);
     }
     let headers = this.defaultHeaders;
     // to determine the Accept header
@@ -5135,8 +4985,13 @@ class SECOMService {
       headers = headers.set('Accept', httpHeaderAcceptSelected);
     }
     // to determine the Content-Type header
-    const consumes = [];
-    return this.httpClient.request('get', `${this.basePath}/api/secom/v2/searchService`, {
+    const consumes = ['application/json'];
+    const httpContentTypeSelected = this.configuration.selectHeaderContentType(consumes);
+    if (httpContentTypeSelected != undefined) {
+      headers = headers.set('Content-Type', httpContentTypeSelected);
+    }
+    return this.httpClient.request('post', `${this.basePath}/api/secom/v1/searchService`, {
+      body: body,
       params: queryParameters,
       withCredentials: this.configuration.withCredentials,
       headers: headers,
@@ -5144,83 +4999,10 @@ class SECOMService {
       reportProgress: reportProgress
     });
   }
-  search(body, observe = 'body', reportProgress = false) {
-    let headers = this.defaultHeaders;
-    // to determine the Accept header
-    let httpHeaderAccepts = ['application/json'];
-    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-    if (httpHeaderAcceptSelected != undefined) {
-      headers = headers.set('Accept', httpHeaderAcceptSelected);
-    }
-    // to determine the Content-Type header
-    const consumes = ['application/json'];
-    const httpContentTypeSelected = this.configuration.selectHeaderContentType(consumes);
-    if (httpContentTypeSelected != undefined) {
-      headers = headers.set('Content-Type', httpContentTypeSelected);
-    }
-    console.log('Base path is:', this.basePath);
-    return this.httpClient.request('post', `${this.basePath}/api/secom/v2/searchService`, {
-      body: body,
-      withCredentials: this.configuration.withCredentials,
-      headers: headers,
-      observe: observe,
-      reportProgress: reportProgress
-    });
-  }
-  v2UpdateServiceInstanceIdPut(instanceId, body, observe = 'body', reportProgress = false) {
-    if (instanceId === null || instanceId === undefined) {
-      throw new Error('Required parameter instanceId was null or undefined when calling v2UpdateServiceInstanceIdPut.');
-    }
-    let headers = this.defaultHeaders;
-    // to determine the Accept header
-    let httpHeaderAccepts = ['application/json'];
-    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-    if (httpHeaderAcceptSelected != undefined) {
-      headers = headers.set('Accept', httpHeaderAcceptSelected);
-    }
-    // to determine the Content-Type header
-    const consumes = ['application/json'];
-    const httpContentTypeSelected = this.configuration.selectHeaderContentType(consumes);
-    if (httpContentTypeSelected != undefined) {
-      headers = headers.set('Content-Type', httpContentTypeSelected);
-    }
-    return this.httpClient.request('put', `${this.basePath}/v2/updateService/${encodeURIComponent(String(instanceId))}`, {
-      body: body,
-      withCredentials: this.configuration.withCredentials,
-      headers: headers,
-      observe: observe,
-      reportProgress: reportProgress
-    });
-  }
-  v2UploadResultsTransactionIdPost(transactionId, body, observe = 'body', reportProgress = false) {
-    if (transactionId === null || transactionId === undefined) {
-      throw new Error('Required parameter transactionId was null or undefined when calling v2UploadResultsTransactionIdPost.');
-    }
-    let headers = this.defaultHeaders;
-    // to determine the Accept header
-    let httpHeaderAccepts = ['application/json'];
-    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
-    if (httpHeaderAcceptSelected != undefined) {
-      headers = headers.set('Accept', httpHeaderAcceptSelected);
-    }
-    // to determine the Content-Type header
-    const consumes = ['application/json'];
-    const httpContentTypeSelected = this.configuration.selectHeaderContentType(consumes);
-    if (httpContentTypeSelected != undefined) {
-      headers = headers.set('Content-Type', httpContentTypeSelected);
-    }
-    return this.httpClient.request('post', `${this.basePath}/v2/uploadResults/${encodeURIComponent(String(transactionId))}`, {
-      body: body,
-      withCredentials: this.configuration.withCredentials,
-      headers: headers,
-      observe: observe,
-      reportProgress: reportProgress
-    });
-  }
   static #_ = this.ɵfac = function SECOMService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || SECOMService)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_variables__WEBPACK_IMPORTED_MODULE_1__.BASE_PATH, 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration, 8));
+    return new (__ngFactoryType__ || SECOMService)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_variables__WEBPACK_IMPORTED_MODULE_1__.BASE_PATH, 8), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration, 8));
   };
-  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjectable"]({
     token: SECOMService,
     factory: SECOMService.ɵfac
   });
@@ -5228,7 +5010,7 @@ class SECOMService {
 
 /***/ }),
 
-/***/ 84144:
+/***/ 78939:
 /*!****************************************************!*\
   !*** ./src/app/backend-api/secom/configuration.ts ***!
   \****************************************************/
@@ -5300,7 +5082,7 @@ class Configuration {
 
 /***/ }),
 
-/***/ 30710:
+/***/ 35753:
 /*!**********************************************!*\
   !*** ./src/app/backend-api/secom/encoder.ts ***!
   \**********************************************/
@@ -5311,7 +5093,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CustomHttpUrlEncodingCodec: () => (/* binding */ CustomHttpUrlEncodingCodec)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 68947);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 /**
 * CustomHttpUrlEncodingCodec
@@ -5331,7 +5113,7 @@ class CustomHttpUrlEncodingCodec extends _angular_common_http__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 77410:
+/***/ 44269:
 /*!********************************************!*\
   !*** ./src/app/backend-api/secom/index.ts ***!
   \********************************************/
@@ -5345,15 +5127,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* reexport safe */ _variables__WEBPACK_IMPORTED_MODULE_2__.BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* reexport safe */ _variables__WEBPACK_IMPORTED_MODULE_2__.COLLECTION_FORMATS),
 /* harmony export */   Configuration: () => (/* reexport safe */ _configuration__WEBPACK_IMPORTED_MODULE_3__.Configuration),
-/* harmony export */   PingService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.PingService),
 /* harmony export */   SECOMService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.SECOMService),
-/* harmony export */   SecomDataProductTypeEnum: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.SecomDataProductTypeEnum)
+/* harmony export */   SearchObjectResult: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.SearchObjectResult),
+/* harmony export */   SearchParameters: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.SearchParameters)
 /* harmony export */ });
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 89977);
-/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 50676);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 53515);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 84144);
-/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 1086);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 57270);
+/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 33665);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 46400);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 78939);
+/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 54239);
 
 
 
@@ -5362,66 +5144,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 25674:
-/*!************************************************!*\
-  !*** ./src/app/backend-api/secom/model/crs.ts ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-/***/ }),
-
-/***/ 51573:
-/*!******************************************************************!*\
-  !*** ./src/app/backend-api/secom/model/defaultResponseObject.ts ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// @ts-ignore
-/**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
- *
- * OpenAPI spec version: v2
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-
-
-/***/ }),
-
-/***/ 24160:
-/*!**************************************************************!*\
-  !*** ./src/app/backend-api/secom/model/inlineResponse200.ts ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
- *
- * OpenAPI spec version: v2
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-
-
-/***/ }),
-
-/***/ 50676:
+/***/ 33665:
 /*!***************************************************!*\
   !*** ./src/app/backend-api/secom/model/models.ts ***!
   \***************************************************/
@@ -5430,82 +5153,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   SecomDataProductTypeEnum: () => (/* reexport safe */ _secomDataProductTypeEnum__WEBPACK_IMPORTED_MODULE_10__.SecomDataProductTypeEnum)
+/* harmony export */   SearchObjectResult: () => (/* reexport safe */ _searchObjectResult__WEBPACK_IMPORTED_MODULE_1__.SearchObjectResult),
+/* harmony export */   SearchParameters: () => (/* reexport safe */ _searchParameters__WEBPACK_IMPORTED_MODULE_2__.SearchParameters)
 /* harmony export */ });
-/* harmony import */ var _crs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./crs */ 25674);
-/* harmony import */ var _defaultResponseObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defaultResponseObject */ 51573);
-/* harmony import */ var _inlineResponse200__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./inlineResponse200 */ 24160);
-/* harmony import */ var _organization__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./organization */ 51153);
-/* harmony import */ var _properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./properties */ 35423);
-/* harmony import */ var _searchFilterObject__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./searchFilterObject */ 19823);
-/* harmony import */ var _searchMessageObject__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./searchMessageObject */ 17860);
-/* harmony import */ var _searchObjectResult__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./searchObjectResult */ 35036);
-/* harmony import */ var _searchParameters__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./searchParameters */ 48398);
-/* harmony import */ var _searchResult__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./searchResult */ 7071);
-/* harmony import */ var _secomDataProductTypeEnum__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./secomDataProductTypeEnum */ 18847);
-/* harmony import */ var _updateServiceObject__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./updateServiceObject */ 66819);
-
-
-
-
-
-
-
-
-
+/* harmony import */ var _searchFilterObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchFilterObject */ 62638);
+/* harmony import */ var _searchObjectResult__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./searchObjectResult */ 49125);
+/* harmony import */ var _searchParameters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchParameters */ 90511);
 
 
 
 
 /***/ }),
 
-/***/ 51153:
-/*!*********************************************************!*\
-  !*** ./src/app/backend-api/secom/model/organization.ts ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
- *
- * OpenAPI spec version: v2
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-
-
-/***/ }),
-
-/***/ 35423:
-/*!*******************************************************!*\
-  !*** ./src/app/backend-api/secom/model/properties.ts ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
- *
- * OpenAPI spec version: v2
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-
-
-/***/ }),
-
-/***/ 19823:
+/***/ 62638:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/secom/model/searchFilterObject.ts ***!
   \***************************************************************/
@@ -5517,19 +5177,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 17860:
-/*!****************************************************************!*\
-  !*** ./src/app/backend-api/secom/model/searchMessageObject.ts ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-/***/ }),
-
-/***/ 35036:
+/***/ 49125:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/secom/model/searchObjectResult.ts ***!
   \***************************************************************/
@@ -5537,22 +5185,56 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SearchObjectResult: () => (/* binding */ SearchObjectResult)
+/* harmony export */ });
 /**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
+ * MCP Service Registry (MSR) - SECOM Interfaces
+ * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
- * OpenAPI spec version: v2
- *
+ * OpenAPI spec version: 1.0
+ * Contact: Nikolaos.Vastardis@gla-rad.org
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-
+var SearchObjectResult;
+(function (SearchObjectResult) {
+  SearchObjectResult.DataProductTypeEnum = {
+    OTHER: 'OTHER',
+    S57: 'S57',
+    S101: 'S101',
+    S102: 'S102',
+    S104: 'S104',
+    S111: 'S111',
+    S122: 'S122',
+    S123: 'S123',
+    S124: 'S124',
+    S125: 'S125',
+    S126: 'S126',
+    S127: 'S127',
+    S128: 'S128',
+    S129: 'S129',
+    S131: 'S131',
+    S210: 'S210',
+    S211: 'S211',
+    S212: 'S212',
+    S401: 'S401',
+    S402: 'S402',
+    S411: 'S411',
+    S412: 'S412',
+    S413: 'S413',
+    S414: 'S414',
+    S421: 'S421',
+    RTZ: 'RTZ',
+    EPC: 'EPC'
+  };
+})(SearchObjectResult || (SearchObjectResult = {}));
 
 /***/ }),
 
-/***/ 48398:
+/***/ 90511:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/secom/model/searchParameters.ts ***!
   \*************************************************************/
@@ -5560,110 +5242,56 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
- *
- * OpenAPI spec version: v2
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-
-
-/***/ }),
-
-/***/ 7071:
-/*!*********************************************************!*\
-  !*** ./src/app/backend-api/secom/model/searchResult.ts ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-/***/ }),
-
-/***/ 18847:
-/*!*********************************************************************!*\
-  !*** ./src/app/backend-api/secom/model/secomDataProductTypeEnum.ts ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   SecomDataProductTypeEnum: () => (/* binding */ SecomDataProductTypeEnum)
+/* harmony export */   SearchParameters: () => (/* binding */ SearchParameters)
 /* harmony export */ });
 /**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
+ * MCP Service Registry (MSR) - SECOM Interfaces
+ * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
- * OpenAPI spec version: v2
- *
- *
- * NOTE: This class is auto generated by the swagger code generator program.
- * https://github.com/swagger-api/swagger-codegen.git
- * Do not edit the class manually.
- */
-const SecomDataProductTypeEnum = {
-  S57: 'S57',
-  S101: 'S101',
-  S102: 'S102',
-  S104: 'S104',
-  S111: 'S111',
-  S122: 'S122',
-  S123: 'S123',
-  S124: 'S124',
-  S125: 'S125',
-  S126: 'S126',
-  S127: 'S127',
-  S128: 'S128',
-  S129: 'S129',
-  S210: 'S210',
-  S211: 'S211',
-  S212: 'S212',
-  S401: 'S401',
-  S402: 'S402',
-  S411: 'S411',
-  S412: 'S412',
-  S413: 'S413',
-  S414: 'S414',
-  S421: 'S421',
-  RTZ: 'RTZ',
-  EPC: 'EPC',
-  OTHER: 'OTHER'
-};
-
-/***/ }),
-
-/***/ 66819:
-/*!****************************************************************!*\
-  !*** ./src/app/backend-api/secom/model/updateServiceObject.ts ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/**
- * MSR Interface definitions
- * Compliant with IEC 63173-2:2025 SECOM version 2
- *
- * OpenAPI spec version: v2
- *
+ * OpenAPI spec version: 1.0
+ * Contact: Nikolaos.Vastardis@gla-rad.org
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-
+var SearchParameters;
+(function (SearchParameters) {
+  SearchParameters.DataProductTypeEnum = {
+    OTHER: 'OTHER',
+    S57: 'S57',
+    S101: 'S101',
+    S102: 'S102',
+    S104: 'S104',
+    S111: 'S111',
+    S122: 'S122',
+    S123: 'S123',
+    S124: 'S124',
+    S125: 'S125',
+    S126: 'S126',
+    S127: 'S127',
+    S128: 'S128',
+    S129: 'S129',
+    S131: 'S131',
+    S210: 'S210',
+    S211: 'S211',
+    S212: 'S212',
+    S401: 'S401',
+    S402: 'S402',
+    S411: 'S411',
+    S412: 'S412',
+    S413: 'S413',
+    S414: 'S414',
+    S421: 'S421',
+    RTZ: 'RTZ',
+    EPC: 'EPC'
+  };
+})(SearchParameters || (SearchParameters = {}));
 
 /***/ }),
 
-/***/ 53515:
+/***/ 46400:
 /*!************************************************!*\
   !*** ./src/app/backend-api/secom/variables.ts ***!
   \************************************************/
@@ -5675,7 +5303,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* binding */ BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* binding */ COLLECTION_FORMATS)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
 
 const BASE_PATH = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('basePath');
 const COLLECTION_FORMATS = {
@@ -5687,7 +5315,7 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
-/***/ 27180:
+/***/ 61543:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api.module.ts ***!
   \************************************************************/
@@ -5698,12 +5326,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ApiModule: () => (/* binding */ ApiModule)
 /* harmony export */ });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 95154);
-/* harmony import */ var _api_docController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/docController.service */ 4300);
-/* harmony import */ var _api_instanceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/instanceController.service */ 60077);
-/* harmony import */ var _api_xmlController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/xmlController.service */ 92379);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 68947);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./configuration */ 36707);
+/* harmony import */ var _api_docController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api/docController.service */ 33773);
+/* harmony import */ var _api_instanceController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api/instanceController.service */ 3574);
+/* harmony import */ var _api_ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api/ledgerRequestController.service */ 46317);
+/* harmony import */ var _api_xmlController_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api/xmlController.service */ 94930);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 67276);
+
 
 
 
@@ -5729,19 +5359,19 @@ class ApiModule {
     }
   }
   static #_ = this.ɵfac = function ApiModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || ApiModule)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](ApiModule, 12), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_5__.HttpClient, 8));
+    return new (__ngFactoryType__ || ApiModule)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](ApiModule, 12), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_6__.HttpClient, 8));
   };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({
     type: ApiModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
-    providers: [_api_docController_service__WEBPACK_IMPORTED_MODULE_1__.DocControllerService, _api_instanceController_service__WEBPACK_IMPORTED_MODULE_2__.InstanceControllerService, _api_xmlController_service__WEBPACK_IMPORTED_MODULE_3__.XmlControllerService]
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({
+    providers: [_api_docController_service__WEBPACK_IMPORTED_MODULE_1__.DocControllerService, _api_instanceController_service__WEBPACK_IMPORTED_MODULE_2__.InstanceControllerService, _api_ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_3__.LedgerRequestControllerService, _api_xmlController_service__WEBPACK_IMPORTED_MODULE_4__.XmlControllerService]
   });
 }
 
 /***/ }),
 
-/***/ 29383:
+/***/ 35374:
 /*!*********************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/api.ts ***!
   \*********************************************************/
@@ -5753,22 +5383,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   APIS: () => (/* binding */ APIS),
 /* harmony export */   DocControllerService: () => (/* reexport safe */ _docController_service__WEBPACK_IMPORTED_MODULE_0__.DocControllerService),
 /* harmony export */   InstanceControllerService: () => (/* reexport safe */ _instanceController_service__WEBPACK_IMPORTED_MODULE_1__.InstanceControllerService),
-/* harmony export */   XmlControllerService: () => (/* reexport safe */ _xmlController_service__WEBPACK_IMPORTED_MODULE_2__.XmlControllerService)
+/* harmony export */   LedgerRequestControllerService: () => (/* reexport safe */ _ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_2__.LedgerRequestControllerService),
+/* harmony export */   XmlControllerService: () => (/* reexport safe */ _xmlController_service__WEBPACK_IMPORTED_MODULE_3__.XmlControllerService)
 /* harmony export */ });
-/* harmony import */ var _docController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./docController.service */ 4300);
-/* harmony import */ var _instanceController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instanceController.service */ 60077);
-/* harmony import */ var _xmlController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./xmlController.service */ 92379);
+/* harmony import */ var _docController_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./docController.service */ 33773);
+/* harmony import */ var _instanceController_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./instanceController.service */ 3574);
+/* harmony import */ var _ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ledgerRequestController.service */ 46317);
+/* harmony import */ var _xmlController_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./xmlController.service */ 94930);
 
 
 
 
 
 
-const APIS = [_docController_service__WEBPACK_IMPORTED_MODULE_0__.DocControllerService, _instanceController_service__WEBPACK_IMPORTED_MODULE_1__.InstanceControllerService, _xmlController_service__WEBPACK_IMPORTED_MODULE_2__.XmlControllerService];
+
+
+const APIS = [_docController_service__WEBPACK_IMPORTED_MODULE_0__.DocControllerService, _instanceController_service__WEBPACK_IMPORTED_MODULE_1__.InstanceControllerService, _ledgerRequestController_service__WEBPACK_IMPORTED_MODULE_2__.LedgerRequestControllerService, _xmlController_service__WEBPACK_IMPORTED_MODULE_3__.XmlControllerService];
 
 /***/ }),
 
-/***/ 4300:
+/***/ 33773:
 /*!***************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/docController.service.ts ***!
   \***************************************************************************/
@@ -5779,11 +5413,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DocControllerService: () => (/* binding */ DocControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 69536);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 35189);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 95154);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -5794,7 +5428,7 @@ __webpack_require__.r(__webpack_exports__);
 class DocControllerService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
-    this.basePath = 'http://localhost:8444';
+    this.basePath = 'https://msr.maritimeconnectivity.net';
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
     if (basePath) {
@@ -5954,7 +5588,7 @@ class DocControllerService {
 
 /***/ }),
 
-/***/ 60077:
+/***/ 3574:
 /*!********************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/instanceController.service.ts ***!
   \********************************************************************************/
@@ -5965,11 +5599,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   InstanceControllerService: () => (/* binding */ InstanceControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 69536);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 35189);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 95154);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -5980,7 +5614,7 @@ __webpack_require__.r(__webpack_exports__);
 class InstanceControllerService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
-    this.basePath = 'http://localhost:8444';
+    this.basePath = 'https://msr.maritimeconnectivity.net';
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
     if (basePath) {
@@ -6172,6 +5806,36 @@ class InstanceControllerService {
       reportProgress: reportProgress
     });
   }
+  updateInstanceLedgerStatus(id, ledgerStatus, observe = 'body', reportProgress = false) {
+    if (id === null || id === undefined) {
+      throw new Error('Required parameter id was null or undefined when calling updateInstanceLedgerStatus.');
+    }
+    if (ledgerStatus === null || ledgerStatus === undefined) {
+      throw new Error('Required parameter ledgerStatus was null or undefined when calling updateInstanceLedgerStatus.');
+    }
+    let queryParameters = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpParams({
+      encoder: new _encoder__WEBPACK_IMPORTED_MODULE_0__.CustomHttpUrlEncodingCodec()
+    });
+    if (ledgerStatus !== undefined && ledgerStatus !== null) {
+      queryParameters = queryParameters.set('ledgerStatus', ledgerStatus);
+    }
+    let headers = this.defaultHeaders;
+    // to determine the Accept header
+    let httpHeaderAccepts = [];
+    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    if (httpHeaderAcceptSelected != undefined) {
+      headers = headers.set('Accept', httpHeaderAcceptSelected);
+    }
+    // to determine the Content-Type header
+    const consumes = [];
+    return this.httpClient.request('put', `${this.basePath}/api/instances/${encodeURIComponent(String(id))}/ledger-status`, {
+      params: queryParameters,
+      withCredentials: this.configuration.withCredentials,
+      headers: headers,
+      observe: observe,
+      reportProgress: reportProgress
+    });
+  }
   updateInstanceStatus(id, status, observe = 'body', reportProgress = false) {
     if (id === null || id === undefined) {
       throw new Error('Required parameter id was null or undefined when calling updateInstanceStatus.');
@@ -6213,7 +5877,195 @@ class InstanceControllerService {
 
 /***/ }),
 
-/***/ 92379:
+/***/ 46317:
+/*!*************************************************************************************!*\
+  !*** ./src/app/backend-api/service-registry/api/ledgerRequestController.service.ts ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   LedgerRequestControllerService: () => (/* binding */ LedgerRequestControllerService)
+/* harmony export */ });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
+
+
+
+
+
+
+
+class LedgerRequestControllerService {
+  constructor(httpClient, basePath, configuration) {
+    this.httpClient = httpClient;
+    this.basePath = 'https://msr.maritimeconnectivity.net';
+    this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
+    this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
+    if (basePath) {
+      this.basePath = basePath;
+    }
+    if (configuration) {
+      this.configuration = configuration;
+      this.basePath = basePath || configuration.basePath || this.basePath;
+    }
+  }
+  /**
+   * @param consumes string[] mime-types
+   * @return true: consumes contains 'multipart/form-data', false: otherwise
+   */
+  canConsumeForm(consumes) {
+    const form = 'multipart/form-data';
+    for (const consume of consumes) {
+      if (form === consume) {
+        return true;
+      }
+    }
+    return false;
+  }
+  createLedgerRequest(body, observe = 'body', reportProgress = false) {
+    if (body === null || body === undefined) {
+      throw new Error('Required parameter body was null or undefined when calling createLedgerRequest.');
+    }
+    let headers = this.defaultHeaders;
+    // to determine the Accept header
+    let httpHeaderAccepts = ['application/json'];
+    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    if (httpHeaderAcceptSelected != undefined) {
+      headers = headers.set('Accept', httpHeaderAcceptSelected);
+    }
+    // to determine the Content-Type header
+    const consumes = ['application/json'];
+    const httpContentTypeSelected = this.configuration.selectHeaderContentType(consumes);
+    if (httpContentTypeSelected != undefined) {
+      headers = headers.set('Content-Type', httpContentTypeSelected);
+    }
+    return this.httpClient.request('post', `${this.basePath}/api/ledgerrequests`, {
+      body: body,
+      withCredentials: this.configuration.withCredentials,
+      headers: headers,
+      observe: observe,
+      reportProgress: reportProgress
+    });
+  }
+  deleteLedgerRequest(id, observe = 'body', reportProgress = false) {
+    if (id === null || id === undefined) {
+      throw new Error('Required parameter id was null or undefined when calling deleteLedgerRequest.');
+    }
+    let headers = this.defaultHeaders;
+    // to determine the Accept header
+    let httpHeaderAccepts = [];
+    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    if (httpHeaderAcceptSelected != undefined) {
+      headers = headers.set('Accept', httpHeaderAcceptSelected);
+    }
+    // to determine the Content-Type header
+    const consumes = [];
+    return this.httpClient.request('delete', `${this.basePath}/api/ledgerrequests/${encodeURIComponent(String(id))}`, {
+      withCredentials: this.configuration.withCredentials,
+      headers: headers,
+      observe: observe,
+      reportProgress: reportProgress
+    });
+  }
+  getLedgerRequest(id, observe = 'body', reportProgress = false) {
+    if (id === null || id === undefined) {
+      throw new Error('Required parameter id was null or undefined when calling getLedgerRequest.');
+    }
+    let headers = this.defaultHeaders;
+    // to determine the Accept header
+    let httpHeaderAccepts = ['application/json'];
+    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    if (httpHeaderAcceptSelected != undefined) {
+      headers = headers.set('Accept', httpHeaderAcceptSelected);
+    }
+    // to determine the Content-Type header
+    const consumes = [];
+    return this.httpClient.request('get', `${this.basePath}/api/ledgerrequests/${encodeURIComponent(String(id))}`, {
+      withCredentials: this.configuration.withCredentials,
+      headers: headers,
+      observe: observe,
+      reportProgress: reportProgress
+    });
+  }
+  getLedgerRequests(page, size, sort, observe = 'body', reportProgress = false) {
+    let queryParameters = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpParams({
+      encoder: new _encoder__WEBPACK_IMPORTED_MODULE_0__.CustomHttpUrlEncodingCodec()
+    });
+    if (page !== undefined && page !== null) {
+      queryParameters = queryParameters.set('page', page);
+    }
+    if (size !== undefined && size !== null) {
+      queryParameters = queryParameters.set('size', size);
+    }
+    if (sort) {
+      sort.forEach(element => {
+        queryParameters = queryParameters.append('sort', element);
+      });
+    }
+    let headers = this.defaultHeaders;
+    // to determine the Accept header
+    let httpHeaderAccepts = ['application/json'];
+    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    if (httpHeaderAcceptSelected != undefined) {
+      headers = headers.set('Accept', httpHeaderAcceptSelected);
+    }
+    // to determine the Content-Type header
+    const consumes = [];
+    return this.httpClient.request('get', `${this.basePath}/api/ledgerrequests`, {
+      params: queryParameters,
+      withCredentials: this.configuration.withCredentials,
+      headers: headers,
+      observe: observe,
+      reportProgress: reportProgress
+    });
+  }
+  updateRequestStatus(id, status, observe = 'body', reportProgress = false) {
+    if (id === null || id === undefined) {
+      throw new Error('Required parameter id was null or undefined when calling updateRequestStatus.');
+    }
+    if (status === null || status === undefined) {
+      throw new Error('Required parameter status was null or undefined when calling updateRequestStatus.');
+    }
+    let queryParameters = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpParams({
+      encoder: new _encoder__WEBPACK_IMPORTED_MODULE_0__.CustomHttpUrlEncodingCodec()
+    });
+    if (status !== undefined && status !== null) {
+      queryParameters = queryParameters.set('status', status);
+    }
+    let headers = this.defaultHeaders;
+    // to determine the Accept header
+    let httpHeaderAccepts = ['application/json'];
+    const httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    if (httpHeaderAcceptSelected != undefined) {
+      headers = headers.set('Accept', httpHeaderAcceptSelected);
+    }
+    // to determine the Content-Type header
+    const consumes = [];
+    return this.httpClient.request('put', `${this.basePath}/api/ledgerrequests/${encodeURIComponent(String(id))}/status`, {
+      params: queryParameters,
+      withCredentials: this.configuration.withCredentials,
+      headers: headers,
+      observe: observe,
+      reportProgress: reportProgress
+    });
+  }
+  static #_ = this.ɵfac = function LedgerRequestControllerService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || LedgerRequestControllerService)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_variables__WEBPACK_IMPORTED_MODULE_1__.BASE_PATH, 8), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration, 8));
+  };
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjectable"]({
+    token: LedgerRequestControllerService,
+    factory: LedgerRequestControllerService.ɵfac
+  });
+}
+
+/***/ }),
+
+/***/ 94930:
 /*!***************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/api/xmlController.service.ts ***!
   \***************************************************************************/
@@ -6224,11 +6076,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   XmlControllerService: () => (/* binding */ XmlControllerService)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 69536);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 35189);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 95154);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 67276);
+/* harmony import */ var _encoder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../encoder */ 26513);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ 36707);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 42391);
 
 
 
@@ -6239,7 +6091,7 @@ __webpack_require__.r(__webpack_exports__);
 class XmlControllerService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
-    this.basePath = 'http://localhost:8444';
+    this.basePath = 'https://msr.maritimeconnectivity.net';
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
     if (basePath) {
@@ -6447,7 +6299,7 @@ class XmlControllerService {
 
 /***/ }),
 
-/***/ 95154:
+/***/ 36707:
 /*!***************************************************************!*\
   !*** ./src/app/backend-api/service-registry/configuration.ts ***!
   \***************************************************************/
@@ -6519,7 +6371,7 @@ class Configuration {
 
 /***/ }),
 
-/***/ 69536:
+/***/ 26513:
 /*!*********************************************************!*\
   !*** ./src/app/backend-api/service-registry/encoder.ts ***!
   \*********************************************************/
@@ -6530,7 +6382,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CustomHttpUrlEncodingCodec: () => (/* binding */ CustomHttpUrlEncodingCodec)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 68947);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 67276);
 
 /**
 * CustomHttpUrlEncodingCodec
@@ -6550,7 +6402,7 @@ class CustomHttpUrlEncodingCodec extends _angular_common_http__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ 65392:
+/***/ 91877:
 /*!*******************************************************!*\
   !*** ./src/app/backend-api/service-registry/index.ts ***!
   \*******************************************************/
@@ -6567,13 +6419,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DocControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.DocControllerService),
 /* harmony export */   InstanceControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.InstanceControllerService),
 /* harmony export */   InstanceDto: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.InstanceDto),
+/* harmony export */   LedgerRequestControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.LedgerRequestControllerService),
+/* harmony export */   LedgerRequestDto: () => (/* reexport safe */ _model_models__WEBPACK_IMPORTED_MODULE_1__.LedgerRequestDto),
 /* harmony export */   XmlControllerService: () => (/* reexport safe */ _api_api__WEBPACK_IMPORTED_MODULE_0__.XmlControllerService)
 /* harmony export */ });
-/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 29383);
-/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 37178);
-/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 35189);
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 95154);
-/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 27180);
+/* harmony import */ var _api_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api */ 35374);
+/* harmony import */ var _model_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/models */ 25321);
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variables */ 4168);
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configuration */ 36707);
+/* harmony import */ var _api_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./api.module */ 61543);
 
 
 
@@ -6582,7 +6436,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4682:
+/***/ 39633:
 /*!******************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/coordinate.ts ***!
   \******************************************************************/
@@ -6595,7 +6449,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6605,7 +6459,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 19931:
+/***/ 24596:
 /*!**************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/coordinateSequence.ts ***!
   \**************************************************************************/
@@ -6618,7 +6472,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6628,7 +6482,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 53349:
+/***/ 71580:
 /*!*********************************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/coordinateSequenceFactory.ts ***!
   \*********************************************************************************/
@@ -6641,7 +6495,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6651,7 +6505,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 56831:
+/***/ 62396:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/docDto.ts ***!
   \**************************************************************/
@@ -6664,7 +6518,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6674,7 +6528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 23588:
+/***/ 18159:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/envelope.ts ***!
   \****************************************************************/
@@ -6687,7 +6541,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6697,7 +6551,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 97296:
+/***/ 65835:
 /*!****************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/geometry.ts ***!
   \****************************************************************/
@@ -6709,7 +6563,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 24840:
+/***/ 25333:
 /*!***********************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/geometryFactory.ts ***!
   \***********************************************************************/
@@ -6721,7 +6575,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 21542:
+/***/ 2779:
 /*!*******************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/instanceDto.ts ***!
   \*******************************************************************/
@@ -6756,7 +6610,6 @@ var InstanceDto;
     S128: 'S128',
     S129: 'S129',
     S131: 'S131',
-    S201: 'S201',
     S210: 'S210',
     S211: 'S211',
     S212: 'S212',
@@ -6770,11 +6623,59 @@ var InstanceDto;
     RTZ: 'RTZ',
     EPC: 'EPC'
   };
+  InstanceDto.LedgerRequestStatusEnum = {
+    INACTIVE: 'INACTIVE',
+    CREATED: 'CREATED',
+    VETTING: 'VETTING',
+    VETTED: 'VETTED',
+    REQUESTING: 'REQUESTING',
+    SUCCEEDED: 'SUCCEEDED',
+    FAILED: 'FAILED',
+    REJECTED: 'REJECTED'
+  };
 })(InstanceDto || (InstanceDto = {}));
 
 /***/ }),
 
-/***/ 37178:
+/***/ 2676:
+/*!************************************************************************!*\
+  !*** ./src/app/backend-api/service-registry/model/ledgerRequestDto.ts ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   LedgerRequestDto: () => (/* binding */ LedgerRequestDto)
+/* harmony export */ });
+/**
+ * Maritime Connectivity Platform Service Registry API
+ * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
+ *
+ * OpenAPI spec version: 0.0.8
+ * Contact: info@maritimeconnectivity.net
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ */
+var LedgerRequestDto;
+(function (LedgerRequestDto) {
+  LedgerRequestDto.StatusEnum = {
+    INACTIVE: 'INACTIVE',
+    CREATED: 'CREATED',
+    VETTING: 'VETTING',
+    VETTED: 'VETTED',
+    REQUESTING: 'REQUESTING',
+    SUCCEEDED: 'SUCCEEDED',
+    FAILED: 'FAILED',
+    REJECTED: 'REJECTED'
+  };
+})(LedgerRequestDto || (LedgerRequestDto = {}));
+
+/***/ }),
+
+/***/ 25321:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/models.ts ***!
   \**************************************************************/
@@ -6783,20 +6684,23 @@ var InstanceDto;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   InstanceDto: () => (/* reexport safe */ _instanceDto__WEBPACK_IMPORTED_MODULE_7__.InstanceDto)
+/* harmony export */   InstanceDto: () => (/* reexport safe */ _instanceDto__WEBPACK_IMPORTED_MODULE_7__.InstanceDto),
+/* harmony export */   LedgerRequestDto: () => (/* reexport safe */ _ledgerRequestDto__WEBPACK_IMPORTED_MODULE_8__.LedgerRequestDto)
 /* harmony export */ });
-/* harmony import */ var _coordinate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coordinate */ 4682);
-/* harmony import */ var _coordinateSequence__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./coordinateSequence */ 19931);
-/* harmony import */ var _coordinateSequenceFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./coordinateSequenceFactory */ 53349);
-/* harmony import */ var _docDto__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./docDto */ 56831);
-/* harmony import */ var _envelope__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./envelope */ 23588);
-/* harmony import */ var _geometry__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./geometry */ 97296);
-/* harmony import */ var _geometryFactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./geometryFactory */ 24840);
-/* harmony import */ var _instanceDto__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./instanceDto */ 21542);
-/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./point */ 54624);
-/* harmony import */ var _precisionModel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./precisionModel */ 76589);
-/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./type */ 62060);
-/* harmony import */ var _xmlDto__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./xmlDto */ 30250);
+/* harmony import */ var _coordinate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coordinate */ 39633);
+/* harmony import */ var _coordinateSequence__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./coordinateSequence */ 24596);
+/* harmony import */ var _coordinateSequenceFactory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./coordinateSequenceFactory */ 71580);
+/* harmony import */ var _docDto__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./docDto */ 62396);
+/* harmony import */ var _envelope__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./envelope */ 18159);
+/* harmony import */ var _geometry__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./geometry */ 65835);
+/* harmony import */ var _geometryFactory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./geometryFactory */ 25333);
+/* harmony import */ var _instanceDto__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./instanceDto */ 2779);
+/* harmony import */ var _ledgerRequestDto__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ledgerRequestDto */ 2676);
+/* harmony import */ var _point__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./point */ 78817);
+/* harmony import */ var _precisionModel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./precisionModel */ 78518);
+/* harmony import */ var _type__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./type */ 28087);
+/* harmony import */ var _xmlDto__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./xmlDto */ 37253);
+
 
 
 
@@ -6812,7 +6716,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 54624:
+/***/ 78817:
 /*!*************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/point.ts ***!
   \*************************************************************/
@@ -6824,7 +6728,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 76589:
+/***/ 78518:
 /*!**********************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/precisionModel.ts ***!
   \**********************************************************************/
@@ -6836,7 +6740,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 62060:
+/***/ 28087:
 /*!************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/type.ts ***!
   \************************************************************/
@@ -6849,7 +6753,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6859,7 +6763,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 30250:
+/***/ 37253:
 /*!**************************************************************!*\
   !*** ./src/app/backend-api/service-registry/model/xmlDto.ts ***!
   \**************************************************************/
@@ -6872,7 +6776,7 @@ __webpack_require__.r(__webpack_exports__);
  * Maritime Connectivity Platform Service Registry, developed by the MCC MSR WG
  *
  * OpenAPI spec version: 0.0.8
- * Contact: Nikolaos.Vastardis@gla-rad.org
+ * Contact: info@maritimeconnectivity.net
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -6882,7 +6786,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 35189:
+/***/ 4168:
 /*!***********************************************************!*\
   !*** ./src/app/backend-api/service-registry/variables.ts ***!
   \***********************************************************/
@@ -6894,7 +6798,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BASE_PATH: () => (/* binding */ BASE_PATH),
 /* harmony export */   COLLECTION_FORMATS: () => (/* binding */ COLLECTION_FORMATS)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 17858);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 42391);
 
 const BASE_PATH = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.InjectionToken('basePath');
 const COLLECTION_FORMATS = {
@@ -6906,7 +6810,7 @@ const COLLECTION_FORMATS = {
 
 /***/ }),
 
-/***/ 71832:
+/***/ 41977:
 /*!*****************************************!*\
   !*** ./src/app/common/columnForMenu.ts ***!
   \*****************************************/
@@ -6917,8 +6821,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ColumnForResource: () => (/* binding */ ColumnForResource)
 /* harmony export */ });
-/* harmony import */ var _countryOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countryOptions */ 14252);
-/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./timeConverter */ 43277);
+/* harmony import */ var _countryOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countryOptions */ 76775);
+/* harmony import */ var _timeConverter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./timeConverter */ 24536);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -7974,91 +7878,19 @@ const ColumnForResource = {
     },
     dataProductType: {
       title: "Data product type",
-      type: "string",
+      type: "stringArray",
       options: [{
-        title: 'S-57 Electronic Navigational Chart (ENC)',
-        value: 'S57'
+        title: "S-57 Electronic Navigational Chart (ENC)",
+        value: "S57"
       }, {
-        title: 'S-101 Electronic Navigational Chart (ENC)',
-        value: 'S101'
+        title: "S-101 Electronic Navigational Chart (ENC)",
+        value: "S101"
       }, {
-        title: 'S-102 Bathymetric Surface',
-        value: 'S102'
-      }, {
-        title: 'S-104 Water Level Information for Surface Navigation',
-        value: 'S104'
-      }, {
-        title: 'S-111 Surface Currents',
-        value: 'S111'
-      }, {
-        title: 'S-122 Marine Protected Areas (MPAs)',
-        value: 'S122'
-      }, {
-        title: 'S-123 Marine Radio Services',
-        value: 'S123'
-      }, {
-        title: 'S-124 Navigational Warnings',
-        value: 'S124'
-      }, {
-        title: 'S-125 Marine Navigational Services',
-        value: 'S125'
-      }, {
-        title: 'S-126 Marine Physical Environment',
-        value: 'S126'
-      }, {
-        title: 'S-127 Marine Traffic Management',
-        value: 'S127'
-      }, {
-        title: 'S-128 Catalogue of Nautical Products',
-        value: 'S128'
-      }, {
-        title: 'S-129 Under Keel Clearance Management (UKCM)',
-        value: 'S129'
-      }, {
-        title: 'S-131 Marine Harbour Infrastructure',
-        value: 'S131'
-      }, {
-        title: 'S-210 Inter-VTS Exchange Format',
-        value: 'S210'
-      }, {
-        title: 'S-211 Port Call Message Format',
-        value: 'S211'
-      }, {
-        title: 'S-212 VTS Digital Information Service',
-        value: 'S212'
-      }, {
-        title: 'S-401 Inland ENC',
-        value: 'S401'
-      }, {
-        title: 'S-402 Bathymetric Contour Overlay for Inland ENC',
-        value: 'S402'
-      }, {
-        title: 'S-411 Sea Ice Information',
-        value: 'S411'
-      }, {
-        title: 'S-412 Weather Overlay',
-        value: 'S412'
-      }, {
-        title: 'S-413 Marine Weather Conditions',
-        value: 'S413'
-      }, {
-        title: 'S-414 Marine Weather Observations',
-        value: 'S414'
-      }, {
-        title: 'S-421 Route Plan',
-        value: 'S421'
-      }, {
-        title: 'Route Plan',
-        value: 'RTZ'
-      }, {
-        title: 'Electronic Port Clearance',
-        value: 'EPC'
-      }, {
-        title: 'Other data types not covered in this table',
-        value: 'OTHER'
+        title: "S-102 Bathymetric Surface",
+        value: "S102"
       }],
       description: "Data product type defined in IEC 63173-2 SECOM standard",
-      visibleFrom: ["detail", "edit", "edit-new"]
+      visibleFrom: ["edit", "edit-new"]
     },
     organizationId: {
       title: "Organization ID",
@@ -8129,11 +7961,6 @@ const ColumnForResource = {
       title: "Geometry",
       type: "object",
       visibleFrom: []
-    },
-    sourceMSR: {
-      title: "Source MSR",
-      type: "string",
-      visibleFrom: ["detail", "list", "edit", "edit-new"]
     }
   },
   newOrganization: {
@@ -8260,7 +8087,7 @@ const ColumnForResource = {
 
 /***/ }),
 
-/***/ 14252:
+/***/ 76775:
 /*!******************************************!*\
   !*** ./src/app/common/countryOptions.ts ***!
   \******************************************/
@@ -9538,7 +9365,7 @@ const countryOptions = [{
 
 /***/ }),
 
-/***/ 91232:
+/***/ 11309:
 /*!*****************************************!*\
   !*** ./src/app/common/dataformatter.ts ***!
   \*****************************************/
@@ -9551,7 +9378,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   formatInstanceData: () => (/* binding */ formatInstanceData),
 /* harmony export */   formatVesselToUpload: () => (/* binding */ formatVesselToUpload)
 /* harmony export */ });
-/* harmony import */ var _backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/vesselAttribute */ 16833);
+/* harmony import */ var _backend_api_identity_registry_model_vesselAttribute__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../backend-api/identity-registry/model/vesselAttribute */ 55078);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -9614,7 +9441,7 @@ const camel2snake = str => str.replace(/[A-Z]/g, constter => `-${constter.toLowe
 
 /***/ }),
 
-/***/ 56521:
+/***/ 7946:
 /*!****************************************!*\
   !*** ./src/app/common/filterObject.ts ***!
   \****************************************/
@@ -9668,7 +9495,7 @@ const migrateVesselAttributes = item => {
 
 /***/ }),
 
-/***/ 42780:
+/***/ 19823:
 /*!********************************************!*\
   !*** ./src/app/common/itemPreprocessor.ts ***!
   \********************************************/
@@ -9681,10 +9508,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   preprocessToShow: () => (/* binding */ preprocessToShow),
 /* harmony export */   preprocessToUpload: () => (/* binding */ preprocessToUpload)
 /* harmony export */ });
-/* harmony import */ var _columnForMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./columnForMenu */ 71832);
-/* harmony import */ var _dataformatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dataformatter */ 91232);
-/* harmony import */ var _filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filterObject */ 56521);
-/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuType */ 82287);
+/* harmony import */ var _columnForMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./columnForMenu */ 41977);
+/* harmony import */ var _dataformatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dataformatter */ 11309);
+/* harmony import */ var _filterObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./filterObject */ 7946);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuType */ 93644);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -9710,19 +9537,17 @@ const preprocess = (item, itemType) => {
   } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Instance) {
     // when we receive the data from the backend, we need to convert the array to object for serviceType and dataProductType
     // store the list of values
-    let serviceTypeStringArray = item.serviceTypes;
+    let serviceTypeStringArray = item.serviceType;
     let dataProductTypeStringArray = item.dataProductType;
-    console.log("preprocess instance", item);
-    console.log("item.serviceTypes is ", item.serviceTypes);
-    if (item.serviceTypes && !Array.isArray(item.serviceTypes) || !item.serviceTypes.every(type => typeof type === 'string')) {
+    if (item.serviceType && !Array.isArray(item.serviceType) || !item.serviceType.every(type => typeof type === 'string')) {
       // if the serviceType is already an array of object, we convert it to an array of string
-      serviceTypeStringArray = item.serviceTypes.map(e => e.value);
-    } else if (item.serviceTypes) {
+      serviceTypeStringArray = item.serviceType.map(e => e.value);
+    } else if (item.serviceType) {
       // if the serviceType is an array of string, we convert it to an array of object
       // then convert the array of string to object
-      serviceTypeStringArray = item.serviceTypes; // save this for later
+      serviceTypeStringArray = item.serviceType; // save this for later
       // actual conversion
-      item.serviceTypes = item.serviceTypes ? Array.isArray(item.serviceTypes) ? item.serviceTypes.map(_serviceType => {
+      item.serviceType = item.serviceType ? Array.isArray(item.serviceType) ? item.serviceType.map(_serviceType => {
         const filtered = _columnForMenu__WEBPACK_IMPORTED_MODULE_0__.ColumnForResource[itemType].serviceType.options.filter(o => o.value === _serviceType);
         // if we don't find the value, we set it to other
         return filtered.length > 0 ? filtered.pop() : {
@@ -9789,7 +9614,7 @@ const preprocessToShow = (item, itemType) => {
 
 /***/ }),
 
-/***/ 82287:
+/***/ 93644:
 /*!************************************!*\
   !*** ./src/app/common/menuType.ts ***!
   \************************************/
@@ -9922,7 +9747,7 @@ const itemTypeToString = itemType => {
 
 /***/ }),
 
-/***/ 84192:
+/***/ 11137:
 /*!*******************************************************!*\
   !*** ./src/app/common/shared/item-manager.service.ts ***!
   \*******************************************************/
@@ -9933,18 +9758,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ItemManagerService: () => (/* binding */ ItemManagerService)
 /* harmony export */ });
-/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
-/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 82287);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 96321);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ 68011);
-/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 68937);
-/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../itemPreprocessor */ 42780);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ 68947);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 17858);
-/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 65392);
-/* harmony import */ var src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/backend-api/secom */ 77410);
-
-
+/* harmony import */ var _home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 18540);
+/* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 93644);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 99792);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ 76018);
+/* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 64886);
+/* harmony import */ var _itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../itemPreprocessor */ 19823);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 42391);
+/* harmony import */ var src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/backend-api/service-registry */ 91877);
+/* harmony import */ var src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/backend-api/secom */ 44269);
 
 
 
@@ -9955,7 +9777,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ItemManagerService {
-  constructor(deviceService, organizationService, userService, serviceService, vesselService, roleService, instanceService, secomService, xmlService, pingService, http) {
+  constructor(deviceService, organizationService, userService, serviceService, vesselService, roleService, instanceService, secomService, xmlService) {
     var _this = this;
     this.deviceService = deviceService;
     this.organizationService = organizationService;
@@ -9966,65 +9788,38 @@ class ItemManagerService {
     this.instanceService = instanceService;
     this.secomService = secomService;
     this.xmlService = xmlService;
-    this.pingService = pingService;
-    this.http = http;
     this.rolesInOrg = [];
-    this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_6__.HttpHeaders();
-    this.checkMsrAvailability = /*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      try {
-        const res = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.pingService.v2PingGet('response'));
-        console.log("stauts code from ping msr: ", res.status);
-        return res.status === 200;
-      } catch (e) {
-        console.error('MSR not available:', e);
-        return false;
-      }
-    });
     this.fetchListOfData = /*#__PURE__*/function () {
-      var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, pageNumber, elementsPerPage, secomSearchFilterobj, xactId) {
+      var _ref = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, pageNumber, elementsPerPage, secomSearchParam) {
         let page;
         if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.instanceService.getInstances(pageNumber, elementsPerPage, [], 'response'));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.instanceService.getInstances(pageNumber, elementsPerPage, [], 'response'));
           const totalElements = parseInt(page.headers.get('X-Total-Count')) || 0;
           return {
             data: page.body.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
             totalPages: Math.ceil(totalElements / elementsPerPage),
             totalElements
           };
-        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.SearchObjectResult && secomSearchFilterobj) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.secomService.search(secomSearchFilterobj, 'response'));
-          const newXactId = page.body?.transactionId ?? undefined;
+        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.SearchObjectResult && secomSearchParam) {
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.secomService.search(secomSearchParam, pageNumber, elementsPerPage, 'response'));
           const totalElements = parseInt(page.headers.get('X-Total-Count')) || 10;
-          console.log("Total elements from header: ", page.body?.services.length);
           return {
-            data: (page.body?.services).map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
+            data: (page.body?.searchServiceResult).map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
             totalPages: Math.ceil(totalElements / elementsPerPage),
-            totalElements,
-            transactionId: newXactId
-          };
-          // Case: we want to call retrievereults with xactId only
-        } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.SearchObjectResult && xactId) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.secomService.v2RetrieveResultsTransactionIdGet(xactId, 'response'));
-          const services = page.body?.services ?? [];
-          const totalHeader = page.headers.get('X-Total-Count');
-          const totalElements = (totalHeader ? parseInt(totalHeader, 10) : services.length) || 0;
-          return {
-            data: services.map(i => (0,_itemPreprocessor__WEBPACK_IMPORTED_MODULE_3__.preprocess)(i, itemType)),
-            totalPages: Math.ceil(totalElements / elementsPerPage || 1),
             totalElements
           };
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.deviceService.getOrganizationDevices(orgMrn, pageNumber, elementsPerPage));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.deviceService.getOrganizationDevices(orgMrn, pageNumber, elementsPerPage));
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.organizationService.getOrganization(pageNumber, elementsPerPage));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.organizationService.getOrganization(pageNumber, elementsPerPage));
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.userService.getOrganizationUsers(orgMrn, pageNumber, elementsPerPage));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.userService.getOrganizationUsers(orgMrn, pageNumber, elementsPerPage));
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.serviceService.getOrganizationServices(orgMrn, pageNumber, elementsPerPage));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.serviceService.getOrganizationServices(orgMrn, pageNumber, elementsPerPage));
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.vesselService.getOrganizationVessels(orgMrn, pageNumber, elementsPerPage));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.vesselService.getOrganizationVessels(orgMrn, pageNumber, elementsPerPage));
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.OrgCandidate) {
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.organizationService.getUnapprovedOrganizations(pageNumber, elementsPerPage));
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.organizationService.getUnapprovedOrganizations(pageNumber, elementsPerPage));
         } else {
           throw new Error('Invalid entity type');
         }
@@ -10034,55 +9829,55 @@ class ItemManagerService {
           totalElements: page.totalElements
         };
       });
-      return function (_x, _x2, _x3, _x4, _x5, _x6) {
-        return _ref2.apply(this, arguments);
+      return function (_x, _x2, _x3, _x4, _x5) {
+        return _ref.apply(this, arguments);
       };
     }();
     this.fetchAllRolesInOrg = /*#__PURE__*/function () {
-      var _ref3 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
-        return yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
+      var _ref2 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+        return yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
       });
-      return function (_x7) {
-        return _ref3.apply(this, arguments);
+      return function (_x6) {
+        return _ref2.apply(this, arguments);
       };
     }();
     this.fetchMyRolesInOrg = /*#__PURE__*/function () {
-      var _ref4 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+      var _ref3 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
         if (_this.rolesInOrg.length === 0) {
-          const roles = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.roleService.getMyRole(orgMrn));
+          const roles = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getMyRole(orgMrn));
           _this.rolesInOrg = roles.map(role => role);
         }
         return _this.rolesInOrg;
       });
-      return function (_x8) {
-        return _ref4.apply(this, arguments);
+      return function (_x7) {
+        return _ref3.apply(this, arguments);
       };
     }();
     this.clearRolesContext = () => {
       this.rolesInOrg = [];
     };
     this.fetchSingleData = /*#__PURE__*/function () {
-      var _ref5 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
+      var _ref4 = (0,_home_runner_work_management_portal_clr_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
         try {
           let item;
           if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
-            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.deviceService.getDevice(orgMrn, id));
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.deviceService.getDevice(orgMrn, id));
           } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Organization) {
-            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.organizationService.getOrganization1(id));
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.organizationService.getOrganization1(id));
           } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
-            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.userService.getUser(orgMrn, id));
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.userService.getUser(orgMrn, id));
           } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Service) {
             if (instanceVersion && instanceVersion.length > 0) {
-              item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.serviceService.getServiceVersion(orgMrn, id, instanceVersion));
+              item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.serviceService.getServiceVersion(orgMrn, id, instanceVersion));
             } else {
-              item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.serviceService.getService(orgMrn, id));
+              item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.serviceService.getService(orgMrn, id));
             }
           } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Vessel) {
-            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.vesselService.getVessel(orgMrn, id));
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.vesselService.getVessel(orgMrn, id));
           } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Role) {
-            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.roleService.getRole(orgMrn, parseInt(id)));
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.roleService.getRole(orgMrn, parseInt(id)));
           } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance && instanceVersion) {
-            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this.instanceService.getInstanceByMRNAndVersion(id, instanceVersion));
+            item = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.firstValueFrom)(_this.instanceService.getInstanceByMRNAndVersion(id, instanceVersion));
           } else {
             return {};
           }
@@ -10092,8 +9887,8 @@ class ItemManagerService {
           return {};
         }
       });
-      return function (_x9, _x10, _x11, _x12) {
-        return _ref5.apply(this, arguments);
+      return function (_x8, _x9, _x10, _x11) {
+        return _ref4.apply(this, arguments);
       };
     }();
     this.registerData = (itemType, body, orgMrn) => {
@@ -10112,7 +9907,7 @@ class ItemManagerService {
       } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance) {
         return this.instanceService.createInstance(body);
       }
-      return new rxjs__WEBPACK_IMPORTED_MODULE_8__.Observable();
+      return new rxjs__WEBPACK_IMPORTED_MODULE_7__.Observable();
     };
     this.updateData = (itemType, body, orgMrn, entityMrn, version, numberId) => {
       if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
@@ -10136,7 +9931,7 @@ class ItemManagerService {
           id: numberId
         }), numberId);
       }
-      return new rxjs__WEBPACK_IMPORTED_MODULE_8__.Observable();
+      return new rxjs__WEBPACK_IMPORTED_MODULE_7__.Observable();
     };
     this.deleteData = (itemType, orgMrn, entityMrn, version, numberId) => {
       if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.User) {
@@ -10158,7 +9953,7 @@ class ItemManagerService {
       } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance && numberId) {
         return this.instanceService.deleteInstance(numberId);
       }
-      return new rxjs__WEBPACK_IMPORTED_MODULE_8__.Observable();
+      return new rxjs__WEBPACK_IMPORTED_MODULE_7__.Observable();
     };
     this.migrate = (newServiceMrn, orgMrn, serviceMrn, instanceVersion) => {
       return this.serviceService.migrateServiceMrn({
@@ -10184,26 +9979,10 @@ class ItemManagerService {
       return this.xmlService.updateXml(xmlDto, id);
     };
   }
-  //Checks API availability through the OpenAPI spec
-  checkMirAvailability(url) {
-    var _this2 = this;
-    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      try {
-        const headers = _this2.defaultHeaders.set('Accept', '*/*');
-        const response = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_7__.firstValueFrom)(_this2.http.get(url, {
-          headers,
-          withCredentials: false
-        }));
-        return !!response?.info?.version;
-      } catch (error) {
-        return false;
-      }
-    })();
-  }
   static #_ = this.ɵfac = function ItemManagerService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || ItemManagerService)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.DeviceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.OrganizationControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.UserControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.ServiceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.VesselControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.RoleControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.InstanceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__.SECOMService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.XmlControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__.PingService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_6__.HttpClient));
+    return new (__ngFactoryType__ || ItemManagerService)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.DeviceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.OrganizationControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.UserControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.ServiceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.VesselControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.RoleControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.InstanceControllerService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_secom__WEBPACK_IMPORTED_MODULE_5__.SECOMService), _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](src_app_backend_api_service_registry__WEBPACK_IMPORTED_MODULE_4__.XmlControllerService));
   };
-  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjectable"]({
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjectable"]({
     token: ItemManagerService,
     factory: ItemManagerService.ɵfac,
     providedIn: 'root'
@@ -10212,7 +9991,7 @@ class ItemManagerService {
 
 /***/ }),
 
-/***/ 43277:
+/***/ 24536:
 /*!*****************************************!*\
   !*** ./src/app/common/timeConverter.ts ***!
   \*****************************************/
@@ -10244,7 +10023,7 @@ const convertTime = s => {
 
 /***/ }),
 
-/***/ 58386:
+/***/ 92671:
 /*!***********************************!*\
   !*** ./src/app/common/version.ts ***!
   \***********************************/
@@ -10261,7 +10040,7 @@ const mpVersion = _package_json__WEBPACK_IMPORTED_MODULE_0__.version;
 
 /***/ }),
 
-/***/ 45824:
+/***/ 95297:
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
   \*****************************************/
@@ -10315,7 +10094,7 @@ const environment = {
 
 /***/ }),
 
-/***/ 76525:
+/***/ 44072:
 /*!*********************!*\
   !*** ./src/main.ts ***!
   \*********************/
@@ -10323,9 +10102,9 @@ const environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ 59851);
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 86763);
-/* harmony import */ var _app_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/app.config */ 22769);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ 9320);
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 60250);
+/* harmony import */ var _app_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/app.config */ 26060);
 
 
 
@@ -10335,7 +10114,7 @@ _app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig._initialize().then(() => 
 
 /***/ }),
 
-/***/ 15418:
+/***/ 76153:
 /*!************************************!*\
   !*** ./src/assets/js/wasm_exec.js ***!
   \************************************/
@@ -10348,7 +10127,7 @@ _app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig._initialize().then(() => 
 
 
 
-var _asyncToGenerator = (__webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/asyncToGenerator.js */ 61417)["default"]);
+var _asyncToGenerator = (__webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/asyncToGenerator.js */ 51486)["default"]);
 (() => {
   const enosys = () => {
     const err = new Error("not implemented");
@@ -10956,14 +10735,14 @@ var _asyncToGenerator = (__webpack_require__(/*! ./node_modules/.pnpm/@babel+run
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","prebuild":"npm run build:go","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/icons":"^13.0.2","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","prebuild":"npm run build:go","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(76525)));
+/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(44072)));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
