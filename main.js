@@ -4945,7 +4945,7 @@ __webpack_require__.r(__webpack_exports__);
 class PingService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
-    this.basePath = '/';
+    this.basePath = 'https://msr-test.maritimeconnectivity.net';
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_1__.Configuration();
     if (basePath) {
@@ -5023,7 +5023,7 @@ __webpack_require__.r(__webpack_exports__);
 class SECOMService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
-    this.basePath = '';
+    this.basePath = 'https://msr-test.maritimeconnectivity.net';
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
     if (basePath) {
