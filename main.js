@@ -327,7 +327,7 @@ class AppModule {
       });
     }), _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__.ApiModule.forRoot(() => {
       return new _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.Configuration({
-        basePath: _app_config__WEBPACK_IMPORTED_MODULE_6__.AppConfig.SR_BASE_PATH
+        basePath: _app_config__WEBPACK_IMPORTED_MODULE_6__.AppConfig.SR_BASE_PATH + "/api/secom"
       });
     }), keycloak_angular__WEBPACK_IMPORTED_MODULE_13__.KeycloakAngularModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_19__.TranslateModule.forRoot({
       loader: {
