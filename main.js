@@ -5045,13 +5045,13 @@ class ServiceRegistryService {
     this.basePath = 'http://localhost:8444/api/secom';
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpHeaders();
     this.configuration = new _configuration__WEBPACK_IMPORTED_MODULE_2__.Configuration();
-    // if (basePath) {
-    //     this.basePath = basePath;
-    // }
-    // if (configuration) {
-    //     this.configuration = configuration;
-    //     this.basePath = basePath || configuration.basePath || this.basePath;
-    // }
+    if (basePath) {
+      this.basePath = basePath;
+    }
+    if (configuration) {
+      this.configuration = configuration;
+      this.basePath = basePath || configuration.basePath || this.basePath;
+    }
   }
   /**
    * @param consumes string[] mime-types
