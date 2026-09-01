@@ -182,6 +182,7 @@ class AppConfig {
         AppConfig.FOOTER_NAME = config.footerName;
         AppConfig.FOOTER_LINK = config.footerLink;
         AppConfig.LOGO_IMG = config.logoImg;
+        AppConfig.ROOT_CERT_TP = config.rootCertificateThumbprint;
       } catch (error) {
         console.log("No config.json could be loaded, falling back to use built in config:", error);
         _this.useDefaultConfig();
@@ -211,6 +212,7 @@ class AppConfig {
     AppConfig.FOOTER_NAME = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.footerName;
     AppConfig.FOOTER_LINK = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.footerLink;
     AppConfig.LOGO_IMG = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.logoImg;
+    AppConfig.ROOT_CERT_TP = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.rootCertificateThumbprint;
   }
 }
 
@@ -5118,7 +5120,10 @@ class ServiceRegistryService {
       reportProgress: reportProgress
     });
   }
-  v2RetrieveResultPost(body, observe = 'body', reportProgress = false) {
+  v2RetrieveResultPost(transactionId, body, observe = 'body', reportProgress = false) {
+    if (transactionId === null || transactionId === undefined) {
+      throw new Error('Required parameter transactionId was null or undefined when calling v2RetrieveResultTransactionIdPost.');
+    }
     let headers = this.defaultHeaders;
     // to determine the Accept header
     let httpHeaderAccepts = ['application/json'];
@@ -5132,7 +5137,7 @@ class ServiceRegistryService {
     if (httpContentTypeSelected != undefined) {
       headers = headers.set('Content-Type', httpContentTypeSelected);
     }
-    return this.httpClient.request('post', `${this.basePath}/v2/retrieveResult`, {
+    return this.httpClient.request('post', `${this.basePath}/v2/retrieveResult/${encodeURIComponent(String(transactionId))}`, {
       body: body,
       withCredentials: this.configuration.withCredentials,
       headers: headers,
@@ -5696,12 +5701,16 @@ __webpack_require__.r(__webpack_exports__);
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-const ServiceInstanceStatus = {
-  PROVISIONAL: 'PROVISIONAL',
-  RELEASED: 'RELEASED',
-  DEPRECATED: 'DEPRECATED',
-  DELETED: 'DELETED'
-};
+/**
+ * Service Instance Status, One of Provisional(0), Released(1), Deprecated(2), Deleted(3)
+ */
+var ServiceInstanceStatus;
+(function (ServiceInstanceStatus) {
+  ServiceInstanceStatus[ServiceInstanceStatus["PROVISIONAL"] = 0] = "PROVISIONAL";
+  ServiceInstanceStatus[ServiceInstanceStatus["RELEASED"] = 1] = "RELEASED";
+  ServiceInstanceStatus[ServiceInstanceStatus["DEPRECATED"] = 2] = "DEPRECATED";
+  ServiceInstanceStatus[ServiceInstanceStatus["DELETED"] = 3] = "DELETED";
+})(ServiceInstanceStatus || (ServiceInstanceStatus = {}));
 
 /***/ }),
 
@@ -10076,7 +10085,8 @@ class ItemManagerService {
           // Case: we want to call retrievereults with xactId only
         } else if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.SearchObjectResult && secomRetrieveResultsobj?.envelope.transactionId) {
           const signedRequest = yield _this.secomSigningService.signRetrieveResultObject(secomRetrieveResultsobj);
-          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this.secomService.v2RetrieveResultPost(signedRequest, 'response'));
+          const transactionId = secomRetrieveResultsobj.envelope.transactionId;
+          page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this.secomService.v2RetrieveResultPost(transactionId, signedRequest, 'response'));
           const services = page.body?.envelope['serviceInstance'];
           const totalHeader = page.headers.get('X-Total-Count');
           const totalElements = (totalHeader ? parseInt(totalHeader, 10) : services.length) || 0;
@@ -10448,39 +10458,39 @@ class SecomSigningService {
     payload += '.';
     payload += q.status ?? '';
     payload += '.';
-    payload += q.version ? q.version.toLowerCase() : '';
+    payload += q.version ? q.version : '';
     payload += '.';
     if (q.keywords && q.keywords.length > 0) {
       payload += '[';
       for (const keyword of q.keywords) {
-        payload += keyword.toLowerCase();
+        payload += keyword;
       }
       payload += ']';
     }
     payload += '.';
-    payload += q.description ? q.description.toLowerCase() : '';
+    payload += q.description ? q.description : '';
     payload += '.';
     if (q.dataProductType && q.dataProductType.length > 0) {
-      payload += q.dataProductType[0].toLowerCase();
+      payload += q.dataProductType[0];
     }
     payload += '.';
-    payload += q.specificationId ? q.specificationId.toLowerCase() : '';
+    payload += q.specificationId ? q.specificationId : '';
     payload += '.';
-    payload += q.designId ? q.designId.toLowerCase() : '';
+    payload += q.designId ? q.designId : '';
     payload += '.';
-    payload += q.instanceId ? q.instanceId.toLowerCase() : '';
+    payload += q.instanceId ? q.instanceId : '';
     payload += '.';
-    payload += q.mmsi != null ? String(q.mmsi).toLowerCase() : '';
+    payload += q.mmsi != null ? String(q.mmsi) : '';
     payload += '.';
-    payload += q.imo != null ? String(q.imo).toLowerCase() : '';
+    payload += q.imo != null ? String(q.imo) : '';
     payload += '.';
-    payload += q.serviceType ? String(q.serviceType).toLowerCase() : '';
+    payload += q.serviceType ? String(q.serviceType) : '';
     payload += '.';
     if (q.unlocode && q.unlocode.length > 0) {
-      payload += q.unlocode[0].toLowerCase();
+      payload += q.unlocode[0];
     }
     payload += '.';
-    payload += q.endpointUri ? q.endpointUri.toLowerCase() : '';
+    payload += q.endpointUri ? q.endpointUri : '';
     return payload;
   }
   toUnixTimestampSeconds(value) {
@@ -10604,7 +10614,8 @@ const environment = {
   footerName: 'Maritime Connectivity Platform Consortium',
   footerLink: 'https://maritimeconnectivity.net',
   logoImg: 'assets/images/logo.svg',
-  loginBgImg: ''
+  loginBgImg: '',
+  rootCertificateThumbprint: '9e8718ab697d6f1d2350358b30ab365e364bc0c857aa6ac183a25b341350390ee4a8c32aaee08b9db2567ee7e30e7fdd'
 };
 
 /***/ }),
@@ -11250,7 +11261,7 @@ var _asyncToGenerator = (__webpack_require__(/*! ./node_modules/.pnpm/@babel+run
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","prebuild":"npm run build:go","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/icons":"^13.0.2","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","ecdsa-sig-formatter":"^1.0.11","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@eslint/js":"^9.9.1","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","prebuild":"$npm_execpath run build:go","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/icons":"^13.0.2","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","ecdsa-sig-formatter":"^1.0.11","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@eslint/js":"^9.9.1","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 
