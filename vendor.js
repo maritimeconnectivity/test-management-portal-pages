@@ -24401,7 +24401,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ɵparseCookieValue": () => (/* binding */ parseCookieValue),
 /* harmony export */   "ɵsetRootDomAdapter": () => (/* binding */ setRootDomAdapter)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 72877);
 
 /**
@@ -31878,7 +31878,7 @@ function assetPriorityCountBelowThreshold(_x) {
  * This assert function is meant to only run on the browser.
  */
 function _assetPriorityCountBelowThreshold() {
-  _assetPriorityCountBelowThreshold = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (appRef) {
+  _assetPriorityCountBelowThreshold = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (appRef) {
     if (IMGS_WITH_PRIORITY_ATTR_COUNT === 0) {
       IMGS_WITH_PRIORITY_ATTR_COUNT++;
       yield (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵwhenStable"])(appRef);
@@ -31991,7 +31991,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ɵREQUESTS_CONTRIBUTE_TO_STABILITY": () => (/* binding */ REQUESTS_CONTRIBUTE_TO_STABILITY),
 /* harmony export */   "ɵwithHttpTransferCache": () => (/* binding */ withHttpTransferCache)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 72877);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 95438);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 28240);
@@ -33521,7 +33521,7 @@ class FetchBackend {
   }
   doRequest(request, signal, observer) {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const init = _this.createRequestInit(request);
       let response;
       try {
@@ -33578,7 +33578,7 @@ class FetchBackend {
         // Perform response processing outside of Angular zone to
         // ensure no excessive change detection runs are executed
         // Here calling the async ReadableStreamDefaultReader.read() is responsible for triggering CD
-        yield _this.ngZone.runOutsideAngular(/*#__PURE__*/(0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+        yield _this.ngZone.runOutsideAngular(/*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
           while (true) {
             const {
               done,
@@ -95382,7 +95382,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ActiveController: () => (/* binding */ e),
 /* harmony export */   active: () => (/* binding */ t)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 
 function t() {
   return t => t.addInitializer(t => new e(t));
@@ -95393,7 +95393,7 @@ class e {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.host.addEventListener("keydown", t => _this.emulateActive(t)), _this.host.addEventListener("mousedown", t => _this.emulateActive(t)), _this.host.addEventListener("keyup", () => _this.emulateInactive()), _this.host.addEventListener("blur", () => _this.emulateInactive()), _this.host.addEventListener("mouseup", () => _this.emulateInactive());
     })();
   }
@@ -95504,7 +95504,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AriaGridController: () => (/* binding */ s),
 /* harmony export */   ariaGrid: () => (/* binding */ e)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_browser_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/browser.js */ 16091);
 /* harmony import */ var _utils_events_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/events.js */ 29294);
 /* harmony import */ var _utils_traversal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/traversal.js */ 38185);
@@ -95529,7 +95529,7 @@ class s {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.intializeColumnSort(), _this.update(), "slot" === _this.config.update ? _this.host.shadowRoot.addEventListener("slotchange", () => _this.host.updateComplete.then(() => _this.update())) : _this.observers.push((0,_utils_events_js__WEBPACK_IMPORTED_MODULE_1__.onChildListMutation)(_this.host, () => _this.host.updateComplete.then(() => _this.update())));
     })();
   }
@@ -95689,7 +95689,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AriaPopupController: () => (/* binding */ i),
 /* harmony export */   ariaPopup: () => (/* binding */ e)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_events_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/events.js */ 29294);
 /* harmony import */ var _trigger_controller_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./trigger.controller.js */ 89129);
 
@@ -95706,13 +95706,13 @@ class i {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.observer = (0,_utils_events_js__WEBPACK_IMPORTED_MODULE_2__.listenForAttributeChange)(_this.host, "hidden", () => _this.updateTrigger(!_this.host.hidden));
     })();
   }
   hostUpdate() {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this2.host.updateComplete, _this2.updateTrigger(!_this2.host.hidden);
     })();
   }
@@ -95928,7 +95928,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DraggableListController: () => (/* binding */ n),
 /* harmony export */   draggableList: () => (/* binding */ d)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_dom_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/dom.js */ 28439);
 /* harmony import */ var _utils_events_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/events.js */ 29294);
 /* harmony import */ var _utils_identity_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/identity.js */ 77129);
@@ -95961,17 +95961,17 @@ class n {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, (0,_utils_events_js__WEBPACK_IMPORTED_MODULE_3__.onFirstInteraction)(_this.host).then(() => {
         _this.addDragEventListeners(_this.items), _this.initializeKeyListController(), _this.host.addEventListener("click", /*#__PURE__*/function () {
-          var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (e) {
+          var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (e) {
             return _this.clickItem(e);
           });
           return function (_x) {
             return _ref.apply(this, arguments);
           };
         }()), _this.host.addEventListener("cdsKeyChange", e => _this.focusItem(e)), _this.host.shadowRoot?.addEventListener("click", /*#__PURE__*/function () {
-          var _ref2 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (e) {
+          var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (e) {
             return _this.clickItem(e);
           });
           return function (_x2) {
@@ -96024,7 +96024,7 @@ function o(_x3, _x4, _x5, _x6, _x7) {
   return _o.apply(this, arguments);
 }
 function _o() {
-  _o = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (e, t, r, a, s) {
+  _o = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (e, t, r, a, s) {
     e?.updateComplete && (yield e.updateComplete), e.dispatchEvent(new CustomEvent("cdsDraggableChange", {
       detail: {
         from: t,
@@ -96067,7 +96067,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   FirstFocusController: () => (/* binding */ e),
 /* harmony export */   firstFocus: () => (/* binding */ h)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_focus_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/focus.js */ 12459);
 /* harmony import */ var _utils_events_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/events.js */ 29294);
 /* harmony import */ var _utils_traversal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/traversal.js */ 38185);
@@ -96088,7 +96088,7 @@ class e {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.observer = (0,_utils_events_js__WEBPACK_IMPORTED_MODULE_1__.listenForAttributeChange)(_this.host, "hidden", () => _this.cdsFocusFirst()), _this.cdsFocusFirst();
     })();
   }
@@ -96124,7 +96124,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   GridRangeSelectionController: () => (/* binding */ e),
 /* harmony export */   gridRangeSelection: () => (/* binding */ t)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 
 function t() {
   return t => t.addInitializer(t => new e(t));
@@ -96138,7 +96138,7 @@ class e {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.setupKeyboardListeners(), _this.setupMouseEvents();
     })();
   }
@@ -96204,7 +96204,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   InlineFocusTrapController: () => (/* binding */ e),
 /* harmony export */   focusTrap: () => (/* binding */ h)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var lit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lit */ 60379);
 /* harmony import */ var _utils_traversal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/traversal.js */ 38185);
 /* harmony import */ var _utils_lit_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/lit.js */ 11206);
@@ -96235,7 +96235,7 @@ class e {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, (0,_utils_focus_js__WEBPACK_IMPORTED_MODULE_3__.ignoreFocus)(_this.host) || ((0,_utils_lit_js__WEBPACK_IMPORTED_MODULE_4__.renderBefore)(_this.styles, _this.root), (0,_utils_lit_js__WEBPACK_IMPORTED_MODULE_4__.renderBefore)(_this.boundary(-1), _this.root), (0,_utils_lit_js__WEBPACK_IMPORTED_MODULE_4__.renderAfter)(_this.boundary(0), _this.root), _this.host.setAttribute("cds-focus-trap", ""));
     })();
   }
@@ -96256,7 +96256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   KeyNavigationGridController: () => (/* binding */ f),
 /* harmony export */   keyNavigationGrid: () => (/* binding */ u)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_events_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/events.js */ 29294);
 /* harmony import */ var _utils_traversal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/traversal.js */ 38185);
 /* harmony import */ var _utils_dom_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/dom.js */ 28439);
@@ -96293,7 +96293,7 @@ class f {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, (0,_utils_events_js__WEBPACK_IMPORTED_MODULE_1__.onFirstInteraction)(_this.host).then(() => {
         (0,_utils_focus_js__WEBPACK_IMPORTED_MODULE_2__.initializeKeyListItems)(_this.hostCells), _this.hostGrid.addEventListener("mouseup", t => _this.clickCell(t)), _this.hostGrid.addEventListener("keydown", t => _this.keynavCell(t)), _this.hostGrid.addEventListener("keyup", t => _this.updateCellActivation(t));
       }), _this.observers.push((0,_utils_events_js__WEBPACK_IMPORTED_MODULE_1__.onChildListMutation)(_this.host, () => (0,_utils_focus_js__WEBPACK_IMPORTED_MODULE_2__.initializeKeyListItems)(_this.hostCells)));
@@ -96355,7 +96355,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   KeyNavigationListController: () => (/* binding */ c),
 /* harmony export */   keyNavigationList: () => (/* binding */ a)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_focus_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/focus.js */ 12459);
 /* harmony import */ var _utils_keycodes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/keycodes.js */ 52408);
 /* harmony import */ var _utils_traversal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/traversal.js */ 38185);
@@ -96389,7 +96389,7 @@ class c {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.initializeTabIndex(), _this.host.addEventListener("click", t => _this.clickItem(t)), _this.host.addEventListener("keydown", t => _this.focusItem(t)), _this.host.shadowRoot?.addEventListener("click", t => _this.clickItem(t)), _this.host.shadowRoot?.addEventListener("keydown", t => _this.focusItem(t));
     })();
   }
@@ -96571,7 +96571,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ResponsiveController: () => (/* binding */ s),
 /* harmony export */   responsive: () => (/* binding */ t)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 
 function t(t = {
   skipFirst: !1
@@ -96586,7 +96586,7 @@ class s {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.observer = new ResizeObserver(t => {
         window.requestAnimationFrame(() => {
           _this.skipFirst ? _this.skipFirst = !1 : (_this.host.dispatchEvent(new CustomEvent("cdsResizeChange", {
@@ -96616,7 +96616,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ScrollableVisibilityController: () => (/* binding */ o),
 /* harmony export */   scrollableVisibility: () => (/* binding */ t)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 
 function t() {
   return t => t.addInitializer(t => new o(t));
@@ -96630,7 +96630,7 @@ class o {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.root.addEventListener("scroll", () => _this.host.style.setProperty("--row-content-visibility", "visibile"), {
         once: !0,
         capture: !0
@@ -96654,7 +96654,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   TouchController: () => (/* binding */ s),
 /* harmony export */   touch: () => (/* binding */ e)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/math.js */ 33293);
 
 
@@ -96667,7 +96667,7 @@ class s {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this.host.updateComplete, _this.host.addEventListener("pointerdown", t => _this.start(t), {
         passive: !0
       });
@@ -96731,7 +96731,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   TriggerController: () => (/* binding */ r),
 /* harmony export */   triggerable: () => (/* binding */ e)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _utils_events_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/events.js */ 29294);
 /* harmony import */ var _utils_focus_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/focus.js */ 12459);
 
@@ -96756,7 +96756,7 @@ class r {
   }
   hostConnected() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this.observer = (0,_utils_events_js__WEBPACK_IMPORTED_MODULE_2__.listenForAttributeChange)(_this.host, "hidden", () => {
         const t = (0,_utils_focus_js__WEBPACK_IMPORTED_MODULE_1__.getActiveElement)();
         !_this.host.hidden && t ? _this.activeElement = t : _this.focusCurrent();
@@ -98317,7 +98317,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   sizeDimensionKeyframes: () => (/* binding */ R),
 /* harmony export */   zeroOutAnimationConfig: () => (/* binding */ B)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _interfaces_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interfaces.js */ 14966);
 /* harmony import */ var _services_log_service_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/log.service.js */ 81697);
 /* harmony import */ var _motion_service_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./motion.service.js */ 25421);
@@ -98341,7 +98341,7 @@ function w(_x, _x2) {
   return _w.apply(this, arguments);
 }
 function _w() {
-  _w = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (t, n) {
+  _w = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (t, n) {
     if (!n._animations) return _services_log_service_js__WEBPACK_IMPORTED_MODULE_1__.LogService.warn(n.tagName.toLocaleLowerCase() + " is trying to animate but no animations are defined."), !1;
     const o = z(n._animations, t);
     return yield Promise.all(o.map(o => {
@@ -99099,8 +99099,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   nextInArray: () => (/* binding */ o),
 /* harmony export */   previousInArray: () => (/* binding */ r)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_awaitAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/awaitAsyncGenerator.js */ 17934);
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_wrapAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/wrapAsyncGenerator.js */ 82284);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_awaitAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/awaitAsyncGenerator.js */ 17934);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_wrapAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/wrapAsyncGenerator.js */ 82284);
 
 
 function n(n, t) {
@@ -99142,9 +99142,9 @@ function s(_x) {
   return _s.apply(this, arguments);
 }
 function _s() {
-  _s = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_wrapAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_1__["default"])(function* (n, t = 100) {
+  _s = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_wrapAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_1__["default"])(function* (n, t = 100) {
     const e = f(n, t);
-    for (let n = 0; n < e.length; n++) yield e[n], yield (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_awaitAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(new Promise(n => setTimeout(n, 0)));
+    for (let n = 0; n < e.length; n++) yield e[n], yield (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_awaitAsyncGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(new Promise(n => setTimeout(n, 0)));
   });
   return _s.apply(this, arguments);
 }
@@ -139743,7 +139743,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   supportsAdoptingStyleSheets: () => (/* reexport safe */ _css_tag_js__WEBPACK_IMPORTED_MODULE_1__.supportsAdoptingStyleSheets),
 /* harmony export */   unsafeCSS: () => (/* reexport safe */ _css_tag_js__WEBPACK_IMPORTED_MODULE_1__.unsafeCSS)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _css_tag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css-tag.js */ 24223);
 
 /**
@@ -140424,7 +140424,7 @@ extends HTMLElement {
    */
   __enqueueUpdate() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this.isUpdatePending = true;
       try {
         // Ensure any previous update has resolved before updating.
@@ -143599,7 +143599,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   KeycloakEventType: () => (/* binding */ KeycloakEventType),
 /* harmony export */   KeycloakService: () => (/* binding */ KeycloakService)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 72877);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 25170);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 30089);
@@ -143636,7 +143636,7 @@ class KeycloakAuthGuard {
   }
   canActivate(route, state) {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
         _this.authenticated = yield _this.keycloakAngular.isLoggedIn();
         _this.roles = yield _this.keycloakAngular.getUserRoles(true);
@@ -143738,7 +143738,7 @@ class KeycloakService {
   }
   init(options = {}) {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this2.initServiceValues(options);
       const {
         config,
@@ -143755,7 +143755,7 @@ class KeycloakService {
   }
   login(options = {}) {
     var _this3 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this3._instance.login(options);
       if (_this3._loadUserProfileAtStartUp) {
         yield _this3.loadUserProfile();
@@ -143764,7 +143764,7 @@ class KeycloakService {
   }
   logout(redirectUri) {
     var _this4 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const options = {
         redirectUri
       };
@@ -143776,7 +143776,7 @@ class KeycloakService {
     action: 'register'
   }) {
     var _this5 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       yield _this5._instance.register(options);
     })();
   }
@@ -143817,7 +143817,7 @@ class KeycloakService {
   }
   updateToken(minValidity = this._updateMinValidity) {
     var _this6 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       if (_this6._silentRefresh) {
         if (_this6.isTokenExpired()) {
           throw new Error('Failed to refresh the token, or the session is expired');
@@ -143836,7 +143836,7 @@ class KeycloakService {
   }
   loadUserProfile(forceReload = false) {
     var _this7 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       if (_this7._userProfile && !forceReload) {
         return _this7._userProfile;
       }
@@ -143848,7 +143848,7 @@ class KeycloakService {
   }
   getToken() {
     var _this8 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       return _this8._instance.token;
     })();
   }
@@ -143895,7 +143895,7 @@ class KeycloakBearerInterceptor {
   }
   conditionallyUpdateToken(req) {
     var _this9 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       if (_this9.keycloak.shouldUpdateToken(req)) {
         return yield _this9.keycloak.updateToken();
       }
@@ -144013,7 +144013,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Keycloak)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-sha256 */ 812);
 /* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jwt-decode */ 13924);
 
@@ -145137,7 +145137,7 @@ function Keycloak(config) {
           return createPromise().promise;
         },
         logout: function () {
-          var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (options) {
+          var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (options) {
             const logoutMethod = options?.logoutMethod ?? kc.logoutMethod;
             if (logoutMethod === "GET") {
               window.location.replace(kc.createLogoutUrl(options));

@@ -132,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AppConfig: () => (/* binding */ AppConfig)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../environments/environment */ 30961);
 /* harmony import */ var _common_version__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common/version */ 29583);
 
@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 class AppConfig {
   static _initialize() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
         const res = yield fetch('/assets/config.json');
         const config = yield res.json();
@@ -360,7 +360,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   authGuard: () => (/* binding */ authGuard)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 72877);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 80848);
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ 97953);
@@ -369,7 +369,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const authGuard = /*#__PURE__*/function () {
-  var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (route, state) {
+  var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (route, state) {
     const authService = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(_auth_service__WEBPACK_IMPORTED_MODULE_1__.AuthService);
     const router = (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.inject)(_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router);
     const authenticated = yield authService.isAuthenticated();
@@ -660,7 +660,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AuthService: () => (/* binding */ AuthService)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _auth_permission__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.permission */ 56967);
 /* harmony import */ var _common_menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/menuType */ 96060);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 92659);
@@ -693,7 +693,7 @@ class AuthService {
   }
   login() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const url = window.location;
       yield _this.keycloakService.login({
         redirectUri: url.protocol + '//' + url.host + '/pages'
@@ -707,7 +707,7 @@ class AuthService {
   }
   logout() {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const url = window.location;
       yield _this2.keycloakService.logout(url.protocol + '//' + url.host + '/login');
       _this2.itemManagerService.clearRolesContext();
@@ -715,7 +715,7 @@ class AuthService {
   }
   isAuthenticated() {
     var _this3 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const authenticated = yield _this3.keycloakService.isLoggedIn();
       _this3.setAuthenticated(authenticated);
       return Promise.resolve(authenticated);
@@ -723,42 +723,42 @@ class AuthService {
   }
   getToken() {
     var _this4 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this4.protectFromEmptyToken();
       return _this4.keycloakService.getToken();
     })();
   }
   getOrgMrnFromToken() {
     var _this5 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this5.protectFromEmptyToken();
       return _this5.keycloakService.getKeycloakInstance().tokenParsed["org"];
     })();
   }
   getUserNameFromToken() {
     var _this6 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this6.protectFromEmptyToken();
       return _this6.keycloakService.getKeycloakInstance().tokenParsed["name"];
     })();
   }
   getUserMrnFromToken() {
     var _this7 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this7.protectFromEmptyToken();
       return _this7.keycloakService.getKeycloakInstance().tokenParsed["mrn"];
     })();
   }
   getUserRolesFromToken() {
     var _this8 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this8.protectFromEmptyToken();
       return _this8.keycloakService.getKeycloakInstance().tokenParsed["roles"];
     })();
   }
   getUserPermissionsFromToken() {
     var _this9 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this9.protectFromEmptyToken();
       return _this9.keycloakService.getKeycloakInstance().tokenParsed["permissions"];
     })();
@@ -6817,31 +6817,31 @@ var InstanceDto;
   };
   InstanceDto.DataProductTypeEnum = {
     OTHER: 'OTHER',
-    S57: 'S57',
-    S101: 'S101',
-    S102: 'S102',
-    S104: 'S104',
-    S111: 'S111',
-    S122: 'S122',
-    S123: 'S123',
-    S124: 'S124',
-    S125: 'S125',
-    S126: 'S126',
-    S127: 'S127',
-    S128: 'S128',
-    S129: 'S129',
-    S131: 'S131',
-    S201: 'S201',
-    S210: 'S210',
-    S211: 'S211',
-    S212: 'S212',
-    S401: 'S401',
-    S402: 'S402',
-    S411: 'S411',
-    S412: 'S412',
-    S413: 'S413',
-    S414: 'S414',
-    S421: 'S421',
+    S57: 'S-57',
+    S101: 'S-101',
+    S102: 'S-102',
+    S104: 'S-104',
+    S111: 'S-111',
+    S122: 'S-122',
+    S123: 'S-123',
+    S124: 'S-124',
+    S125: 'S-125',
+    S126: 'S-126',
+    S127: 'S-127',
+    S128: 'S-128',
+    S129: 'S-129',
+    S131: 'S-131',
+    S201: 'S-201',
+    S210: 'S-210',
+    S211: 'S-211',
+    S212: 'S-212',
+    S401: 'S-401',
+    S402: 'S-402',
+    S411: 'S-411',
+    S412: 'S-412',
+    S413: 'S-413',
+    S414: 'S-414',
+    S421: 'S-421',
     RTZ: 'RTZ',
     EPC: 'EPC'
   };
@@ -7744,78 +7744,78 @@ const ColumnForResource = {
       type: 'stringArray',
       options: [{
         title: 'S-57 Electronic Navigational Chart (ENC)',
-        value: 'S57'
+        value: 'S-57'
       }, {
         title: 'S-101 Electronic Navigational Chart (ENC)',
-        value: 'S101'
+        value: 'S-101'
       }, {
         title: 'S-102 Bathymetric Surface',
-        value: 'S102'
+        value: 'S-102'
       }, {
         title: 'S-104 Water Level Information for Surface Navigation',
-        value: 'S104'
+        value: 'S-104'
       }, {
         title: 'S-111 Surface Currents',
-        value: 'S111'
+        value: 'S-111'
       }, {
         title: 'S-122 Marine Protected Areas (MPAs)',
-        value: 'S122'
+        value: 'S-122'
       }, {
         title: 'S-123 Marine Radio Services',
-        value: 'S123'
+        value: 'S-123'
       }, {
         title: 'S-124 Navigational Warnings',
-        value: 'S124'
+        value: 'S-124'
       }, {
         title: 'S-125 Marine Navigational Services',
-        value: 'S125'
+        value: 'S-125'
       }, {
         title: 'S-126 Marine Physical Environment',
-        value: 'S126'
+        value: 'S-126'
       }, {
         title: 'S-127 Marine Traffic Management',
-        value: 'S127'
+        value: 'S-127'
       }, {
         title: 'S-128 Catalogue of Nautical Products',
-        value: 'S128'
+        value: 'S-128'
       }, {
         title: 'S-129 Under Keel Clearance Management (UKCM)',
-        value: 'S129'
+        value: 'S-129'
       }, {
         title: 'S-131 Marine Harbour Infrastructure',
-        value: 'S131'
+        value: 'S-131'
       }, {
         title: 'S-210 Inter-VTS Exchange Format',
-        value: 'S210'
+        value: 'S-210'
       }, {
         title: 'S-211 Port Call Message Format',
-        value: 'S211'
+        value: 'S-211'
       }, {
         title: 'S-212 VTS Digital Information Service',
-        value: 'S212'
+        value: 'S-212'
       }, {
         title: 'S-401 Inland ENC',
-        value: 'S401'
+        value: 'S-401'
       }, {
         title: 'S-402 Bathymetric Contour Overlay for Inland ENC',
-        value: 'S402'
+        value: 'S-402'
       }, {
         title: 'S-411 Sea Ice Information',
-        value: 'S411'
+        value: 'S-411'
       }, {
         title: 'S-412 Weather Overlay',
-        value: 'S412'
+        value: 'S-412'
       }, {
         title: 'S-413 Marine Weather Conditions',
-        value: 'S413'
+        value: 'S-413'
       }, {
         title: 'S-414 Marine Weather Observations',
-        value: 'S414'
+        value: 'S-414'
       }, {
         title: 'S-421 Route Plan',
-        value: 'S421'
+        value: 'S-421'
       }, {
-        title: 'Route Plan',
+        title: 'RTZ Route Plan',
         value: 'RTZ'
       }, {
         title: 'Electronic Port Clearance',
@@ -8055,73 +8055,73 @@ const ColumnForResource = {
         value: 'S57'
       }, {
         title: 'S-101 Electronic Navigational Chart (ENC)',
-        value: 'S101'
+        value: 'S-101'
       }, {
         title: 'S-102 Bathymetric Surface',
-        value: 'S102'
+        value: 'S-102'
       }, {
         title: 'S-104 Water Level Information for Surface Navigation',
-        value: 'S104'
+        value: 'S-104'
       }, {
         title: 'S-111 Surface Currents',
-        value: 'S111'
+        value: 'S-111'
       }, {
         title: 'S-122 Marine Protected Areas (MPAs)',
-        value: 'S122'
+        value: 'S-122'
       }, {
         title: 'S-123 Marine Radio Services',
-        value: 'S123'
+        value: 'S-123'
       }, {
         title: 'S-124 Navigational Warnings',
-        value: 'S124'
+        value: 'S-124'
       }, {
         title: 'S-125 Marine Navigational Services',
-        value: 'S125'
+        value: 'S-125'
       }, {
         title: 'S-126 Marine Physical Environment',
-        value: 'S126'
+        value: 'S-126'
       }, {
         title: 'S-127 Marine Traffic Management',
-        value: 'S127'
+        value: 'S-127'
       }, {
         title: 'S-128 Catalogue of Nautical Products',
-        value: 'S128'
+        value: 'S-128'
       }, {
         title: 'S-129 Under Keel Clearance Management (UKCM)',
-        value: 'S129'
+        value: 'S-129'
       }, {
         title: 'S-131 Marine Harbour Infrastructure',
-        value: 'S131'
+        value: 'S-131'
       }, {
         title: 'S-210 Inter-VTS Exchange Format',
-        value: 'S210'
+        value: 'S-210'
       }, {
         title: 'S-211 Port Call Message Format',
-        value: 'S211'
+        value: 'S-211'
       }, {
         title: 'S-212 VTS Digital Information Service',
-        value: 'S212'
+        value: 'S-212'
       }, {
         title: 'S-401 Inland ENC',
-        value: 'S401'
+        value: 'S-401'
       }, {
         title: 'S-402 Bathymetric Contour Overlay for Inland ENC',
-        value: 'S402'
+        value: 'S-402'
       }, {
         title: 'S-411 Sea Ice Information',
-        value: 'S411'
+        value: 'S-411'
       }, {
         title: 'S-412 Weather Overlay',
-        value: 'S412'
+        value: 'S-412'
       }, {
         title: 'S-413 Marine Weather Conditions',
-        value: 'S413'
+        value: 'S-413'
       }, {
         title: 'S-414 Marine Weather Observations',
-        value: 'S414'
+        value: 'S-414'
       }, {
         title: 'S-421 Route Plan',
-        value: 'S421'
+        value: 'S-421'
       }, {
         title: 'Route Plan',
         value: 'RTZ'
@@ -10008,7 +10008,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ItemManagerService: () => (/* binding */ ItemManagerService)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menuType */ 96060);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ 89066);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs */ 28240);
@@ -10048,7 +10048,7 @@ class ItemManagerService {
     this.secomSigningService = secomSigningService;
     this.rolesInOrg = [];
     this.defaultHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpHeaders();
-    this.checkMsrAvailability = /*#__PURE__*/(0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    this.checkMsrAvailability = /*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
         const res = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this.pingService.v2PingGet('response'));
         console.log("stauts code from ping msr: ", res.status);
@@ -10059,7 +10059,7 @@ class ItemManagerService {
       }
     });
     this.fetchListOfData = /*#__PURE__*/function () {
-      var _ref2 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, pageNumber, elementsPerPage, secomSearchFilterobj, secomRetrieveResultsobj) {
+      var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, pageNumber, elementsPerPage, secomSearchFilterobj, secomRetrieveResultsobj) {
         let page;
         if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Instance) {
           page = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this.instanceService.getInstances(pageNumber, elementsPerPage, [], 'response'));
@@ -10121,7 +10121,7 @@ class ItemManagerService {
       };
     }();
     this.fetchAllRolesInOrg = /*#__PURE__*/function () {
-      var _ref3 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+      var _ref3 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
         return yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this.roleService.getRoles(orgMrn));
       });
       return function (_x7) {
@@ -10129,7 +10129,7 @@ class ItemManagerService {
       };
     }();
     this.fetchMyRolesInOrg = /*#__PURE__*/function () {
-      var _ref4 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+      var _ref4 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
         if (_this.rolesInOrg.length === 0) {
           const roles = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this.roleService.getMyRole(orgMrn));
           _this.rolesInOrg = roles.map(role => role);
@@ -10144,7 +10144,7 @@ class ItemManagerService {
       this.rolesInOrg = [];
     };
     this.fetchSingleData = /*#__PURE__*/function () {
-      var _ref5 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
+      var _ref5 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, orgMrn, id, instanceVersion) {
         try {
           let item;
           if (itemType === _menuType__WEBPACK_IMPORTED_MODULE_1__.ItemType.Device) {
@@ -10269,7 +10269,7 @@ class ItemManagerService {
   //Checks API availability through the OpenAPI spec
   checkMirAvailability(url) {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       try {
         const headers = _this2.defaultHeaders.set('Accept', '*/*');
         const response = yield (0,rxjs__WEBPACK_IMPORTED_MODULE_8__.firstValueFrom)(_this2.http.get(url, {
@@ -10306,7 +10306,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SecomSignerProvider: () => (/* binding */ SecomSignerProvider),
 /* harmony export */   SecomSigningService: () => (/* binding */ SecomSigningService)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var ecdsa_sig_formatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ecdsa-sig-formatter */ 73299);
 /* harmony import */ var ecdsa_sig_formatter__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ecdsa_sig_formatter__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 72877);
@@ -10345,7 +10345,7 @@ class SecomSigningService {
   }
   signRetrieveResultObject(rro) {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const sm = _this.ssp.getSigningMaterial();
       const envelope = rro.envelope;
       const bytes = _this.toBytesRetrieveResult(envelope);
@@ -10387,7 +10387,7 @@ class SecomSigningService {
   }
   signSearchFilterObject(sfo) {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const sm = _this2.ssp.getSigningMaterial();
       const envelope = sfo.envelope;
       const bytes = _this2.toBytes(envelope);
@@ -10412,7 +10412,7 @@ class SecomSigningService {
     })();
   }
   pemToCryptoKey(pem) {
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const pemContents = pem.replace('-----BEGIN PRIVATE KEY-----', '').replace('-----END PRIVATE KEY-----', '').replace(/\s+/g, '');
       const binaryDerString = atob(pemContents);
       const binaryDer = new Uint8Array(binaryDerString.length);

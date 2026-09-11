@@ -146,7 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   issueNewWithLocalKeys: () => (/* binding */ issueNewWithLocalKeys)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
@@ -164,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
  * limitations under the License.
  */
 const issueNewWithLocalKeys = /*#__PURE__*/function () {
-  var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (certificateService, itemType, mrn, orgMrn, generatePkcs12) {
+  var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (certificateService, itemType, mrn, orgMrn, generatePkcs12) {
     try {
       const csrResult = yield createCsr();
       const certificateText = yield new Promise((resolve, reject) => {
@@ -737,7 +737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   FileHelperService: () => (/* binding */ FileHelperService)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ 41691);
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var jszip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jszip */ 6568);
@@ -761,7 +761,7 @@ class FileHelperService {
     this.xmlControllerService = xmlControllerService;
     this.docControllerService = docControllerService;
     this.uploadDoc = /*#__PURE__*/function () {
-      var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (doc) {
+      var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (doc) {
         return new Promise((resolve, reject) => _this.docControllerService.createDoc(doc).subscribe(res => {
           _this.notifierService.notify('success', _this.translate.instant('success.file.upload') + doc.name);
           resolve(res);
@@ -775,7 +775,7 @@ class FileHelperService {
       };
     }();
     this.uploadXml = /*#__PURE__*/function () {
-      var _ref2 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (xml) {
+      var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (xml) {
         return new Promise((resolve, reject) => _this.xmlControllerService.createXml(xml).subscribe(res => {
           _this.notifierService.notify('success', _this.translate.instant('success.file.upload') + xml.name);
           resolve(res);
@@ -1554,7 +1554,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ItemFormComponent: () => (/* binding */ ItemFormComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 72877);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 6829);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @clr/angular */ 20032);
@@ -2399,7 +2399,7 @@ class ItemFormComponent {
         };
       }
     };
-    this.submit = /*#__PURE__*/(0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    this.submit = /*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       // Filter attributes with undefined values
       if (_this.isValid()) {
         let filteredAttributes = (0,src_app_common_filterObject__WEBPACK_IMPORTED_MODULE_2__.filterUndefinedAttributes)(_this.itemForm.value);
@@ -2583,7 +2583,7 @@ class ItemFormComponent {
       }
     };
     this.deleteFile = /*#__PURE__*/function () {
-      var _ref2 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (key) {
+      var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (key) {
         if (key === 'instanceAsDocName' && _this.item.instanceAsDoc) {
           if (_this.item.instanceAsDocName === '') {
             // this is for deletion of file, which hasn't been uploaded yet
@@ -2688,7 +2688,6 @@ class ItemFormComponent {
     } else {
       event.target.value = this.mrnPrefix;
     }
-    this.itemForm.patchValue(this.item);
   }
   onMrnChange(value) {
     if (!value.startsWith(this.mrnPrefix)) {
@@ -4034,7 +4033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SmartExpandableTableComponent: () => (/* binding */ SmartExpandableTableComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 72877);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @clr/angular */ 20032);
 /* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
@@ -4414,7 +4413,7 @@ class SmartExpandableTableComponent {
     this.totalPages = 0;
     this.totalElements = 0;
     this.hasEditPermission = false;
-    this.getData = /*#__PURE__*/(0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    this.getData = /*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       return [];
     });
     this.rowSelectEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_6__.EventEmitter();
@@ -4547,7 +4546,7 @@ class SmartExpandableTableComponent {
   }
   loadData(pageNumber = this.currentPageNumber, xactId) {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const newRows = (yield _this.getData(_this.itemType, pageNumber, _this.elementsPerPage, xactId)) || [];
       if (_this.defaultLoaded && newRows.length === 0) {
         _this.placeholder = "Search returned no data"; // <-- override message
@@ -4569,7 +4568,7 @@ class SmartExpandableTableComponent {
   // this function is for background loading of data
   onRefresh(state) {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       if (!_this2.data) {
         _this2.loadData();
       }

@@ -215,7 +215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SignatureProviderError: () => (/* binding */ SignatureProviderError),
 /* harmony export */   SignatureProviderErrorCode: () => (/* binding */ SignatureProviderErrorCode)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _certificateUtil__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../certificateUtil */ 7456);
 /* harmony import */ var _menuType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../menuType */ 96060);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 72877);
@@ -250,7 +250,7 @@ class CertificateProviderService {
   }
   getCertificate(passwordProvider) {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const ownMrn = yield _this.authService.getUserMrnFromToken();
       const blob = yield _this.readEncryptedBlob(ownMrn);
       if (blob) {
@@ -275,7 +275,7 @@ class CertificateProviderService {
   }
   createAndStoreCertBundle(ownMrn, password) {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const certBundle = yield (0,_certificateUtil__WEBPACK_IMPORTED_MODULE_1__.issueNewWithLocalKeys)(_this2.certificateService, _menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.User, ownMrn, yield _this2.authService.getOrgMrnFromToken(), false);
       if (certBundle) {
         try {
@@ -290,7 +290,7 @@ class CertificateProviderService {
   }
   getPassword(passwordProvider, request) {
     var _this3 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       if (_this3.cachedPassword) {
         return _this3.cachedPassword;
       }
@@ -301,7 +301,7 @@ class CertificateProviderService {
   }
   readEncryptedBlob(ownMrn) {
     var _this4 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const db = yield _this4.getDB();
       const objectStore = db.transaction(["certificates"], "readonly").objectStore("certificates");
       return yield new Promise(resolve => {
@@ -317,7 +317,7 @@ class CertificateProviderService {
     })();
   }
   getDB() {
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       return new Promise((resolve, reject) => {
         const dbRequest = window.indexedDB.open("certificates_db", 1);
         dbRequest.onsuccess = event => {
@@ -336,7 +336,7 @@ class CertificateProviderService {
   }
   storeCertificate(certBundle, ownMrn, password) {
     var _this5 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const blob = yield _this5.encryptBundle(certBundle, password);
       const db = yield _this5.getDB();
       const objectStore = db.transaction(["certificates"], "readwrite").objectStore("certificates");
@@ -354,7 +354,7 @@ class CertificateProviderService {
   }
   decryptBundle(encryptedBlob, password) {
     var _this6 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const encryptionKey = yield _this6.getEncryptionKey(password, encryptedBlob.salt);
       const decrypted = yield window.crypto.subtle.decrypt({
         name: "AES-GCM",
@@ -367,7 +367,7 @@ class CertificateProviderService {
   }
   encryptBundle(certBundle, password) {
     var _this7 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const salt = window.crypto.getRandomValues(new Uint8Array(16));
       const bundleJson = JSON.stringify(certBundle);
       const bundleBuffer = _this7.textEncoder.encode(bundleJson);
@@ -386,7 +386,7 @@ class CertificateProviderService {
   }
   getEncryptionKey(password, salt) {
     var _this8 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const keyMaterial = yield window.crypto.subtle.importKey("raw", _this8.textEncoder.encode(password), "PBKDF2", false, ["deriveKey"]);
       return yield window.crypto.subtle.deriveKey({
         name: "PBKDF2",
@@ -2431,7 +2431,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   HeaderComponent: () => (/* binding */ HeaderComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @cds/core/icon */ 64229);
 /* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @cds/core/icon */ 23783);
 /* harmony import */ var _cds_core_icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @cds/core/icon */ 9226);
@@ -2538,13 +2538,13 @@ class HeaderComponent {
   }
   logOut() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this.authService.logout();
     })();
   }
   changeLang(lang) {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       (0,src_app_common_translateHelper__WEBPACK_IMPORTED_MODULE_3__.changeLang)(_this2.translate, lang);
       _this2.loadLang();
     })();
@@ -2984,7 +2984,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AboutComponent: () => (/* binding */ AboutComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @clr/angular */ 20032);
 /* harmony import */ var src_app_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.config */ 4284);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 25170);
@@ -3071,7 +3071,7 @@ class AboutComponent {
   }
   fetchVersionFromSwaggerFile(url) {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const headers = _this.defaultHeaders.set('Accept', '*/*');
       return new Promise((resolve, reject) => {
         _this.http.request('get', url, {
@@ -3135,7 +3135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DashboardComponent: () => (/* binding */ DashboardComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _layout_layout_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../layout/layout.module */ 97396);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @clr/angular */ 20032);
 /* harmony import */ var src_app_components_itemtype_overview_itemtype_overview_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/itemtype-overview/itemtype-overview.component */ 3640);
@@ -3262,13 +3262,13 @@ class DashboardComponent {
   }
   checkMsrConnection() {
     var _this = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this.msrAvailable = yield _this.itemManagerService.checkMsrAvailability();
     })();
   }
   checkMirConnection() {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const checkPath = _app_config__WEBPACK_IMPORTED_MODULE_3__.AppConfig.IR_BASE_PATH + '/v3/api-docs';
       _this2.mirAvailable = yield _this2.itemManagerService.checkMirAvailability(checkPath);
     })();
@@ -3437,7 +3437,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DetailViewComponent: () => (/* binding */ DetailViewComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @clr/angular */ 20032);
 /* harmony import */ var _terraformer_wkt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @terraformer/wkt */ 88282);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! rxjs */ 89066);
@@ -3583,7 +3583,7 @@ class DetailViewComponent {
       });
     };
     this.loadItem = /*#__PURE__*/function () {
-      var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
+      var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (orgMrn) {
         _this.item = yield _this.itemManagerService.fetchSingleData(_this.itemType, orgMrn, _this.id, _this.instanceVersion);
         if (_this.itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_2__.ItemType.Instance && _this.item) {
           _this.numberId = parseInt(_this.item.id);
@@ -3624,7 +3624,7 @@ class DetailViewComponent {
     };
     this.callUpdate = (body, id) => {
       this.itemManagerService.updateData(this.itemType, body, this.orgMrn, id, this.instanceVersion, this.numberId).subscribe(/*#__PURE__*/function () {
-        var _ref2 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (res) {
+        var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (res) {
           _this.notifier.notify('success', _this.translate.instant('success.resource.update'));
           _this.isLoading = false;
           // if version is different, redirect to the new version
@@ -3733,7 +3733,7 @@ class DetailViewComponent {
     if (queryParams['serial']) {
       this.serial = queryParams['serial'];
     }
-    this.parseMyUrl().then(/*#__PURE__*/(0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    this.parseMyUrl().then(/*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       _this2.authService.getOrgMrnFromToken().then(orgMrn => {
         _this2.orgMrn = orgMrn;
         if (_this2.isForNew) {
@@ -3840,7 +3840,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ListViewComponent: () => (/* binding */ ListViewComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var src_app_components_components_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/components/components.module */ 43920);
 /* harmony import */ var src_app_backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/backend-api/identity-registry */ 64742);
 /* harmony import */ var src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/common/menuType */ 96060);
@@ -3942,7 +3942,7 @@ class ListViewComponent {
       }, {});
     };
     this.fetchData = /*#__PURE__*/function () {
-      var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, pageNumber, elementsPerPage, xactId) {
+      var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, pageNumber, elementsPerPage, xactId) {
         try {
           if (itemType === src_app_common_menuType__WEBPACK_IMPORTED_MODULE_3__.ItemType.Role) {
             return yield _this.itemManagerService.fetchAllRolesInOrg(_this.orgMrn);
@@ -3964,7 +3964,7 @@ class ListViewComponent {
       };
     }();
     this.onDelete = /*#__PURE__*/function () {
-      var _ref2 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (selected) {
+      var _ref2 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (selected) {
         const handleError = err => {
           if (err.status === 403) {
             _this.notifier.notify('error', _this.translate.instant('error.resource.permissionError'));
@@ -3979,7 +3979,7 @@ class ListViewComponent {
           _this.notifier.notify('error', _this.translate.instant('error.resource.permissionError'));
         } else {
           yield selected.forEach(/*#__PURE__*/function () {
-            var _ref3 = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (item) {
+            var _ref3 = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (item) {
               yield _this.itemManagerService.deleteData(_this.itemType, _this.orgMrn, item.mrn, item.instanceVersion, item.id && parseInt(item.id)).pipe((0,rxjs__WEBPACK_IMPORTED_MODULE_11__.catchError)(err => {
                 handleError(err);
                 return (0,rxjs__WEBPACK_IMPORTED_MODULE_12__.throwError)(err);
@@ -4634,7 +4634,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SrSearchComponent: () => (/* binding */ SrSearchComponent)
 /* harmony export */ });
-/* harmony import */ var _Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
+/* harmony import */ var _home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/.pnpm/@babel+runtime@7.25.0/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 4383);
 /* harmony import */ var _components_input_geometry_input_geometry_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/input-geometry/input-geometry.component */ 84720);
 /* harmony import */ var src_app_components_components_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/components.module */ 43920);
 /* harmony import */ var _components_password_prompt_modal_password_prompt_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/password-prompt-modal/password-prompt-modal.component */ 62464);
@@ -4840,7 +4840,7 @@ class SrSearchComponent {
       }, {});
     };
     this.fetchData = /*#__PURE__*/function () {
-      var _ref = (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, pageNumber, elementsPerPage, xactId) {
+      var _ref = (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (itemType, pageNumber, elementsPerPage, xactId) {
         try {
           // A guard to prevent empty searches for calling the API as this will result in 400
           const hasSearchParams = Object.keys(_this.searchParams).length > 0;
@@ -5038,7 +5038,7 @@ class SrSearchComponent {
   }
   checkMsrConnection() {
     var _this2 = this;
-    return (0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       const msrConnected = yield _this2.itemManagerService.checkMsrAvailability();
       if (msrConnected) {
         _this2.msrAvailable = true;
@@ -5062,7 +5062,7 @@ class SrSearchComponent {
     this.globalSearchInProgress = true;
     this.remainingGlobalSearchCalls = 3; // 3, 6, 10 seconds
     [3, 6, 10].forEach(seconds => {
-      const id = setTimeout(/*#__PURE__*/(0,_Users_dmc_jakob_Documents_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      const id = setTimeout(/*#__PURE__*/(0,_home_oliver_IdeaProjects_management_portal_clr_node_modules_pnpm_babel_runtime_7_25_0_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
         try {
           yield _this3.smartTable.loadData(undefined, transactionId);
         } catch (error) {
