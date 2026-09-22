@@ -230,26 +230,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AppModule: () => (/* binding */ AppModule),
 /* harmony export */   HttpLoaderFactory: () => (/* binding */ HttpLoaderFactory)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/core */ 72877);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/platform-browser */ 34603);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/platform-browser/animations */ 58592);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 72877);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/platform-browser */ 34603);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/platform-browser/animations */ 58592);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app-routing.module */ 24683);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ 51371);
-/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @clr/angular */ 20032);
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @clr/angular */ 20032);
 /* harmony import */ var _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./backend-api/identity-registry */ 64742);
 /* harmony import */ var _backend_api_service_registry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./backend-api/service-registry */ 57045);
 /* harmony import */ var _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./backend-api/secom */ 59933);
 /* harmony import */ var _auth_auth_init__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth/auth.init */ 10902);
-/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! keycloak-angular */ 30215);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ 25170);
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ngx-translate/core */ 82711);
-/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ngx-translate/http-loader */ 85330);
-/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! gramli-angular-notifier */ 74504);
+/* harmony import */ var keycloak_angular__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! keycloak-angular */ 30215);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common/http */ 25170);
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ngx-translate/core */ 82711);
+/* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ngx-translate/http-loader */ 85330);
+/* harmony import */ var gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! gramli-angular-notifier */ 74504);
 /* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.config */ 4284);
 /* harmony import */ var _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth/auth.interceptor */ 75977);
-/* harmony import */ var _backend_api_identity_registry_api_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./backend-api/identity-registry/api.module */ 60954);
-/* harmony import */ var _backend_api_service_registry_api_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./backend-api/service-registry/api.module */ 51159);
-/* harmony import */ var _backend_api_secom_api_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./backend-api/secom/api.module */ 95343);
+/* harmony import */ var _common_http_serial_number_interceptor__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./common/http/serial-number.interceptor */ 2427);
+/* harmony import */ var _backend_api_identity_registry_api_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./backend-api/identity-registry/api.module */ 60954);
+/* harmony import */ var _backend_api_service_registry_api_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./backend-api/service-registry/api.module */ 51159);
+/* harmony import */ var _backend_api_secom_api_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./backend-api/secom/api.module */ 95343);
 /*
  * Copyright (c) 2025 Maritime Connectivity Platform Consortium
  *
@@ -287,24 +288,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 // AoT requires an exported function for factories
 function HttpLoaderFactory(http) {
-  return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_11__.TranslateHttpLoader(http);
+  return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_12__.TranslateHttpLoader(http);
 }
 class AppModule {
   static #_ = this.ɵfac = function AppModule_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || AppModule)();
   };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineNgModule"]({
     type: AppModule,
     bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent]
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineInjector"]({
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineInjector"]({
     providers: [{
-      provide: _angular_core__WEBPACK_IMPORTED_MODULE_12__.APP_INITIALIZER,
+      provide: _angular_core__WEBPACK_IMPORTED_MODULE_13__.APP_INITIALIZER,
       useFactory: _auth_auth_init__WEBPACK_IMPORTED_MODULE_5__.initializeKeycloak,
       multi: true,
-      deps: [keycloak_angular__WEBPACK_IMPORTED_MODULE_13__.KeycloakService]
+      deps: [keycloak_angular__WEBPACK_IMPORTED_MODULE_14__.KeycloakService]
     }, {
       provide: _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.BASE_PATH,
       useValue: _app_config__WEBPACK_IMPORTED_MODULE_6__.AppConfig.IR_BASE_PATH
@@ -315,11 +317,15 @@ class AppModule {
       provide: _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__.BASE_PATH,
       useValue: _app_config__WEBPACK_IMPORTED_MODULE_6__.AppConfig.SR_BASE_PATH
     }, {
-      provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_14__.HTTP_INTERCEPTORS,
+      provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_15__.HTTP_INTERCEPTORS,
       useClass: _auth_auth_interceptor__WEBPACK_IMPORTED_MODULE_7__.AuthInterceptor,
       multi: true
-    }, (0,_angular_common_http__WEBPACK_IMPORTED_MODULE_14__.provideHttpClient)((0,_angular_common_http__WEBPACK_IMPORTED_MODULE_14__.withInterceptorsFromDi)())],
-    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_15__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__.BrowserAnimationsModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_17__.NotifierModule, _clr_angular__WEBPACK_IMPORTED_MODULE_18__.ClarityModule, _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.ApiModule.forRoot(() => {
+    }, {
+      provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_15__.HTTP_INTERCEPTORS,
+      useClass: _common_http_serial_number_interceptor__WEBPACK_IMPORTED_MODULE_8__.SerialNumberInterceptor,
+      multi: true
+    }, (0,_angular_common_http__WEBPACK_IMPORTED_MODULE_15__.provideHttpClient)((0,_angular_common_http__WEBPACK_IMPORTED_MODULE_15__.withInterceptorsFromDi)())],
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_16__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__.BrowserAnimationsModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_18__.NotifierModule, _clr_angular__WEBPACK_IMPORTED_MODULE_19__.ClarityModule, _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.ApiModule.forRoot(() => {
       return new _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.Configuration({
         basePath: _app_config__WEBPACK_IMPORTED_MODULE_6__.AppConfig.IR_BASE_PATH
       });
@@ -331,19 +337,19 @@ class AppModule {
       return new _backend_api_identity_registry__WEBPACK_IMPORTED_MODULE_2__.Configuration({
         basePath: _app_config__WEBPACK_IMPORTED_MODULE_6__.AppConfig.SR_BASE_PATH + "/api/secom"
       });
-    }), keycloak_angular__WEBPACK_IMPORTED_MODULE_13__.KeycloakAngularModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_19__.TranslateModule.forRoot({
+    }), keycloak_angular__WEBPACK_IMPORTED_MODULE_14__.KeycloakAngularModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_20__.TranslateModule.forRoot({
       loader: {
-        provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_19__.TranslateLoader,
+        provide: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_20__.TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_14__.HttpClient]
+        deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_15__.HttpClient]
       }
     })]
   });
 }
 (function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵsetNgModuleScope"](AppModule, {
+  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵsetNgModuleScope"](AppModule, {
     declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent],
-    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_15__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__.BrowserAnimationsModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_17__.NotifierModule, _clr_angular__WEBPACK_IMPORTED_MODULE_18__.ClarityModule, _backend_api_identity_registry_api_module__WEBPACK_IMPORTED_MODULE_8__.ApiModule, _backend_api_service_registry_api_module__WEBPACK_IMPORTED_MODULE_9__.ApiModule, _backend_api_secom_api_module__WEBPACK_IMPORTED_MODULE_10__.ApiModule, keycloak_angular__WEBPACK_IMPORTED_MODULE_13__.KeycloakAngularModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_19__.TranslateModule]
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_16__.BrowserModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__.BrowserAnimationsModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, gramli_angular_notifier__WEBPACK_IMPORTED_MODULE_18__.NotifierModule, _clr_angular__WEBPACK_IMPORTED_MODULE_19__.ClarityModule, _backend_api_identity_registry_api_module__WEBPACK_IMPORTED_MODULE_9__.ApiModule, _backend_api_service_registry_api_module__WEBPACK_IMPORTED_MODULE_10__.ApiModule, _backend_api_secom_api_module__WEBPACK_IMPORTED_MODULE_11__.ApiModule, keycloak_angular__WEBPACK_IMPORTED_MODULE_14__.KeycloakAngularModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_20__.TranslateModule]
   });
 })();
 
@@ -9740,6 +9746,81 @@ const migrateVesselAttributes = item => {
     }), {})
   };
 };
+
+/***/ }),
+
+/***/ 2427:
+/*!**********************************************************!*\
+  !*** ./src/app/common/http/serial-number.interceptor.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SerialNumberInterceptor: () => (/* binding */ SerialNumberInterceptor)
+/* harmony export */ });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ 25170);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ 81229);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 72877);
+
+
+
+// Matches a bare, unquoted "serialNumber" numeric value in raw JSON text, e.g. "serialNumber":123456789012345
+const SERIAL_NUMBER_PATTERN = /"serialNumber"\s*:\s*(-?\d+)(?![.\d])/g;
+/**
+ * Certificate serial numbers can exceed Number.MAX_SAFE_INTEGER, so parsing them with the
+ * default JSON.parse (used internally by HttpClient for 'json' responses) silently loses
+ * precision. This interceptor requests the raw response as text instead, quotes any
+ * "serialNumber" values before parsing so they survive JSON.parse intact.
+ *
+ * Some endpoints (e.g. certificate issuance) reply with a non-JSON body such as raw PEM text
+ * despite 'json' being the requested responseType. Angular's own HttpXhrBackend tolerates
+ * that: a body that fails JSON.parse is delivered on the error channel as an HttpErrorResponse
+ * shaped as `{ error, text: <original body> }`, and callers in this app rely on that shape to
+ * recover the raw text (see certificateUtil.ts). We replicate that fallback here so bypassing
+ * Angular's built-in JSON parsing doesn't change that contract.
+ */
+class SerialNumberInterceptor {
+  intercept(req, next) {
+    if (req.responseType !== 'json') {
+      return next.handle(req);
+    }
+    const textReq = req.clone({
+      responseType: 'text'
+    });
+    return next.handle(textReq).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_0__.map)(event => {
+      if (!(event instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpResponse) || typeof event.body !== 'string' || event.body.length === 0) {
+        return event;
+      }
+      const originalBody = event.body;
+      try {
+        const body = JSON.parse(originalBody.replace(SERIAL_NUMBER_PATTERN, '"serialNumber":"$1"'));
+        return event.clone({
+          body
+        });
+      } catch (error) {
+        throw new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpErrorResponse({
+          error: {
+            error,
+            text: originalBody
+          },
+          headers: event.headers,
+          status: event.status,
+          statusText: event.statusText,
+          url: event.url ?? undefined
+        });
+      }
+    }));
+  }
+  static #_ = this.ɵfac = function SerialNumberInterceptor_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || SerialNumberInterceptor)();
+  };
+  static #_2 = this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({
+    token: SerialNumberInterceptor,
+    factory: SerialNumberInterceptor.ɵfac
+  });
+}
 
 /***/ }),
 

@@ -610,7 +610,7 @@ class CertificateService {
   }
   ngOnInit() {}
   formatCerts(certificates) {
-    let formatted = [];
+    const formatted = [];
     for (const key_certs in certificates) {
       const cert = certificates[key_certs];
       for (const key in cert) {
@@ -625,8 +625,8 @@ class CertificateService {
     return formatted;
   }
   splitByRevokeStatus(certificates) {
-    let activeCertificates = [];
-    let revokedCertificates = [];
+    const activeCertificates = [];
+    const revokedCertificates = [];
     for (const key_certs in certificates) {
       const cert = certificates[key_certs];
       cert['revoked'] ? revokedCertificates.push(cert) : activeCertificates.push(cert);
@@ -4579,7 +4579,9 @@ class SmartExpandableTableComponent {
   }
   getDisplayValue(key, value) {
     if (key === 'status') {
-      return _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__.ServiceInstanceStatus[value] ?? value;
+      // The SECOM search API returns status as a number (see ServiceInstanceStatus),
+      // while the Service Registry API already returns it as a string (e.g. 'RELEASED').
+      return typeof value === 'number' ? _backend_api_secom__WEBPACK_IMPORTED_MODULE_4__.ServiceInstanceStatus[value] : value;
     }
     return value;
   }
