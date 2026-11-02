@@ -182,6 +182,7 @@ class AppConfig {
         AppConfig.FOOTER_NAME = config.footerName;
         AppConfig.FOOTER_LINK = config.footerLink;
         AppConfig.LOGO_IMG = config.logoImg;
+        AppConfig.LOGIN_LOGO_IMG = config.loginLogoImg;
         AppConfig.ROOT_CERT_TP = config.rootCertificateThumbprint;
       } catch (error) {
         console.log("No config.json could be loaded, falling back to use built in config:", error);
@@ -212,6 +213,7 @@ class AppConfig {
     AppConfig.FOOTER_NAME = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.footerName;
     AppConfig.FOOTER_LINK = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.footerLink;
     AppConfig.LOGO_IMG = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.logoImg;
+    AppConfig.LOGIN_LOGO_IMG = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.loginLogoImg;
     AppConfig.ROOT_CERT_TP = _environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.rootCertificateThumbprint;
   }
 }
@@ -9428,8 +9430,8 @@ const countryOptions = [{
 }, {
   code: "SR",
   code3: "SUR",
-  title: "Surititle",
-  value: "Surititle"
+  title: "Suriname",
+  value: "Suriname"
 }, {
   code: "SJ",
   code3: "SJM",
@@ -10461,7 +10463,7 @@ class SecomSigningService {
     }
     const transactionIdPayload = erro.transactionId;
     const certs = this.toMinifiedPemList(cert);
-    const certPayload = `[${certs.join(', ')}]`;
+    const certPayload = certs.join(',');
     const timestampPayload = this.toUnixTimestampSeconds(erro.envelopeSignatureTime);
     const payload = transactionIdPayload + '.' + certPayload + '.' + thumbprint + '.' + timestampPayload;
     return new TextEncoder().encode(payload);
@@ -10527,7 +10529,7 @@ class SecomSigningService {
     const geometryPayload = esfo.geometry ?? '';
     const localOnlyPayload = String(esfo.localOnly ?? true).toLowerCase();
     const certs = this.toMinifiedPemList(cert);
-    const certPayload = `[${certs.join(', ')}]`;
+    const certPayload = certs.join(',');
     const timestampPayload = this.toUnixTimestampSeconds(esfo.envelopeSignatureTime);
     const payload = queryPayload + '.' + geometryPayload + '.' + localOnlyPayload + '.' + certPayload + '.' + thumbprint + '.' + timestampPayload;
     return new TextEncoder().encode(payload);
@@ -10542,11 +10544,7 @@ class SecomSigningService {
     payload += q.version ? q.version : '';
     payload += '.';
     if (q.keywords && q.keywords.length > 0) {
-      payload += '[';
-      for (const keyword of q.keywords) {
-        payload += keyword;
-      }
-      payload += ']';
+      payload += q.keywords.map(keyword => this.toBase64(new TextEncoder().encode(keyword))).join(',');
     }
     payload += '.';
     payload += q.description ? q.description : '';
@@ -10578,12 +10576,15 @@ class SecomSigningService {
     const date = value instanceof Date ? value : new Date(String(value));
     return String(Math.floor(date.getTime() / 1000));
   }
-  toBase64Url(bytes) {
+  toBase64(bytes) {
     let binary = '';
     for (const b of bytes) {
       binary += String.fromCharCode(b);
     }
-    return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    return btoa(binary);
+  }
+  toBase64Url(bytes) {
+    return this.toBase64(bytes).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   }
   static #_ = this.ɵfac = function SecomSigningService_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || SecomSigningService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](SecomSignerProvider));
@@ -10695,6 +10696,7 @@ const environment = {
   footerName: 'Maritime Connectivity Platform Consortium',
   footerLink: 'https://maritimeconnectivity.net',
   logoImg: 'assets/images/logo.svg',
+  loginLogoImg: 'assets/images/logo.svg',
   loginBgImg: '',
   rootCertificateThumbprint: '9e8718ab697d6f1d2350358b30ab365e364bc0c857aa6ac183a25b341350390ee4a8c32aaee08b9db2567ee7e30e7fdd'
 };
@@ -11342,7 +11344,7 @@ var _asyncToGenerator = (__webpack_require__(/*! ./node_modules/.pnpm/@babel+run
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"0.6.8","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","prebuild":"$npm_execpath run build:go","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/icons":"^13.0.2","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","asn1js":"^3.0.5","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","ecdsa-sig-formatter":"^1.0.11","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@eslint/js":"^9.9.1","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"management-portal-clr","version":"1.4","license":"Apache license 2.0","repository":{"type":"git","url":"git+https://github.com/maritimeconnectivity/management-portal-clr.git"},"bugs":{"url":"https://github.com/maritimeconnectivity/management-portal-clr/issues"},"scripts":{"ng":"ng","start":"ng serve","prebuild":"$npm_execpath run build:go","build":"ng build","build:go":"cd go && GOOS=js GOARCH=wasm go build -o ../src/assets/wasm/main.wasm && cp $(go env GOROOT)/lib/wasm/wasm_exec.js ../src/assets/js/wasm_exec.js","watch":"ng build --watch --configuration development","test":"ng test","lint":"ng lint"},"private":true,"dependencies":{"@angular/animations":"^18.2.3","@angular/common":"^18.2.3","@angular/compiler":"^18.2.3","@angular/core":"^18.2.3","@angular/forms":"^18.2.3","@angular/platform-browser":"^18.2.3","@angular/platform-browser-dynamic":"^18.2.3","@angular/router":"^18.2.3","@bluehalo/ngx-leaflet":"^18.0.2","@bluehalo/ngx-leaflet-draw":"^18.0.4","@cds/core":"^6.13.0","@clr/angular":"^17.3.0","@clr/icons":"^13.0.2","@clr/ui":"^17.3.0","@ngx-translate/core":"^15.0.0","@ngx-translate/http-loader":"^8.0.0","@swimlane/ngx-charts":"^20.5.0","@terraformer/wkt":"^2.2.1","@turf/boolean-point-in-polygon":"^7.2.0","@turf/turf":"^7.2.0","d3-scale":"^4.0.2","d3-selection":"^3.0.0","d3-shape":"^3.2.0","ecdsa-sig-formatter":"^1.0.11","file-saver":"^2.0.5","gramli-angular-notifier":"^16.0.2","jszip":"^3.10.1","keycloak-angular":"^16.0.1","keycloak-js":"^25.0.5","leaflet":"^1.9.4","leaflet-draw":"^1.0.2","lucene-query-string-builder":"^1.0.8","rxjs":"~7.8.0","shortid":"^2.2.16","tslib":"^2.3.0","zone.js":"^0.14.10"},"devDependencies":{"@angular-devkit/build-angular":"^18.2.3","@angular/cli":"^18.2.3","@eslint/js":"^9.9.1","@types/d3-scale":"^4.0.8","@types/d3-selection":"^3.0.11","@types/d3-shape":"^3.1.6","@types/file-saver":"^2.0.7","@types/geojson":"^7946.0.14","@types/golang-wasm-exec":"^1.15.2","@types/jasmine":"~4.3.0","@types/leaflet":"^1.9.14","@types/leaflet-draw":"^1.0.11","@types/lucene-query-string-builder":"^1.0.0","@types/terraformer__wkt":"^2.0.3","@types/turf":"^3.5.32","angular-cli-ghpages":"2.0.3","angular-eslint":"18.3.1","eslint":"^9.9.1","jasmine-core":"~4.5.0","karma":"~6.4.0","karma-chrome-launcher":"~3.1.0","karma-coverage":"~2.2.0","karma-jasmine":"~5.1.0","karma-jasmine-html-reporter":"~2.0.0","typescript":"~5.5","typescript-eslint":"8.2.0"}}');
 
 /***/ })
 

@@ -184,11 +184,11 @@ __webpack_require__.r(__webpack_exports__);
 const _c0 = ["regInfoModal"];
 const _c1 = ["wizard"];
 const _forTrack0 = ($index, $item) => $item.code;
-function LoginComponent_For_12_Template(rf, ctx) {
+function LoginComponent_For_10_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](0, "div", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("click", function LoginComponent_For_12_Template_div_click_0_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵlistener"]("click", function LoginComponent_For_10_Template_div_click_0_listener() {
       const option_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵrestoreView"](_r2).$implicit;
       const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵresetView"](ctx_r3.changeLang(option_r3.code));
@@ -329,7 +329,7 @@ class LoginComponent {
     this.currentLangName = "English";
     this.loggedIn = false;
     this.version = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.MP_VERSION;
-    this.logo_img = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.LOGO_IMG;
+    this.loginLogoImg = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.LOGIN_LOGO_IMG;
     this.wizardOpen = false;
     this.termsOfUse = src_app_app_config__WEBPACK_IMPORTED_MODULE_1__.AppConfig.TERMS_OF_USE;
     this.size = "lg";
@@ -466,21 +466,21 @@ class LoginComponent {
     features: [_angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵStandaloneFeature"]],
     decls: 119,
     vars: 67,
-    consts: [["regInfoModal", ""], ["wizard", ""], [1, "login-wrapper"], [1, "login"], [1, "login-header"], [1, "top-logo"], ["height", "100%", "alt", "Logo", 3, "src"], [1, "actions"], ["clrDropdownTrigger", "", 1, "btn", "btn-link", "btn-sm"], ["shape", "angle", "direction", "down"], ["aria-label", "option.code", "clrDropdownItem", ""], [1, "login-body"], [1, "title"], [1, "hint"], [1, "login-group"], [1, "btn", "btn-primary", 3, "click"], [1, "btn", "btn-warning-outline", 3, "click"], ["href", "javascript://", 1, "signup", 3, "click"], [1, "login-footer"], [1, "copyright"], ["target", "_blank", 1, "text-white", 3, "href"], [3, "clrModalOpenChange", "clrModalOpen", "clrModalSize"], [1, "modal-title"], [1, "modal-body"], [1, "clr-timeline"], [1, "clr-timeline-step"], [1, "clr-timeline-step-header"], ["role", "img", "shape", "circle", "aria-label", "Not started"], [1, "clr-timeline-step-body"], [1, "clr-timeline-step-title"], [1, "clr-timeline-step-description"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["clrWizardSize", "xl", 3, "clrWizardOpenChange", "clrWizardOpen"], [3, "type"], [3, "click", "type"], ["clrPageTitle", ""], [3, "clrWizardPageCustomButton"], [3, "isForNew", "itemType", "item", "mrnPrefix"], [3, "clrAlertType"], ["clrPageButtons", ""], ["aria-label", "option.code", "clrDropdownItem", "", 3, "click"], [3, "submitEvent", "isForNew", "itemType", "item", "mrnPrefix"], [1, "alert-text"], ["disabled", "", 1, "btn", "btn-primary"]],
+    consts: [["regInfoModal", ""], ["wizard", ""], [1, "login-wrapper"], [1, "login"], [1, "login-header"], [1, "actions"], ["clrDropdownTrigger", "", 1, "btn", "btn-link", "btn-sm"], ["shape", "angle", "direction", "down"], ["aria-label", "option.code", "clrDropdownItem", ""], [1, "login-body"], [1, "login-logo"], ["alt", "Logo", 3, "src"], [1, "title"], [1, "hint"], [1, "login-group"], [1, "btn", "btn-primary", 3, "click"], [1, "btn", "btn-warning-outline", 3, "click"], ["href", "javascript://", 1, "signup", 3, "click"], [1, "login-footer"], [1, "copyright"], ["target", "_blank", 1, "text-white", 3, "href"], [3, "clrModalOpenChange", "clrModalOpen", "clrModalSize"], [1, "modal-title"], [1, "modal-body"], [1, "clr-timeline"], [1, "clr-timeline-step"], [1, "clr-timeline-step-header"], ["role", "img", "shape", "circle", "aria-label", "Not started"], [1, "clr-timeline-step-body"], [1, "clr-timeline-step-title"], [1, "clr-timeline-step-description"], [1, "modal-footer"], ["type", "button", 1, "btn", "btn-outline", 3, "click"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], ["clrWizardSize", "xl", 3, "clrWizardOpenChange", "clrWizardOpen"], [3, "type"], [3, "click", "type"], ["clrPageTitle", ""], [3, "clrWizardPageCustomButton"], [3, "isForNew", "itemType", "item", "mrnPrefix"], [3, "clrAlertType"], ["clrPageButtons", ""], ["aria-label", "option.code", "clrDropdownItem", "", 3, "click"], [3, "submitEvent", "isForNew", "itemType", "item", "mrnPrefix"], [1, "alert-text"], ["disabled", "", 1, "btn", "btn-primary"]],
     template: function LoginComponent_Template(rf, ctx) {
       if (rf & 1) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵgetCurrentView"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](0, "div", 2)(1, "form", 3)(2, "div", 4)(3, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](4, "img", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](0, "div", 2)(1, "form", 3)(2, "div", 4)(3, "div", 5)(4, "clr-dropdown")(5, "button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtext"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](7, "cds-icon", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](5, "div", 7)(6, "clr-dropdown")(7, "button", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtext"](8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](9, "cds-icon", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](10, "clr-dropdown-menu");
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵrepeaterCreate"](11, LoginComponent_For_12_Template, 2, 1, "div", 10, _forTrack0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](8, "clr-dropdown-menu");
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵrepeaterCreate"](9, LoginComponent_For_10_Template, 2, 1, "div", 8, _forTrack0);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](13, "div", 11)(14, "section", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](11, "div", 9)(12, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelement"](13, "img", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](14, "section", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtext"](15);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipe"](16, "translate");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementStart"](17, "div", 13);
@@ -635,13 +635,13 @@ class LoginComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵelementEnd"]()()();
       }
       if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpropertyInterpolate"]("src", ctx.logo_img, _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsanitizeUrl"]);
-        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" Lang: ", ctx.currentLangName, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵrepeater"](ctx.langs);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpropertyInterpolate"]("src", ctx.loginLogoImg, _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](16, 35, "landing.title.serviceName"), " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵtextInterpolate2"]("", ctx.environmentName, " ", _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵpipeBind1"](19, 37, "landing.title.environmentName"), "");
@@ -701,7 +701,7 @@ class LoginComponent {
       }
     },
     dependencies: [_clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrSelectModule, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgForm, src_app_common_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__.SharedModule, _ngx_translate_core__WEBPACK_IMPORTED_MODULE_13__.TranslatePipe, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrModalModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrModal, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrModalBody, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.CdsIconCustomTag, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdown, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownMenu, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownTrigger, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrDropdownItem, src_app_components_components_module__WEBPACK_IMPORTED_MODULE_5__.ComponentsModule, _components_item_form_item_form_component__WEBPACK_IMPORTED_MODULE_9__.ItemFormComponent, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlertModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlert, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlertItem, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrAlertText, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardModule, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizard, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardPage, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardButton, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardTitle, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardPageTitle, _clr_angular__WEBPACK_IMPORTED_MODULE_14__.ClrWizardPageButtons],
-    styles: ["@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap);@import url(https://fonts.googleapis.com/css2?family=Staatliches&display=swap);.login-wrapper[_ngcontent-%COMP%] {\n    display: flex;\n    height: 100%;\n    background: url(\"/assets/images/sea_anim.svg\");\n    background-size: 100%;\n    background-position: calc(580*(1rem/var(--cds-global-base))) 800;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbGFuZGluZy9sb2dpbi9sb2dpbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0lBQ0ksYUFBYTtJQUNiLFlBQVk7SUFDWiw4Q0FBOEM7SUFDOUMscUJBQXFCO0lBQ3JCLGdFQUFnRTtJQUNoRSw0QkFBNEI7SUFDNUIsc0JBQXNCO0FBQzFCIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9UXVpY2tzYW5kOndnaHRAMzAwJmRpc3BsYXk9c3dhcCcpO1xuQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9U3RhYXRsaWNoZXMmZGlzcGxheT1zd2FwJyk7XG5cbi5sb2dpbi13cmFwcGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9zZWFfYW5pbS5zdmdcIik7XG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNhbGMoNTgwKigxcmVtL3ZhcigtLWNkcy1nbG9iYWwtYmFzZSkpKSA4MDA7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufSJdLCJzb3VyY2VSb290IjoiIn0= */"]
+    styles: ["@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap);@import url(https://fonts.googleapis.com/css2?family=Staatliches&display=swap);.login-header[_ngcontent-%COMP%] {\n    justify-content: flex-end;\n    margin-bottom: 6rem;\n}\n\n.login-logo[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n    height: 160px;\n}\n\n.login-wrapper[_ngcontent-%COMP%] {\n    display: flex;\n    height: 100%;\n    background: url(\"/assets/images/sea_anim.svg\");\n    background-size: 100%;\n    background-position: calc(580*(1rem/var(--cds-global-base))) 800;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbGFuZGluZy9sb2dpbi9sb2dpbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0lBQ0kseUJBQXlCO0lBQ3pCLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLDhDQUE4QztJQUM5QyxxQkFBcUI7SUFDckIsZ0VBQWdFO0lBQ2hFLDRCQUE0QjtJQUM1QixzQkFBc0I7QUFDMUIiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1RdWlja3NhbmQ6d2dodEAzMDAmZGlzcGxheT1zd2FwJyk7XG5AaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1TdGFhdGxpY2hlcyZkaXNwbGF5PXN3YXAnKTtcblxuLmxvZ2luLWhlYWRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgICBtYXJnaW4tYm90dG9tOiA2cmVtO1xufVxuXG4ubG9naW4tbG9nbyBpbWcge1xuICAgIGhlaWdodDogMTYwcHg7XG59XG5cbi5sb2dpbi13cmFwcGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIvYXNzZXRzL2ltYWdlcy9zZWFfYW5pbS5zdmdcIik7XG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNhbGMoNTgwKigxcmVtL3ZhcigtLWNkcy1nbG9iYWwtYmFzZSkpKSA4MDA7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xufSJdLCJzb3VyY2VSb290IjoiIn0= */"]
   });
 }
 
